@@ -11,7 +11,7 @@ DIANCIE 719 Base Egg Step problem------------------------------CORRECTED
 HOOPA 720 Height Problem---------------------------------------CORRECTED
 
 TO-DO
-Poke Evo Chain - 100
+Poke Evo Chain - Elaborte way to identify
 MEGA-EVOLUTIONS
 POKEMON FORMS - 27 Pokemons(bulbapedia)
 Pikachu
@@ -35,7 +35,7 @@ Keldeo
 Meloetta
 Genesect
 Vivillion
-Flabébé, Floete and Florges
+FlabÃ©bÃ©, Floete and Florges
 Furfrou
 Aegislash
 Pumpkaboo and Gourgeist
