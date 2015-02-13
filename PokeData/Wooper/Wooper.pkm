@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Wooper
+National No: 194
+Central No: 0
+Coastal No: 0
+Mountain No: 17
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: Ground
+Water Fish Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 8.5kg
+Lbs: 18.7lbs
+255
+5120
+PokeData/Wooper/Wooper.png
+PokeData/Wooper/Wooper-Shiny.png
+Name: Damp
+Description: Explosion and Selfdestruct will not work while the Pokémon is on the field
+Name: Water Absorb
+Description: The Pokémon heals up to 1/4 of it's maximum Hit Points when hit with Water-type moves
+Name: Unaware
+Description: Foe's stat modifications are ignored
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+HP: 1
+Not Eligible/Known
+Grass: 4.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 0.5
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

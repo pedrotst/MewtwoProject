@@ -1,0 +1,46 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Weezing
+National No: 110
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 114
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Poison
+Type 2: NoType
+Poison Gas Pokémon
+Meters: 1.2m
+Inches: 3'11"
+Kg: 9.5kg
+Lbs: 20.9lbs
+60
+5120
+PokeData/Weezing/Weezing.png
+PokeData/Weezing/Weezing-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 2
+Eligible
+Grass: 0.5
+Psychic: 2.0
+Poison: 0.5
+Fight: 0.5
+Fire: 1.0
+Ground: 2.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

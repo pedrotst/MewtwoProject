@@ -1,0 +1,956 @@
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM84
+Poison Jab
+Poison
+Physical
+80
+100
+20
+30
+The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Drain Punch
+Fighting
+Physical
+75
+100
+10
+--
+An energy-draining punch. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Endeavor
+Normal
+Physical
+??
+100
+5
+--
+An attack move that cuts down the target's HP to equal the user's HP.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+Hyper Voice
+Normal
+Special
+90
+100
+10
+--
+The user lets loose a horribly echoing shout with the power to inflict damage.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Uproar
+Normal
+Special
+90
+100
+10
+--
+The user attacks in an uproar for three turns. Over that time, no one can fall asleep.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+ΩRαS Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Spiky Shield
+Grass
+Other
+--
+--
+10
+--
+In addition to protecting the user from attacks, this move also damages any attacker who makes direct contact.
+Attack
+-----------------
+—
+Cotton Guard
+Grass
+Other
+--
+--
+10
+--
+The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.
+Attack
+-----------------
+—
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Attack
+-----------------
+—
+Peck
+Flying
+Physical
+35
+100
+35
+--
+The target is jabbed with a sharply pointed beak or horn.
+Attack
+-----------------
+—
+Absorb
+Grass
+Special
+20
+100
+25
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+3
+Sweet Scent
+Normal
+Other
+--
+100
+20
+--
+A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pokémon if used in grass, etc.
+Attack
+-----------------
+6
+Growth
+Normal
+Other
+--
+--
+20
+--
+The user's body grows all at once, raising the Attack and Sp. Atk stats.
+Attack
+-----------------
+10
+Pin Missile
+Bug
+Physical
+25
+95
+20
+--
+Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Attack
+-----------------
+13
+Mega Drain
+Grass
+Special
+40
+100
+15
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+15
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+18
+Cotton Spore
+Grass
+Other
+--
+100
+40
+--
+The user releases cotton-like spores that cling to the target, harshly reducing its Speed stat.
+Attack
+-----------------
+22
+Needle Arm
+Grass
+Physical
+60
+100
+15
+30
+The user attacks by wildly swinging its thorny arms. It may also make the target flinch.
+Attack
+-----------------
+26
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+29
+Acupressure
+Normal
+Other
+--
+--
+30
+--
+The user applies pressure to stress points, sharply boosting one of its stats.
+Attack
+-----------------
+33
+Ingrain
+Grass
+Other
+--
+--
+20
+--
+The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.
+Attack
+-----------------
+38
+Petal Dance
+Grass
+Special
+120
+100
+10
+--
+The user attacks the target by scattering petals for two to three turns. The user then becomes confused.
+Attack
+-----------------
+42
+Sucker Punch
+Dark
+Physical
+80
+100
+5
+--
+This move enables the user to attack first. It fails if the target is not readying an attack, however.
+Attack
+-----------------
+45
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+48
+Petal Blizzard
+Grass
+Physical
+90
+100
+15
+--
+The user stirs up a violent petal blizzard and attacks everything around it.
+Attack
+-----------------
+50
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+55
+Cotton Guard
+Grass
+Other
+--
+--
+10
+--
+The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.
+Attack
+-----------------
+57
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Bullet Seed
+Grass
+Physical
+25
+100
+30
+--
+The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
+Attack
+-----------------
+Grass Whistle
+Grass
+Other
+--
+55
+15
+--
+The user plays a pleasant melody that lulls the target into a deep sleep.
+Attack
+-----------------
+Grassy Terrain
+Grass
+Other
+--
+--
+10
+--
+The user turns the ground under everyone's feet to grass for five turns. This restores the HP of Pokémon on the ground a little every turn.
+Attack
+-----------------
+Leech Seed
+Grass
+Other
+--
+90
+10
+--
+A seed is planted on the target. It steals some HP from the target every turn.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Spikes
+Ground
+Other
+--
+--
+20
+--
+The user lays a trap of spikes at the opposing team's feet. The trap hurts Pokémon that switch into battle.
+Attack
+-----------------
+Wood Hammer
+Grass
+Physical
+120
+100
+15
+--
+The user slams its rugged body into the target to attack. The user also sustains serious damage.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+X & Y Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Cotton Guard
+Grass
+Other
+--
+--
+10
+--
+The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.
+Attack
+-----------------
+—
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Attack
+-----------------
+—
+Peck
+Flying
+Physical
+35
+100
+35
+--
+The target is jabbed with a sharply pointed beak or horn.
+Attack
+-----------------
+—
+Absorb
+Grass
+Special
+20
+100
+25
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+3
+Sweet Scent
+Normal
+Other
+--
+100
+20
+--
+A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pokémon if used in grass, etc.
+Attack
+-----------------
+6
+Growth
+Normal
+Other
+--
+--
+20
+--
+The user's body grows all at once, raising the Attack and Sp. Atk stats.
+Attack
+-----------------
+10
+Pin Missile
+Bug
+Physical
+25
+95
+20
+--
+Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Attack
+-----------------
+13
+Mega Drain
+Grass
+Special
+40
+100
+15
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+15
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+18
+Cotton Spore
+Grass
+Other
+--
+100
+40
+--
+The user releases cotton-like spores that cling to the target, harshly reducing its Speed stat.
+Attack
+-----------------
+22
+Needle Arm
+Grass
+Physical
+60
+100
+15
+30
+The user attacks by wildly swinging its thorny arms. It may also make the target flinch.
+Attack
+-----------------
+26
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+29
+Acupressure
+Normal
+Other
+--
+--
+30
+--
+The user applies pressure to stress points, sharply boosting one of its stats.
+Attack
+-----------------
+33
+Ingrain
+Grass
+Other
+--
+--
+20
+--
+The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.
+Attack
+-----------------
+38
+Petal Dance
+Grass
+Special
+120
+100
+10
+--
+The user attacks the target by scattering petals for two to three turns. The user then becomes confused.
+Attack
+-----------------
+42
+Sucker Punch
+Dark
+Physical
+80
+100
+5
+--
+This move enables the user to attack first. It fails if the target is not readying an attack, however.
+Attack
+-----------------
+45
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+48
+Petal Blizzard
+Grass
+Physical
+90
+100
+15
+--
+The user stirs up a violent petal blizzard and attacks everything around it.
+Attack
+-----------------
+50
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+55
+Cotton Guard
+Grass
+Other
+--
+--
+10
+--
+The user protects itself by wrapping its body in soft cotton, drastically raising the user's Defense stat.
+Attack
+-----------------
+57
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.

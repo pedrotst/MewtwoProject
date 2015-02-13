@@ -1,0 +1,44 @@
+ROTTOM - Wrong Type -------------------------------------------CORRECTED
+KYOGRE 382-384,483-484,643-644 - 2 Capture Rates---------------CORRECTED
+DEOXYS 386 - Forms Level Up -----------------------------------CORRECTED
+DEOXYS EV Problem ---------------------------------------------CORRECTED
+MEOWSTIC 678 Ability problem-----------------------------------CORRECTED
+WORMADAM 413 EV PROBLEM----------------------------------------CORRECTED
+SHAYMIN 492 EV PROBLEM-----------------------------------------CORRECTED
+DARMANITAM 555 EV PROBLE---------------------------------------CORRECTED
+TORNADUS 641 EV PROBLEM----------------------------------------CORRECTED
+DIANCIE 719 Base Egg Step problem------------------------------CORRECTED
+HOOPA 720 Height Problem---------------------------------------CORRECTED
+
+TO-DO
+Poke Evo Chain - 100
+MEGA-EVOLUTIONS
+POKEMON FORMS - 27 Pokemons(bulbapedia)
+Pikachu
+Pichu
+Unown
+Castform
+Deoxys
+Burmy and Wormadam
+Cherrim
+Shellos and Gastrodon
+Rotom
+Giratina
+Shaymin
+Arceus
+Basculin
+Darmanitan
+Deerling and Sawsbuck
+Forces of Nature(Thandurus, etc)
+Kyurem
+Keldeo
+Meloetta
+Genesect
+Vivillion
+Flabébé, Floete and Florges
+Furfrou
+Aegislash
+Pumpkaboo and Gourgeist
+Xerneas
+Hoopa
+

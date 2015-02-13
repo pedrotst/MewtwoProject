@@ -1,0 +1,47 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Flygon
+National No: 330
+Central No: 0
+Coastal No: 0
+Mountain No: 5
+Hoenn No: 123
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: Dragon
+Mystic Pokémon
+Meters: 2.0m
+Inches: 6'07"
+Kg: 82.0kg
+Lbs: 180.8lbs
+45
+5120
+PokeData/Flygon/Flygon.png
+PokeData/Flygon/Flygon-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Attack: 1
+Speed: 2
+Eligible
+Grass: 1.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 4.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 2.0
+Water: 1.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

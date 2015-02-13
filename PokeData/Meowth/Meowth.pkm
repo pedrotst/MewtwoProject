@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Meowth
+National No: 52
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: NoType
+Scratch Cat Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 4.2kg
+Lbs: 9.3lbs
+255
+5120
+PokeData/Meowth/Meowth.png
+PokeData/Meowth/Meowth-Shiny.png
+Name: Pickup
+Description: Has a 10% chance of finding and holding an item after battle. Will not work if this Pokémon is already holding an item. From Black & White, it allows for the user to pick up the item of its opponent or ally if they used up the item in battle
+Name: Technician
+Description: Moves with a base power of 60 or less are boosted in power by 50%
+Name: Unnerve
+Description: The opponent Pokémon will never use their held Berry while the Pokémon is in battle
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

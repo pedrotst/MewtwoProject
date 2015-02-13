@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Zigzagoon
+National No: 263
+Central No: 12
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 12
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: NoType
+Tiny Racoon Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 17.5kg
+Lbs: 38.6lbs
+255
+3840
+PokeData/Zigzagoon/Zigzagoon.png
+PokeData/Zigzagoon/Zigzagoon-Shiny.png
+Name: Pickup
+Description: Has a 10% chance of finding and holding an item after battle. Will not work if this Pokémon is already holding an item. From Black & White, it allows for the user to pick up the item of its opponent or ally if they used up the item in battle
+Name: Gluttony
+Description: The Pokémon will use a berry when its Hit Points are below 50%
+Name: Quick Feet
+Description: Speed is increased by 50% when induced with a status (Burn, Poison, Sleep, Frozen & Paralysis). If Paralysed, the speed drop is ignored
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

@@ -1,0 +1,47 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Moltres
+National No: 146
+Central No: 0
+Coastal No: 153
+Mountain No: 0
+Hoenn No: 0
+No gender
+Type 1: Fire
+Type 2: Flying
+Flame Pokémon
+Meters: 2.0m
+Inches: 6'07"
+Kg: 60.0kg
+Lbs: 132.3lbs
+3
+20480
+PokeData/Moltres/Moltres.png
+PokeData/Moltres/Moltres-Shiny.png
+Name: Pressure
+Description: When this Pokémon is hit by a move, the opponent's PP lowers by 2 rather than 1
+Name: Flame Body
+Description: The opponent has a 30% chance of being induced with Burn when using an attack, that requires physical contact, against this Pokémon
+Exp to lvl 100: 1250000
+Classification: Slow
+35
+Sp. Attack: 3
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 0.5
+Ground: 0.0
+Electric: 2.0
+Bug: 0.25
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 2.0
+Steel: 0.5
+Rock: 4.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

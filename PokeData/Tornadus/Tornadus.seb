@@ -1,0 +1,788 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Thrash
+Normal
+Physical
+120
+100
+10
+--
+The user rampages and attacks for two to three turns. It then becomes confused, however.
+Attack
+-----------------
+—
+Hammer Arm
+Fighting
+Physical
+100
+90
+10
+100
+The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.
+Attack
+-----------------
+—
+Hurricane
+Flying
+Special
+110
+70
+10
+30
+The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. It may also confuse the target.
+Attack
+-----------------
+—
+Tailwind
+Flying
+Other
+--
+--
+15
+--
+The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns.
+Attack
+-----------------
+—
+Uproar
+Normal
+Special
+90
+100
+10
+--
+The user attacks in an uproar for three turns. Over that time, no one can fall asleep.
+Attack
+-----------------
+—
+Astonish
+Ghost
+Physical
+30
+100
+15
+30
+The user attacks the target while shouting in a startling fashion. It may also make the target flinch.
+Attack
+-----------------
+—
+Gust
+Flying
+Special
+40
+100
+35
+--
+A gust of wind is whipped up by wings and launched at the target to inflict damage.
+Attack
+-----------------
+7
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+13
+Bite
+Dark
+Physical
+60
+100
+25
+30
+The target is bitten with viciously sharp fangs. It may make the target flinch.
+Attack
+-----------------
+19
+Revenge
+Fighting
+Physical
+60
+100
+10
+--
+An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn.
+Attack
+-----------------
+25
+Air Cutter
+Flying
+Special
+60
+95
+25
+--
+The user launches razor-like wind to slash the opposing team. Critical hits land more easily.
+Attack
+-----------------
+31
+Extrasensory
+Psychic
+Special
+80
+100
+20
+10
+The user attacks with an odd, unseeable power. It may also make the target flinch.
+Attack
+-----------------
+37
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+43
+Air Slash
+Flying
+Special
+75
+95
+15
+30
+The user attacks with a blade of air that slices even the sky. It may also make the target flinch.
+Attack
+-----------------
+49
+Crunch
+Dark
+Physical
+80
+100
+15
+20
+The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.
+Attack
+-----------------
+55
+Tailwind
+Flying
+Other
+--
+--
+15
+--
+The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns.
+Attack
+-----------------
+61
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+67
+Hurricane
+Flying
+Special
+110
+70
+10
+30
+The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. It may also confuse the target.
+Attack
+-----------------
+73
+Dark Pulse
+Dark
+Special
+80
+100
+15
+20
+The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
+Attack
+-----------------
+79
+Hammer Arm
+Fighting
+Physical
+100
+90
+10
+100
+The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.
+Attack
+-----------------
+85
+Thrash
+Normal
+Physical
+120
+100
+10
+--
+The user rampages and attacks for two to three turns. It then becomes confused, however.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM08
+Bulk Up
+Fighting
+Other
+--
+--
+20
+--
+The user tenses its muscles to bulk up its body, boosting both its Attack and Defense stats.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM12
+Taunt
+Dark
+Other
+--
+100
+20
+--
+The target is taunted into a rage that allows it to use only attack moves for three turns.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM23
+Smack Down
+Rock
+Physical
+50
+100
+15
+100
+The user throws a stone or projectile to attack an opponent. A flying Pokémon will fall to the ground when hit.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM29
+Psychic
+Psychic
+Special
+90
+100
+10
+10
+The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
+Attack
+-----------------
+TM31
+Brick Break
+Fighting
+Physical
+75
+100
+15
+--
+The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM34
+Sludge Wave
+Poison
+Special
+95
+100
+10
+10
+It swamps the area around the user with a giant sludge wave. It may also poison those hit.
+Attack
+-----------------
+TM36
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM41
+Torment
+Dark
+Other
+--
+100
+15
+--
+The user torments and enrages the target, making it incapable of using the same move twice in a row.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM52
+Focus Blast
+Fighting
+Special
+120
+70
+5
+10
+The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM56
+Fling
+Dark
+Physical
+??
+100
+10
+--
+The user flings its held item at the target to attack. Its power and effects depend on the item.
+Attack
+-----------------
+TM58
+Sky Drop
+Flying
+Physical
+60
+100
+10
+--
+The user takes the target into the sky, then drops it during the next turn. The target cannot attack while in the sky.
+Attack
+-----------------
+TM59
+Incinerate
+Fire
+Special
+60
+100
+15
+--
+The user attacks opposing Pokemon with fire. If a Pokemon is holding a certain item, such as a berry, the item becomes burned up and unusable
+Attack
+-----------------
+TM62
+Acrobatics
+Flying
+Physical
+55
+100
+15
+--
+The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.
+Attack
+-----------------
+TM63
+Embargo
+Dark
+Other
+--
+100
+15
+--
+It prevents the target from using its held item. Its Trainer is also prevented from using items on it.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM89
+U-turn
+Bug
+Physical
+70
+100
+20
+--
+After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM97
+Dark Pulse
+Dark
+Special
+80
+100
+15
+20
+The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM02
+Fly
+Flying
+Physical
+90
+95
+15
+--
+The user soars, then strikes its target on the second turn. It can also be used for flying to any familiar town.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+Heat Wave
+Fire
+Special
+95
+90
+10
+10
+The user attacks by exhaling hot breath on the opposing team. It may also leave targets with a burn.
+Attack
+-----------------
+Icy Wind
+Ice
+Special
+55
+95
+15
+100
+The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Role Play
+Psychic
+Other
+--
+--
+10
+--
+The user mimics the target completely, copying the target's natural Ability.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Attack
+-----------------
+Tailwind
+Flying
+Other
+--
+--
+15
+--
+The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns.
+Attack
+-----------------
+Uproar
+Normal
+Special
+90
+100
+10
+--
+The user attacks in an uproar for three turns. Over that time, no one can fall asleep.

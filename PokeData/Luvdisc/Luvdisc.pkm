@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Luvdisc
+National No: 370
+Central No: 0
+Coastal No: 29
+Mountain No: 0
+Hoenn No: 192
+Male Rate :25.0%
+Female Rate :75.0%
+Type 1: Water
+Type 2: NoType
+Rendezvous Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 8.7kg
+Lbs: 19.2lbs
+225
+5120
+PokeData/Luvdisc/Luvdisc.png
+PokeData/Luvdisc/Luvdisc-Shiny.png
+Name: Swift Swim
+Description: When rainy, The Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Heavy Rain
+Name: Hydration
+Description: All status problems: Burn, Paralysis, Sleep, Frozen and Poison, are healed when raining
+Exp to lvl 100: 800000
+Classification: Fast
+70
+Speed: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,47 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Ho-Oh
+National No: 250
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+No gender
+Type 1: Fire
+Type 2: Flying
+Rainbow Pokémon
+Meters: 3.8m
+Inches: 12'06"
+Kg: 199.0kg
+Lbs: 438.7lbs
+3
+30720
+PokeData/Ho-Oh/Ho-Oh.png
+PokeData/Ho-Oh/Ho-Oh-Shiny.png
+Name: Pressure
+Description: When this Pokémon is hit by a move, the opponent's PP lowers by 2 rather than 1
+Name: Regenerator
+Description: When the Pokémon switches out of battle, up to 33.3% of its maximum Hit Points are restored
+Exp to lvl 100: 1250000
+Classification: Slow
+0
+Sp. Defense: 3
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 0.5
+Ground: 0.0
+Electric: 2.0
+Bug: 0.25
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 2.0
+Steel: 0.5
+Rock: 4.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

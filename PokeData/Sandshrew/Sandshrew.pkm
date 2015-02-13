@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Sandshrew
+National No: 27
+Central No: 0
+Coastal No: 0
+Mountain No: 97
+Hoenn No: 117
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: NoType
+Mouse Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 12.0kg
+Lbs: 26.5lbs
+255
+5120
+PokeData/Sandshrew/Sandshrew.png
+PokeData/Sandshrew/Sandshrew-Shiny.png
+Name: Sand Veil
+Description: Raises the Pokémon's evasion during a sandstorm by one level
+Name: Sand Rush
+Description: Speed is doubled within a sandstorm
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

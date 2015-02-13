@@ -1,0 +1,628 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Absorb
+Grass
+Special
+20
+100
+25
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+4
+Growth
+Normal
+Other
+--
+--
+20
+--
+The user's body grows all at once, raising the Attack and Sp. Atk stats.
+Attack
+-----------------
+8
+Leech Seed
+Grass
+Other
+--
+90
+10
+--
+A seed is planted on the target. It steals some HP from the target every turn.
+Attack
+-----------------
+10
+Sleep Powder
+Grass
+Other
+--
+75
+15
+--
+The user scatters a big cloud of sleep-inducing dust around the target.
+Attack
+-----------------
+13
+Mega Drain
+Grass
+Special
+40
+100
+15
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+17
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+19
+Magical Leaf
+Grass
+Special
+60
+--
+20
+--
+The user scatters curious leaves that chase the target. This attack will not miss.
+Attack
+-----------------
+22
+Stun Spore
+Grass
+Other
+--
+75
+30
+--
+The user scatters a cloud of paralyzing powder. It may leave the target with paralysis.
+Attack
+-----------------
+26
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+28
+Aromatherapy
+Grass
+Other
+--
+--
+5
+--
+The user releases a soothing scent that heals all status problems affecting the user's party.
+Attack
+-----------------
+31
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+35
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+37
+Entrainment
+Normal
+Other
+--
+100
+15
+--
+The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.
+Attack
+-----------------
+40
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+44
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Attack
+-----------------
+46
+Leaf Storm
+Grass
+Special
+130
+90
+5
+100
+The user whips up a storm of leaves around the target. The attack's recoil harshly reduces the user's Sp. Atk stat.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM85
+Dream Eater
+Psychic
+Special
+100
+100
+15
+--
+The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user's HP.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bide
+Normal
+Physical
+??
+--
+10
+--
+The user endures attacks for two turns, then strikes back to cause double the damage taken.
+Attack
+-----------------
+Charm
+Fairy
+Other
+--
+100
+20
+--
+The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Grass Whistle
+Grass
+Other
+--
+55
+15
+--
+The user plays a pleasant melody that lulls the target into a deep sleep.
+Attack
+-----------------
+Healing Wish
+Psychic
+Other
+--
+--
+10
+--
+The user faints. In return, the Pokémon taking its place will have its HP restored and status cured.
+Attack
+-----------------
+Ingrain
+Grass
+Other
+--
+--
+20
+--
+The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Sweet Scent
+Normal
+Other
+--
+100
+20
+--
+A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pokémon if used in grass, etc.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+After You
+Normal
+Other
+--
+--
+15
+--
+The user helps the target and makes it use its move right after the user.
+Attack
+-----------------
+Covet
+Normal
+Physical
+60
+100
+25
+--
+The user endearingly approaches the target, then steals the target's held item.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Heal Bell
+Normal
+Other
+--
+--
+5
+--
+The user makes a soothing bell chime to heal the status problems of all the party Pokémon.
+Attack
+-----------------
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.

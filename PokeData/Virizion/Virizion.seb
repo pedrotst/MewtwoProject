@@ -1,0 +1,733 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Close Combat
+Fighting
+Physical
+120
+100
+5
+100
+The user fights the target up close without guarding itself. It also cuts the user's Defense and Sp. Def.
+Attack
+-----------------
+—
+Leaf Blade
+Grass
+Physical
+90
+100
+15
+--
+The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.
+Attack
+-----------------
+—
+Work Up
+Normal
+Other
+--
+--
+30
+--
+The user is roused, and its Attack and Sp. Atk stats increase.
+Attack
+-----------------
+—
+Quick Guard
+Fighting
+Other
+--
+--
+15
+--
+The user protects itself and its allies from priority moves. If used in succession, its chance of failing rises.
+Attack
+-----------------
+—
+Quick Attack
+Normal
+Physical
+40
+100
+30
+--
+The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
+Attack
+-----------------
+—
+Leer
+Normal
+Other
+--
+100
+30
+100
+The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.
+Attack
+-----------------
+7
+Double Kick
+Fighting
+Physical
+30
+100
+30
+--
+The target is quickly kicked twice in succession using both feet.
+Attack
+-----------------
+13
+Magical Leaf
+Grass
+Special
+60
+--
+20
+--
+The user scatters curious leaves that chase the target. This attack will not miss.
+Attack
+-----------------
+19
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+25
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+31
+Retaliate
+Normal
+Physical
+70
+100
+5
+--
+The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack's damage increases.
+Attack
+-----------------
+37
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+42
+Sacred Sword
+Fighting
+Physical
+90
+100
+15
+--
+The user attacks by slicing with its long horns. The target's stat changes don't affect this attack's damage.
+Attack
+-----------------
+49
+Swords Dance
+Normal
+Other
+--
+--
+20
+--
+A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
+Attack
+-----------------
+55
+Quick Guard
+Fighting
+Other
+--
+--
+15
+--
+The user protects itself and its allies from priority moves. If used in succession, its chance of failing rises.
+Attack
+-----------------
+61
+Work Up
+Normal
+Other
+--
+--
+30
+--
+The user is roused, and its Attack and Sp. Atk stats increase.
+Attack
+-----------------
+67
+Leaf Blade
+Grass
+Physical
+90
+100
+15
+--
+The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.
+Attack
+-----------------
+73
+Close Combat
+Fighting
+Physical
+120
+100
+5
+100
+The user fights the target up close without guarding itself. It also cuts the user's Defense and Sp. Def.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM04
+Calm Mind
+Psychic
+Other
+--
+--
+20
+--
+The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.
+Attack
+-----------------
+TM05
+Roar
+Normal
+Other
+--
+--
+20
+--
+The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM12
+Taunt
+Dark
+Other
+--
+100
+20
+--
+The target is taunted into a rage that allows it to use only attack moves for three turns.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM33
+Reflect
+Psychic
+Other
+--
+--
+20
+--
+A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM52
+Focus Blast
+Fighting
+Special
+120
+70
+5
+10
+The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM54
+False Swipe
+Normal
+Physical
+40
+100
+40
+--
+A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.
+Attack
+-----------------
+TM67
+Retaliate
+Normal
+Physical
+70
+100
+5
+--
+The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack's damage increases.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM71
+Stone Edge
+Rock
+Physical
+100
+80
+5
+--
+The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio.
+Attack
+-----------------
+TM75
+Swords Dance
+Normal
+Other
+--
+--
+20
+--
+A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
+Attack
+-----------------
+TM77
+Psych Up
+Normal
+Other
+--
+--
+10
+--
+The user hypnotizes itself into copying any stat change made by the target.
+Attack
+-----------------
+TM81
+X-Scissor
+Bug
+Physical
+80
+100
+15
+--
+The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Block
+Normal
+Other
+--
+--
+5
+--
+The user blocks the target's way with arms spread wide to prevent escape.
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+Attack
+-----------------
+Zen Headbutt
+Psychic
+Physical
+80
+90
+15
+20
+The user focuses its willpower to its head and attacks the target. It may also make the target flinch.

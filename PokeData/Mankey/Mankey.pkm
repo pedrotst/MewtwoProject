@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Mankey
+National No: 56
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: NoType
+Type 2: NoType
+Pig Monkey Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 28.0kg
+Lbs: 61.7lbs
+190
+5120
+PokeData/Mankey/Mankey.png
+PokeData/Mankey/Mankey-Shiny.png
+Name: Vital Spirit
+Description: The Pokémon cannot be Asleep while having this ability
+Name: Anger Point
+Description: Increases Attack to maximum level upon taking a critical hit
+Name: Defiant
+Description: Attack is raised by two stages when the Pokémon has its stats lowered. Doesn't work on self inflicted stat drops or drops from allies
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 2.0
+Poison: 1.0
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 0.5
+Flying: 2.0
+Ghost: 1.0
+Dark: 0.5

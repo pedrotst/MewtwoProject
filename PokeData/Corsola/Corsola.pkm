@@ -1,0 +1,51 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Corsola
+National No: 222
+Central No: 0
+Coastal No: 146
+Mountain No: 0
+Hoenn No: 189
+Male Rate :25.0%
+Female Rate :75.0%
+Type 1: Water
+Type 2: Rock
+Coral Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 5.0kg
+Lbs: 11.0lbs
+60
+5120
+PokeData/Corsola/Corsola.png
+PokeData/Corsola/Corsola-Shiny.png
+Name: Hustle
+Description: Damage from physical attacks is increased by 50%, but average accuracy is only 80%
+Name: Natural Cure
+Description: The Pokémon's status (BURN, PARALYZE, SLEEP, POISON, FREEZE) is healed when withdrawn from battle
+Name: Regenerator
+Description: When the Pokémon switches out of battle, up to 33.3% of its maximum Hit Points are restored
+Exp to lvl 100: 800000
+Classification: Fast
+70
+Defense: 1
+Sp. Defense: 1
+Not Eligible/Known
+Grass: 4.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 2.0
+Fire: 0.25
+Ground: 2.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 0.5
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Charizard
+National No: 6
+Central No: 85
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :87.5%
+Female Rate :12.5%
+Type 1: Fire
+Type 2: Flying
+Flame Pokémon
+Meters: 1.7m
+Inches: 5'07"
+Kg: 90.5kg
+Lbs: 199.5lbs
+45
+5120
+PokeData/Charizard/Charizard.png
+PokeData/Charizard/Charizard-Shiny.png
+Name: Blaze
+Description: When HP is below 1/3rd its maximum, power of Fire-type moves is increased by 50%
+Name: Solar Power
+Description: During sunshine, the Pokémon's Special Attack raises to 1.5 times but HP decreases by 1/8th the maximum HP every turn
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Attack: 3
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 0.5
+Ground: 0.0
+Electric: 2.0
+Bug: 0.25
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 2.0
+Steel: 0.5
+Rock: 4.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Swellow
+National No: 277
+Central No: 0
+Coastal No: 20
+Mountain No: 0
+Hoenn No: 26
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: Flying
+Swallow Pokémon
+Meters: 0.7m
+Inches: 2'04"
+Kg: 19.8kg
+Lbs: 43.7lbs
+45
+3840
+PokeData/Swellow/Swellow.png
+PokeData/Swellow/Swellow-Shiny.png
+Name: Guts
+Description: Attack is increased by 50% when induced with a status (BURN, PARALYZE, SLEEP, POISON, FREEZE). Burn's effect of lowering Attack is not applied
+Name: Scrappy
+Description: Allows the Pokémon to hit Ghost-type Pokémon with Normal-type and Fighting-type moves
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Speed: 2
+Eligible
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 1.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

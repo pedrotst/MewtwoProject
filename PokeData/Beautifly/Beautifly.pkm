@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Beautifly
+National No: 267
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 16
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Bug
+Type 2: Flying
+Butterfly Pokémon
+Meters: 1.0m
+Inches: 3'03"
+Kg: 28.4kg
+Lbs: 62.6lbs
+45
+3840
+PokeData/Beautifly/Beautifly.png
+PokeData/Beautifly/Beautifly-Shiny.png
+Name: Swarm
+Description: When HP is below 1/3rd its maximum, power of Bug-type moves is increased by 50%
+Name: Rivalry
+Description: Attack & Special Attack is increased by 25% if the foe is of the same gender; Attack & Special Attack is decreased by 25% if the foe is of the opposite gender
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Sp. Attack: 3
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.25
+Fire: 2.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 4.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

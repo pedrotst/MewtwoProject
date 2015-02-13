@@ -1,0 +1,554 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Leech Life
+Bug
+Physical
+20
+100
+15
+--
+The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+4
+Acid
+Poison
+Special
+40
+100
+30
+10
+The opposing team is attacked with a spray of harsh acid. The acid may also lower the targets' Sp. Def stats.
+Attack
+-----------------
+8
+Bide
+Normal
+Physical
+??
+--
+10
+--
+The user endures attacks for two turns, then strikes back to cause double the damage taken.
+Attack
+-----------------
+13
+Curse
+Ghost
+Other
+--
+--
+10
+--
+A move that works differently for the Ghost type than for all other types.
+Attack
+-----------------
+16
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+20
+Mega Drain
+Grass
+Special
+40
+100
+15
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+25
+Yawn
+Normal
+Other
+--
+--
+10
+--
+The user lets loose a huge yawn that lulls the target into falling asleep on the next turn.
+Attack
+-----------------
+28
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+32
+Acid Armor
+Poison
+Other
+--
+--
+20
+--
+The user alters its cellular structure to liquefy itself, sharply raising its Defense stat.
+Attack
+-----------------
+37
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+40
+Body Slam
+Normal
+Physical
+85
+100
+15
+30
+The user drops onto the target with its full body weight. It may also leave the target with paralysis.
+Attack
+-----------------
+44
+Bug Buzz
+Bug
+Special
+90
+100
+10
+10
+The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+49
+Recover
+Normal
+Other
+--
+--
+10
+--
+Restoring its own cells, the user restores its own HP by half of its max HP.
+Attack
+-----------------
+50
+Guard Swap
+Psychic
+Other
+--
+--
+10
+--
+The user employs its psychic power to switch changes to its Defense and Sp. Def with the target.
+Attack
+-----------------
+56
+Final Gambit
+Fighting
+Special
+??
+100
+5
+--
+The user risks everything to attack its target. The user faints but does damage equal to the user's HP.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM09
+Venoshock
+Poison
+Special
+65
+100
+10
+--
+The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM36
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM76
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+TM83
+Infestation
+Bug
+Special
+20
+100
+20
+100
+The target is infested and attacked for four to five turns. The target can't flee during this time.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Baton Pass
+Normal
+Other
+--
+--
+40
+--
+The user switches places with a party Pokémon in waiting, passing along any stat changes.
+Attack
+-----------------
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Encore
+Normal
+Other
+--
+100
+5
+--
+The user compels the target to keep using only the move it last used for three turns.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Feint
+Normal
+Physical
+30
+100
+10
+--
+An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.
+Attack
+-----------------
+Guard Split
+Psychic
+Other
+--
+--
+10
+--
+The user employs its psychic power to average its Defense and Sp. Def stats with those of its target's.
+Attack
+-----------------
+Mind Reader
+Normal
+Other
+--
+--
+5
+--
+The user senses the target's movements with its mind to ensure its next attack does not miss the target.
+Attack
+-----------------
+Mud-Slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+Pursuit
+Dark
+Physical
+40
+100
+20
+--
+An attack move that inflicts double damage if used on a target that is switching out of battle.
+Attack
+-----------------
+Spikes
+Ground
+Other
+--
+--
+20
+--
+The user lays a trap of spikes at the opposing team's feet. The trap hurts Pokémon that switch into battle.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Gastro Acid
+Poison
+Other
+--
+100
+10
+--
+The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

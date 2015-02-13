@@ -1,0 +1,586 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Quick Attack
+Normal
+Physical
+40
+100
+30
+--
+The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
+Attack
+-----------------
+4
+Tail Whip
+Normal
+Other
+--
+100
+30
+--
+The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.
+Attack
+-----------------
+8
+Charge
+Electric
+Other
+--
+--
+20
+--
+The user boosts the power of the Electric move it uses on the next turn. It also raises the user's Sp. Def stat.
+Attack
+-----------------
+11
+Shock Wave
+Electric
+Special
+60
+--
+20
+--
+The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
+Attack
+-----------------
+15
+Thunder Wave
+Electric
+Other
+--
+100
+20
+--
+A weak electric charge is launched at the target. It causes paralysis if it hits.
+Attack
+-----------------
+18
+Flame Charge
+Fire
+Physical
+50
+100
+20
+100
+The user cloaks itself with flame and attacks. Building up more power, it raises the user's Speed stat.
+Attack
+-----------------
+22
+Pursuit
+Dark
+Physical
+40
+100
+20
+--
+An attack move that inflicts double damage if used on a target that is switching out of battle.
+Attack
+-----------------
+25
+Spark
+Electric
+Physical
+65
+100
+20
+30
+The user throws an electrically charged tackle at the target. It may also leave the target with paralysis.
+Attack
+-----------------
+29
+Stomp
+Normal
+Physical
+65
+100
+20
+30
+The target is stomped with a big foot. It may also make the target flinch.
+Attack
+-----------------
+32
+Discharge
+Electric
+Special
+80
+100
+15
+30
+A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.
+Attack
+-----------------
+36
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+39
+Wild Charge
+Electric
+Physical
+90
+100
+15
+--
+The user shrouds itself in electricity and smashes into its target. It also damages the user a little.
+Attack
+-----------------
+43
+Thrash
+Normal
+Physical
+120
+100
+10
+--
+The user rampages and attacks for two to three turns. It then becomes confused, however.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM24
+Thunderbolt
+Electric
+Special
+90
+100
+15
+10
+A strong electric blast is loosed at the target. It may also leave the target with paralysis.
+Attack
+-----------------
+TM25
+Thunder
+Electric
+Special
+110
+70
+10
+30
+A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM43
+Flame Charge
+Fire
+Physical
+50
+100
+20
+100
+The user cloaks itself with flame and attacks. Building up more power, it raises the user's Speed stat.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM57
+Charge Beam
+Electric
+Special
+50
+90
+10
+70
+The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM72
+Volt Switch
+Electric
+Special
+70
+100
+20
+--
+After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Attack
+-----------------
+TM73
+Thunder Wave
+Electric
+Other
+--
+100
+20
+--
+A weak electric charge is launched at the target. It causes paralysis if it hits.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM93
+Wild Charge
+Electric
+Physical
+90
+100
+15
+--
+The user shrouds itself in electricity and smashes into its target. It also damages the user a little.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Double Kick
+Fighting
+Physical
+30
+100
+30
+--
+The target is quickly kicked twice in succession using both feet.
+Attack
+-----------------
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Me First
+Normal
+Other
+??
+--
+20
+--
+The user tries to cut ahead of the target to steal and use the target's intended move with greater power.
+Attack
+-----------------
+Rage
+Normal
+Physical
+20
+100
+20
+--
+As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle.
+Attack
+-----------------
+Sand Attack
+Ground
+Other
+--
+100
+15
+--
+Sand is hurled in the target's face, reducing its accuracy.
+Attack
+-----------------
+Screech
+Normal
+Other
+--
+85
+40
+--
+An earsplitting screech harshly reduces the target's Defense stat.
+Attack
+-----------------
+Shock Wave
+Electric
+Special
+60
+--
+20
+--
+The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
+Attack
+-----------------
+Snatch
+Dark
+Other
+--
+--
+10
+--
+The user steals the effects of any healing or stat-changing move the opponent attempts to use.
+Attack
+-----------------
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Magnet Rise
+Electric
+Other
+--
+--
+10
+--
+The user levitates using electrically generated magnetism for five turns.
+Attack
+-----------------
+Shock Wave
+Electric
+Special
+60
+--
+20
+--
+The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snatch
+Dark
+Other
+--
+--
+10
+--
+The user steals the effects of any healing or stat-changing move the opponent attempts to use.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

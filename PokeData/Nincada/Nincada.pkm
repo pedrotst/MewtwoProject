@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Nincada
+National No: 290
+Central No: 111
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 43
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Bug
+Type 2: Ground
+Trainee Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 5.5kg
+Lbs: 12.1lbs
+255
+3840
+PokeData/Nincada/Nincada.png
+PokeData/Nincada/Nincada-Shiny.png
+Name: Compoundeyes
+Description: Raises the Pokémon's accuracy by 30%
+Name: Run Away
+Description: Except for trainer battles, can always run from battle. Cannot run during Mean Look or Block or when the opponent is trapping with the Arena Trap, Magnet Pull, or Shadow Tag ability
+Exp to lvl 100: 600000
+Classification: Erratic
+70
+Defense: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 0.5
+Fire: 2.0
+Ground: 0.5
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

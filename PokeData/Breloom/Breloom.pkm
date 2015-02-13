@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Breloom
+National No: 286
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 36
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: NoType
+Mushroom Pokémon
+Meters: 1.2m
+Inches: 3'11"
+Kg: 39.2kg
+Lbs: 86.4lbs
+90
+3840
+PokeData/Breloom/Breloom.png
+PokeData/Breloom/Breloom-Shiny.png
+Name: Effect Spore
+Description: The opponent has a 10% chance of being induced by PARALYZE, POISON, or SLEEP when using an attack, that requires physical contact, against this Pokémon
+Name: Poison Heal
+Description: HP is restored by 1/8th the maximum HP every turn while the Pokémon has the Poison condition
+Name: Technician
+Description: Moves with a base power of 60 or less are boosted in power by 50%
+Exp to lvl 100: 1640000
+Classification: Fluctuating
+70
+Attack: 2
+Not Eligible/Known
+Grass: 0.5
+Psychic: 2.0
+Poison: 2.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 0.5
+Flying: 4.0
+Ghost: 1.0
+Dark: 0.5

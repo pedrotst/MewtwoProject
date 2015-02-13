@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Doduo
+National No: 84
+Central No: 94
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 95
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: Flying
+Twin Bird Pokémon
+Meters: 1.4m
+Inches: 4'07"
+Kg: 39.2kg
+Lbs: 86.4lbs
+190
+5120
+PokeData/Doduo/Doduo.png
+PokeData/Doduo/Doduo-Shiny.png
+Name: Run Away
+Description: Except for trainer battles, can always run from battle. Cannot run during Mean Look or Block or when the opponent is trapping with the Arena Trap, Magnet Pull, or Shadow Tag ability
+Name: Early Bird
+Description: Sleep conditions lasts for half as long, rounding down. For example, half of three turns is 1.5, which rounds down to one turn. When the number of turns to sleep is one, half of this rounded down is zero, and the Pokémon wakes up instantly
+Name: Tangled Feet
+Description: Pokémon's evasion raises one level when Confused
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 1.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

@@ -1,0 +1,787 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Conversion 2
+Normal
+Other
+--
+--
+30
+--
+The user changes its type to make itself resistant to the type of the attack the opponent used last.
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+—
+Conversion
+Normal
+Other
+--
+--
+30
+--
+The user changes its type to become the same type as the move at the top of the list of moves it knows.
+Attack
+-----------------
+—
+Sharpen
+Normal
+Other
+--
+--
+30
+--
+The user reduces its polygon count to make itself more jagged, raising the Attack stat.
+Attack
+-----------------
+7
+Psybeam
+Psychic
+Special
+65
+100
+20
+10
+The target is attacked with a peculiar ray. It may also cause confusion.
+Attack
+-----------------
+12
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+18
+Recover
+Normal
+Other
+--
+--
+10
+--
+Restoring its own cells, the user restores its own HP by half of its max HP.
+Attack
+-----------------
+23
+Magnet Rise
+Electric
+Other
+--
+--
+10
+--
+The user levitates using electrically generated magnetism for five turns.
+Attack
+-----------------
+29
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+34
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+40
+Discharge
+Electric
+Special
+80
+100
+15
+30
+A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.
+Attack
+-----------------
+45
+Lock-On
+Normal
+Other
+--
+--
+5
+--
+The user takes sure aim at the target. It ensures the next attack does not fail to hit the target.
+Attack
+-----------------
+50
+Tri Attack
+Normal
+Special
+80
+100
+10
+20
+The user strikes with a simultaneous three-beam attack. May also burn, freeze, or leave the target with paralysis.
+Attack
+-----------------
+56
+Magic Coat
+Psychic
+Other
+--
+--
+15
+--
+A barrier reflects back to the target moves like Leech Seed and moves that damage status.
+Attack
+-----------------
+62
+Zap Cannon
+Electric
+Special
+120
+50
+5
+100
+The user fires an electric blast like a cannon to inflict damage and cause paralysis.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Electroweb
+Electric
+Special
+55
+95
+15
+100
+The user captures and attacks opposing Pokémon by using an electric net. It reduces the targets' Speed stat.
+Attack
+-----------------
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+Gravity
+Psychic
+Other
+--
+--
+5
+--
+Gravity is intensified for five turns, making moves involving flying unusable and negating Levitate.
+Attack
+-----------------
+Icy Wind
+Ice
+Special
+55
+95
+15
+100
+The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Last Resort
+Normal
+Physical
+140
+100
+5
+--
+This move can be used only after the user has used all the other moves it knows in the battle.
+Attack
+-----------------
+Magic Coat
+Psychic
+Other
+--
+--
+15
+--
+A barrier reflects back to the target moves like Leech Seed and moves that damage status.
+Attack
+-----------------
+Magnet Rise
+Electric
+Other
+--
+--
+10
+--
+The user levitates using electrically generated magnetism for five turns.
+Attack
+-----------------
+Pain Split
+Normal
+Other
+--
+--
+20
+--
+The user adds its HP to the target's HP, then equally shares the combined HP with the target.
+Attack
+-----------------
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+Shock Wave
+Electric
+Special
+60
+--
+20
+--
+The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Trick
+Psychic
+Other
+--
+100
+10
+--
+The user catches the target off guard and swaps its held item with its own.
+Attack
+-----------------
+Wonder Room
+Psychic
+Other
+--
+--
+10
+--
+The user creates a bizarre area in which Pokémon's Defense and Sp. Def stats are swapped for five turns.
+Attack
+-----------------
+Zen Headbutt
+Psychic
+Physical
+80
+90
+15
+20
+The user focuses its willpower to its head and attacks the target. It may also make the target flinch.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+Attack
+-----------------
+Double-edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Mimic
+Normal
+Other
+--
+--
+10
+--
+The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+Attack
+-----------------
+Nightmare
+Ghost
+Other
+--
+100
+15
+--
+A sleeping target sees a nightmare that inflicts some damage every turn.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM03
+Psyshock
+Psychic
+Special
+80
+100
+10
+--
+The user materializes an odd psychic wave to attack the target. This attack does physical damage.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM13
+Ice Beam
+Ice
+Special
+90
+100
+10
+10
+The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Attack
+-----------------
+TM14
+Blizzard
+Ice
+Special
+110
+70
+5
+10
+A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM24
+Thunderbolt
+Electric
+Special
+90
+100
+15
+10
+A strong electric blast is loosed at the target. It may also leave the target with paralysis.
+Attack
+-----------------
+TM25
+Thunder
+Electric
+Special
+110
+70
+10
+30
+A wicked thunderbolt is dropped on the target to inflict damage. It may also leave the target with paralysis.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM29
+Psychic
+Psychic
+Special
+90
+100
+10
+10
+The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
+Attack
+-----------------
+TM30
+Shadow Ball
+Ghost
+Special
+80
+100
+15
+20
+The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM57
+Charge Beam
+Electric
+Special
+50
+90
+10
+70
+The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM73
+Thunder Wave
+Electric
+Other
+--
+100
+20
+--
+A weak electric charge is launched at the target. It causes paralysis if it hits.
+Attack
+-----------------
+TM77
+Psych Up
+Normal
+Other
+--
+--
+10
+--
+The user hypnotizes itself into copying any stat change made by the target.
+Attack
+-----------------
+TM85
+Dream Eater
+Psychic
+Special
+100
+100
+15
+--
+The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user's HP.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM92
+Trick Room
+Psychic
+Other
+--
+--
+5
+--
+The user creates a bizarre area in which slower Pokémon get to move first for five turns.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.

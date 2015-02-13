@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Lapras
+National No: 131
+Central No: 0
+Coastal No: 150
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: Ice
+Transport Pokémon
+Meters: 2.5m
+Inches: 8'02"
+Kg: 220.0kg
+Lbs: 485.0lbs
+45
+10240
+PokeData/Lapras/Lapras.png
+PokeData/Lapras/Lapras-Shiny.png
+Name: Water Absorb
+Description: The Pokémon heals up to 1/4 of it's maximum Hit Points when hit with Water-type moves
+Name: Shell Armor
+Description: Opponent's moves cannot Critical Hit
+Name: Hydration
+Description: All status problems: Burn, Paralysis, Sleep, Frozen and Poison, are healed when raining
+Exp to lvl 100: 1250000
+Classification: Slow
+70
+HP: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 1.0
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.25
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

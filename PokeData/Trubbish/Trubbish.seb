@@ -1,0 +1,630 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Pound
+Normal
+Physical
+40
+100
+35
+--
+The target is physically pounded with a long tail or a foreleg, etc.
+Attack
+-----------------
+—
+Poison Gas
+Poison
+Other
+--
+90
+40
+--
+A cloud of poison gas is sprayed in the face of opposing Pokémon. It may poison those hit.
+Attack
+-----------------
+3
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+7
+Toxic Spikes
+Poison
+Other
+--
+--
+20
+--
+The user lays a trap of poison spikes at the opponent's feet. They poison opponents that switch into battle.
+Attack
+-----------------
+12
+Acid Spray
+Poison
+Special
+40
+100
+20
+100
+The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.
+Attack
+-----------------
+14
+Double Slap
+Normal
+Physical
+15
+85
+10
+--
+The target is slapped repeatedly, back and forth, two to five times in a row.
+Attack
+-----------------
+18
+Sludge
+Poison
+Special
+65
+100
+20
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+23
+Stockpile
+Normal
+Other
+--
+--
+20
+--
+The user charges up power and raises both its Defense and Sp. Def. The move can be used three times.
+Attack
+-----------------
+23
+Swallow
+Normal
+Other
+--
+--
+10
+--
+The power stored using the move Stockpile is absorbed by the user to heal its HP. Storing more power heals more HP.
+Attack
+-----------------
+25
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+29
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+34
+Clear Smog
+Poison
+Special
+50
+--
+15
+--
+The user attacks by throwing a clump of special mud. All status changes are returned to normal.
+Attack
+-----------------
+36
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+40
+Amnesia
+Psychic
+Other
+--
+--
+20
+--
+The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.
+Attack
+-----------------
+42
+Belch
+Poison
+Special
+120
+90
+10
+--
+The user lets out a damaging belch on the target. The user must eat a Berry to use this move.
+Attack
+-----------------
+45
+Gunk Shot
+Poison
+Physical
+120
+80
+5
+30
+The user shoots filthy garbage at the target to attack. It may also poison the target.
+Attack
+-----------------
+47
+Explosion
+Normal
+Physical
+250
+100
+5
+--
+The user explodes to inflict damage on those around it. The user faints upon using this move.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM09
+Venoshock
+Poison
+Special
+65
+100
+10
+--
+The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM34
+Sludge Wave
+Poison
+Special
+95
+100
+10
+10
+It swamps the area around the user with a giant sludge wave. It may also poison those hit.
+Attack
+-----------------
+TM36
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM64
+Explosion
+Normal
+Physical
+250
+100
+5
+--
+The user explodes to inflict damage on those around it. The user faints upon using this move.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM83
+Infestation
+Bug
+Special
+20
+100
+20
+100
+The target is infested and attacked for four to five turns. The target can't flee during this time.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM97
+Dark Pulse
+Dark
+Special
+80
+100
+15
+20
+The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Curse
+Ghost
+Other
+--
+--
+10
+--
+A move that works differently for the Ghost type than for all other types.
+Attack
+-----------------
+Haze
+Ice
+Other
+--
+--
+30
+--
+The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.
+Attack
+-----------------
+Mud Sport
+Ground
+Other
+--
+--
+15
+--
+The user covers itself with mud. It weakens Electric-type moves for five turns.
+Attack
+-----------------
+Rock Blast
+Rock
+Physical
+25
+90
+10
+--
+The user hurls hard rocks at the target. Two to five rocks are launched in quick succession.
+Attack
+-----------------
+Rollout
+Rock
+Physical
+30
+90
+20
+--
+The user continually rolls into the target over five turns. It becomes stronger each time it hits.
+Attack
+-----------------
+Sand Attack
+Ground
+Other
+--
+100
+15
+--
+Sand is hurled in the target's face, reducing its accuracy.
+Attack
+-----------------
+Self-Destruct
+Normal
+Physical
+200
+100
+5
+--
+The user attacks everything around it by causing an explosion. The user faints upon using this move.
+Attack
+-----------------
+Spikes
+Ground
+Other
+--
+--
+20
+--
+The user lays a trap of spikes at the opposing team's feet. The trap hurts Pokémon that switch into battle.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Drain Punch
+Fighting
+Physical
+75
+100
+10
+--
+An energy-draining punch. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Gunk Shot
+Poison
+Physical
+120
+80
+5
+30
+The user shoots filthy garbage at the target to attack. It may also poison the target.
+Attack
+-----------------
+Pain Split
+Normal
+Other
+--
+--
+20
+--
+The user adds its HP to the target's HP, then equally shares the combined HP with the target.
+Attack
+-----------------
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Spite
+Ghost
+Other
+--
+100
+10
+--
+The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.

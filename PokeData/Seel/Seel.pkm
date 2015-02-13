@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Seel
+National No: 86
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Sea Lion Pokémon
+Meters: 1.1m
+Inches: 3'07"
+Kg: 90.0kg
+Lbs: 198.4lbs
+190
+5120
+PokeData/Seel/Seel.png
+PokeData/Seel/Seel-Shiny.png
+Name: Thick Fat
+Description: Fire and Ice-type moves deal 50% damage
+Name: Hydration
+Description: All status problems: Burn, Paralysis, Sleep, Frozen and Poison, are healed when raining
+Name: Ice Body
+Description: HP is restored by 1/16th of maximum HP when it's hailing
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Sp. Defense: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

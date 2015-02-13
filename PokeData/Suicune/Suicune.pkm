@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Suicune
+National No: 245
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+No gender
+Type 1: Water
+Type 2: NoType
+Aurora Pokémon
+Meters: 2.0m
+Inches: 6'07"
+Kg: 187.0kg
+Lbs: 412.3lbs
+3
+20480
+PokeData/Suicune/Suicune.png
+PokeData/Suicune/Suicune-Shiny.png
+Name: Pressure
+Description: When this Pokémon is hit by a move, the opponent's PP lowers by 2 rather than 1
+Name: Water Absorb
+Description: The Pokémon heals up to 1/4 of it's maximum Hit Points when hit with Water-type moves
+Exp to lvl 100: 1250000
+Classification: Slow
+35
+Defense: 1
+Sp. Defense: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,46 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Haunter
+National No: 93
+Central No: 0
+Coastal No: 0
+Mountain No: 31
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ghost
+Type 2: Poison
+Gas Pokémon
+Meters: 1.6m
+Inches: 5'03"
+Kg: 0.1kg
+Lbs: 0.2lbs
+90
+5120
+PokeData/Haunter/Haunter.png
+PokeData/Haunter/Haunter-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Attack: 2
+Eligible
+Grass: 0.5
+Psychic: 2.0
+Poison: 0.25
+Fight: 0.0
+Fire: 1.0
+Ground: 2.0
+Electric: 1.0
+Bug: 0.25
+Ice: 1.0
+Normal: 0.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 2.0
+Dark: 2.0

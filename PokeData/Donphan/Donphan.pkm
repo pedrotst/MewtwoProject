@@ -1,0 +1,49 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Donphan
+National No: 232
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 173
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: NoType
+Armor Pokémon
+Meters: 1.1m
+Inches: 3'07"
+Kg: 120.0kg
+Lbs: 264.6lbs
+60
+5120
+PokeData/Donphan/Donphan.png
+PokeData/Donphan/Donphan-Shiny.png
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Sand Veil
+Description: Raises the Pokémon's evasion during a sandstorm by one level
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Defense: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Yanma
+National No: 193
+Central No: 0
+Coastal No: 87
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Bug
+Type 2: Flying
+Clear Wing Pokémon
+Meters: 1.2m
+Inches: 3'11"
+Kg: 38.0kg
+Lbs: 83.8lbs
+75
+5120
+PokeData/Yanma/Yanma.png
+PokeData/Yanma/Yanma-Shiny.png
+Name: Speed Boost
+Description: Speed increases by one stage at the end of each turn
+Name: Compoundeyes
+Description: Raises the Pokémon's accuracy by 30%
+Name: Frisk
+Description: Reveals the foe's held item
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 1
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.25
+Fire: 2.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 4.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

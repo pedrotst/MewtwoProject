@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Clamperl
+National No: 366
+Central No: 0
+Coastal No: 141
+Mountain No: 0
+Hoenn No: 185
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Bivalve Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 52.5kg
+Lbs: 115.7lbs
+255
+5120
+PokeData/Clamperl/Clamperl.png
+PokeData/Clamperl/Clamperl-Shiny.png
+Name: Shell Armor
+Description: Opponent's moves cannot Critical Hit
+Name: Rattled
+Description: Speed is raised by one stage when the Pokémon is hit by a Bug-type, Ghost-type or Dark-type move
+Exp to lvl 100: 600000
+Classification: Erratic
+70
+Defense: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

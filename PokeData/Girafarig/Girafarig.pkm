@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Girafarig
+National No: 203
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 171
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: Psychic
+Long Neck Pokémon
+Meters: 1.5m
+Inches: 4'11"
+Kg: 41.5kg
+Lbs: 91.5lbs
+60
+5120
+PokeData/Girafarig/Girafarig.png
+PokeData/Girafarig/Girafarig-Shiny.png
+Name: Inner Focus
+Description: This Pokémon will not flinch. Does not prevent flinching with Focus Punch
+Name: Early Bird
+Description: Sleep conditions lasts for half as long, rounding down. For example, half of three turns is 1.5, which rounds down to one turn. When the number of turns to sleep is one, half of this rounded down is zero, and the Pokémon wakes up instantly
+Name: Sap Sipper
+Description: Attack is raised by one stage when the Pokémon is hit by a Grass-type move. User receives no damage from Grass-type attacks
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Sp. Attack: 2
+Not Eligible/Known
+Grass: 1.0
+Psychic: 0.5
+Poison: 1.0
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 2.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 2.0

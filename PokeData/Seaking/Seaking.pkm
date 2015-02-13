@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Seaking
+National No: 119
+Central No: 54
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 52
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Goldfish Pokémon
+Meters: 1.3m
+Inches: 4'03"
+Kg: 39.0kg
+Lbs: 86.0lbs
+60
+5120
+PokeData/Seaking/Seaking.png
+PokeData/Seaking/Seaking-Shiny.png
+Name: Swift Swim
+Description: When rainy, The Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Heavy Rain
+Name: Water Veil
+Description: This Pokémon cannot be Burned while having this ability
+Name: Lightningrod
+Description: Electric-type moves are drawn to this Pokémon. Electric-type moves will do no damage and the Pokémon's SP ATK is raised one stage. If the Pokémon is Ground-type, moves are drawn to it, but it gets no boost
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

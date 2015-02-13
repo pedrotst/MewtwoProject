@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Aerodactyl
+National No: 142
+Central No: 0
+Coastal No: 68
+Mountain No: 0
+Hoenn No: 0
+Male Rate :87.5%
+Female Rate :12.5%
+Type 1: Rock
+Type 2: Flying
+Fossil Pokémon
+Meters: 1.8m
+Inches: 5'11"
+Kg: 59.0kg
+Lbs: 130.1lbs
+45
+8960
+PokeData/Aerodactyl/Aerodactyl.png
+PokeData/Aerodactyl/Aerodactyl-Shiny.png
+Name: Rock Head
+Description: Does not receive recoil damage from recoil-causing damages
+Name: Pressure
+Description: When this Pokémon is hit by a move, the opponent's PP lowers by 2 rather than 1
+Name: Unnerve
+Description: The opponent Pokémon will never use their held Berry while the Pokémon is in battle
+Exp to lvl 100: 1250000
+Classification: Slow
+70
+Speed: 2
+Eligible
+Grass: 1.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 0.5
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 0.5
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 2.0
+Rock: 2.0
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Altaria
+National No: 334
+Central No: 0
+Coastal No: 0
+Mountain No: 140
+Hoenn No: 127
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Dragon
+Type 2: Flying
+Humming Pokémon
+Meters: 1.1m
+Inches: 3'07"
+Kg: 20.6kg
+Lbs: 45.4lbs
+45
+5120
+PokeData/Altaria/Altaria.png
+PokeData/Altaria/Altaria-Shiny.png
+Name: Natural Cure
+Description: The Pokémon's status (BURN, PARALYZE, SLEEP, POISON, FREEZE) is healed when withdrawn from battle
+Name: Cloud Nine
+Description: All weather effects are negated while the Pokémon is on the field
+Exp to lvl 100: 600000
+Classification: Erratic
+70
+Sp. Defense: 2
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 0.5
+Ground: 0.0
+Electric: 1.0
+Bug: 0.5
+Ice: 4.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 2.0
+Water: 0.5
+Steel: 1.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

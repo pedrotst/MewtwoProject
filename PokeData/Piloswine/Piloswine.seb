@@ -1,0 +1,854 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Ancient Power
+Rock
+Special
+60
+100
+5
+10
+The user attacks with a prehistoric power. It may also raise all the user's stats at once.
+Attack
+-----------------
+—
+Peck
+Flying
+Physical
+35
+100
+35
+--
+The target is jabbed with a sharply pointed beak or horn.
+Attack
+-----------------
+—
+Odor Sleuth
+Normal
+Other
+--
+--
+40
+--
+Enables a Ghost-type target to be hit with Normal- and Fighting-type attacks. It also enables an evasive target to be hit.
+Attack
+-----------------
+—
+Mud Sport
+Ground
+Other
+--
+--
+15
+--
+The user covers itself with mud. It weakens Electric-type moves for five turns.
+Attack
+-----------------
+—
+Powder Snow
+Ice
+Special
+40
+100
+25
+10
+The user attacks with a chilling gust of powdery snow. It may also freeze the targets.
+Attack
+-----------------
+5
+Mud Sport
+Ground
+Other
+--
+--
+15
+--
+The user covers itself with mud. It weakens Electric-type moves for five turns.
+Attack
+-----------------
+8
+Powder Snow
+Ice
+Special
+40
+100
+25
+10
+The user attacks with a chilling gust of powdery snow. It may also freeze the targets.
+Attack
+-----------------
+11
+Mud-Slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+14
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+18
+Mud Bomb
+Ground
+Special
+65
+85
+10
+30
+The user launches a hard-packed mud ball to attack. It may also lower the target's accuracy.
+Attack
+-----------------
+21
+Icy Wind
+Ice
+Special
+55
+95
+15
+100
+The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.
+Attack
+-----------------
+24
+Ice Fang
+Ice
+Physical
+65
+95
+15
+10
+The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.
+Attack
+-----------------
+28
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+33
+Fury Attack
+Normal
+Physical
+15
+85
+20
+--
+The target is jabbed repeatedly with a horn or beak two to five times in a row.
+Attack
+-----------------
+37
+Mist
+Ice
+Other
+--
+--
+30
+--
+The user cloaks its body with a white mist that prevents any of its stats from being cut for five turns.
+Attack
+-----------------
+41
+Thrash
+Normal
+Physical
+120
+100
+10
+--
+The user rampages and attacks for two to three turns. It then becomes confused, however.
+Attack
+-----------------
+46
+Earthquake
+Ground
+Physical
+100
+100
+10
+--
+The user sets off an earthquake that strikes those around it.
+Attack
+-----------------
+52
+Blizzard
+Ice
+Special
+110
+70
+5
+10
+A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Attack
+-----------------
+58
+Amnesia
+Psychic
+Other
+--
+--
+20
+--
+The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Headbutt
+Normal
+Physical
+70
+100
+15
+30
+The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.
+Attack
+-----------------
+Mimic
+Normal
+Other
+--
+--
+10
+--
+The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+Attack
+-----------------
+Defense Curl
+Normal
+Other
+--
+--
+40
+--
+The user curls up to conceal weak spots and raise its Defense stat.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM05
+Roar
+Normal
+Other
+--
+--
+20
+--
+The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM07
+Hail
+Ice
+Other
+--
+--
+10
+--
+The user summons a hailstorm lasting five turns. It damages all Pokémon except the Ice type.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM13
+Ice Beam
+Ice
+Special
+90
+100
+10
+10
+The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Attack
+-----------------
+TM14
+Blizzard
+Ice
+Special
+110
+70
+5
+10
+A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM26
+Earthquake
+Ground
+Physical
+100
+100
+10
+--
+The user sets off an earthquake that strikes those around it.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM28
+Dig
+Ground
+Physical
+80
+100
+10
+--
+The user burrows, then attacks on the second turn. It can also be used to exit dungeons.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM33
+Reflect
+Psychic
+Other
+--
+--
+20
+--
+A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
+Attack
+-----------------
+TM37
+Sandstorm
+Rock
+Other
+--
+--
+10
+--
+A five-turn sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.
+Attack
+-----------------
+TM39
+Rock Tomb
+Rock
+Physical
+60
+95
+15
+100
+Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM71
+Stone Edge
+Rock
+Physical
+100
+80
+5
+--
+The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio.
+Attack
+-----------------
+TM78
+Bulldoze
+Ground
+Physical
+60
+100
+20
+100
+The user stomps down on the ground and attacks everything in the area. Hit Pokémon's Speed stat is reduced.
+Attack
+-----------------
+TM80
+Rock Slide
+Rock
+Physical
+75
+90
+10
+30
+Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+Ice Shard
+Ice
+Physical
+40
+100
+30
+--
+The user flash freezes chunks of ice and hurls them at the target. This move always goes first.
+Attack
+-----------------
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Earth Power
+Ground
+Special
+90
+100
+10
+10
+The user makes the ground under the target erupt with power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+Endeavor
+Normal
+Physical
+??
+100
+5
+--
+An attack move that cuts down the target's HP to equal the user's HP.
+Attack
+-----------------
+Icy Wind
+Ice
+Special
+55
+95
+15
+100
+The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Stealth Rock
+Rock
+Other
+--
+--
+20
+--
+The user lays a trap of levitating stones around the opponent's team. The trap hurts opponents that switch into battle.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Ancient Power
+Rock
+Special
+60
+100
+5
+10
+The user attacks with a prehistoric power. It may also raise all the user's stats at once.
+Attack
+-----------------
+Avalanche
+Ice
+Physical
+60
+100
+10
+--
+An attack move that inflicts double the damage if the user has been hurt by the target in the same turn.
+Attack
+-----------------
+Bite
+Dark
+Physical
+60
+100
+25
+30
+The target is bitten with viciously sharp fangs. It may make the target flinch.
+Attack
+-----------------
+Body Slam
+Normal
+Physical
+85
+100
+15
+30
+The user drops onto the target with its full body weight. It may also leave the target with paralysis.
+Attack
+-----------------
+Curse
+Ghost
+Other
+--
+--
+10
+--
+A move that works differently for the Ghost type than for all other types.
+Attack
+-----------------
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Fissure
+Ground
+Physical
+??
+30
+5
+--
+The user opens up a fissure in the ground and drops the target in. The target instantly faints if it hits.
+Attack
+-----------------
+Freeze-Dry
+Ice
+Special
+70
+100
+20
+10
+The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.
+Attack
+-----------------
+Icicle Crash
+Ice
+Physical
+85
+90
+10
+30
+The user attacks by harshly dropping an icicle onto the target. It may also make the target flinch.
+Attack
+-----------------
+Icicle Spear
+Ice
+Physical
+25
+100
+30
+--
+The user launches sharp icicles at the target. It strikes two to five times in a row.
+Attack
+-----------------
+Mud Shot
+Ground
+Special
+55
+95
+15
+100
+The user attacks by hurling a blob of mud at the target. It also reduces the target's Speed.
+Attack
+-----------------
+Stealth Rock
+Rock
+Other
+--
+--
+20
+--
+The user lays a trap of levitating stones around the opponent's team. The trap hurts opponents that switch into battle.
+Attack
+-----------------
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.

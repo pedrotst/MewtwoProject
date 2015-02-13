@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Spinarak
+National No: 167
+Central No: 0
+Coastal No: 0
+Mountain No: 107
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Bug
+Type 2: Poison
+String Spit Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 8.5kg
+Lbs: 18.7lbs
+255
+3840
+PokeData/Spinarak/Spinarak.png
+PokeData/Spinarak/Spinarak-Shiny.png
+Name: Swarm
+Description: When HP is below 1/3rd its maximum, power of Bug-type moves is increased by 50%
+Name: Insomnia
+Description: The Pokémon cannot be put to Sleep while having this ability
+Name: Sniper
+Description: Power of critical-hit moves is increased to 225% rather than 150%
+Exp to lvl 100: 800000
+Classification: Fast
+70
+Attack: 1
+Not Eligible/Known
+Grass: 0.25
+Psychic: 2.0
+Poison: 0.5
+Fight: 0.25
+Fire: 2.0
+Ground: 1.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

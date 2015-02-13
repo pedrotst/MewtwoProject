@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Corphish
+National No: 341
+Central No: 51
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 134
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Ruffian Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 11.5kg
+Lbs: 25.4lbs
+205
+3840
+PokeData/Corphish/Corphish.png
+PokeData/Corphish/Corphish-Shiny.png
+Name: Hyper Cutter
+Description: Opponent cannot lower this Pokémon's Attack value. This Pokémon may still lower its own Attack value using a move of by itself
+Name: Shell Armor
+Description: Opponent's moves cannot Critical Hit
+Name: Adaptability
+Description: Increases the Same Type Attack Bonus from *1.5 to *2
+Exp to lvl 100: 1640000
+Classification: Fluctuating
+70
+Attack: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Bellossom
+National No: 182
+Central No: 108
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 94
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: NoType
+Flower Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 5.8kg
+Lbs: 12.8lbs
+45
+5120
+PokeData/Bellossom/Bellossom.png
+PokeData/Bellossom/Bellossom-Shiny.png
+Name: Chlorophyll
+Description: When sunny, the Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Strong Sunlight
+Name: Healer
+Description: At the end of the turn, there is a 30% chance of either Ally being healed from a status condition
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Defense: 3
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 2.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 2.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Exeggutor
+National No: 103
+Central No: 0
+Coastal No: 137
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: Psychic
+Coconut Pokémon
+Meters: 2.0m
+Inches: 6'07"
+Kg: 120.0kg
+Lbs: 264.6lbs
+45
+5120
+PokeData/Exeggutor/Exeggutor.png
+PokeData/Exeggutor/Exeggutor-Shiny.png
+Name: Chlorophyll
+Description: When sunny, the Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Strong Sunlight
+Name: Harvest
+Description: The Pokémon has a 50% chance of restoring a consumed berry. During sunshine, this chance increases to 100%
+Exp to lvl 100: 1250000
+Classification: Slow
+70
+Sp. Attack: 2
+Not Eligible/Known
+Grass: 0.5
+Psychic: 0.5
+Poison: 2.0
+Fight: 0.5
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 4.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 2.0
+Dark: 2.0

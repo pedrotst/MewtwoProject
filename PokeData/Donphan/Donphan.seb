@@ -1,0 +1,1127 @@
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM05
+Roar
+Normal
+Other
+--
+--
+20
+--
+The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM26
+Earthquake
+Ground
+Physical
+100
+100
+10
+--
+The user sets off an earthquake that strikes those around it.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM37
+Sandstorm
+Rock
+Other
+--
+--
+10
+--
+A five-turn sandstorm is summoned to hurt all combatants except the Rock, Ground, and Steel types.
+Attack
+-----------------
+TM39
+Rock Tomb
+Rock
+Physical
+60
+95
+15
+100
+Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM49
+Echoed Voice
+Normal
+Special
+40
+100
+15
+--
+The user attacks the target with an echoing voice. If this move is used every turn, it does greater damage.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM69
+Rock Polish
+Rock
+Other
+--
+--
+20
+--
+The user polishes its body to reduce drag. It can sharply raise the Speed stat.
+Attack
+-----------------
+TM71
+Stone Edge
+Rock
+Physical
+100
+80
+5
+--
+The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio.
+Attack
+-----------------
+TM74
+Gyro Ball
+Steel
+Physical
+??
+100
+5
+--
+The user tackles the target with a high-speed spin. The slower the user, the greater the damage.
+Attack
+-----------------
+TM78
+Bulldoze
+Ground
+Physical
+60
+100
+20
+100
+The user stomps down on the ground and attacks everything in the area. Hit Pokémon's Speed stat is reduced.
+Attack
+-----------------
+TM80
+Rock Slide
+Rock
+Physical
+75
+90
+10
+30
+Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch.
+Attack
+-----------------
+TM84
+Poison Jab
+Poison
+Physical
+80
+100
+20
+30
+The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Block
+Normal
+Other
+--
+--
+5
+--
+The user blocks the target's way with arms spread wide to prevent escape.
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Earth Power
+Ground
+Special
+90
+100
+10
+10
+The user makes the ground under the target erupt with power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+Endeavor
+Normal
+Physical
+??
+100
+5
+--
+An attack move that cuts down the target's HP to equal the user's HP.
+Attack
+-----------------
+Gunk Shot
+Poison
+Physical
+120
+80
+5
+30
+The user shoots filthy garbage at the target to attack. It may also poison the target.
+Attack
+-----------------
+Hyper Voice
+Normal
+Special
+90
+100
+10
+--
+The user lets loose a horribly echoing shout with the power to inflict damage.
+Attack
+-----------------
+Iron Defense
+Steel
+Other
+--
+--
+15
+--
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Last Resort
+Normal
+Physical
+140
+100
+5
+--
+This move can be used only after the user has used all the other moves it knows in the battle.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Stealth Rock
+Rock
+Other
+--
+--
+20
+--
+The user lays a trap of levitating stones around the opponent's team. The trap hurts opponents that switch into battle.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Headbutt
+Normal
+Physical
+70
+100
+15
+30
+The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.
+Attack
+-----------------
+Double-edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Mimic
+Normal
+Other
+--
+--
+10
+--
+The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+ΩRαS Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Fire Fang
+Fire
+Physical
+65
+95
+15
+10
+The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned.
+Attack
+-----------------
+—
+Thunder Fang
+Electric
+Physical
+65
+95
+15
+10
+The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.
+Attack
+-----------------
+—
+Horn Attack
+Normal
+Physical
+65
+100
+25
+--
+The target is jabbed with a sharply pointed horn to inflict damage.
+Attack
+-----------------
+—
+Bulldoze
+Ground
+Physical
+60
+100
+20
+100
+The user stomps down on the ground and attacks everything in the area. Hit Pokémon's Speed stat is reduced.
+Attack
+-----------------
+—
+Growl
+Normal
+Other
+--
+100
+40
+--
+The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.
+Attack
+-----------------
+—
+Defense Curl
+Normal
+Other
+--
+--
+40
+--
+The user curls up to conceal weak spots and raise its Defense stat.
+Attack
+-----------------
+6
+Rapid Spin
+Normal
+Physical
+20
+100
+40
+--
+A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.
+Attack
+-----------------
+10
+Rollout
+Rock
+Physical
+30
+90
+20
+--
+The user continually rolls into the target over five turns. It becomes stronger each time it hits.
+Attack
+-----------------
+15
+Assurance
+Dark
+Physical
+60
+100
+10
+--
+If the target has already taken some damage in the same turn, this attack's power is doubled.
+Attack
+-----------------
+19
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+24
+Slam
+Normal
+Physical
+80
+75
+20
+--
+The target is slammed with a long tail, vines, etc., to inflict damage.
+Attack
+-----------------
+25
+Fury Attack
+Normal
+Physical
+15
+85
+20
+--
+The target is jabbed repeatedly with a horn or beak two to five times in a row.
+Attack
+-----------------
+30
+Magnitude
+Ground
+Physical
+??
+100
+30
+--
+The user looses a ground-shaking quake affecting everyone around the user. Its power varies.
+Attack
+-----------------
+37
+Scary Face
+Normal
+Other
+--
+100
+10
+--
+The user frightens the target with a scary face to harshly reduce its Speed stat.
+Attack
+-----------------
+43
+Earthquake
+Ground
+Physical
+100
+100
+10
+--
+The user sets off an earthquake that strikes those around it.
+Attack
+-----------------
+50
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Odor Sleuth
+Normal
+Other
+--
+--
+40
+--
+Enables a Ghost-type target to be hit with Normal- and Fighting-type attacks. It also enables an evasive target to be hit.
+Attack
+-----------------
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+Charm
+Fairy
+Other
+--
+100
+20
+--
+The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.
+Attack
+-----------------
+Last Resort
+Normal
+Physical
+140
+100
+5
+--
+This move can be used only after the user has used all the other moves it knows in the battle.
+Attack
+-----------------
+Double-edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+X & Y Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Fire Fang
+Fire
+Physical
+65
+95
+15
+10
+The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned.
+Attack
+-----------------
+—
+Thunder Fang
+Electric
+Physical
+65
+95
+15
+10
+The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.
+Attack
+-----------------
+—
+Horn Attack
+Normal
+Physical
+65
+100
+25
+--
+The target is jabbed with a sharply pointed horn to inflict damage.
+Attack
+-----------------
+—
+Growl
+Normal
+Other
+--
+100
+40
+--
+The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.
+Attack
+-----------------
+—
+Defense Curl
+Normal
+Other
+--
+--
+40
+--
+The user curls up to conceal weak spots and raise its Defense stat.
+Attack
+-----------------
+—
+Bulldoze
+Ground
+Physical
+60
+100
+20
+100
+The user stomps down on the ground and attacks everything in the area. Hit Pokémon's Speed stat is reduced.
+Attack
+-----------------
+6
+Rapid Spin
+Normal
+Physical
+20
+100
+40
+--
+A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.
+Attack
+-----------------
+10
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+15
+Rollout
+Rock
+Physical
+30
+90
+20
+--
+The user continually rolls into the target over five turns. It becomes stronger each time it hits.
+Attack
+-----------------
+19
+Magnitude
+Ground
+Physical
+??
+100
+30
+--
+The user looses a ground-shaking quake affecting everyone around the user. Its power varies.
+Attack
+-----------------
+24
+Slam
+Normal
+Physical
+80
+75
+20
+--
+The target is slammed with a long tail, vines, etc., to inflict damage.
+Attack
+-----------------
+25
+Fury Attack
+Normal
+Physical
+15
+85
+20
+--
+The target is jabbed repeatedly with a horn or beak two to five times in a row.
+Attack
+-----------------
+31
+Assurance
+Dark
+Physical
+60
+100
+10
+--
+If the target has already taken some damage in the same turn, this attack's power is doubled.
+Attack
+-----------------
+39
+Scary Face
+Normal
+Other
+--
+100
+10
+--
+The user frightens the target with a scary face to harshly reduce its Speed stat.
+Attack
+-----------------
+46
+Earthquake
+Ground
+Physical
+100
+100
+10
+--
+The user sets off an earthquake that strikes those around it.
+Attack
+-----------------
+54
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Ancient Power
+Rock
+Special
+60
+100
+5
+10
+The user attacks with a prehistoric power. It may also raise all the user's stats at once.
+Attack
+-----------------
+Body Slam
+Normal
+Physical
+85
+100
+15
+30
+The user drops onto the target with its full body weight. It may also leave the target with paralysis.
+Attack
+-----------------
+Counter
+Fighting
+Physical
+??
+100
+20
+--
+A retaliation move that counters any physical attack, inflicting double the damage taken.
+Attack
+-----------------
+Endeavor
+Normal
+Physical
+??
+100
+5
+--
+An attack move that cuts down the target's HP to equal the user's HP.
+Attack
+-----------------
+Fissure
+Ground
+Physical
+??
+30
+5
+--
+The user opens up a fissure in the ground and drops the target in. The target instantly faints if it hits.
+Attack
+-----------------
+Focus Energy
+Normal
+Other
+--
+--
+30
+--
+The user takes a deep breath and focuses so that critical hits land more easily.
+Attack
+-----------------
+Head Smash
+Rock
+Physical
+150
+80
+5
+--
+The user attacks the target with a hazardous, full-power headbutt. The user also takes terrible damage.
+Attack
+-----------------
+Heavy Slam
+Steel
+Physical
+??
+100
+10
+--
+The user slams into the target with its heavy body. The more the user outweighs the target, the greater its damage.
+Attack
+-----------------
+Ice Shard
+Ice
+Physical
+40
+100
+30
+--
+The user flash freezes chunks of ice and hurls them at the target. This move always goes first.
+Attack
+-----------------
+Mud-Slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+Play Rough
+Fairy
+Physical
+90
+90
+10
+10
+The user plays rough with the target and attacks it. This may also lower the target's Attack stat.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

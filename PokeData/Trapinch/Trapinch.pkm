@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Trapinch
+National No: 328
+Central No: 0
+Coastal No: 0
+Mountain No: 3
+Hoenn No: 121
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: NoType
+Ant Pit Pokémon
+Meters: 0.7m
+Inches: 2'04"
+Kg: 15.0kg
+Lbs: 33.1lbs
+255
+5120
+PokeData/Trapinch/Trapinch.png
+PokeData/Trapinch/Trapinch-Shiny.png
+Name: Hyper Cutter
+Description: Opponent cannot lower this Pokémon's Attack value. This Pokémon may still lower its own Attack value using a move of by itself
+Name: Arena Trap
+Description: The opponent cannot run nor switch. Flying-type Pokémon and Pokémon with the Levitate special ability are unaffected. If this Pokémon switches, the opponent is still trapped for that turn. The opponent may still switch by using Baton Pass
+Name: Sheer Force
+Description: Moves with a secondary effect are increased in power by 33% but lose their secondary effect
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Attack: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0
