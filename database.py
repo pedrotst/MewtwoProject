@@ -320,6 +320,62 @@ class AttacksManager(Manager):
 				
     class AttackNotFoundError(Exception):
         pass
+        
+class PokeAttacksManager(Manager):
+    def createTablePkAttacks(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeAttacks(PokeName TEXT, AtkName TEXT, AtkGroup TEXT, Condition TEXT, PRIMARY KEY (PokeName, AtkGroup, Condition))''')
+
+    def insertPokeAttacks(self, pokeName = None, atkName = None, atkGroup = None , condition = None):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Poke name not str')
+        if not (isinstance(atkName,str) ):
+            raise TypeError('atk name not str')
+        if not (isinstance(atkGroup,str) ):
+            raise TypeError('atk group not str')
+        if not (isinstance(condition,str) ):
+            raise TypeError('condition not str')
+            
+        self._certifyConnection()
+        
+        attackData = (pokeName,atkName, atkGroup, condition)
+        AM = AttacksManager()
+        if AM.getAttackByName(attackData[1]) is None:
+            raise self.DescriptionError('Attack '+ atkName+ ' is not in database')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO PokeAttacks VALUES (?,?,?,?)",attackData)
+            except sqlite3.OperationalError as error:
+                self.createTablePkAttacks()
+                cursor.execute("INSERT INTO PokeAttacks VALUES (?,?,?,?)",attackData)
+        
+    def getAttacksByPoke(self,name):
+        self._certifyConnection()
+        search = (name,)
+        if not isinstance(name,str):
+            raise TypeError('Pokemon\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM PokeAttacks WHERE PokeName=? ORDER BY Condition',search)
+        attackData = cursor.fetchall()
+        if(attackData is not None):
+            print(*attackData, sep='\n')
+#return attackData
+        else:
+            raise self.AttackNotFoundError('Pokemon was not found')
+		
+		
+    def view(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            for row in conn.cursor().execute('SELECT * FROM PokeAttacks'):
+                print(row)
+				
+    class DescriptionError(Exception):
+        pass
 '''#depois eu ia montar o PokeAttacksManager
 #e rodar ele pra inserir os pokemons e que ataques eles aprendem
 

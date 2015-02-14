@@ -21,8 +21,11 @@ def run(i):
     print(i)
     c.parseSerebii()
     poke = Pokemon(c.getPoke())
-    poke.createAttacksDatabase()
-    
+##    poke.createAbilityDatabase()
+##    poke.createPokemonAbilityDatabase()
+##    poke.createAttacksDatabase()
+    poke.createPokemonAttacksDatabase()
+
 class importSerebii():
     def __init__(self):
         self.__poke = {}

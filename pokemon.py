@@ -148,7 +148,18 @@ class Pokemon:
                     manager.insertAttack(attack = attack)
                 except sqlite3.IntegrityError:
                     pass
+                    
+    def createPokemonAttacksDatabase(self):
+        managerAtt = AttacksManager()
+        managerPkAtts = PokeAttacksManager()
+        for key in self.__attacks.getAttackGroups():
+            for attack in self.__attacks.getAttackGroup(key):
+                try:
+                    managerPkAtts.insertPokeAttacks(self.__name, attack.getName(), key, str(attack.getCondition()))
+                except sqlite3.IntegrityError:
+                    pass
 
+        
     ##Load Pokemon
     def load(self,name):
         dirName = 'PokeData/'+name+'/'
