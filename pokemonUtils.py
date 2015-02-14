@@ -688,7 +688,16 @@ class Attack:
         self.__description = description
 
     def __str__(self):
-        return self.__name+str(self.__cat)
+        string =  'Name: '+self.__name
+        string += '\nType: '+self.__atkType
+        string += '\nCategory: '+self.__cat
+        string += '\nAttribute: '+str(self.__att)
+        string += '\nAccuracy: '+str(self.__acc)
+        string += '\nPP: '+str(self.__pp)
+        string += '\nEffect: '+self.__effect
+        string += '\nDescription: '+self.__description
+        return string
+
     def __repr__(self):
         return self.__str__()
 

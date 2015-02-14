@@ -25,7 +25,8 @@ class Manager:
     def _connectToDatabase(self):
         self._connection = sqlite3.connect(self._databasePath)
 
-
+#controla a tabela Abilities que contem todas habilidades que existem e sua descrição
+#só permite um tipo de query: getAbilityByName
 class AbilitiesManager(Manager):
     def createTableAbilities(self):
         self._certifyConnection()
@@ -296,8 +297,44 @@ class AttacksManager(Manager):
                 self.createTableAbilities()
                 cursor.execute("INSERT INTO Attacks VALUES (?,?,?,?,?,?,?,?)",attackData)
         
+    def getAttackByName(self,name):
+        self._certifyConnection()
+        search = (name,)
+        if not isinstance(name,str):
+            raise TypeError('Attack\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM Attacks WHERE Name=?',search)
+        attackData = cursor.fetchone()
+        if(attackData is not None):
+            return Attack(0,attackData[0],attackData[1],attackData[2],attackData[3],attackData[4],attackData[5],attackData[6],attackData[7])
+        else:
+            raise self.AttackNotFoundError('Attack was not found')
+		
+		
     def view(self):
         self._certifyConnection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Attacks'):
                 print(row)
+				
+    class AttackNotFoundError(Exception):
+        pass
+'''#depois eu ia montar o PokeAttacksManager
+#e rodar ele pra inserir os pokemons e que ataques eles aprendem
+
+#faz a tabela PokemonAttackers
+#ela vai ter 3 columns
+#a primeira é o nome do pokemon
+#a segunda uma condicao
+#a terceira é o nome do atk
+#só que a combinacao da primeira e da terceira colunas tem que ser unica
+create table t (
+PokemonName text,
+Condition text,
+AttackName text,
+primary key (PokemonName,AttackName)
+)'''
+if __name__ == '__main__':
+    c = AttacksManager()
+    c.getAttackByName("Gust")
