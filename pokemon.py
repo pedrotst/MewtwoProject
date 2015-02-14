@@ -150,12 +150,18 @@ class Pokemon:
                     pass
                     
     def createPokemonAttacksDatabase(self):
-        managerAtt = AttacksManager()
         managerPkAtts = PokeAttacksManager()
         for key in self.__attacks.getAttackGroups():
             for attack in self.__attacks.getAttackGroup(key):
                 try:
                     managerPkAtts.insertPokeAttacks(self.__name, attack.getName(), key, str(attack.getCondition()))
+                except sqlite3.IntegrityError:
+                    pass
+
+    def createPokemonItemsDatabase(self):
+        managerPkItems = PokeItemsManager()
+                try:
+                    managerPkItems.insertPokeItems(self.__name, self.__wildItems.getNormalItem())
                 except sqlite3.IntegrityError:
                     pass
 

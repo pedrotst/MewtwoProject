@@ -484,6 +484,12 @@ class PokeWildItems():
             self.__dexNav = split_uppercase(aux[1])+extras
         except IndexError:
             self.__dexNav = None
+            
+        def getNormalItem(serlf):
+            return self.__normal
+         
+        def getDexNav(self):
+            return self.__getNav
 ##        print(wI,'\nNormal :',self.__normal,'\nDexNav :',self.__dexNav)
 
 """ Capture Rate Class for Database--------------------------------------------------

@@ -363,7 +363,55 @@ class PokeAttacksManager(Manager):
         attackData = cursor.fetchall()
         if(attackData is not None):
             print(*attackData, sep='\n')
-#return attackData
+            #return attackData
+        else:
+            raise self.AttackNotFoundError('Pokemon was not found')
+		
+		
+    def view(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            for row in conn.cursor().execute('SELECT * FROM PokeAttacks'):
+                print(row)
+				
+    class DescriptionError(Exception):
+        pass
+        
+class PokeItemsManager(Manager):
+    def createTablePkItems(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeItems(PokeName TEXT PRIMARY KEY, ItemName Text''')
+
+    def insertPokeItem(self, pokeName = None, itemName = None):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Poke name not str')
+        if not (isinstance(itemName,str) ):
+            raise TypeError('atk name not str')
+        self._certifyConnection()
+        
+        pkItemData = (pokeName,itemName) #itemname nao devia ser uma lista? to confuso. Senao ta pronto
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO PokeItems VALUES (?,?)",pkItemData)
+            except sqlite3.OperationalError as error:
+                self.createTablePkItems()
+                cursor.execute("INSERT INTO PokeItems VALUES (?,?)",pkItemData)
+        
+    def getItemsByPoke(self,name): #todo
+        self._certifyConnection()
+        search = (name,)
+        if not isinstance(name,str):
+            raise TypeError('Pokemon\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM PokeAttacks WHERE PokeName=? ORDER BY Condition',search)
+        attackData = cursor.fetchall()
+        if(attackData is not None):
+            print(*attackData, sep='\n')
+            #return attackData
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
 		
