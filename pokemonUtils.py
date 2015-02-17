@@ -97,15 +97,15 @@ class PokeGender:
             raise TypeError('Rate must be a \'Number\'')
         self.__male = maleRate
         self.__female = femaleRate
-        self.__genderless = 0
+        self.__genderless = False
         if(self.__male==self.__female==0):
-            self.__genderless = 1
+            self.__genderless = True
 
     def __str__(self):
-        try:
+        if(not self.__genderless):
             string = 'Male Rate :'+str(self.getMaleRate())+'%'
             string += '\nFemale Rate :'+str(self.getFemaleRate())+'%'
-        except GenderException:
+        else:
             string = 'No gender'
         return string
 
@@ -113,14 +113,13 @@ class PokeGender:
         return self.__str__()
 
     def getMaleRate(self):
-        if(self.__genderless):
-            raise GenderException('No Gender')
         return self.__male
 
     def getFemaleRate(self):
-        if(self.__genderless):
-            raise GenderException('No Gender')
         return self.__female
+
+    def isGenderless(self):
+        return self.__genderless
 
 """ Stats Class for Database--------------------------------------------------
 """
@@ -309,7 +308,7 @@ class PokeWeight:
     def getKg(self):
         return self.__kg
 
-    def getValueInlbs(self):
+    def getValueInLbs(self):
         return self.__lbsValue
 
     def getlbs(self):
@@ -398,7 +397,7 @@ class PokeExpGrowth:
         return self.__str__()
 
     def getExpGrowth(self):
-        return self.__expG
+        return self.__exp
 
     def getClassification(self):
         return self.__classification
@@ -466,6 +465,11 @@ class PokeWeaknesses:
     def __repr__(self):
         return self.__str__()
 
+    def __getitem__(self,key):
+        if isinstance(key,str):
+            key = Type.__fromStr__(key)
+        return self.__weaknesses[key]
+
     def getWeaknesses(self):
         return self.__weaknesses
 
@@ -485,11 +489,21 @@ class PokeWildItems():
         except IndexError:
             self.__dexNav = None
             
-        def getNormalItem(serlf):
-            return self.__normal
+    def __str__(self):
+        string = '\nNormal :'+str(self.__normal)+'\nDexNav :'+str(self.__dexNav)
+        return string
+
+    def __repr__(self):
+        return self.__str__()
+        
+    def getNormalItems(self):
+        return self.__normal
          
-        def getDexNav(self):
-            return self.__getNav
+    def getDexNavItems(self):
+        try:
+            return self.__dexNav
+        except AttributeError:
+            return None
 ##        print(wI,'\nNormal :',self.__normal,'\nDexNav :',self.__dexNav)
 
 """ Capture Rate Class for Database--------------------------------------------------
@@ -515,6 +529,12 @@ class PokeCR:
     def __repr__(self):
         return self.__str__()
 
+    def getXY(self):
+        return self.__crXY
+
+    def getORAS(self):
+        return self.__cRORAS
+
 """ Egg Group Class for Database--------------------------------------------------
 """
 
@@ -538,6 +558,13 @@ class PokeEggGroup:
 
     def __repr__(self):
         return self.__str__()
+
+    def getGroup1(self):
+        return self.__group1
+
+    def getGroup2(self):
+        return self.__group2
+
 
 """ Poke Evo Class for Database--------------------------------------------------
 """
@@ -639,6 +666,19 @@ class PokeLocation:
     def __repr__(self):
         return self.__str__()
 
+    def getX(self):
+        return self.__x
+
+    def getY(self):
+        return self.__y
+
+    def getOR(self):
+        return self.__oR
+
+    def getAS(self):
+        return self.__aS
+
+
 """ Poke Flavour Text for Database--------------------------------------------------
 """
 
@@ -666,6 +706,19 @@ class PokeDexText:
 
     def __repr__(self):
         return self.__str__()
+
+    def getX(self):
+        return self.__x
+
+    def getY(self):
+        return self.__y
+
+    def getOR(self):
+        return self.__oR
+
+    def getAS(self):
+        return self.__aS
+
 
 """ Poke Attacks for Database--------------------------------------------------
 """
