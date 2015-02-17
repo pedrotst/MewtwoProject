@@ -94,26 +94,18 @@ class Pokemon:
 
     def __str__(self):
         string =  str(self.__name)
-##        string += '\n'+str(self.__num)
-##        string += '\n'+str(self.__gender)
-##        string += '\n'+str(self.__types)
-##        string += '\n'+str(self.__classification)
-##        string += '\n'+str(self.__height)
-##        string += '\n'+str(self.__weight)
-##        string += '\n'+str(self.__captureRate)
-##        string += '\n'+str(self.__baseEggSteps)
-##        string += '\n'+str(self.__img)
-##        string += '\n'+str(self.__abilities)
-##        string += '\n'+str(self.__expGrowth)
-##        string += '\n'+str(self.__baseHappiness)
-##        string += '\n'+str(self.__evWorth)
-##        string += '\n'+str(self.__skyBattle)
-##        string += '\n'+str(self.__weaknesses)
-        
         return string
 
     def __repr__(self):
         return self.__str__()
+
+    def getFromDatabase(name):##TODO Terminar e retornar nova instance da classe, criado pelo manager
+        if isinstance(name,str):
+            print(name)
+            db = DatabaseManager()
+            print(db.getPokemonByName(name))
+        else:
+            raise Exception('Name is not string')
 
     ##Save Pokemon
     def createAbilityDatabase(self):
@@ -160,10 +152,40 @@ class Pokemon:
 
     def createPokemonItemsDatabase(self):
         managerPkItems = PokeItemsManager()
+        for item in self.__wildItems.getNormalItems():
+            if(item != 'None' and item != ''):
+                parts = item.split(' - ')
+                itemName = parts[0].strip()
+                itemChance = int(parts[1].strip(' %(SuperSize)'))
                 try:
-                    managerPkItems.insertPokeItems(self.__name, self.__wildItems.getNormalItem())
+                    managerPkItems.insertPokeItem(self.__name, itemName,itemChance)
                 except sqlite3.IntegrityError:
                     pass
+
+    def createPokemonDexNavItemsDatabase(self):
+        managerPkItems = PokeDexNavItemsManager()
+        dexNavItems = self.__wildItems.getDexNavItems()
+        if dexNavItems:
+            for item in self.__wildItems.getDexNavItems():
+                item = item.strip(' %')
+                if(item != 'None' and item != ''):
+                    try:
+                        managerPkItems.insertPokeDexNavItem(self.__name, item)
+                    except sqlite3.IntegrityError:
+                        pass
+
+    def createPokemonEVWorthDatabase(self):
+        manager = PokemonEVWorthManager()
+        for ev in self.getEVWorth().getEVs():
+            print(ev)
+            try:
+                manager.insertPokeEvWorth(self.__name,ev)
+            except sqlite3.IntegrityError:
+                pass
+
+    def createPokemonDatabase(self):
+        manager = PokemonManager()
+        manager.insertPokemon(self)
 
         
     ##Load Pokemon
@@ -211,7 +233,11 @@ class Pokemon:
             print(self.__name)
         except UnicodeEncodeError:
             print(self.__name.encode('utf-8','ignore'))
-            
+
+##Get Name----------------------------------------------------------------------
+    def getName(self):
+        return self.__name
+
 ##Set Num----------------------------------------------------------------------
     def __setNum(self,poke):
         self.__num = DexNum(poke['No']['National'][1:],
@@ -219,6 +245,10 @@ class Pokemon:
                             poke['No']['Coastal'][1:],
                             poke['No']['Mountain'][1:],
                             poke['No']['Hoenn'][1:])
+
+##Get Num----------------------------------------------------------------------
+    def getDexNum(self):
+        return self.__num
 
 ##Set Gender----------------------------------------------------------------------
     def __setGender(self,poke):
@@ -230,6 +260,10 @@ class Pokemon:
         except (KeyError,TypeError):
             self.__gender = PokeGender()
 
+##Get Gender----------------------------------------------------------------------
+    def getGender(self):
+        return self.__gender
+
 ##Set Types----------------------------------------------------------------------
     def __setTypes(self,poke):
         try:
@@ -240,9 +274,17 @@ class Pokemon:
         except IndexError:
             self.__types = PokeTypes(type1)
 
+##Get Types----------------------------------------------------------------------
+    def getTypes(self):
+        return self.__types
+
 ##Set Classification----------------------------------------------------------------------
     def __setClassification(self,poke):
         self.__classification = poke['Classification'].pop()
+
+##Get Classification----------------------------------------------------------------------
+    def getClassification(self):
+        return self.__classification
 
 ##Set Height----------------------------------------------------------------------
     def __setHeight(self,poke):
@@ -255,6 +297,13 @@ class Pokemon:
         else:            
             self.__height = PokeHeight(h[1],h[0])
 
+##Get Height----------------------------------------------------------------------
+    def getHeight(self):
+        if isinstance(self.__height,list):
+            return self.__height[0]
+        else:
+            return self.__height
+
 ##Set Weight----------------------------------------------------------------------
     def __setWeight(self,poke):
         Weight = poke['Weight'][0]
@@ -265,10 +314,22 @@ class Pokemon:
             self.__weight.append(PokeWeight(w[5],w[2]))
         else:            
             self.__weight = PokeWeight(w[1],w[0])
+
+##Get Weight----------------------------------------------------------------------
+    def getWeight(self):
+        if isinstance(self.__weight,list):
+            return self.__weight[0]
+        else:
+            return self.__weight
+
             
 ##Set CaptureRate----------------------------------------------------------------------
     def __setCaptureRate(self,poke):
         self.__captureRate = PokeCR(poke['Capture Rate'])
+
+##Get CaptureRate----------------------------------------------------------------------
+    def getCaptureRate(self):
+        return self.__captureRate
 
 ##Set BaseEggSteps----------------------------------------------------------------------
     def __setBaseEggSteps(self,poke):
@@ -277,10 +338,17 @@ class Pokemon:
             steps = 0
         self.__baseEggSteps = int(steps)
 
+##Get BaseEggSteps----------------------------------------------------------------------
+    def getBaseEggSteps(self):
+        return self.__baseEggSteps
+
 ##Set Image Path----------------------------------------------------------------------
     def __setImagePath(self,poke):
         self.__img = PokeImage(poke['Picture'],poke['Picture-Shiny'])
-
+        
+##Get Image Path----------------------------------------------------------------------
+    def getImagePath(self):
+        return self.__img
 
 ##Set Abilities----------------------------------------------------------------------
     def __setAbilities(self,poke):
@@ -291,9 +359,17 @@ class Pokemon:
     def __setExpGrowth(self,poke):
         self.__expGrowth = PokeExpGrowth(poke['Experience Growth'])
 
+##Get ExpGrowth----------------------------------------------------------------------
+    def getExpGrowth(self):
+        return self.__expGrowth
+
 ##Set baseHappines----------------------------------------------------------------------
     def __setBaseHappiness(self,poke):
         self.__baseHappiness = int(poke['Base Happiness'].pop())
+
+##Get baseHappines----------------------------------------------------------------------
+    def getHappiness(self):
+       return self.__baseHappiness
 
 ##Set evWorth----------------------------------------------------------------------
     def __setEvWorth(self,poke):
@@ -361,13 +437,30 @@ class Pokemon:
                               PokeEVWorth([evPirouette])]
         else:
             self.__evWorth = PokeEVWorth(poke['Effort Values Earned'])
+
+##Get evWorth----------------------------------------------------------------------
+    def getEVWorth(self):
+        if isinstance(self.__evWorth,list):
+            return self.__evWorth[0]
+        else:
+            return self.__evWorth
+
+
 ##Set SkyBattle----------------------------------------------------------------------
     def __setSkyBattle(self,poke):
         self.__skyBattle = poke['Eligible for Sky Battle?'].pop().strip()
 
+#Get SkyBattle-----------------------------------------------------------------------
+    def getSkyBattle(self):
+        return self.__skyBattle
+
 ##Set Weaknesses----------------------------------------------------------------------
     def __setWeaknesses(self,poke):
         self.__weaknesses = PokeWeaknesses(poke['Weaknesses'])
+
+##Get Weaknesses---------------------------------------------------------------------
+    def getWeaknesses(self):
+        return self.__weaknesses
 
 ##Set WildHoldItem----------------------------------------------------------------------
     def __setWildItems(self,poke):
@@ -376,6 +469,11 @@ class Pokemon:
 ##Set EggGroup----------------------------------------------------------------------
     def __setEggGroup(self,poke):
         self.__eggGroups = PokeEggGroup(poke['Egg Groups'])
+
+##Get EggGroup----------------------------------------------------------------------
+    def getEggGroups(self):
+        return  self.__eggGroups
+
         
 ##Set EvoChain----------------------------------------------------------------------
     def __setEvoChain(self,poke):
@@ -384,15 +482,27 @@ class Pokemon:
 ##Set Location----------------------------------------------------------------------
     def __setLocation(self,poke):
         self.__location = PokeLocation(poke['Location'])
+
+##Get Location----------------------------------------------------------------------
+    def getLocation(self):
+        return self.__location
         
 ##Set DexText----------------------------------------------------------------------
     def __setDexText(self,poke):
         self.__dexText = PokeDexText(poke['Flavour Text'])
-        
+
+##Get DexText----------------------------------------------------------------------
+    def getDexText(self):
+        return self.__dexText
+
 ##Set Attacks----------------------------------------------------------------------
     def __setAttacks(self,poke):
         self.__attacks = PokeAttacks(poke['Attacks'])
+        
 ##Set Stats----------------------------------------------------------------------
     def __setStats(self,poke):
         self.__stats = PokeStats(poke['Stats'])
  
+##Get Stats----------------------------------------------------------------------
+    def getStats(self):
+        return self.__stats        
