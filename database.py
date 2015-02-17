@@ -651,6 +651,38 @@ class PokemonManager(Manager):
     class DescriptionError(Exception):
         pass
 
+class ItemCategoryManager(Manager):
+    def createItemCategoryTable(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS ItemCategory(ItemName TEXT PRIMARY KEY, Category TEXT)''')
+
+    def insertItem(self, itemName = None, category = None):
+        if not (isinstance(itemName,str) ):
+            raise TypeError('Poke name not str')
+        if not (isinstance(category,str) ):
+            raise TypeError('atk name not str')
+        self._certifyConnection()
+        
+        pkItemData = (itemName,category)
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO ItemCategory VALUES (?,?)",pkItemData)
+            except sqlite3.OperationalError as error:
+                self.createTablePkItems()
+                cursor.execute("INSERT INTO ItemCategory VALUES (?,?)",pkItemData)
+
+    def view(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            for row in conn.cursor().execute('SELECT * FROM ItemCategory'):
+                print(row)
+    def drop(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            conn.cursor().execute('DROP TABLE ItemCategory')
 
 '''#depois eu ia montar o PokeAttacksManager
 #e rodar ele pra inserir os pokemons e que ataques eles aprendem
