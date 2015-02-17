@@ -24,8 +24,12 @@ def run(i):
 ##    poke.createAbilityDatabase()
 ##    poke.createPokemonAbilityDatabase()
 ##    poke.createAttacksDatabase()
-    poke.createPokemonAttacksDatabase()
-
+##    poke.createPokemonAttacksDatabase()
+##    poke.createPokemonItemsDatabase()
+##    poke.createPokemonDexNavItemsDatabase()
+##    poke.createPokemonEVWorthDatabase()
+##    poke.createPokemonDatabase()
+    
 class importSerebii():
     def __init__(self):
         self.__poke = {}
