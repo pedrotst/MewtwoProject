@@ -677,7 +677,7 @@ class ItemCategoryManager(Manager):
     def view(self):
         self._certifyConnection()
         with self._connection as conn:
-            for row in conn.cursor().execute('SELECT * FROM ItemCategory'):
+            for row in conn.cursor().execute('SELECT * FROM ItemCategory ORDER BY Category, ItemName'):
                 print(row)
     def drop(self):
         self._certifyConnection()
