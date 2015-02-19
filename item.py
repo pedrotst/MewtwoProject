@@ -25,3 +25,17 @@ class Item:
 
     def getCategory(self):
     	return self.__category
+
+class battleItem(Item):
+    def __init__(self, iName, iCategory, iType, flingDamage, purchPrice, sellPrice, versions, effectText, flvText, loc, pickUpDet, shoppingDet):
+        super(iName, iCategory)
+        self.__type = iType
+        self.__flingDamage = flingDamage
+        self.__purchPrice = purchPrice
+        self.__sellPrice = sellPrice
+        self.__versions = versions
+        self.__effectText = effectText
+        self.__flvText = flvText
+        self.__loc = loc
+        self.__pickUpDet = pickUpDet
+        self.__shoppingDet = shoppingDet

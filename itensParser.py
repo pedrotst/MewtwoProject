@@ -3,6 +3,10 @@ import item
 import requests
 import re
 import os
+import win_unicode_console
+import html.parser
+
+win_unicode_console.enable()
 
 class importItens():
     def __init__(self):
@@ -20,18 +24,15 @@ class importItens():
                 r = requests.get(self.__url)
                 if (r.status_code != 200):
                     raise  Exception('Download failed')
-                r.enconding = 'Unicode'
-                self.__html = r.text
-                with open(self.__itemPath,mode='w',encoding = 'utf-8') as f:
-                    f.write(self.__html)
+                self.__html = html.parser.HTMLParser().unescape(r.text)
+                with open(self.__itemPath,mode='wb') as f:
+                    f.write(r.content)
                     f.close()
             else:
                 self.getItemMainHTML()
 
-    def getItemMainHTML(self):
-        with open(self.__itemPath,mode='r',encoding='utf-8') as f:
-            for line in f:
-                self.__html += line + '\n'
+    
+
 
     def createItemFolder(self, formSoup):
         categoryName = formSoup['name']
@@ -60,10 +61,10 @@ class importItens():
                     r = requests.get(itemHTMLloc)
                     if (r.status_code != 200):
                         raise  Exception('Download failed')
-                    r.enconding = 'Unicode'
-                    itemHtml = r.text
-                    with open(itemLoc, mode = 'w', encoding = 'utf-8') as f:
-                        f.write(itemHtml)
+                    r.encode = 'latin1'
+                    parsedText = html.parser.HTMLParser().unescape(r.text)
+                    with open(itemLoc, mode = 'wb') as f:
+                        f.write(parsedText.encode())
                         f.close()
             except:
                 with open(self.__itemFolder+'error.txt', mode = 'a+') as f:
@@ -76,6 +77,8 @@ class importItens():
             if(form != None):
                 self.createItemFolder(form)
                 self.downloadEachItem(form)
+
+
     #won't allow buildItemTypeDb search at main list file        
     def notMainList(self, fileName):
         dirs = next(os.walk(self.__itemFolder))[1]
@@ -86,11 +89,20 @@ class importItens():
 
     def getHTML(self, path):
         dest = ''
-        with open(path,mode='r',encoding='utf-8') as f:
-            for line in f:
-                dest += line + '\n'
+        with open(path,mode='r', encoding = 'utf-8') as f:
+            for line in f.readlines():
+                dest += line
             f.close()
-        return dest 
+        return(dest)
+
+    def getItemMainHTML(self):
+        xx = b''
+        with open(self.__itemPath,mode='rb') as f:
+            for line in f.readlines():
+                xx += line
+            f.close()
+
+        self.__html = str(xx, encoding = 'latin1').encode('latin1').decode('utf-8')
 
     def buildItemTypeDb(self):
         itList = []
@@ -109,12 +121,6 @@ class importItens():
                         # itList.append(itemthingy)
                         print(itemthingy)
                         itemthingy.insertItemCategoryDatabase()
-                        # if(root == '\.Itens\\misc'):
-                        #     itType = (soup.find_all("td", {"class":"cen"}))[0]
-                        # else:
-                        #     itType = (soup.find_all("td", {"class":"cen"}))[1].find("a")
-                        # if((itName != None) and (itType != None)):
-                        #     print(itName.string, itType.string)
                     except:
                         with open(self.__itemFolder+'errorTypedb.txt', mode = 'a+') as f:
                             f.write("Get Type and Name failed for " + curFile + "\n")
@@ -125,58 +131,66 @@ class importItens():
             f.close()
             # for name in dirs:
             #     print(os.path.join(root, name))
-    
-    
-    
-    def parseItems(self):
-        soup = BeautifulSoup(self.__html)
-        names = []
-        descriptions = []
-        locs = []
-        itemDic = {}
-        itemFound = 0
-        descTime = False
-        first = True
-        itemName = None
-        '''
-        for tag in soup.find_all('a', {'href': re.compile("^/pokearth/")}):
-            print(tag)
-        '''
-        for td in soup.find_all('td', {'class': "fooinfo"}):
-            item = td.find('a', {'href': re.compile("^/itemdex/")})
-            loc = td.find ('a', {'href': re.compile("^/pokearth/")})
-            if(item != None):
-                itemNameOld = itemName
-                itemName = item.string
-                itemFound += 1
-                descTime = True
-            elif(loc != None):
-                locs.append(loc.string)
-            elif(itemFound >= 1 and descTime):
-                itemDesc = td.string
-                descTime = False
-            if(itemFound == 2):
-                itemDic[itemNameOld] = (itemDesc,locs)
-                locs = []
-                itemFound -= 1
-            
-            
-        print(itemDic)
-        
+    def yesNoIsBool(self, yesNo):
+        if yesNo == "Yes":
+            return True
+        return False
+
+    def buildBattleItemDb(self):
+        battleFolderPath = os.path.join(self.__itemFolder, 'battle')
+        print(battleFolderPath)
+        for root, dirs, files in os.walk(battleFolderPath, topdown = False):
+            for f in files:
+                fileHtml = self.getHTML(os.path.join(battleFolderPath, f))
+                fileSoup = BeautifulSoup(fileHtml)
+                name = fileSoup.find("table", {"class": "dextable", "align": "center"}).find("tr").find("td").find("font").text
+                print(name)
+                category = 'battle'
+                print(category)
+                table2 = fileSoup.find_all("td", {"class": "cen"})
+                iType = table2[1].text
+                print(iType)
+                flingDamage = table2[3].text
+                print(flingDamage)
+                purchPrice = table2[4].find_all("td", {"width": "40%"})[0].text
+                sellPrice = table2[4].find_all("td", {"width": "40%"})[1].text
+                print(purchPrice)
+                print(sellPrice)
+                versionsAvail = {}
+                versionsList = []
+                yesNoList = fileSoup.find_all("td", {"class": "cen", "width": "5%"})
+                if len(yesNoList) == 0 :
+                    yesNoList = fileSoup.find_all("td", {"class": "cen", "width": "6%"})
+                for version in yesNoList:
+                    versionsList.append(self.yesNoIsBool(version.text))
+                while len(versionsList) < 18:
+                    versionsList.append(False)
+                versionsStr = ["RGBY", "GS", 'C', 'RS', 'E', "FRLG", 'DP', 'Pt', 'HG', 'SS', 'B', 'W', 'B2', 'W2', 'X', 'Y', 'oR', 'aS']
+                for i in range(18):
+                    versionsAvail[versionsStr[i]] = versionsList[i]
+                print(versionsAvail)
+                effectText = fileSoup.find("td", {"class": "fooinfo"}).text
+                print(effectText)
+                flavTexts = {}
+                flavTextList = fileSoup.find_all("td", {"class": "fooinfo", "width": "80%"})
+                if (flav = fileSoup.find("td", {"class": "crystal"})) != None:
+                    flavTexts['HS'] = exist.text
+                else:
+                    flavTexts['HS'] = "NODATA"
+                if (exists = fileSoup.find("td", {"class": "emerald"})
+                exists = fileSoup.find("td", {"class": "leafgreen"})
+                exists = fileSoup.find("td", {"class": "platinum"})
+                exists = fileSoup.find("td", {"class": "soulsilver"})
+                exists = fileSoup.find("td", {"class": "white"})
+                exists = fileSoup.find("td", {"class": "white"})
+                if exists != None:
+
+                # flavVersions = ['HS', 'RSE', 'FRLG', 'DPPl', 'HGSS', 'BW', 'B2W2']
+                # flavTextList = fileSoup.find_all()
+
 c = importItens()
-#c.downloadItensMainPage()
-#c.downloadItensPages()
-c.buildItemTypeDb()
+c.downloadItensMainPage()
+# c.downloadItensPages()
+#c.buildItemTypeDb()
+c.buildBattleItemDb()
 #c.parseItems()
-'''    if(itemFound == 2):
-                itemFound = 0
-                descriptions.append(td.string)
-            for item in td.find_all('a', {'href': re.compile("^/itemdex/")}):
-                names.append(item.string)
-                itemFound += 1
-                        
-            for loc in td.find_all('a', {'href': re.compile("^/pokearth/")}):
-                locs.append(loc.string)
-            if(itemFound == 1 && first):
-                first = False
-'''
