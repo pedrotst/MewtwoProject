@@ -124,14 +124,24 @@ class PokeGender:
 """ Stats Class for Database--------------------------------------------------
 """
 class PokeStats:
-    def __init__(self,stats):
-        self.__setHp(int(stats[1]))
-        self.__setAttack(int(stats[2]))
-        self.__setDefense(int(stats[3]))
-        self.__setSpAttack(int(stats[4]))
-        self.__setSpDefense(int(stats[5]))
-        self.__setSpeed(int(stats[6]))
-
+    def __init__(self,stats = None ,hp = None ,attack = None ,defense = None ,spAttack = None ,spDefense = None ,speed = None ,total = None):
+        if(stats):
+            self.__setHp(int(stats[1]))
+            self.__setAttack(int(stats[2]))
+            self.__setDefense(int(stats[3]))
+            self.__setSpAttack(int(stats[4]))
+            self.__setSpDefense(int(stats[5]))
+            self.__setSpeed(int(stats[6]))
+            self.__setTotal()
+        else:
+            self.__setHp(hp)
+            self.__setAttack(attack)
+            self.__setDefense(defense)
+            self.__setSpAttack(spAttack)
+            self.__setSpDefense(spDefense)
+            self.__setSpeed(speed)
+            self.__setTotal(total)
+            
     def __str__(self):
         string = 'HP: '+str(self.__Hp)
         string+= ' Atk: '+str(self.__Attack)
@@ -139,6 +149,7 @@ class PokeStats:
         string+= ' Sp.Atk: '+str(self.__SpAttack)
         string+= ' Sp.Def: '+str(self.__SpDefense)
         string+= ' Spd: '+str(self.__Speed)
+        string+= ' Total: '+str(self.__Total)
         return string
 
     def __rpr__(self):
@@ -179,6 +190,15 @@ class PokeStats:
 
     def getSpeed(self):
         return self.__Speed
+
+    def __setTotal(self,total=None):
+        if(total):
+            self.__Total = total
+        else:
+            self.__Total = self.__Hp+self.__Attack+self.__Defense+self.__SpAttack+self.__SpDefense+self.__Speed
+
+    def getTotal(self):
+        return self.__Total
 
 """ Image Class for Database--------------------------------------------------
 """
@@ -256,12 +276,20 @@ class PokeTypes:
         
 class PokeHeight:
     def __init__(self,meter='0m',inches='0\'00"'):
-        self.__meters = meter
-        self.__metersValue = float(meter[:-1])
+        if isinstance(meter,str) and isinstance(inches,str):
+            self.__meters = meter
+            self.__metersValue = float(meter[:-1])
 
-        self.__inches = inches
-        aux = inches.split('\'')
-        self.__inchesValue = 12*int(aux[0])+int(aux[1][:-1])
+            self.__inches = inches
+            aux = inches.split('\'')
+            self.__inchesValue = 12*int(aux[0])+int(aux[1][:-1])
+        elif isinstance(meter,float) and isinstance(inches,int):
+            self.__meters = str(meter)+'m'
+            self.__metersValue = meter
+
+            self.__inches = str(int(inches/12))+'\''+str(inches%12)+'"'
+            self.__inchesValue = inches
+
 
     def __str__(self):
         string  = 'Meters: '+self.__meters
@@ -288,11 +316,18 @@ class PokeHeight:
         
 class PokeWeight:
     def __init__(self,kg='0kg',lbs='0lbs'):
-        self.__kg = kg
-        self.__kgValue = float(kg.strip('kg'))
+        if isinstance(kg,str) and isinstance(lbs,str):
+            self.__kg = kg
+            self.__kgValue = float(kg.strip('kg'))
 
-        self.__lbs = lbs
-        self.__lbsValue = float(lbs.strip('lbs')) 
+            self.__lbs = lbs
+            self.__lbsValue = float(lbs.strip('lbs'))
+        elif isinstance(kg,float) and isinstance(lbs,float):
+            self.__kg = str(kg)+'kg'
+            self.__kgValue = kg
+
+            self.__lbs = str(lbs)+'lbs'
+            self.__lbsValue = lbs
 
     def __str__(self):
         string  = 'Kg: '+self.__kg
@@ -341,20 +376,28 @@ class AbilityError(Exception):
     pass
 
 class PokeAbilities:
-    def __init__(self,abilities):
-        self.__abilities = []
-        for ability in abilities['Normal']:
-            for key in ability.keys():
-                self.__abilities.append(PokeAbility(key,handleUnicodeProblens(ability[key].strip('. :'))))
-
-        self.__hiddenAbilities = []
-        try:
-            for ability in abilities['Hidden']:
+    def __init__(self,abilities = None, abilitiesList = -1, hiddenAbilitiesList = -1):
+        if(abilities):
+            self.__abilities = []
+            for ability in abilities['Normal']:
                 for key in ability.keys():
-                    self.__hiddenAbilities.append(PokeAbility(key,handleUnicodeProblens(ability[key].strip('. :'))))
-        except KeyError:
-            pass
+                    self.__abilities.append(PokeAbility(key,handleUnicodeProblens(ability[key].strip('. :'))))
 
+            self.__hiddenAbilities = []
+            try:
+                for ability in abilities['Hidden']:
+                    for key in ability.keys():
+                        self.__hiddenAbilities.append(PokeAbility(key,handleUnicodeProblens(ability[key].strip('. :'))))
+            except KeyError:
+                pass
+        elif(abilitiesList != -1 and  hiddenAbilitiesList != -1):
+            self.__abilities = abilitiesList
+            if hiddenAbilitiesList:
+                self.__hiddenAbilities = hiddenAbilitiesList
+            else:
+                self.__hiddenAbilities =[]
+
+                
     def __str__(self):
         string = ''
         for ability in self.__abilities:
@@ -382,12 +425,15 @@ class PokeAbilities:
 """ Exp Growth Class for Database--------------------------------------------------
 """
 class PokeExpGrowth:
-    def __init__(self,expG):
-        expG = expG.pop()
-        expG = expG.split('Points')
-        self.__exp = int(expG[0].replace(',',''))
-        self.__classification = expG[1]
-
+    def __init__(self,expG=None,expGrowth=None,expClassification=None):
+        if(expG):
+            expG = expG.pop()
+            expG = expG.split('Points')
+            self.__exp = int(expG[0].replace(',',''))
+            self.__classification = expG[1]
+        elif(expGrowth and expClassification):
+            self.__exp = expGrowth
+            self.__classification = expClassification
     def __str__(self):
         string =  'Exp to lvl 100: '+str(self.__exp)
         string += '\nClassification: '+str(self.__classification)
@@ -428,14 +474,20 @@ class EV:
 
         
 class PokeEVWorth:
-    def __init__(self,EVs):
-        EVs = EVs[0].split('Point(s)')
-        self.__EVs = []
-        for ev in EVs:
-            if ev is not '':
-                n = EV(int(ev[0]),Stat.__fromStr__(ev[1:].strip()))
+    def __init__(self,EVs = None,EvList = None):
+        if(EVs):
+            EVs = EVs[0].split('Point(s)')
+            self.__EVs = []
+            for ev in EVs:
+                if ev is not '':
+                    n = EV(int(ev[0]),Stat.__fromStr__(ev[1:].strip()))
+                    self.__EVs.append(n)
+        elif(EvList):
+            self.__EVs = []
+            for ev in EvList:
+                n = EV(ev[2],Stat.__fromStr__(ev[1]))
                 self.__EVs.append(n)
-  
+      
     def getEVs(self):
         return self.__EVs
         
@@ -451,11 +503,30 @@ class PokeEVWorth:
 """ Weaknesses Class for Database--------------------------------------------------
 """
 class PokeWeaknesses:
-    def __init__(self,weak):
+    def __init__(self,weak = None,normal = None ,fire = None ,water = None ,electric = None ,grass = None ,ice = None ,fighting = None ,poison = None ,ground = None ,flying = None ,psychic = None ,bug = None ,rock = None ,ghost = None ,dragon = None ,dark = None ,steel = None,fairy = None):
         self.__weaknesses = {}
-        for key in weak.keys():
-            self.__weaknesses[key] = float(weak[key].strip(' *'))
-
+        if(weak):
+            for key in weak.keys():
+                self.__weaknesses[key] = float(weak[key].strip(' *'))
+        else:
+            self.__weaknesses['Normal'] = normal
+            self.__weaknesses['Fire'] = fire
+            self.__weaknesses['Water'] = water
+            self.__weaknesses['Electric'] = electric
+            self.__weaknesses['Grass'] = grass
+            self.__weaknesses['Ice'] = ice
+            self.__weaknesses['Fighting'] = fighting
+            self.__weaknesses['Poison'] = poison
+            self.__weaknesses['Ground'] = ground
+            self.__weaknesses['Flying'] = flying
+            self.__weaknesses['Psychic'] = psychic
+            self.__weaknesses['Bug'] = bug
+            self.__weaknesses['Rock'] = rock
+            self.__weaknesses['Ghost'] = ghost
+            self.__weaknesses['Dragon'] = dragon
+            self.__weaknesses['Dark'] = dark
+            self.__weaknesses['Steel'] = steel
+            self.__weaknesses['Fairy'] = fairy
     def __str__(self):
         string = ''
         for key in self.__weaknesses.keys():
@@ -476,19 +547,22 @@ class PokeWeaknesses:
 """ Wild Items Class for Database--------------------------------------------------
 """
 class PokeWildItems():
-    def __init__(self,wI):
-        aux = wI.strip().split('DexNav')
-        self.__normal = split_percUppercase(aux[0])
-        try:
-            extras = []
-            extras.clear()
-            if(aux[1].find('BrightPowder')>=0):
-                aux[1] = aux[1].replace('BrightPowder','')
-                extras.append('BrightPowder')
-            self.__dexNav = split_uppercase(aux[1])+extras
-        except IndexError:
-            self.__dexNav = None
-            
+    def __init__(self,wI = None, items = -1, dexNavItems = -1):
+        if(wI):
+            aux = wI.strip().split('DexNav')
+            self.__normal = split_percUppercase(aux[0])
+            try:
+                extras = []
+                extras.clear()
+                if(aux[1].find('BrightPowder')>=0):
+                    aux[1] = aux[1].replace('BrightPowder','')
+                    extras.append('BrightPowder')
+                self.__dexNav = split_uppercase(aux[1])+extras
+            except IndexError:
+                self.__dexNav = None
+        elif(items != -1 and dexNavItems != -1):
+            self.__normal = items
+            self.__dexNav = dexNavItems
     def __str__(self):
         string = '\nNormal :'+str(self.__normal)+'\nDexNav :'+str(self.__dexNav)
         return string
@@ -509,18 +583,22 @@ class PokeWildItems():
 """ Capture Rate Class for Database--------------------------------------------------
 """
 class PokeCR:
-    def __init__(self,captureRate):
-        try:
-            self.__cRORAS = int(captureRate[0])
-            self.__crXY = int(captureRate[0])
-        except ValueError:
-            split = re.split(r'[^0-9]',captureRate[0])
-            num = []
-            for element in split:
-                if element != '':
-                    num.append(element)
-            self.__cRORAS = int(num[1])
-            self.__crXY = int(num[0])
+    def __init__(self,captureRate=None,cRORAS=None,crXY=None):
+        if(captureRate):
+            try:
+                self.__cRORAS = int(captureRate[0])
+                self.__crXY = int(captureRate[0])
+            except ValueError:
+                split = re.split(r'[^0-9]',captureRate[0])
+                num = []
+                for element in split:
+                    if element != '':
+                        num.append(element)
+                self.__cRORAS = int(num[1])
+                self.__crXY = int(num[0])
+        elif(cRORAS and crXY):
+            self.__cRORAS =cRORAS
+            self.__crXY = crXY
 
     def __str__(self):
         string =  'CR XY: '+str(self.__crXY)+'\n'
@@ -539,17 +617,21 @@ class PokeCR:
 """
 
 class PokeEggGroup:
-    def __init__(self,eggGroup):
-        if isinstance(eggGroup,list):
-            if(len(eggGroup)>1):
-                self.__group1 = EggGroup.__fromStr__(eggGroup[0])
-                self.__group2 = EggGroup.__fromStr__(eggGroup[1])
+    def __init__(self,eggGroup = None, group1 = None, group2 = None):
+        if(eggGroup):
+            if isinstance(eggGroup,list):
+                if(len(eggGroup)>1):
+                    self.__group1 = EggGroup.__fromStr__(eggGroup[0])
+                    self.__group2 = EggGroup.__fromStr__(eggGroup[1])
+                else:
+                    self.__group1 = EggGroup.__fromStr__(eggGroup[0])
+                    self.__group2 = EggGroup.NoType
             else:
-                self.__group1 = EggGroup.__fromStr__(eggGroup[0])
+                self.__group1 = EggGroup.__fromStr__(eggGroup)
                 self.__group2 = EggGroup.NoType
-        else:
-            self.__group1 = EggGroup.__fromStr__(eggGroup)
-            self.__group2 = EggGroup.NoType
+        elif(group1 and group2):
+            self.__group1 = group1
+            self.__group2 = group2
 
     def __str__(self):
         string =  'Group 1: '+ str(self.__group1)
@@ -593,12 +675,16 @@ class PokeEvoChain:
             evoList.append(evoEnt)
         self.__evoChain = []
         list2index = 0
+        print(evoChain) 
         for ent,entIndex in zip(evoList[0],range(0,len(evoList[0]))):
             try:
                 nextEntIndex = entIndex+1
                 nextEnt = evoList[0][nextEntIndex]
                 if(ent is Entity.Pokemon):
                     if(nextEnt is Entity.Pokemon or nextEnt is Entity.MegaPokemon):
+                        if(evoList[1][list2index] == Entity.SexCondition):
+                            list2index += 1
+                
                         evoNode = [evoChain[0][entIndex],evoChain[1][list2index],evoChain[0][nextEntIndex]]
                         self.__evoChain.append(evoNode)
                         list2index += 1
@@ -607,6 +693,7 @@ class PokeEvoChain:
                         self.__evoChain.append(evoNode)
             except IndexError:
                 pass
+        print(self.__evoChain)
 
 
     def __entIdent(self,unknown):
@@ -642,19 +729,26 @@ class PokeEvoChain:
 """ Poke Location for Database--------------------------------------------------
 """
 class PokeLocation:
-    def __init__(self,location):
-        for key in location.keys():
-            if key == 'X':
-                self.__x = location[key].split('\n')[2].strip()
-        
-            elif key == 'Y':
-                self.__y = location[key].split('\n')[2].strip()
+    def __init__(self,location = None,x = None,y = None, oR = None, aS = None):
+        if(location):
+            for key in location.keys():
+                if key == 'X':
+                    self.__x = location[key].split('\n')[2].strip()
+            
+                elif key == 'Y':
+                    self.__y = location[key].split('\n')[2].strip()
 
-            elif key == 'Ruby':
-                self.__oR = location[key].split('\n')[2].strip()
+                elif key == 'Ruby':
+                    self.__oR = location[key].split('\n')[2].strip()
 
-            elif key == 'Sapphire':
-                self.__aS = location[key].split('\n')[2].strip()
+                elif key == 'Sapphire':
+                    self.__aS = location[key].split('\n')[2].strip()
+        elif(x and y and oR and aS):
+            self.__x = x
+            self.__y = y
+            self.__oR = oR
+            self.__aS = aS
+            
 
     def __str__(self):
         string =  'X: '+ self.__x
@@ -683,19 +777,27 @@ class PokeLocation:
 """
 
 class PokeDexText:
-    def __init__(self,dexText):
-        for key in dexText.keys():
-            if key == 'X':
-                self.__x = dexText[key].split('\n')[2].strip()
-        
-            elif key == 'Y':
-                self.__y = dexText[key].split('\n')[2].strip()
+    def __init__(self,dexText = None,x = None,y = None, oR = None, aS = None):
+        if(dexText):
+            for key in dexText.keys():
+                if key == 'X':
+                    self.__x = dexText[key].split('\n')[2].strip()
+            
+                elif key == 'Y':
+                    self.__y = dexText[key].split('\n')[2].strip()
 
-            elif key == 'Ruby':
-                self.__oR = dexText[key].split('\n')[2].strip()
+                elif key == 'Ruby':
+                    self.__oR = dexText[key].split('\n')[2].strip()
 
-            elif key == 'Sapphire':
-                self.__aS = dexText[key].split('\n')[2].strip()
+                elif key == 'Sapphire':
+                    self.__aS = dexText[key].split('\n')[2].strip()
+
+        elif(x and y and oR and aS):
+            self.__x = x
+            self.__y = y
+            self.__oR = oR
+            self.__aS = aS
+
 
     def __str__(self):
         string =  'X: '+ self.__x
@@ -748,6 +850,7 @@ class Attack:
 
     def __str__(self):
         string =  'Name: '+self.__name
+        string += '\nCondition: '+self.__condition
         string += '\nType: '+self.__atkType
         string += '\nCategory: '+self.__cat
         string += '\nAttribute: '+str(self.__att)
@@ -759,6 +862,9 @@ class Attack:
 
     def __repr__(self):
         return self.__str__()
+
+    def setCondition(self,value):
+        self.__condition = value
 
     def getCondition(self):
         return self.__condition
@@ -780,36 +886,47 @@ class Attack:
        return self.__description
     
 class PokeAttacks:
-    def __init__(self,attackGroups):
-        self.__attackGroups = {}
-        for attackGroup in attackGroups.keys():
-            self.__attackGroups[attackGroup] = []
-            for attack in attackGroups[attackGroup]:
-                caract = []
-                for element in attack:
-                    caract.append(element)
-                if(len(caract)==8):
-                    self.__attackGroups[attackGroup].append(Attack(name = caract[0],
-                                                               atkType = Type.__fromStr__(caract[1]),
-                                                               cat = AttackCat.__fromStr__(caract[2]),
-                                                               att = caract[3],
-                                                               acc = caract[4],
-                                                               pp = caract[5],
-                                                               effect = caract[6],
-                                                               description = caract[7]))
-                elif(len(caract) == 9):
-                    self.__attackGroups[attackGroup].append(Attack(condition = caract[0],
-                                                               name = caract[1],
-                                                               atkType = Type.__fromStr__(caract[2]),
-                                                               cat = AttackCat.__fromStr__(caract[3]),
-                                                               att = caract[4],
-                                                               acc = caract[5],
-                                                               pp = caract[6],
-                                                               effect = caract[7],
-                                                               description = caract[8]))
-                else:
-                    pass
+    def __init__(self,attackGroups = None, attacks = None):
+        if(attackGroups):
+            self.__attackGroups = {}
+            for attackGroup in attackGroups.keys():
+                self.__attackGroups[attackGroup] = []
+                for attack in attackGroups[attackGroup]:
+                    caract = []
+                    for element in attack:
+                        caract.append(element)
+                    if(len(caract)==8):
+                        self.__attackGroups[attackGroup].append(Attack(name = caract[0],
+                                                                   atkType = Type.__fromStr__(caract[1]),
+                                                                   cat = AttackCat.__fromStr__(caract[2]),
+                                                                   att = caract[3],
+                                                                   acc = caract[4],
+                                                                   pp = caract[5],
+                                                                   effect = caract[6],
+                                                                   description = caract[7]))
+                    elif(len(caract) == 9):
+                        self.__attackGroups[attackGroup].append(Attack(condition = caract[0],
+                                                                   name = caract[1],
+                                                                   atkType = Type.__fromStr__(caract[2]),
+                                                                   cat = AttackCat.__fromStr__(caract[3]),
+                                                                   att = caract[4],
+                                                                   acc = caract[5],
+                                                                   pp = caract[6],
+                                                                   effect = caract[7],
+                                                                   description = caract[8]))
+                    else:
+                        pass
+        elif(attacks):
+            self.__attackGroups = attacks
 
+    def __str__(self):
+        string = ''
+        for key in self.getAttackGroups():
+            string += key+':\n'
+            for attack in self.getAttackGroup(key):
+                string += str(attack)+'\n'
+        return string
+    
     def getAttackGroups(self):
         return self.__attackGroups.keys()
 
