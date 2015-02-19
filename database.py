@@ -28,16 +28,30 @@ class DatabaseManager(Manager):
         self.__atkMan = AttacksManager()
         self.__pkmAtkMan = PokeAttacksManager()
         self.__pkmItemsMan = PokeItemsManager()
+        self.__pkmDNItemsMan = PokeDexNavItemsManager()
         self.__pkmEVMan = PokemonEVWorthManager()
         self.__pkmMan = PokemonManager()
 
-    def getPokemonByName(self,name):##TODO TERMINAR O POKEMON-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    def getPokemonByName(self,name):
         pokeData = self.__pkmMan.getPokemonByName(name)
         pokemonName = pokeData[0]
         pokeAbilities = self.__pkmAbMan.getPokemonAbilities(pokemonName)
-        pokeHiddenAbilities = self.__pkmHiddenAbMan.getPokemonHiddenAbilities(pokemonName)
+        try:
+            pokeHiddenAbilities = self.__pkmHiddenAbMan.getPokemonHiddenAbilities(pokemonName)
+        except Exception:
+            pokeHiddenAbilities = None         
         pokeAttacks = self.__pkmAtkMan.getPokemonAttacks(pokemonName)
-        return pokeAttacks
+        pokeItems = self.__pkmItemsMan.getPokemonItems(pokemonName)
+        pokeDexNavItems = self.__pkmDNItemsMan.getPokemonDexNavItems(pokemonName)
+        pokeEvWorth = self.__pkmEVMan.getPokemonEVWorth(pokemonName)
+        return (pokeData,
+                pokeAbilities,
+                pokeHiddenAbilities,
+                pokeAttacks,
+                pokeItems,
+                pokeDexNavItems,
+                pokeEvWorth)
+                
 
 
 #controla a tabela Abilities que contem todas habilidades que existem e sua descrição
@@ -289,6 +303,9 @@ class PokemonHiddenAbilitiesManager(Manager):
     class DescriptionError(Exception):
         pass
 
+    class AbilityNotFoundError(Exception):
+        pass
+
 class AttacksManager(Manager):
     def createTableAttacks(self):
         self._certifyConnection()
@@ -367,7 +384,7 @@ class PokeAttacksManager(Manager):
                 self.createTablePkAttacks()
                 cursor.execute("INSERT INTO PokeAttacks VALUES (?,?,?,?)",attackData)
         
-    def getPokemonAttacks(self,name):##TODO TERMINAR E RETORNAR A LISTA DE ATAQUES DO POKEMON--------------------------------------------------------------------------------------------------------------------------------------------
+    def getPokemonAttacks(self,name):
         self._certifyConnection()
         search = (name,)
         if not isinstance(name,str):
@@ -378,13 +395,15 @@ class PokeAttacksManager(Manager):
         attackData = cursor.fetchall()
         
         if(attackData is not None):
+            attackGroups = {}
             for attack in attackData:
+                if( attack[2] not in attackGroups.keys()):
+                    attackGroups[attack[2]] = []
                 AM = AttacksManager()
                 atk = AM.getAttackByName(attack[1])
-                print(attack[3])
-                print(attack[2])
-                print(atk)
-            #return attackData
+                atk.setCondition(attack[3])
+                attackGroups[attack[2]].append(atk)
+            return attackGroups
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
 		
@@ -422,22 +441,20 @@ class PokeItemsManager(Manager):
             except sqlite3.OperationalError as error:
                 self.createTablePkItems()
                 cursor.execute("INSERT INTO PokeItems VALUES (?,?,?)",pkItemData)
-        
-    def getItemsByPoke(self,name): #todo
+        		
+    def getPokemonItems(self,pokemonName):
         self._certifyConnection()
-        search = (name,)
-        if not isinstance(name,str):
+        search = (pokemonName,)
+        if not isinstance(pokemonName,str):
             raise TypeError('Pokemon\'s name must be a string')
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('SELECT * FROM PokeAttacks WHERE PokeName=? ORDER BY Condition',search)
-        attackData = cursor.fetchall()
-        if(attackData is not None):
-            print(*attackData, sep='\n')
-            #return attackData
+            cursor.execute('SELECT * FROM PokeItems WHERE PokeName=?',search)
+        itemData = cursor.fetchall()
+        if(itemData is not None):
+            return itemData
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
-		
 		
     def view(self):
         self._certifyConnection()
@@ -448,6 +465,53 @@ class PokeItemsManager(Manager):
     class DescriptionError(Exception):
         pass
 
+
+class PokeDexNavItemsManager(Manager):
+    def createTablePkDexNavItems(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeDexNavItems(PokeName TEXT , ItemName TEXT,PRIMARY KEY(PokeName,ItemName))''')
+
+    def insertPokeItem(self, pokeName = None, itemName = None):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Poke name not str')
+        if not (isinstance(itemName,str) ):
+            raise TypeError('item name not str')
+
+        self._certifyConnection()
+        
+        pkItemData = (pokeName,itemName)
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO PokeDexNavItems VALUES (?,?)",pkItemData)
+            except sqlite3.OperationalError as error:
+                self.createTablePkItems()
+                cursor.execute("INSERT INTO PokeDexNavItems VALUES (?,?)",pkItemData)
+        		
+    def getPokemonDexNavItems(self,pokemonName):
+        self._certifyConnection()
+        search = (pokemonName,)
+        if not isinstance(pokemonName,str):
+            raise TypeError('Pokemon\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM PokeDexNavItems WHERE PokeName=?',search)
+        itemData = cursor.fetchall()
+        if(itemData is not None):
+            return itemData
+        else:
+            raise self.AttackNotFoundError('Pokemon was not found')
+		
+    def view(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            for row in conn.cursor().execute('SELECT * FROM PokeDexNavItems'):
+                print(row)
+				
+    class DescriptionError(Exception):
+        pass
 
 class PokemonEVWorthManager(Manager):
     def createTablePokemonEVWorth(self):
@@ -472,6 +536,21 @@ class PokemonEVWorthManager(Manager):
                 self.createTablePokemonEVWorth()
                 cursor.execute("INSERT INTO PokemonEVWorth VALUES (?,?,?)",evData)		
 		
+    def getPokemonEVWorth(self,pokemonName):
+        self._certifyConnection()
+        search = (pokemonName,)
+        if not isinstance(pokemonName,str):
+            raise TypeError('Pokemon\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM PokemonEVWorth WHERE PokeName=?',search)
+        evData = cursor.fetchall()
+        if(evData is not None):
+            return evData
+        else:
+            raise self.AttackNotFoundError('Pokemon was not found')
+
+
     def view(self):
         self._certifyConnection()
         with self._connection as conn:
@@ -683,22 +762,3 @@ class ItemCategoryManager(Manager):
         self._certifyConnection()
         with self._connection as conn:
             conn.cursor().execute('DROP TABLE ItemCategory')
-
-'''#depois eu ia montar o PokeAttacksManager
-#e rodar ele pra inserir os pokemons e que ataques eles aprendem
-
-#faz a tabela PokemonAttackers
-#ela vai ter 3 columns
-#a primeira é o nome do pokemon
-#a segunda uma condicao
-#a terceira é o nome do atk
-#só que a combinacao da primeira e da terceira colunas tem que ser unica
-create table t (
-PokemonName text,
-Condition text,
-AttackName text,
-primary key (PokemonName,AttackName)
-)'''
-if __name__ == '__main__':
-    c = AttacksManager()
-    c.getAttackByName("Gust")
