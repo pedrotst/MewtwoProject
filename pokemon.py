@@ -680,7 +680,6 @@ class Pokemon:
 
     def __setFromDbStats(self,hp,attack,defense,spAttack,spDefense,speed,total):
         self.__stats = PokeStats(None,hp,attack,defense,spAttack,spDefense,speed,total)
-        print(self.__stats)
  
 ##Get Stats----------------------------------------------------------------------
     def getStats(self):
