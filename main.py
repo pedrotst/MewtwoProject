@@ -42,10 +42,12 @@ class mainApplication():
                 self.__l.pack_forget()
                 self.__next.pack_forget()
                 self.__previous.pack_forget()
+                self.__error.pack_forget()
                 self.__l = DexShow(self.__top,name)
                 self.__l.pack()
                 self.__next.pack(side = RIGHT)
                 self.__previous.pack(side = LEFT)
+                self.__error.pack()
         except AttributeError:
             pass
             self.__l = DexShow(self.__top,name)
