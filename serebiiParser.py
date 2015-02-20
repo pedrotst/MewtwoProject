@@ -21,6 +21,7 @@ def run(i):
     print(i)
     c.parseSerebii()
     poke = Pokemon(c.getPoke())
+    poke.createPokemonEvoChainDatabase()
 ##    poke.createAbilityDatabase()
 ##    poke.createPokemonAbilityDatabase()
 ##    poke.createAttacksDatabase()
@@ -499,3 +500,5 @@ class importSerebii():
 
         self.__poke['Flavour Text'] = flavourText
         self.__poke['Location'] = location
+
+if __name__ == '__main__':

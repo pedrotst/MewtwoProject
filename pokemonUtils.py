@@ -539,7 +539,7 @@ class PokeWeaknesses:
     def __getitem__(self,key):
         if isinstance(key,str):
             key = Type.__fromStr__(key)
-        return self.__weaknesses[key]
+        return self.__weaknesses[str(key)]
 
     def getWeaknesses(self):
         return self.__weaknesses
@@ -666,35 +666,41 @@ class Entity(Enum):
     Rollout = 12
     
 class PokeEvoChain:
-    def __init__(self,evoChain):
-        evoList = []
-        for List in evoChain:
-            evoEnt = []
-            for ent in List:
-                evoEnt.append(self.__entIdent(ent))
-            evoList.append(evoEnt)
-        self.__evoChain = []
-        list2index = 0
-        print(evoChain) 
-        for ent,entIndex in zip(evoList[0],range(0,len(evoList[0]))):
-            try:
-                nextEntIndex = entIndex+1
-                nextEnt = evoList[0][nextEntIndex]
-                if(ent is Entity.Pokemon):
-                    if(nextEnt is Entity.Pokemon or nextEnt is Entity.MegaPokemon):
-                        if(evoList[1][list2index] == Entity.SexCondition):
+    def __init__(self,evoChain = None,dbChain = None):
+        if evoChain:
+            evoList = []
+            for List in evoChain:
+                evoEnt = []
+                for ent in List:
+                    evoEnt.append(self.__entIdent(ent))
+                evoList.append(evoEnt)
+            self.__evoChain = []
+            list2index = 0
+            for ent,entIndex in zip(evoList[0],range(0,len(evoList[0]))):
+                try:
+                    nextEntIndex = entIndex+1
+                    nextEnt = evoList[0][nextEntIndex]
+                    if(ent is Entity.Pokemon):
+                        if(nextEnt is Entity.Pokemon or nextEnt is Entity.MegaPokemon):
+                            if(evoList[1][list2index] == Entity.SexCondition):
+                                list2index += 1
+                    
+                            evoNode = [evoChain[0][entIndex],evoChain[1][list2index],evoChain[0][nextEntIndex]]
+                            self.__evoChain.append(evoNode)
                             list2index += 1
-                
-                        evoNode = [evoChain[0][entIndex],evoChain[1][list2index],evoChain[0][nextEntIndex]]
-                        self.__evoChain.append(evoNode)
-                        list2index += 1
-                    else:
-                        evoNode = [evoChain[0][entIndex],evoChain[0][nextEntIndex],evoChain[0][nextEntIndex+1]]
-                        self.__evoChain.append(evoNode)
-            except IndexError:
-                pass
-        print(self.__evoChain)
+                        else:
+                            evoNode = [evoChain[0][entIndex],evoChain[0][nextEntIndex],evoChain[0][nextEntIndex+1]]
+                            self.__evoChain.append(evoNode)
+                except IndexError:
+                    pass
+        else:
+            self.__evoChain = list(dbChain)
 
+    def __str__(self):
+        string = ''
+        for node in self.__evoChain:
+            string += str(node[0])+'\n'
+        return string.strip()
 
     def __entIdent(self,unknown):
         conditions = ['happiness']
@@ -726,6 +732,9 @@ class PokeEvoChain:
 
         else:
             return Entity.NoType
+        
+    def getEvoChain(self):
+        return self.__evoChain
 """ Poke Location for Database--------------------------------------------------
 """
 class PokeLocation:

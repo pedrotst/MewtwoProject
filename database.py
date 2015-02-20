@@ -30,6 +30,7 @@ class DatabaseManager(Manager):
         self.__pkmItemsMan = PokeItemsManager()
         self.__pkmDNItemsMan = PokeDexNavItemsManager()
         self.__pkmEVMan = PokemonEVWorthManager()
+        self.__pkmEvoMan = PokemonEvoChainManager()
         self.__pkmMan = PokemonManager()
 
     def getPokemonsByDexNum(self):
@@ -47,13 +48,15 @@ class DatabaseManager(Manager):
         pokeItems = self.__pkmItemsMan.getPokemonItems(pokemonName)
         pokeDexNavItems = self.__pkmDNItemsMan.getPokemonDexNavItems(pokemonName)
         pokeEvWorth = self.__pkmEVMan.getPokemonEVWorth(pokemonName)
+        pokeEvoChain = self.__pkmEvoMan.getPokemonEvoChain(pokemonName)
         return (pokeData,
                 pokeAbilities,
                 pokeHiddenAbilities,
                 pokeAttacks,
                 pokeItems,
                 pokeDexNavItems,
-                pokeEvWorth)
+                pokeEvWorth,
+                pokeEvoChain)
                 
 
 
@@ -452,7 +455,7 @@ class PokeItemsManager(Manager):
             raise TypeError('Pokemon\'s name must be a string')
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('SELECT * FROM PokeItems WHERE PokeName=?',search)
+            cursor.execute('SELECT ItemName,ItemChance FROM PokeItems WHERE PokeName=?',search)
         itemData = cursor.fetchall()
         if(itemData is not None):
             return itemData
@@ -500,7 +503,7 @@ class PokeDexNavItemsManager(Manager):
             raise TypeError('Pokemon\'s name must be a string')
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('SELECT * FROM PokeDexNavItems WHERE PokeName=?',search)
+            cursor.execute('SELECT ItemName FROM PokeDexNavItems WHERE PokeName=?',search)
         itemData = cursor.fetchall()
         if(itemData is not None):
             return itemData
@@ -739,6 +742,48 @@ class PokemonManager(Manager):
 				
     class DescriptionError(Exception):
         pass
+
+class PokemonEvoChainManager(Manager):
+    def createTablePokemonEvoChain(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonEvoChain(PokeName TEXT ,EvoNode TEXT, PRIMARY KEY(PokeName,EvoNode))''')
+
+    def insertEvoNode(self,pokeName, evoNode):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Pokemon name not str')
+        self._certifyConnection()
+        
+        evData = (pokeName,str(evoNode))
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)
+            except sqlite3.OperationalError as error:
+                self.createTablePokemonEvoChain()
+                cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)		
+		
+    def getPokemonEvoChain(self,pokemonName):
+        self._certifyConnection()
+        search = (pokemonName,)
+        if not isinstance(pokemonName,str):
+            raise TypeError('Pokemon\'s name must be a string')
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT EvoNode FROM PokemonEvoChain WHERE PokeName=?',search)
+        evData = cursor.fetchall()
+        if(evData is not None):
+            return evData
+        else:
+            raise self.AttackNotFoundError('Pokemon was not found')
+
+
+    def view(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            for row in conn.cursor().execute('SELECT * FROM PokemonEvoChain'):
+                print(row)
 
 class ItemCategoryManager(Manager):
     def createItemCategoryTable(self):

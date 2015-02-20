@@ -9,6 +9,7 @@ DARMANITAM 555 EV PROBLE---------------------------------------CORRECTED
 TORNADUS 641 EV PROBLEM----------------------------------------CORRECTED
 DIANCIE 719 Base Egg Step problem------------------------------CORRECTED
 HOOPA 720 Height Problem---------------------------------------CORRECTED
+Mr Mime - Nome Errado no DB
 
 TO-DO
 Poke Evo Chain - Elaborte way to identify

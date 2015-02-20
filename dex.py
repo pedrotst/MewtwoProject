@@ -25,7 +25,9 @@ class DexShow(LabelFrame):
         
         self.__configTrainingInfo1()
         
-        self.__configTrainingInfo2()     
+        self.__configTrainingInfo2()
+        
+        self.__configBattleInfo()
 
 
     def __configTop(self):
@@ -365,6 +367,7 @@ class DexShow(LabelFrame):
         
         self.__configWildItems()
         self.__configLocation()
+        self.__configEvoChain()
         
     def __configWildItems(self):
         ##Make label
@@ -422,9 +425,153 @@ class DexShow(LabelFrame):
         else:
             self.__locationAS.set(self.__pokemon.getLocation().getOR())
 
+    def __configEvoChain(self):
+        ##Make label
+        self.__labelEvoChain = Label(self.__TrainingInfo2,text = 'Evo Chain: ',bg = self.__background,font = ('Helvetica',12))
+        self.__labelEvoChain.grid(row = 0, column =4,sticky=NSEW)
+        ##Make info
+        self.__evoChain = StringVar()
+        self.__labelEvoChainInfo = Label(self.__TrainingInfo2,textvariable = self.__evoChain,bg = self.__background,font = ('Helvetica',10))
+        self.__labelEvoChainInfo.grid(row = 0, column = 5,sticky=NSEW)
+
+        self.__evoChain.set(self.__pokemon.getEvoChain())
+
+    def __configBattleInfo(self):
+        self.__BattleInfo = LabelFrame(self.__top,background = 'gray21')
+        self.__BattleInfo.grid(row = 6,column = 0,columnspan = 6, padx = 20,pady = 5,sticky = NSEW)
+        self.__BattleInfo.configure(highlightthickness = 2,highlightbackground = 'Black', text = 'Battle Info')
+        
+        self.__configAbilities()
+        self.__configAttacks()
+        self.__configWeaknesses()
+        self.__configStats()
+        self.__skyBattle()
+        
+    def __configAbilities(self):
+        ##Make info
+        self.__abilities = StringVar()
+        self.__frameAbilities = LabelFrame(self.__BattleInfo,text='Abilities')
+        self.__scrollAbilities = Scrollbar(self.__frameAbilities)
+        self.__scrollAbilities.pack(side=RIGHT,fill=Y)
+        self.__labelAbilitiesInfo = Text(self.__frameAbilities,bg = self.__background,font = ('Helvetica',9),yscrollcommand=self.__scrollAbilities.set,width=40,height=5)
+        self.__labelAbilitiesInfo.pack(side=LEFT,fill=BOTH)
+        
+        self.__abilities.set(self.__pokemon.getAbilities())
+        self.__labelAbilitiesInfo.insert(INSERT,self.__abilities.get())
+        
+        self.__labelAbilitiesInfo.config(state = DISABLED)
+        
+        self.__scrollAbilities.config(command=self.__labelAbilitiesInfo.yview)
+        self.__frameAbilities.grid(row = 0, column = 0,columnspan=8,sticky=NSEW)
+        
+    def __configAttacks(self):
+        ##Make info
+        self.__attack = StringVar()
+        self.__frameAttacks = LabelFrame(self.__BattleInfo,text='Attacks')
+        self.__scrollAttacks = Scrollbar(self.__frameAttacks)
+        self.__scrollAttacks.pack(side=RIGHT,fill=Y)
+        self.__labelAttacksInfo = Text(self.__frameAttacks,bg = self.__background,font = ('Helvetica',9),yscrollcommand=self.__scrollAttacks.set,width=40,height=5)
+        self.__labelAttacksInfo.pack(side=LEFT,fill=BOTH)
+        
+        self.__attack.set(self.__pokemon.getAttacks())
+        self.__labelAttacksInfo.insert(INSERT,self.__attack.get())
+        
+        self.__labelAttacksInfo.config(state = DISABLED)
+        
+        self.__scrollAttacks.config(command=self.__labelAttacksInfo.yview)
+        self.__frameAttacks.grid(row = 0, column = 8,columnspan=8,sticky=NSEW)
+        
+    def __configWeaknesses(self):
+        self.__frameWeaknesses = LabelFrame(self.__BattleInfo,text='weaknesses')
+        self.__typeImg = []
+        self.__typeCanvas = []
+        self.__typeDmg = []
+        self.__typeDmgInfo = []
+        for i in range(1,17):
+            type_ = Type(i)
+            self.__typeImg.append(PhotoImage(file = type_.ImgV()))
+            self.__typeDmg.append(StringVar())
+
+            self.__typeDmgInfo.append(Label(self.__BattleInfo,textvariable = self.__typeDmg[i-1],bg = self.__background,font = ('Helvetica',12)))
+            
+            self.__typeDmg[i-1].set(self.__pokemon.getWeaknesses()[Type(i)])
+            
+
+            imgHeight = self.__typeImg[i-1].height()
+            imgWidth = self.__typeImg[i-1].width()
+            
+            self.__typeCanvas.append(Canvas(self.__BattleInfo,bg='LightSteelBlue3',height=imgHeight,width=imgWidth))
+            
+            self.__typeCanvas[i-1].configure(highlightthickness=0)
+            self.__typeCanvas[i-1].create_image(0,0,anchor = NW, image = self.__typeImg[i-1])
+    
+            self.__typeCanvas[i-1].grid(row = 1, column = i-1)
+            self.__typeDmgInfo[i-1].grid(row = 2, column = i-1)
+            
+    def __configStats(self):
+         ##Make info
+        self.__attack = StringVar()
+        self.__frameStats = LabelFrame(self.__BattleInfo,text='Stats',background=self.__background)
+        self.__frameStats.grid(row = 0,column = 16,columnspan = 2,padx= 10,sticky = NSEW)
+        
+        self.__labelHp = Label(self.__frameStats,text = 'Hp:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelAttack = Label(self.__frameStats,text = 'Attack:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelDefense = Label(self.__frameStats,text = 'Defense:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpAttack = Label(self.__frameStats,text = 'Sp Attack:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpDefense = Label(self.__frameStats,text = 'Sp Defense:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpeed = Label(self.__frameStats,text = 'Speed:',bg = self.__background,font = ('Helvetica',12))
+        self.__labelTotal = Label(self.__frameStats,text = 'Total:',bg = self.__background,font = ('Helvetica',12))
+        
+        self.__labelHp.grid(row = 0,column=0,sticky=NSEW) 
+        self.__labelAttack.grid(row = 0,column=1,sticky=NSEW) 
+        self.__labelDefense.grid(row = 0,column=2,sticky=NSEW)
+        self.__labelSpAttack.grid(row = 0,column=3,sticky=NSEW)
+        self.__labelSpDefense.grid(row = 0,column=4,sticky=NSEW)
+        self.__labelSpeed.grid(row = 0,column=5,sticky=NSEW)
+        self.__labelTotal.grid(row = 0,column=6,sticky=NSEW)
+        
+        self.__hp = StringVar()
+        self.__attack = StringVar()
+        self.__defense = StringVar()
+        self.__spAttack = StringVar()
+        self.__spDefense = StringVar()
+        self.__speed = StringVar()
+        self.__total = StringVar()
+        
+        self.__labelHpInfo = Label(self.__frameStats,textvariable = self.__hp,bg = self.__background,font = ('Helvetica',12))
+        self.__labelAttackInfo = Label(self.__frameStats,textvariable = self.__attack,bg = self.__background,font = ('Helvetica',12))
+        self.__labelDefenseInfo = Label(self.__frameStats,textvariable = self.__defense,bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpAttackInfo = Label(self.__frameStats,textvariable = self.__spAttack,bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpDefenseInfo = Label(self.__frameStats,textvariable = self.__spDefense,bg = self.__background,font = ('Helvetica',12))
+        self.__labelSpeedInfo = Label(self.__frameStats,textvariable = self.__speed,bg = self.__background,font = ('Helvetica',12))
+        self.__labelTotalInfo = Label(self.__frameStats,textvariable = self.__total,bg = self.__background,font = ('Helvetica',12))
+        
+        self.__labelHpInfo.grid(row = 1,column=0,sticky=NSEW) 
+        self.__labelAttackInfo.grid(row = 1,column=1,sticky=NSEW) 
+        self.__labelDefenseInfo.grid(row = 1,column=2,sticky=NSEW)
+        self.__labelSpAttackInfo.grid(row = 1,column=3,sticky=NSEW)
+        self.__labelSpDefenseInfo.grid(row = 1,column=4,sticky=NSEW)
+        self.__labelSpeedInfo.grid(row = 1,column=5,sticky=NSEW)
+        self.__labelTotalInfo.grid(row = 1,column=6,sticky=NSEW)
+        
+        self.__hp.set(self.__pokemon.getStats().getHp())
+        self.__attack.set(self.__pokemon.getStats().getAttack())
+        self.__defense.set(self.__pokemon.getStats().getDefense())
+        self.__spAttack.set(self.__pokemon.getStats().getSpAttack())
+        self.__spDefense.set(self.__pokemon.getStats().getSpDefense())
+        self.__speed.set(self.__pokemon.getStats().getSpeed())
+        self.__total.set(self.__pokemon.getStats().getTotal())
+    
+    def __skyBattle(self):
+        ##Make label
+        self.__labelSkyBattle = Label(self.__BattleInfo,text = 'Is Elegible to Sky Battle?: ',bg = self.__background,font = ('Helvetica',12))
+        self.__labelSkyBattle.grid(row = 1, column =16,sticky=NSEW)
+        ##Make info
+        self.__skyBattle = StringVar()
+        self.__labelSkyBattleInfo = Label(self.__BattleInfo,textvariable = self.__skyBattle,bg = self.__background,font = ('Helvetica',10))
+        self.__labelSkyBattleInfo.grid(row = 1, column = 17,sticky=NSEW)
+
+        self.__skyBattle.set(self.__pokemon.getSkyBattle())
 
 if __name__ == '__main__':
     DexShow('Pikachu').run()
-
-
-

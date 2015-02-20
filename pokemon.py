@@ -88,6 +88,7 @@ class Pokemon:
             pokeItems = data[4]
             pokeDexNavItems = data[5]
             pokeEvWorth = data[6]
+            pokeEvoChain = data[7]
 
             ##Get Name
             self.__setFromDbName(pokeData[0])
@@ -170,9 +171,9 @@ class Pokemon:
 
             ##Get EggGroup
             self.__setFromDbEggGroup(pokeData[43],pokeData[44])
-##
-##            ##Get EvoChain
-##            self.__setFromDbEvoChain(poke)
+
+            ##Get EvoChain
+            self.__setFromDbEvoChain(pokeEvoChain)
 
             ##Get Location
             self.__setFromDbLocation(pokeData[45],
@@ -279,6 +280,15 @@ class Pokemon:
             print(ev)
             try:
                 manager.insertPokeEvWorth(self.__name,ev)
+            except sqlite3.IntegrityError:
+                pass
+
+    def createPokemonEvoChainDatabase(self):
+        manager = PokemonEvoChainManager()
+        for evoChain in self.__evoChain.getEvoChain():
+            print(evoChain)
+            try:
+                manager.insertEvoNode(self.__name,evoChain)
             except sqlite3.IntegrityError:
                 pass
 
@@ -501,6 +511,10 @@ class Pokemon:
     def __setFromDbAbilities(self,abilities,hiddenAbilities):
         self.__abilities = PokeAbilities(abilitiesList = abilities,hiddenAbilitiesList = hiddenAbilities)
         
+##Get Abilities
+    def getAbilities(self):
+        return self.__abilities
+        
 ##Set ExpGrowth----------------------------------------------------------------------
     def __setFromDictExpGrowth(self,poke):
         self.__expGrowth = PokeExpGrowth(poke['Experience Growth'])
@@ -649,6 +663,13 @@ class Pokemon:
     def __setFromDictEvoChain(self,poke):
         self.__evoChain = PokeEvoChain(poke['Evo Chain'])
 
+    def __setFromDbEvoChain(self,evoChain):
+        self.__evoChain = PokeEvoChain(dbChain = evoChain)
+
+##Get EvoChain----------------------------------------------------------------------
+    def getEvoChain(self):
+        return self.__evoChain
+
 ##Set Location----------------------------------------------------------------------
     def __setFromDictLocation(self,poke):
         self.__location = PokeLocation(poke['Location'])
@@ -678,6 +699,10 @@ class Pokemon:
     def __setFromDbAttacks(self,attacks):
         self.__attacks = PokeAttacks(attacks = attacks)
         
+##Get Attacks
+    def getAttacks(self):
+        return self.__attacks
+        
 ##Set Stats----------------------------------------------------------------------
     def __setFromDictStats(self,poke):
         self.__stats = PokeStats(poke['Stats'])
@@ -691,4 +716,4 @@ class Pokemon:
     
 
 if __name__ == '__main__':
-    Pokemon('Ditto')
+    Pokemon('Bulbasaur')
