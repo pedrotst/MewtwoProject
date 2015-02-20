@@ -32,6 +32,9 @@ class DatabaseManager(Manager):
         self.__pkmEVMan = PokemonEVWorthManager()
         self.__pkmMan = PokemonManager()
 
+    def getPokemonsByDexNum(self):
+        return  self.__pkmMan.getPokemonByDexNum()
+
     def getPokemonByName(self,name):
         pokeData = self.__pkmMan.getPokemonByName(name)
         pokemonName = pokeData[0]
@@ -703,6 +706,13 @@ class PokemonManager(Manager):
                 self.createTablePokemon()
                 cursor.execute("INSERT INTO Pokemon VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
         		
+    def getPokemonByDexNum(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT NationalDex,PokeName FROM Pokemon ORDER BY NationalDex')
+            return cursor.fetchall()                        
+                        
     def getPokemonByName(self,name):
         self._certifyConnection()
         search = (name,)

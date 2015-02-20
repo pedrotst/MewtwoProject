@@ -52,7 +52,50 @@ class Type(Enum):
         except KeyError:
             return Type.NoType
 
+    def ImgH(self):
+        names = {'NoType' : None,
+                 'Bug' : 'Images/Tipos/BugH.png',
+                 'Dark' : 'Images/Tipos/DarkH.png',
+                 'Dragon' : 'Images/Tipos/DragonH.png',
+                 'Electric' : 'Images/Tipos/ElectricH.png',
+                 'Fairy' : 'Images/Tipos/FairyH.png',
+                 'Fighting' : 'Images/Tipos/FightingH.png',
+                 'Fire' : 'Images/Tipos/FireH.png',
+                 'Flying' : 'Images/Tipos/FlyingH.png',
+                 'Ghost' : 'Images/Tipos/GhostH.png',
+                 'Grass' : 'Images/Tipos/GrassH.png',
+                  'Ground' : 'Images/Tipos/GroundH.png',
+                  'Ice' : 'Images/Tipos/IceH.png',
+                  'Normal' : 'Images/Tipos/NormalH.png',
+                  'Poison' : 'Images/Tipos/PoisonH.png',
+                  'Psychic' : 'Images/Tipos/PsychicH.png',
+                  'Rock' : 'Images/Tipos/RockH.png',
+                  'Steel' : 'Images/Tipos/SteelH.png',
+                  'Water' : 'Images/Tipos/WaterH.png'}
+        return names[str(self)]
         
+    def ImgV(self):
+        names = {'NoType' : None,
+                 'Bug' : 'Images/Tipos/BugV.png',
+                 'Dark' : 'Images/Tipos/DarkV.png',
+                 'Dragon' : 'Images/Tipos/DragonV.png',
+                 'Electric' : 'Images/Tipos/ElectricV.png',
+                 'Fairy' : 'Images/Tipos/FairyV.png',
+                 'Fighting' : 'Images/Tipos/FightingV.png',
+                 'Fire' : 'Images/Tipos/FireV.png',
+                 'Flying' : 'Images/Tipos/FlyingV.png',
+                 'Ghost' : 'Images/Tipos/GhostV.png',
+                 'Grass' : 'Images/Tipos/GrassV.png',
+                  'Ground' : 'Images/Tipos/GroundV.png',
+                  'Ice' : 'Images/Tipos/IceV.png',
+                  'Normal' : 'Images/Tipos/NormalV.png',
+                  'Poison' : 'Images/Tipos/PoisonV.png',
+                  'Psychic' : 'Images/Tipos/PsychicV.png',
+                  'Rock' : 'Images/Tipos/RockV.png',
+                  'Steel' : 'Images/Tipos/SteelV.png',
+                  'Water' : 'Images/Tipos/WaterV.png'}
+        return names[str(self)]
+
     NoType = 0
     Bug = 1
     Dark = 2

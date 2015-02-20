@@ -792,7 +792,7 @@ class PokeDexText:
                 elif key == 'Sapphire':
                     self.__aS = dexText[key].split('\n')[2].strip()
 
-        elif(x and y and oR and aS):
+        elif(x and y and (oR or aS)):
             self.__x = x
             self.__y = y
             self.__oR = oR

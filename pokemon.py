@@ -630,6 +630,10 @@ class Pokemon:
     def __setFromDbWildItems(self,items,dexnav):
         self.__wildItems = PokeWildItems(items = items, dexNavItems = dexnav)
 
+##Get WildHoldItems
+    def getWildItems(self):
+        return self.__wildItems
+    
 ##Set EggGroup----------------------------------------------------------------------
     def __setFromDictEggGroup(self,poke):
         self.__eggGroups = PokeEggGroup(poke['Egg Groups'])
@@ -683,4 +687,8 @@ class Pokemon:
  
 ##Get Stats----------------------------------------------------------------------
     def getStats(self):
-        return self.__stats        
+        return self.__stats
+    
+
+if __name__ == '__main__':
+    Pokemon('Ditto')
