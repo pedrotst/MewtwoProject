@@ -788,6 +788,7 @@ class PokemonEvoChainManager(Manager):
         evData = (pokeName,str(evoNode))
         with self._connection as conn:
             cursor = conn.cursor()
+            print(evData[1])
             cursor.execute("DELETE FROM PokemonEvoChain WHERE PokeName=(?) AND EvoNode=(?)",evData)
 
     def drop(self):

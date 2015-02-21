@@ -660,86 +660,122 @@ class PokeEggGroup:
 class PokeEvoChain:
     def __init__(self,evoChain = None,dbChain = None):
         if evoChain:
-            pkms = evoChain[0]
-            methods = evoChain[1]
-            j = 0
+            #print(evoChain)
+            evoTable = self.__transformToTable(evoChain)
             evoList = []
-            while(len(methods)>0):
-                pkm = pkms[j][0]
-                column = pkms[j][1]
-                colspan = int(pkms[j][2])
-                row = pkms[j][3]
-                rowspan = int(pkms[j][4])
-                if(rowspan > 0):
-                    nextRows = rowspan
-                    i = 0
-                    currRow = 0
-                    while nextRows>0:
-                        #print(i,methods)
-                        method = methods[i][0]
-                        methodCol = methods[i][1]
-                        methodRow = methods[i][3]
-                        methodRowSpan = int(methods[i][4])
-                        if(currRow==methodRow):
-                            evoRow = methodRow
-                            evoCol = methodCol+1
-                            if(methodRowSpan==0):
-                                nextRows -= 1
-                                currRow += 1
-                                if(rowspan!=0):
-                                    evoCol=column+2
-                                    evoRow=row
+            for row in evoTable.keys():
+                for col in evoTable[row].keys():
+                    if not isinstance(evoTable[row][col],str):
+                        isPkm = evoTable[row][col][5]
+                        if(isPkm):
+                            pkm = evoTable[row][col][0]
+                            pkmRow = evoTable[row][col][1]
+                            pkmRowspan = int(evoTable[row][col][2])
+                            pkmCol = evoTable[row][col][3]
+                            pkmColspan = int(evoTable[row][col][4])
+                            if(pkmColspan==0):
+                                if(pkmRowspan==0):
+                                    if(col+2 in evoTable[row]):
+                                        method = evoTable[row][col+1][0]
+                                        isMethodPokemon = evoTable[row][col+1][5]
+                                        if(not isMethodPokemon):
+                                            evoPkm = evoTable[row][col+2][0]
+                                            node = (pkm,method,evoPkm)
+                                            evoList.append(node)
+                                else:
+                                    spanQuota = 0
+                                    rowMethod = row
+                                    if(col+2 in evoTable[row]):
+                                        while(spanQuota<pkmRowspan):
+                                            method = evoTable[rowMethod][col+1][0]
+                                            methodSpan = int(evoTable[rowMethod][col+1][2])
+                                            isMethodPokemon = evoTable[rowMethod][col+1][5]
+                                            evoPkm = evoTable[rowMethod][col+2]
+                                            i=0
+                                            while(isinstance(evoPkm,str)):
+                                                evoPkm = evoTable[row-i][col+2]
+                                                i+=1
+                                            if(not isMethodPokemon):
+                                                evoPkm = evoPkm[0]
+                                                node = (pkm,method,evoPkm)
+                                                evoList.append(node)
+                                                if(methodSpan == 0):
+                                                    methodSpan = 1
+                                                rowMethod+=methodSpan
+                                                spanQuota+=methodSpan
                             else:
-                                nextRows -= methodRowSpan
-                                currRow += methodRowSpan
-                            node = (pkm,method,self.__getByRowAndCol(pkms,evoRow,evoCol))
-                            evoList.append(node)
-                            #print(node)
-                            del methods[i]
-                            i-=1
-                        i+=1
-                elif(colspan == 0):
-                    method = methods[0][0]
-                    methodCol = methods[0][1]
-                    methodRow = methods[0][3]
-                    if(row == methodRow):
-                        node = (pkm,method,self.__getByRowAndCol(pkms,methodRow,methodCol+1))
-                        del methods[0]
-                        evoList.append(node)
-                elif(colspan > 0):
-                    nextCol = colspan
-                    i = 0
-                    currCol = 0
-                    while nextCol>0:
-                        method = methods[i][0]
-                        methodCol = methods[i][1]
-                        methodColSpan = int(methods[i][2])
-                        methodRow = methods[i][3]
-                        if(currCol==methodCol):
-                            if(methodColSpan==0):
-                                nextCol -= 1
-                                currCol += 1
-                            else:
-                                nextCol -= methodColSpan
-                                currCol += methodColSpan
-                            node = (pkm,method,self.__getByRowAndCol(pkms,methodRow+1,methodCol))
-                            evoList.append(node)
-                            del methods[i]
-                            i-=1
-                        i+=1
-                else:
-                    pass
-                j+=1
-                #print(evoList)
+                                spanQuota = 0
+                                colMethod = col
+                                if(col+2 in evoTable[row]):
+                                    while(spanQuota<pkmColspan):
+                                        method = evoTable[row+1][colMethod][0]
+                                        methodSpan = int(evoTable[row+1][colMethod][4])
+                                        isMethodPokemon = evoTable[row+1][colMethod][5]
+                                        evoPkm = evoTable[row+2][colMethod]
+                                        if(not isMethodPokemon):
+                                            evoPkm = evoPkm[0]
+                                            node = (pkm,method,evoPkm)
+                                            evoList.append(node)
+                                            if(methodSpan == 0):
+                                                methodSpan = 1
+                                            colMethod+=methodSpan
+                                            spanQuota+=methodSpan
+                            #print(evoTable[row][col])
+            #print(evoList)
+            
+            
+           
             self.__evoChain = evoList
             
         else:
             self.__evoChain = list(dbChain)
 
+    def __transformToTable(self,evoChain):
+        table = {}
+        table[0] = {}
+        rowNum = 0
+        colNum = 0
+        for element,i in zip(evoChain,range(0,len(evoChain))):
+            #print(element)
+            eRow = element[1]
+            eRowspan = int(element[2])
+            eCol = element[3]
+            eColspan = int(element[4])
+            while colNum in table[rowNum]:
+                #print(colNum)
+                colNum+=1
+            #print(rowNum,colNum)
+            #print(colNum in table[rowNum])
+            table[rowNum][colNum] = element
+            
+            for j in range(1,eRowspan):
+                #print('rowspan',rowNum+j,colNum)
+                if not rowNum+j in table:
+                    table[rowNum+j] = {}
+                table[rowNum+j][colNum] = 'rowspan'
+            colNum+=1
+            
+            for j in range(1,eColspan):
+                table[rowNum][colNum] = 'colspan'
+                colNum+=1
+            
+            try:
+                nextElement = evoChain[i+1]
+                nextElementRow = nextElement[1]
+            except IndexError:
+                nextElementRow = rowNum
+            #print(table)
+            if(nextElementRow!=rowNum):
+                colNum=0
+                rowNum+=1
+                if(not rowNum in table):
+                    table[rowNum] = {}
+        return table
+
     def __getByRowAndCol(self,elements,row,col):
         for element in elements:
             if element[3]==row and element[1]==col:
-                return element[0]
+                return element
         return None
             
 

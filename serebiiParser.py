@@ -370,12 +370,12 @@ class importSerebii():
     def __getEvoChain(self,soup):
         info = soup.find('table',class_='evochain')
         tagsTr = info.findAll('tr')
-        pokeEvo = []
-        evoCond = []
+        pokeEvoChain = []
         row = 0
         column = 0
         for tagTr in tagsTr:
             tagsTd = tagTr.findAll('td')
+            #print(tagTr.findParent())
             column = 0
             for tagTd in tagsTd:
                 try:
@@ -397,17 +397,12 @@ class importSerebii():
         
                 except AttributeError:
                     aux = tagTd.img['src'].split('/').pop().split('.')[0]
+                  
+                pokeEvoChain.append((aux,row,rowSpan,column,columnSpan,isPokemon))
                 
-                if(isPokemon):    
-                    pokeEvo.append((aux,column,columnSpan,row,rowSpan))
-                else:
-                    evoCond.append((aux,column,columnSpan,row,rowSpan))
                 column += 1
             row += 1
-        evoChain = []
-        evoChain.append(pokeEvo)
-        evoChain.append(evoCond)
-        self.__poke['Evo Chain'] = evoChain
+        self.__poke['Evo Chain'] = pokeEvoChain
         
 ##--------------------------------------------------------------------------------
     def __getAttacks(self,soup):
@@ -525,4 +520,4 @@ class importSerebii():
         self.__poke['Location'] = location
 
 if __name__ == '__main__':
-    runTest(350)
+    runTest(287)
