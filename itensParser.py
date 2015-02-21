@@ -40,6 +40,7 @@ class importItens():
         categoryPath = os.path.join(self.__itemFolder, categoryName)
         if(not os.path.exists(categoryPath)):
             os.mkdir(categoryPath)
+            os.mkdir(os.path.join(categoryPath, 'Sprites'))
             categoryLoc = os.path.join(categoryPath, categoryName+'.html')
             with open(categoryLoc, mode = 'w') as f:
                 f.write(formSoup.prettify())
@@ -137,109 +138,148 @@ class importItens():
             return True
         return False
 
-    def buildBattleItemDb(self):
+    def getDescriptionsDict(self, fileTree):
+        descriptions = {}
+        descriptions['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/text()')
+        descriptions['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()')
+        descriptions['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()')
+        descriptions['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/text()')
+        descriptions['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()')
+        descriptions['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White"]/following-sibling::td/text()')
+        descriptions['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/text()')
+        descriptions['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/text()')
+        descriptions['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/text()')
+        return descriptions
+
+    def getLocationsDict(self, fileTree):
+        locations = {}
+        locations['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
+        locations['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()')
+        locations['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()')
+        locations['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
+        locations['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()')
+        locations['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
+        locations['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
+        locations['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
+        locations['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
+        return locations
+                
+    def getShoppingDict(self, fileTree):
+        shopDet = {}
+        shopDet['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
+        shopDet['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()')
+        shopDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()')
+        shopDet['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
+        shopDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()')
+        shopDet['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
+        shopDet['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
+        shopDet['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
+        shopDet['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
+        return shopDet
+
+    def getPickUpLoc(self, fileTree):
+        pickDet = {}
+        pickDet['RS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Sapphire"]/following-sibling::td/text()')
+        pickDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()')
+        pickDet['Emerald'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()')
+        pickDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()')
+        pickDet['BW'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="White"]/following-sibling::td/font/text()')
+        pickDet['XY'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/font/text()')
+        return pickDet
+
+    def getAvailDict(self, fileTree):
+        yesNoList = fileTree.xpath('//table[./tr[1]/td/text() = "Attainable In"]/tr[3]/td/text()')
+        trueFalseList = (list(map (lambda x: True if x == 'Yes' else False, yesNoList)))
+        versionsStr = ["RGBY", "GS", 'C', 'RS', 'E', "FRLG", 'DP', 'Pt', 'HG', 'SS', 'B', 'W', 'B2', 'W2', 'X', 'Y', 'oR', 'aS']
+        versionsAvail = dict(zip(versionsStr, trueFalseList))
+        return versionsAvail
+
+    def getType(self, fileTree):
+        iType = fileTree.xpath('//table[@class = "dextable"]/tr[./td[2]/text() = "Item Type"]/following-sibling::tr/td[2]/a/text()')
+        return iType[0] if len(iType) >0 else []
+
+    def getName(self, fileTree):
+        name = fileTree.xpath('//table[@class = "dextable" and @align = "center"]/tr[1]/td/font/b/text()')
+        return name[0] if len(name) >0 else ''
+
+    def getPurchPrice(self,fileTree):
+        purchPrice = fileTree.xpath('//td[@class = "cen"]/table/tr[./td/b/text() = "Purchase Price"]/td[2]/text()')
+        return purchPrice[0] if len(purchPrice) >0 else ''
+
+    def getSellPrice(self,fileTree):
+        sellPrice = fileTree.xpath('//td[@class = "cen"]/table/tr[./td/b/text() = "Sell Price"]/td[2]/text()')
+        return sellPrice[0] if len(sellPrice) >0 else ''
+
+    def getFlingDamage(self, fileTree):
+        flingDamage = fileTree.xpath('//table[@class = "dextable"]/tr[./td[4]/text() = "Fling Damage"]/following-sibling::tr/td[4]/text()')
+        return flingDamage[0] if len(flingDamage) > 0 else ''
+
+    def getEffectText(self,fileTree):
+        effectText = fileTree.xpath('//table[@class = "dextable" and @align = "center" and ./tr/td/text() = "In-Depth Effect"]/tr[2]/td[@class = "fooinfo"]/text()')
+        return effectText[0] if len(effectText) > 0 else ''
+
+    def getJapaneseText(self, fileTree):
+        japaName = fileTree.xpath('//table[@class = "dextable"]/tr[./td[3]/text() = "Japanese Name"]/following-sibling::tr/td[3]/text()')
+        return japaName[0] if len(japaName) > 0 else ''
+
+    def getImgPath(self, fileTree):
+        imgPath = fileTree.xpath("//table[@class='dextable'][2]/tr[2]/td[@class='cen'][1]/table/tr/td[@class='pkmn']/img/@src")
+        return imgPath[0] if len(imgPath) > 0 else ''
+
+    def downloadSprites(self):
+        for root, dirs, files in os.walk(self.__itemFolder, topdown = True):
+            for f in files:
+                if(f != root[6:] + '.html' and f[-5:] == '.html' and f[:-5] != root[:5]):
+                    # print(os.path.join(root, f))
+                    print("Downloading: " + f)
+                    fileHtml = self.getHTML(os.path.join(root, f))
+                    fileTree = html.fromstring(fileHtml)
+                    imageUrl = self.__serebii + self.getImgPath(fileTree)
+                    imagePath = os.path.join(root, 'Sprites', f[:-5])
+                    if imageUrl == self.__serebii:
+                        print("error with: " + f)
+                    r = requests.get(imageUrl)
+                    if r.status_code == 200:
+                        with open(imagePath+'.png', 'wb') as pic:
+                            for chunk in r.iter_content():
+                                pic.write(chunk)
+                            pic.close()
+                    else:
+                        print("error with request: " + f)
+                else:
+                    print("error with root-check: " + f)
+
+
+
+
+    def buildBattleItemDb(self, name):
         battleFolderPath = os.path.join(self.__itemFolder, 'battle')
         print(battleFolderPath)
         for root, dirs, files in os.walk(battleFolderPath, topdown = False):
             for f in files:
-                fileHtml = self.getHTML(os.path.join(battleFolderPath, f))
-                fileSoup = BeautifulSoup(fileHtml)
-                name = fileSoup.find("table", {"class": "dextable", "align": "center"}).find("tr").find("td").find("font").text
-                print(name)
-                category = 'battle'
-                # print(category)
-                table2 = fileSoup.find_all("td", {"class": "cen"})
-                iType = table2[1].text
-                # print(iType)
-                flingDamage = table2[3].text
-                # print(flingDamage)
-                purchPrice = table2[4].find_all("td", {"width": "40%"})[0].text
-                sellPrice = table2[4].find_all("td", {"width": "40%"})[1].text
-                # print(purchPrice)
-                # print(sellPrice)
-                versionsAvail = {}
-                versionsList = []
-                yesNoList = fileSoup.find_all("td", {"class": "cen", "width": "5%"})
-                if len(yesNoList) == 0 :
-                    yesNoList = fileSoup.find_all("td", {"class": "cen", "width": "6%"})
-                for version in yesNoList:
-                    versionsList.append(self.yesNoIsBool(version.text))
-                while len(versionsList) < 18:
-                    versionsList.append(False)
-                versionsStr = ["RGBY", "GS", 'C', 'RS', 'E', "FRLG", 'DP', 'Pt', 'HG', 'SS', 'B', 'W', 'B2', 'W2', 'X', 'Y', 'oR', 'aS']
-                for i in range(18):
-                    versionsAvail[versionsStr[i]] = versionsList[i]
-                # print(versionsAvail)
-                effectText = fileSoup.find("td", {"class": "fooinfo"}).text
-                # print(effectText)
-                flavTexts = {}
-                fileTree = html.fromstring(fileHtml)
-                descriptions = {}
-                descriptions['GSC'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/text()')
-                descriptions['RSE'] = fileTree.xpath('//table[5]/tr[position()>1]/td[@class="emerald"]/following-sibling::td/text()')
-                descriptions['FRLG'] = fileTree.xpath('//table[5]/tr[position()>1]/td[@class="leafgreen"]/following-sibling::td/text()')
-                descriptions['DPPl'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/text()')
-                descriptions['HGSS'] = fileTree.xpath('//table[5]/tr[position()>1]/td[@class="soulsilver"]/following-sibling::td/text()')
-                descriptions['BW'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="White"]/following-sibling::td/text()')
-                descriptions['B2W2'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/text()')
-                descriptions['XY'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="Y"]/following-sibling::td/text()')
-                descriptions['oRaS'] = fileTree.xpath('//table[5]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/text()')
-                # print(descriptions)
-                locations = {}
-
-                locations['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
-                locations['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[@class="emerald"]/following-sibling::td/a/text()')
-                locations['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[@class="leafgreen"]/following-sibling::td/a/text()')
-                locations['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
-                locations['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[@class="soulsilver"]/following-sibling::td/a/text()')
-                locations['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
-                locations['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
-                locations['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
-                locations['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
-                # print(locations)
-                shopDet = {}
-                shopDet['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
-                shopDet['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[@class="emerald"]/following-sibling::td/a/text()')
-                shopDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[@class="leafgreen"]/following-sibling::td/a/text()')
-                shopDet['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
-                shopDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[@class="soulsilver"]/following-sibling::td/a/text()')
-                shopDet['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
-                shopDet['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
-                shopDet['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
-                shopDet['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
-                # print(shopDet)
-                pickDet = {}
-                pickDet['RS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Sapphire"]/following-sibling::td/text()')
-                pickDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[@class="leafgreen"]/following-sibling::td/text()')
-                pickDet['Emerald'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()')
-                pickDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[@class="soulsilver"]/following-sibling::td/text()')
-                pickDet['BW'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="White"]/following-sibling::td/font/text()')
-                pickDet['XY'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/font/text()')
-                print(pickDet)
-
-                # print(fileTree.xpath('//td[@class="fooevo" and text() = "Flavour Text"]/following-sibling::text()'))
-                # print(fileTree.xpath('//td[@class="crystal"][1]/preceding-sibling::td/text()'))   
-                # print(fileTree.xpath('//td[@class ="fooinfo"]/text()'))
-                # print(fileHtml)
-                # flavTextList = fileSoup.find_all("td", {"class": "fooinfo", "width": "80%"})
-                # if (flav = fileSoup.find("td", {"class": "crystal"})) != None:
-                #     flavTexts['HS'] = exist.text
-                # else:
-                #     flavTexts['HS'] = "NODATA"
-                # if (exists = fileSoup.find("td", {"class": "emerald"})
-                # exists = fileSoup.find("td", {"class": "leafgreen"})
-                # exists = fileSoup.find("td", {"class": "platinum"})
-                # exists = fileSoup.find("td", {"class": "soulsilver"})
-                # exists = fileSoup.find("td", {"class": "white"})
-                # exists = fileSoup.find("td", {"class": "white"})
-                # if exists != None:
-
-                # flavVersions = ['HS', 'RSE', 'FRLG', 'DPPl', 'HGSS', 'BW', 'B2W2']
-                # flavTextList = fileSoup.find_all()
+                # if f == name:
+                    fileHtml = self.getHTML(os.path.join(battleFolderPath, f))
+                    fileTree = html.fromstring(fileHtml)
+                    name = self.getName(fileTree)
+                    category = battleFolderPath[6:]
+                    iType = self.getType(fileTree)
+                    flingDamage = self.getFlingDamage(fileTree)
+                    japaName = self.getJapaneseText(fileTree)
+                    purchPrice = self.getPurchPrice(fileTree)
+                    sellPrice = self.getSellPrice(fileTree)
+                    versionsAvail = self.getAvailDict(fileTree)
+                    effectText = self.getEffectText(fileTree)
+                    descriptions = self.getDescriptionsDict(fileTree)
+                    locations = self.getLocationsDict(fileTree)
+                    pickUpLoc = self.getPickUpLoc(fileTree)
+                    shopDest = self.getShoppingDict(fileTree)
+                    theItem = item.battleItem(name, category, iType, japaName, flingDamage, purchPrice, sellPrice, versionsAvail, effectText, descriptions, locations, pickUpLoc, shopDest)
+                    print(theItem)
 
 c = importItens()
 c.downloadItensMainPage()
 # c.downloadItensPages()
 #c.buildItemTypeDb()
-c.buildBattleItemDb()
+# c.buildBattleItemDb("PP Max.html")
+c.downloadSprites()
 #c.parseItems()
