@@ -372,15 +372,38 @@ class importSerebii():
         tagsTr = info.findAll('tr')
         pokeEvo = []
         evoCond = []
+        row = 0
+        column = 0
         for tagTr in tagsTr:
             tagsTd = tagTr.findAll('td')
+            column = 0
             for tagTd in tagsTd:
                 try:
+                    c = tagTd['class']
+                    isPokemon = True
+                except KeyError:
+                    isPokemon = False
+                try:
+                    rowSpan = tagTd['rowspan']
+                except KeyError:
+                    rowSpan = 0
+                try:
+                    columnSpan = tagTd['colspan']
+                except KeyError:
+                    columnSpan = 0
+                #print(isPokemon,column,columnSpan,row,rowSpan)
+                try:
                     aux = tagTd.a.img['src'].split('/').pop().split('.')[0]
-                    pokeEvo.append(aux)                    
+        
                 except AttributeError:
                     aux = tagTd.img['src'].split('/').pop().split('.')[0]
-                    evoCond.append(aux)
+                
+                if(isPokemon):    
+                    pokeEvo.append((aux,column,columnSpan,row,rowSpan))
+                else:
+                    evoCond.append((aux,column,columnSpan,row,rowSpan))
+                column += 1
+            row += 1
         evoChain = []
         evoChain.append(pokeEvo)
         evoChain.append(evoCond)
@@ -502,3 +525,4 @@ class importSerebii():
         self.__poke['Location'] = location
 
 if __name__ == '__main__':
+    runTest(350)

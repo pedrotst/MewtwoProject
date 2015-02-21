@@ -6,7 +6,7 @@ import re
 ##    return re.sub(r'([a-z])([A-Z])', r'\1 \2',string)
 
 def split_uppercase(string):
-    split = re.split(r'([a-z][A-Z])',string)
+    split = re.split(r'([a-z|0-9][A-Z])',string)
     for c in split:
         try:
             completeC = c+split[split.index(c)+1][0]
@@ -17,6 +17,13 @@ def split_uppercase(string):
         except IndexError:
             pass
     return split
+
+def replace_uppercase(string):
+    split = split_uppercase(string)
+    string = ''
+    for c in split:
+        string+=c+', '
+    return string.strip(' ,')
 
 def split_percUppercase(string):
     split = re.split(r'(%[A-Z])',string)
@@ -649,89 +656,98 @@ class PokeEggGroup:
 
 
 """ Poke Evo Class for Database--------------------------------------------------
-"""
-class Entity(Enum):
-    NoType = 0
-    Pokemon = 1
-    MegaPokemon = 2
-    Level = 3
-    MegaStone = 4
-    EvolutionStone = 5
-    Egg = 6
-    SexCondition = 7
-    Condition = 8
-    Trade = 9
-    Local = 10
-    Tyrogue = 11
-    Rollout = 12
-    
+""" 
 class PokeEvoChain:
     def __init__(self,evoChain = None,dbChain = None):
         if evoChain:
+            pkms = evoChain[0]
+            methods = evoChain[1]
+            j = 0
             evoList = []
-            for List in evoChain:
-                evoEnt = []
-                for ent in List:
-                    evoEnt.append(self.__entIdent(ent))
-                evoList.append(evoEnt)
-            self.__evoChain = []
-            list2index = 0
-            for ent,entIndex in zip(evoList[0],range(0,len(evoList[0]))):
-                try:
-                    nextEntIndex = entIndex+1
-                    nextEnt = evoList[0][nextEntIndex]
-                    if(ent is Entity.Pokemon):
-                        if(nextEnt is Entity.Pokemon or nextEnt is Entity.MegaPokemon):
-                            if(evoList[1][list2index] == Entity.SexCondition):
-                                list2index += 1
-                    
-                            evoNode = [evoChain[0][entIndex],evoChain[1][list2index],evoChain[0][nextEntIndex]]
-                            self.__evoChain.append(evoNode)
-                            list2index += 1
-                        else:
-                            evoNode = [evoChain[0][entIndex],evoChain[0][nextEntIndex],evoChain[0][nextEntIndex+1]]
-                            self.__evoChain.append(evoNode)
-                except IndexError:
+            while(len(methods)>0):
+                pkm = pkms[j][0]
+                column = pkms[j][1]
+                colspan = int(pkms[j][2])
+                row = pkms[j][3]
+                rowspan = int(pkms[j][4])
+                if(rowspan > 0):
+                    nextRows = rowspan
+                    i = 0
+                    currRow = 0
+                    while nextRows>0:
+                        #print(i,methods)
+                        method = methods[i][0]
+                        methodCol = methods[i][1]
+                        methodRow = methods[i][3]
+                        methodRowSpan = int(methods[i][4])
+                        if(currRow==methodRow):
+                            evoRow = methodRow
+                            evoCol = methodCol+1
+                            if(methodRowSpan==0):
+                                nextRows -= 1
+                                currRow += 1
+                                if(rowspan!=0):
+                                    evoCol=column+2
+                                    evoRow=row
+                            else:
+                                nextRows -= methodRowSpan
+                                currRow += methodRowSpan
+                            node = (pkm,method,self.__getByRowAndCol(pkms,evoRow,evoCol))
+                            evoList.append(node)
+                            #print(node)
+                            del methods[i]
+                            i-=1
+                        i+=1
+                elif(colspan == 0):
+                    method = methods[0][0]
+                    methodCol = methods[0][1]
+                    methodRow = methods[0][3]
+                    if(row == methodRow):
+                        node = (pkm,method,self.__getByRowAndCol(pkms,methodRow,methodCol+1))
+                        del methods[0]
+                        evoList.append(node)
+                elif(colspan > 0):
+                    nextCol = colspan
+                    i = 0
+                    currCol = 0
+                    while nextCol>0:
+                        method = methods[i][0]
+                        methodCol = methods[i][1]
+                        methodColSpan = int(methods[i][2])
+                        methodRow = methods[i][3]
+                        if(currCol==methodCol):
+                            if(methodColSpan==0):
+                                nextCol -= 1
+                                currCol += 1
+                            else:
+                                nextCol -= methodColSpan
+                                currCol += methodColSpan
+                            node = (pkm,method,self.__getByRowAndCol(pkms,methodRow+1,methodCol))
+                            evoList.append(node)
+                            del methods[i]
+                            i-=1
+                        i+=1
+                else:
                     pass
+                j+=1
+                #print(evoList)
+            self.__evoChain = evoList
+            
         else:
             self.__evoChain = list(dbChain)
+
+    def __getByRowAndCol(self,elements,row,col):
+        for element in elements:
+            if element[3]==row and element[1]==col:
+                return element[0]
+        return None
+            
 
     def __str__(self):
         string = ''
         for node in self.__evoChain:
             string += str(node[0])+'\n'
         return string.strip()
-
-    def __entIdent(self,unknown):
-        conditions = ['happiness']
-##        print(re.search(r'-m',unknown))
-        if re.search(r'[^0-9]',unknown) is None:
-            return Entity.Pokemon
-        elif re.search(r'\d-\w',unknown) is not None:
-            return Entity.MegaPokemon
-        elif re.search(r'l\d',unknown) is not None:
-            return Entity.Level
-        elif re.search(r'mega\d|charizard',unknown) is not None:
-            return Entity.MegaStone
-        elif re.search(r'stone',unknown) is not None:
-            return Entity.EvolutionStone
-        elif re.search(r'egg',unknown) is not None:
-            return Entity.Egg
-        elif re.search(r'male|female',unknown) is not None:
-            return Entity.SexCondition
-        elif unknown in conditions:
-            return Entity.Condition
-        elif re.search(r'trade',unknown) is not None:
-            return Entity.Trade
-        elif re.search(r'coronet',unknown) is not None:
-            return Entity.Local
-        elif re.search(r'tyrogue',unknown) is not None:
-            return Entity.Tyrogue
-        elif re.search(r'rollout',unknown) is not None:
-            return Entity.Rollout
-
-        else:
-            return Entity.NoType
         
     def getEvoChain(self):
         return self.__evoChain

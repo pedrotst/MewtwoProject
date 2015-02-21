@@ -323,9 +323,10 @@ class DexShow(LabelFrame):
         self.__evWorth = StringVar()
         self.__labelEVWorthInfo = Label(self.__TrainingInfo1,textvariable = self.__evWorth,bg = self.__background,font = ('Helvetica',10))
         self.__labelEVWorthInfo.grid(row = 0, column = 1,sticky=NSEW)
-
-        self.__evWorth.set(self.__pokemon.getEVWorth())
-        
+        try:
+            self.__evWorth.set(self.__pokemon.getEVWorth())
+        except AttributeError:
+            self.__evWorth.set('Not known')
     def __configCaptureRate(self):
         ##Make label
         self.__labelCaptureRate = Label(self.__TrainingInfo1,text = 'Capture Rate: ',bg = self.__background,font = ('Helvetica',12))

@@ -338,17 +338,17 @@ class Pokemon:
 ##Set Name----------------------------------------------------------------------
     def  __setFromDictName(self,poke):
         self.__name = poke['Name']
-        try:
-            print(self.__name)
-        except UnicodeEncodeError:
-            print(self.__name.encode('utf-8','ignore'))
+        #try:
+        #    print(self.__name)
+        #except UnicodeEncodeError:
+        #    print(self.__name.encode('utf-8','ignore'))
 
     def  __setFromDbName(self,name):
         self.__name = name
-        try:
-            print(self.__name)
-        except UnicodeEncodeError:
-            print(self.__name.encode('utf-8','ignore'))
+        #try:
+        #    print(self.__name)
+        #except UnicodeEncodeError:
+        #    print(self.__name.encode('utf-8','ignore'))
 
 
 ##Get Name----------------------------------------------------------------------

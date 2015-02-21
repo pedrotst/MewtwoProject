@@ -495,7 +495,7 @@ class PokeDexNavItemsManager(Manager):
             except sqlite3.OperationalError as error:
                 self.createTablePkItems()
                 cursor.execute("INSERT INTO PokeDexNavItems VALUES (?,?)",pkItemData)
-        		
+                
     def getPokemonDexNavItems(self,pokemonName):
         self._certifyConnection()
         search = (pokemonName,)
@@ -509,15 +509,13 @@ class PokeDexNavItemsManager(Manager):
             return itemData
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
-		
+        
     def view(self):
         self._certifyConnection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeDexNavItems'):
                 print(row)
-				
-    class DescriptionError(Exception):
-        pass
+                
 
 class PokemonEVWorthManager(Manager):
     def createTablePokemonEVWorth(self):
@@ -562,9 +560,6 @@ class PokemonEVWorthManager(Manager):
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokemonEVWorth'):
                 print(row)
-				
-    class DescriptionError8(Exception):
-        pass
 
 class PokemonManager(Manager):
     def createTablePokemon(self):
@@ -708,7 +703,27 @@ class PokemonManager(Manager):
             except sqlite3.OperationalError as error:
                 self.createTablePokemon()
                 cursor.execute("INSERT INTO Pokemon VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
-        		
+             
+    def __correctLocation(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT PokeName,LocationX,LocationY,LocationOR,LocationAS FROM Pokemon ORDER BY NationalDex')
+            newValues = []
+            for poke in cursor.fetchall():
+                p = ['','','','']
+                p[0] = poke[1].replace('Details','')
+                p[0] = replace_uppercase(p[0])
+                p[1] = poke[2].replace('Details','')
+                p[1] = replace_uppercase(p[1])
+                p[2] = poke[3].replace('Details','')
+                p[2] = replace_uppercase(p[2])
+                p[3] = poke[4].replace('Details','')
+                p[3] = replace_uppercase(p[3])
+                cursor.execute('''UPDATE Pokemon SET LocationX=(?),LocationY=(?),LocationOR=(?),LocationAS=(?) WHERE PokeName=(?)''',(p[0],p[1],p[2],p[3],poke[0]))
+                newValues.append(p)
+            print(*newValues,sep = '\n')
+      
     def getPokemonByDexNum(self):
         self._certifyConnection()
         with self._connection as conn:
@@ -734,12 +749,13 @@ class PokemonManager(Manager):
         pass
 
 		
+
     def view(self):
         self._certifyConnection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Pokemon'):
                 print(row)
-				
+
     class DescriptionError(Exception):
         pass
 
@@ -762,8 +778,46 @@ class PokemonEvoChainManager(Manager):
                 cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)
             except sqlite3.OperationalError as error:
                 self.createTablePokemonEvoChain()
-                cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)		
-		
+                cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)
+                
+    def removeNode(self,pokeName,evoNode):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Pokemon name not str')
+        self._certifyConnection()
+        
+        evData = (pokeName,str(evoNode))
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM PokemonEvoChain WHERE PokeName=(?) AND EvoNode=(?)",evData)
+
+    def drop(self):
+        self._certifyConnection()
+        with self._connection as conn:
+            conn.cursor().execute('DROP TABLE PokemonEvoChain')
+            
+
+                
+    def updateEvoNode(self,pokeName,add = None,remove = None):
+        if not (isinstance(pokeName,str) ):
+            raise TypeError('Pokemon name not str')
+        self._certifyConnection()
+        
+        with self._connection as conn:
+            cursor = conn.cursor()
+            evData = (pokeName,)
+            cursor.execute("SELECT EvoNode FROM PokemonEvoChain WHERE PokeName=(?)",evData)
+            nodes = cursor.fetchall()
+            if(nodes):
+                for node in nodes:
+                    print(node)
+                if add:
+                    self.insertEvoNode(pokeName,add)
+                    print(add)
+                elif remove:
+                    self.removeNode(pokeName,remove)
+                    
+
+    
     def getPokemonEvoChain(self,pokemonName):
         self._certifyConnection()
         search = (pokemonName,)
@@ -817,3 +871,9 @@ class ItemCategoryManager(Manager):
         self._certifyConnection()
         with self._connection as conn:
             conn.cursor().execute('DROP TABLE ItemCategory')
+
+if __name__ == '__main__':
+    PokemonEvoChainManager().view()
+    
+    
+    

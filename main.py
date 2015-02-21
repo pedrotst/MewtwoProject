@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter.ttk
 from dex import *
 from database import DatabaseManager
 import re
@@ -30,11 +31,14 @@ class mainApplication():
         self.__name = StringVar()
         db = DatabaseManager()
         data = db.getPokemonsByDexNum()
-        self.__OPTIONS = data
+        self.__OPTIONS = []
+        for option in data:
+            self.__OPTIONS.append(str(option[0])+' : '+option[1].strip('{}'))
         self.__name.set(self.__OPTIONS[0])
         self.__name.trace("w",lambda *args: self.__changePokemon(self.__name,*args))
-        listbox = OptionMenu(self.__top,self.__name,*self.__OPTIONS)
-        listbox.pack()
+        self.__combobox = ttk.Combobox(self.__top,textvariable = self.__name,state = 'readonly')
+        self.__combobox['values'] = tuple(self.__OPTIONS)
+        self.__combobox.pack()
         
     def __configDexShow(self,name):
         try:
@@ -54,7 +58,7 @@ class mainApplication():
             self.__l.pack()
         
     def __changePokemon(self,value,*args):
-        data = self.__name.get().strip('()').split(',')
+        data = self.__name.get().strip('()').split(':')
         data[0] = int(data[0])
         data[1] = data[1].strip(' \'')
         self.__configDexShow(data[1])
@@ -75,22 +79,18 @@ class mainApplication():
         errorLog = MyDialog(self.__top)
 
     def __goToPrevious(self):
-        data = self.__name.get().strip('()').split(',')
-        data[0] = int(data[0])
-        data[1] = data[1].strip(' \'')
-        index = self.__OPTIONS.index(tuple(data))
+        data = self.__name.get()
+        index = self.__OPTIONS.index(data)
         if(index>0):
-            next = self.__OPTIONS[index-1][1]
-            self.__name.set(self.__OPTIONS[index-1])
+            previous = self.__OPTIONS[index-1]
+            self.__name.set(previous)
         
     def __goToNext(self):
-        data = self.__name.get().strip('()').split(',')
-        data[0] = int(data[0])
-        data[1] = data[1].strip(' \'')
-        index = self.__OPTIONS.index(tuple(data))
+        data = self.__name.get()
+        index = self.__OPTIONS.index(data)
         if(index<720):
-            next = self.__OPTIONS[index+1][1]
-            self.__name.set(self.__OPTIONS[index+1])
+            next = self.__OPTIONS[index+1]
+            self.__name.set(next)
         
     def run(self):
         self.__top.mainloop()
