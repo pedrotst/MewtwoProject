@@ -1,0 +1,846 @@
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM07
+Hail
+Ice
+Other
+--
+--
+10
+--
+The user summons a hailstorm lasting five turns. It damages all Pokémon except the Ice type.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM13
+Ice Beam
+Ice
+Special
+90
+100
+10
+10
+The target is struck with an icy-cold beam of energy. It may also freeze the target solid.
+Attack
+-----------------
+TM14
+Blizzard
+Ice
+Special
+110
+70
+5
+10
+A howling blizzard is summoned to strike the opposing team. It may also freeze them solid.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM55
+Scald
+Water
+Special
+80
+100
+15
+30
+The user shoots boiling hot water at its target. It may also leave the target with a burn.
+Attack
+-----------------
+TM77
+Psych Up
+Normal
+Other
+--
+--
+10
+--
+The user hypnotizes itself into copying any stat change made by the target.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM03
+Surf
+Water
+Special
+90
+100
+15
+--
+It swamps the area around the user with a giant wave. It can also be used for crossing water.
+Attack
+-----------------
+HM05
+Waterfall
+Water
+Physical
+80
+100
+15
+20
+The user charges at the target and may make it flinch. It can also be used to climb a waterfall.
+Attack
+-----------------
+HM07 (ΩRαS)
+Dive
+Water
+Physical
+80
+100
+10
+--
+Diving on the first turn, the user floats up and attacks on the second turn. It can be used to dive deep in the ocean.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Icy Wind
+Ice
+Special
+55
+95
+15
+100
+The user attacks with a gust of chilled air. It also reduces the targets' Speed stat.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Water Pulse
+Water
+Special
+60
+100
+20
+20
+The user attacks the target with a pulsing blast of water. It may also confuse the target.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Dive
+Water
+Physical
+80
+100
+10
+--
+Diving on the first turn, the user floats up and attacks on the second turn. It can be used to dive deep in the ocean.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Whirlpool
+Water
+Special
+35
+85
+15
+100
+Traps foes in a violent swirling whirlpool for four to five turns.
+Attack
+-----------------
+Dive
+Water
+Physical
+80
+100
+10
+--
+Diving on the first turn, the user floats up and attacks on the second turn. It can be used to dive deep in the ocean.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+Attack
+-----------------
+Double-edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Mimic
+Normal
+Other
+--
+--
+10
+--
+The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+ΩRαS Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+—
+Charm
+Fairy
+Other
+--
+100
+20
+--
+The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.
+Attack
+-----------------
+4
+Water Gun
+Water
+Special
+40
+100
+25
+--
+The target is blasted with a forceful shot of water.
+Attack
+-----------------
+7
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+9
+Draining Kiss
+Fairy
+Special
+50
+100
+10
+--
+The user steals the target's energy with a kiss. The user's HP is restored by over half of the damage taken by the target.
+Attack
+-----------------
+14
+Lucky Chant
+Normal
+Other
+--
+--
+30
+--
+The user chants an incantation toward the sky, preventing opposing Pokémon from landing critical hits.
+Attack
+-----------------
+17
+Water Pulse
+Water
+Special
+60
+100
+20
+20
+The user attacks the target with a pulsing blast of water. It may also confuse the target.
+Attack
+-----------------
+22
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+27
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Attack
+-----------------
+31
+Sweet Kiss
+Fairy
+Other
+--
+75
+10
+--
+The user kisses the target with a sweet, angelic cuteness that causes confusion.
+Attack
+-----------------
+37
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+40
+Aqua Ring
+Water
+Other
+--
+--
+20
+--
+The user envelops itself in a veil made of water. It regains some HP on every turn.
+Attack
+-----------------
+46
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+50
+Hydro Pump
+Water
+Special
+110
+80
+5
+--
+The target is blasted by a huge volume of water launched under great pressure.
+Attack
+-----------------
+55
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+X & Y Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+4
+Charm
+Fairy
+Other
+--
+100
+20
+--
+The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.
+Attack
+-----------------
+7
+Water Gun
+Water
+Special
+40
+100
+25
+--
+The target is blasted with a forceful shot of water.
+Attack
+-----------------
+9
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+14
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+17
+Lucky Chant
+Normal
+Other
+--
+--
+30
+--
+The user chants an incantation toward the sky, preventing opposing Pokémon from landing critical hits.
+Attack
+-----------------
+22
+Water Pulse
+Water
+Special
+60
+100
+20
+20
+The user attacks the target with a pulsing blast of water. It may also confuse the target.
+Attack
+-----------------
+27
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+31
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Attack
+-----------------
+37
+Sweet Kiss
+Fairy
+Other
+--
+75
+10
+--
+The user kisses the target with a sweet, angelic cuteness that causes confusion.
+Attack
+-----------------
+40
+Hydro Pump
+Water
+Special
+110
+80
+5
+--
+The target is blasted by a huge volume of water launched under great pressure.
+Attack
+-----------------
+46
+Aqua Ring
+Water
+Other
+--
+--
+20
+--
+The user envelops itself in a veil made of water. It regains some HP on every turn.
+Attack
+-----------------
+50
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+55
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Aqua Jet
+Water
+Physical
+40
+100
+20
+--
+The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
+Attack
+-----------------
+Aqua Ring
+Water
+Other
+--
+--
+20
+--
+The user envelops itself in a veil made of water. It regains some HP on every turn.
+Attack
+-----------------
+Brine
+Water
+Special
+65
+100
+10
+--
+If the target's HP is down to about half, this attack will hit with double the power.
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Entrainment
+Normal
+Other
+--
+100
+15
+--
+The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.
+Attack
+-----------------
+Heal Pulse
+Psychic
+Other
+--
+--
+10
+--
+The user emits a healing pulse which restores the target's HP by up to half of its max HP.
+Attack
+-----------------
+Mud Sport
+Ground
+Other
+--
+--
+15
+--
+The user covers itself with mud. It weakens Electric-type moves for five turns.
+Attack
+-----------------
+Splash
+Normal
+Other
+--
+--
+40
+--
+The user just flops and splashes around to no effect at all...
+Attack
+-----------------
+Supersonic
+Normal
+Other
+--
+55
+20
+--
+The user generates odd sound waves from its body. It may confuse the target.
+Attack
+-----------------
+Water Sport
+Water
+Other
+--
+--
+15
+--
+The user soaks itself with water. The move weakens Fire-type moves for five turns.

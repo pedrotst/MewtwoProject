@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Torchic
+National No: 255
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 4
+Male Rate :87.5%
+Female Rate :12.5%
+Type 1: Fire
+Type 2: NoType
+Chick Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 2.5kg
+Lbs: 5.5lbs
+45
+5120
+PokeData/Torchic/Torchic.png
+PokeData/Torchic/Torchic-Shiny.png
+Name: Blaze
+Description: When HP is below 1/3rd its maximum, power of Fire-type moves is increased by 50%
+Name: Speed Boost
+Description: Speed increases by one stage at the end of each turn
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Attack: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 2.0
+Electric: 1.0
+Bug: 0.5
+Ice: 0.5
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 2.0
+Steel: 0.5
+Rock: 2.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

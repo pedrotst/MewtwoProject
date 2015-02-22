@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Clefable
+National No: 36
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :25.0%
+Female Rate :75.0%
+Type 1: Fairy
+Type 2: NoType
+Fairy Pokémon
+Meters: 1.3m
+Inches: 4'03"
+Kg: 40.0kg
+Lbs: 88.2lbs
+25
+2560
+PokeData/Clefable/Clefable.png
+PokeData/Clefable/Clefable-Shiny.png
+Name: Cute Charm
+Description: The opponent has a 30% chance of being induced with Attract when using an attack, that requires physical contact, against this Pokémon
+Name: Magic Guard
+Description: Prevents all damage except from direct-attack moves
+Name: Unaware
+Description: Foe's stat modifications are ignored
+Exp to lvl 100: 800000
+Classification: Fast
+140
+HP: 3
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 2.0
+Fight: 0.5
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 0.0
+Water: 1.0
+Steel: 2.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 0.5

@@ -1,0 +1,780 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+—
+Fell Stinger
+Bug
+Physical
+30
+100
+25
+--
+When the user knocks out a target with this move, the user's Attack stat rises sharply.
+Attack
+-----------------
+—
+Peck
+Flying
+Physical
+35
+100
+35
+--
+The target is jabbed with a sharply pointed beak or horn.
+Attack
+-----------------
+—
+Leer
+Normal
+Other
+--
+100
+30
+100
+The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.
+Attack
+-----------------
+—
+Quick Guard
+Fighting
+Other
+--
+--
+15
+--
+The user protects itself and its allies from priority moves. If used in succession, its chance of failing rises.
+Attack
+-----------------
+—
+Twineedle
+Bug
+Physical
+25
+100
+20
+20
+The user damages the target twice in succession by jabbing it with two spikes. It may also poison the target.
+Attack
+-----------------
+4
+Leer
+Normal
+Other
+--
+100
+30
+100
+The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.
+Attack
+-----------------
+8
+Quick Guard
+Fighting
+Other
+--
+--
+15
+--
+The user protects itself and its allies from priority moves. If used in succession, its chance of failing rises.
+Attack
+-----------------
+13
+Twineedle
+Bug
+Physical
+25
+100
+20
+20
+The user damages the target twice in succession by jabbing it with two spikes. It may also poison the target.
+Attack
+-----------------
+16
+Fury Attack
+Normal
+Physical
+15
+85
+20
+--
+The target is jabbed repeatedly with a horn or beak two to five times in a row.
+Attack
+-----------------
+20
+Headbutt
+Normal
+Physical
+70
+100
+15
+30
+The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.
+Attack
+-----------------
+25
+False Swipe
+Normal
+Physical
+40
+100
+40
+--
+A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.
+Attack
+-----------------
+28
+Bug Buzz
+Bug
+Special
+90
+100
+10
+10
+The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+32
+Slash
+Normal
+Physical
+70
+100
+20
+--
+The target is attacked with a slash of claws or blades. Critical hits land more easily.
+Attack
+-----------------
+37
+Iron Head
+Steel
+Physical
+80
+100
+15
+30
+The user slams the target with its steel-hard head. It may also make the target flinch.
+Attack
+-----------------
+40
+Iron Defense
+Steel
+Other
+--
+--
+15
+--
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+Attack
+-----------------
+44
+X-Scissor
+Bug
+Physical
+80
+100
+15
+--
+The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.
+Attack
+-----------------
+49
+Reversal
+Fighting
+Physical
+??
+100
+15
+--
+An all-out attack that becomes more powerful the less HP the user has.
+Attack
+-----------------
+52
+Swords Dance
+Normal
+Other
+--
+--
+20
+--
+A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
+Attack
+-----------------
+56
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+60
+Fell Stinger
+Bug
+Physical
+30
+100
+25
+--
+When the user knocks out a target with this move, the user's Attack stat rises sharply.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM52
+Focus Blast
+Fighting
+Special
+120
+70
+5
+10
+The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM54
+False Swipe
+Normal
+Physical
+40
+100
+40
+--
+A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM75
+Swords Dance
+Normal
+Other
+--
+--
+20
+--
+A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
+Attack
+-----------------
+TM76
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+TM81
+X-Scissor
+Bug
+Physical
+80
+100
+15
+--
+The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.
+Attack
+-----------------
+TM83
+Infestation
+Bug
+Special
+20
+100
+20
+100
+The target is infested and attacked for four to five turns. The target can't flee during this time.
+Attack
+-----------------
+TM84
+Poison Jab
+Poison
+Physical
+80
+100
+20
+30
+The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Fury Cutter
+Bug
+Physical
+40
+95
+20
+--
+The target is slashed with scythes or claws. Its power increases if it hits in succession.
+Attack
+-----------------
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+Scary Face
+Normal
+Other
+--
+100
+10
+--
+The user frightens the target with a scary face to harshly reduce its Speed stat.
+Attack
+-----------------
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Counter
+Fighting
+Physical
+??
+100
+20
+--
+A retaliation move that counters any physical attack, inflicting double the damage taken.
+Attack
+-----------------
+Drill Run
+Ground
+Physical
+80
+95
+10
+--
+The user crashes into its target while rotating its body like a drill. Critical hits land more easily.
+Attack
+-----------------
+Feint Attack
+Dark
+Physical
+60
+--
+20
+--
+The user approaches the target disarmingly, then throws a sucker punch. It hits without fail.
+Attack
+-----------------
+Horn Attack
+Normal
+Physical
+65
+100
+25
+--
+The target is jabbed with a sharply pointed horn to inflict damage.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Megahorn
+Bug
+Physical
+120
+85
+10
+--
+Using its tough and impressive horn, the user rams into the target with no letup.
+Attack
+-----------------
+Pursuit
+Dark
+Physical
+40
+100
+20
+--
+An attack move that inflicts double damage if used on a target that is switching out of battle.
+Attack
+-----------------
+Screech
+Normal
+Other
+--
+85
+40
+--
+An earsplitting screech harshly reduces the target's Defense stat.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Drill Run
+Ground
+Physical
+80
+95
+10
+--
+The user crashes into its target while rotating its body like a drill. Critical hits land more easily.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Iron Defense
+Steel
+Other
+--
+--
+15
+--
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+Attack
+-----------------
+Iron Head
+Steel
+Physical
+80
+100
+15
+30
+The user slams the target with its steel-hard head. It may also make the target flinch.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

@@ -1,0 +1,818 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Attack
+-----------------
+—
+Reversal
+Fighting
+Physical
+??
+100
+15
+--
+An all-out attack that becomes more powerful the less HP the user has.
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+—
+Peck
+Flying
+Physical
+35
+100
+35
+--
+The target is jabbed with a sharply pointed beak or horn.
+Attack
+-----------------
+—
+Constrict
+Normal
+Physical
+10
+100
+35
+10
+The target is attacked with long, creeping tentacles or vines. It may also lower the target's Speed stat.
+Attack
+-----------------
+4
+Reflect
+Psychic
+Other
+--
+--
+20
+--
+A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
+Attack
+-----------------
+8
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+12
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+13
+Psywave
+Psychic
+Special
+??
+100
+15
+--
+The target is attacked with an odd  psychic wave. The attack varies in intensity.
+Attack
+-----------------
+15
+Topsy-Turvy
+Dark
+Other
+--
+100
+20
+--
+All stat changes affecting the target turn topsy-turvy and become the opposite of what they were.
+Attack
+-----------------
+18
+Hypnosis
+Psychic
+Other
+--
+60
+20
+--
+The user employs hypnotic suggestion to make the target fall into a deep sleep.
+Attack
+-----------------
+21
+Psybeam
+Psychic
+Special
+65
+100
+20
+10
+The target is attacked with a peculiar ray. It may also cause confusion.
+Attack
+-----------------
+23
+Switcheroo
+Dark
+Other
+--
+100
+10
+--
+The user trades held items with the target faster than the eye can follow.
+Attack
+-----------------
+27
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+31
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+35
+Pluck
+Flying
+Physical
+60
+100
+20
+--
+The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+39
+Psycho Cut
+Psychic
+Physical
+70
+100
+20
+--
+The user tears at the target with blades formed by psychic power. Critical hits land more easily.
+Attack
+-----------------
+43
+Slash
+Normal
+Physical
+70
+100
+20
+--
+The target is attacked with a slash of claws or blades. Critical hits land more easily.
+Attack
+-----------------
+46
+Night Slash
+Dark
+Physical
+70
+100
+15
+--
+The user slashes the target the instant an opportunity arises. Critical hits land more easily.
+Attack
+-----------------
+48
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM03
+Psyshock
+Psychic
+Special
+80
+100
+10
+--
+The user materializes an odd psychic wave to attack the target. This attack does physical damage.
+Attack
+-----------------
+TM04
+Calm Mind
+Psychic
+Other
+--
+--
+20
+--
+The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM12
+Taunt
+Dark
+Other
+--
+100
+20
+--
+The target is taunted into a rage that allows it to use only attack moves for three turns.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM24
+Thunderbolt
+Electric
+Special
+90
+100
+15
+10
+A strong electric blast is loosed at the target. It may also leave the target with paralysis.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM29
+Psychic
+Psychic
+Special
+90
+100
+10
+10
+The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM33
+Reflect
+Psychic
+Other
+--
+--
+20
+--
+A wondrous wall of light is put up to suppress damage from physical attacks for five turns.
+Attack
+-----------------
+TM35
+Flamethrower
+Fire
+Special
+90
+100
+15
+10
+The target is scorched with an intense blast of fire. It may also leave the target with a burn.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM41
+Torment
+Dark
+Other
+--
+100
+15
+--
+The user torments and enrages the target, making it incapable of using the same move twice in a row.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM56
+Fling
+Dark
+Physical
+??
+100
+10
+--
+The user flings its held item at the target to attack. Its power and effects depend on the item.
+Attack
+-----------------
+TM63
+Embargo
+Dark
+Other
+--
+100
+15
+--
+It prevents the target from using its held item. Its Trainer is also prevented from using items on it.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM67
+Retaliate
+Normal
+Physical
+70
+100
+5
+--
+The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this attack's damage increases.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM77
+Psych Up
+Normal
+Other
+--
+--
+10
+--
+The user hypnotizes itself into copying any stat change made by the target.
+Attack
+-----------------
+TM80
+Rock Slide
+Rock
+Physical
+75
+90
+10
+30
+Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM92
+Trick Room
+Psychic
+Other
+--
+--
+5
+--
+The user creates a bizarre area in which slower Pokémon get to move first for five turns.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM97
+Dark Pulse
+Dark
+Special
+80
+100
+15
+20
+The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Camouflage
+Normal
+Other
+--
+--
+20
+--
+The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.
+Attack
+-----------------
+Destiny Bond
+Ghost
+Other
+--
+--
+5
+--
+When this move is used, if the user faints, the Pokémon that landed the knockout hit also faints.
+Attack
+-----------------
+Flatter
+Dark
+Other
+--
+100
+15
+--
+Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat.
+Attack
+-----------------
+Power Split
+Psychic
+Other
+--
+--
+10
+--
+The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target's.
+Attack
+-----------------
+Simple Beam
+Normal
+Other
+--
+100
+15
+--
+The user's mysterious psychic wave changes the target's Ability to Simple.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bind
+Normal
+Physical
+15
+85
+20
+100
+Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.
+Attack
+-----------------
+Block
+Normal
+Other
+--
+--
+5
+--
+The user blocks the target's way with arms spread wide to prevent escape.
+Attack
+-----------------
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Role Play
+Psychic
+Other
+--
+--
+10
+--
+The user mimics the target completely, copying the target's natural Ability.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snatch
+Dark
+Other
+--
+--
+10
+--
+The user steals the effects of any healing or stat-changing move the opponent attempts to use.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Spite
+Ghost
+Other
+--
+100
+10
+--
+The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.

@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Chikorita
+National No: 152
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :87.5%
+Female Rate :12.5%
+Type 1: Grass
+Type 2: NoType
+Leaf Pokémon
+Meters: 0.9m
+Inches: 2'11"
+Kg: 6.4kg
+Lbs: 14.1lbs
+45
+5120
+PokeData/Chikorita/Chikorita.png
+PokeData/Chikorita/Chikorita-Shiny.png
+Name: Overgrow
+Description: When HP is below 1/3rd its maximum, power of Grass-type moves is increased by 50%
+Name: Leaf Guard
+Description: Prevents the Pokémon from receiving status conditions during strong sunlight
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Defense: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 2.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 2.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

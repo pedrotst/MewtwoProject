@@ -1,0 +1,63 @@
+Get Type and Name failed for .\Itens\berry\Pamtre Berry.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Calcium.html
+Get Type and Name failed for .\Itens\battle\Carbos.html
+Get Type and Name failed for .\Itens\battle\Clever Wing.html
+Get Type and Name failed for .\Itens\battle\Dire Hit.html
+Get Type and Name failed for .\Itens\battle\Genius Wing.html
+Get Type and Name failed for .\Itens\battle\Guard Spec..html
+Get Type and Name failed for .\Itens\battle\Health Wing.html
+Get Type and Name failed for .\Itens\battle\HP Up.html
+Get Type and Name failed for .\Itens\battle\Iron.html
+Get Type and Name failed for .\Itens\battle\Muscle Wing.html
+Get Type and Name failed for .\Itens\battle\PP Max.html
+Get Type and Name failed for .\Itens\battle\PP Up.html
+Get Type and Name failed for .\Itens\battle\Protein.html
+Get Type and Name failed for .\Itens\battle\Rare Candy.html
+Get Type and Name failed for .\Itens\battle\Resist Wing.html
+Get Type and Name failed for .\Itens\battle\Stat Items.html
+Get Type and Name failed for .\Itens\battle\Swift Wing.html
+Get Type and Name failed for .\Itens\battle\Vitamins.html
+Get Type and Name failed for .\Itens\battle\X Accuracy.html
+Get Type and Name failed for .\Itens\battle\X Attack.html
+Get Type and Name failed for .\Itens\battle\X Defend.html
+Get Type and Name failed for .\Itens\battle\X Sp. Def.html
+Get Type and Name failed for .\Itens\battle\X Special.html
+Get Type and Name failed for .\Itens\battle\X Speed.html
+Get Type and Name failed for .\Itens\battle\Zinc.html
+Get Type and Name failed for .\Itens\berry\Aguav Berry.html
+Get Type and Name failed for .\Itens\berry\Apicot Berry.html
+Get Type and Name failed for .\Itens\berry\Aspear Berry.html
+Get Type and Name failed for .\Itens\berry\Babiri Berry.html
+Get Type and Name failed for .\Itens\berry\Belue Berry.html
+Get Type and Name failed for .\Itens\berry\Berries.html
+Get Type and Name failed for .\Itens\berry\Bitter Berry.html
+Get Type and Name failed for .\Itens\berry\Bluk Berry.html
+Get Type and Name failed for .\Itens\berry\Burnt Berry.html
+Get Type and Name failed for .\Itens\berry\Charti Berry.html
+Get Type and Name failed for .\Itens\berry\Cheri Berry.html
+Get Type and Name failed for .\Itens\berry\Chesto Berry.html
+Get Type and Name failed for .\Itens\berry\Chilan Berry.html
+Get Type and Name failed for .\Itens\berry\Chople Berry.html
+Get Type and Name failed for .\Itens\berry\Coba Berry.html
+Get Type and Name failed for .\Itens\berry\Colbur Berry.html
+Get Type and Name failed for .\Itens\berry\Cornn Berry.html
+Get Type and Name failed for .\Itens\berry\Custap Berry.html
+Get Type and Name failed for .\Itens\berry\Durin Berry.html
+Get Type and Name failed for .\Itens\berry\Enigma Berry.html
+Get Type and Name failed for .\Itens\berry\Figy Berry.html
+Get Type and Name failed for .\Itens\berry\Ganlon Berry.html
+Get Type and Name failed for .\Itens\berry\Gold Berry.html
+Get Type and Name failed for .\Itens\berry\Grepa Berry.html
+Get Type and Name failed for .\Itens\berry\GS Berries.html
+Get Type and Name failed for .\Itens\berry\Haban Berry.html
+Get Type and Name failed for .\Itens\berry\Hondew Berry.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html
+Get Type and Name failed for .\Itens\battle\Battle Effect.html

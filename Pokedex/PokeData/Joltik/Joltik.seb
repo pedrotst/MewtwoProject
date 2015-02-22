@@ -1,0 +1,684 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+String Shot
+Bug
+Other
+--
+95
+40
+--
+The targets are bound with silk blown from the user's mouth. This silk reduces the targets' Speed stat.
+Attack
+-----------------
+—
+Leech Life
+Bug
+Physical
+20
+100
+15
+--
+The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+—
+Spider Web
+Bug
+Other
+--
+--
+10
+--
+The user ensnares the target with thin, gooey silk so it can't flee from battle.
+Attack
+-----------------
+4
+Thunder Wave
+Electric
+Other
+--
+100
+20
+--
+A weak electric charge is launched at the target. It causes paralysis if it hits.
+Attack
+-----------------
+7
+Screech
+Normal
+Other
+--
+85
+40
+--
+An earsplitting screech harshly reduces the target's Defense stat.
+Attack
+-----------------
+12
+Fury Cutter
+Bug
+Physical
+40
+95
+20
+--
+The target is slashed with scythes or claws. Its power increases if it hits in succession.
+Attack
+-----------------
+15
+Electroweb
+Electric
+Special
+55
+95
+15
+100
+The user captures and attacks opposing Pokémon by using an electric net. It reduces the targets' Speed stat.
+Attack
+-----------------
+18
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+23
+Gastro Acid
+Poison
+Other
+--
+100
+10
+--
+The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.
+Attack
+-----------------
+26
+Slash
+Normal
+Physical
+70
+100
+20
+--
+The target is attacked with a slash of claws or blades. Critical hits land more easily.
+Attack
+-----------------
+29
+Electro Ball
+Electric
+Special
+??
+100
+10
+--
+The user hurls an electric orb at the target. The faster the user is than the target, the greater the damage.
+Attack
+-----------------
+34
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+37
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+40
+Sucker Punch
+Dark
+Physical
+80
+100
+5
+--
+This move enables the user to attack first. It fails if the target is not readying an attack, however.
+Attack
+-----------------
+45
+Discharge
+Electric
+Special
+80
+100
+15
+30
+A flare of electricity is loosed to strike the area around the user. It may also cause paralysis.
+Attack
+-----------------
+48
+Bug Buzz
+Bug
+Special
+90
+100
+10
+10
+The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM24
+Thunderbolt
+Electric
+Special
+90
+100
+15
+10
+A strong electric blast is loosed at the target. It may also leave the target with paralysis.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM57
+Charge Beam
+Electric
+Special
+50
+90
+10
+70
+The user attacks with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM72
+Volt Switch
+Electric
+Special
+70
+100
+20
+--
+After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Attack
+-----------------
+TM73
+Thunder Wave
+Electric
+Other
+--
+100
+20
+--
+A weak electric charge is launched at the target. It causes paralysis if it hits.
+Attack
+-----------------
+TM76
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+TM81
+X-Scissor
+Bug
+Physical
+80
+100
+15
+--
+The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.
+Attack
+-----------------
+TM83
+Infestation
+Bug
+Special
+20
+100
+20
+100
+The target is infested and attacked for four to five turns. The target can't flee during this time.
+Attack
+-----------------
+TM84
+Poison Jab
+Poison
+Physical
+80
+100
+20
+30
+The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM93
+Wild Charge
+Electric
+Physical
+90
+100
+15
+--
+The user shrouds itself in electricity and smashes into its target. It also damages the user a little.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Camouflage
+Normal
+Other
+--
+--
+20
+--
+The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.
+Attack
+-----------------
+Cross Poison
+Poison
+Physical
+70
+100
+20
+10
+A slashing attack with a poisonous blade that may also leave the target poisoned. Critical hits land more easily.
+Attack
+-----------------
+Disable
+Normal
+Other
+--
+100
+20
+--
+For four turns, this move prevents the target from using the move it last used.
+Attack
+-----------------
+Feint Attack
+Dark
+Physical
+60
+--
+20
+--
+The user approaches the target disarmingly, then throws a sucker punch. It hits without fail.
+Attack
+-----------------
+Pin Missile
+Bug
+Physical
+25
+95
+20
+--
+Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Attack
+-----------------
+Poison Sting
+Poison
+Physical
+15
+100
+35
+30
+The user stabs the target with a poisonous stinger. This may also poison the target.
+Attack
+-----------------
+Pursuit
+Dark
+Physical
+40
+100
+20
+--
+An attack move that inflicts double damage if used on a target that is switching out of battle.
+Attack
+-----------------
+Rock Climb
+Normal
+Physical
+90
+85
+20
+20
+The user attacks the target by smashing into it with incredible force. It may also confuse the target.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bounce
+Flying
+Physical
+85
+85
+5
+30
+The user bounces up high, then drops on the target on the second turn. It may also leave the target with paralysis.
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Electroweb
+Electric
+Special
+55
+95
+15
+100
+The user captures and attacks opposing Pokémon by using an electric net. It reduces the targets' Speed stat.
+Attack
+-----------------
+Gastro Acid
+Poison
+Other
+--
+100
+10
+--
+The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Magnet Rise
+Electric
+Other
+--
+--
+10
+--
+The user levitates using electrically generated magnetism for five turns.
+Attack
+-----------------
+Shock Wave
+Electric
+Special
+60
+--
+20
+--
+The user strikes the target with a quick jolt of electricity. This attack cannot be evaded.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

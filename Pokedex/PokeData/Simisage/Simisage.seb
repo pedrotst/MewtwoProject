@@ -1,0 +1,916 @@
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM01
+Hone Claws
+Dark
+Other
+--
+--
+15
+--
+The user sharpens its claws to boost its Attack stat and accuracy.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM12
+Taunt
+Dark
+Other
+--
+100
+20
+--
+The target is taunted into a rage that allows it to use only attack moves for three turns.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM28
+Dig
+Ground
+Physical
+80
+100
+10
+--
+The user burrows, then attacks on the second turn. It can also be used to exit dungeons.
+Attack
+-----------------
+TM31
+Brick Break
+Fighting
+Physical
+75
+100
+15
+--
+The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM39
+Rock Tomb
+Rock
+Physical
+60
+95
+15
+100
+Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement.
+Attack
+-----------------
+TM41
+Torment
+Dark
+Other
+--
+100
+15
+--
+The user torments and enrages the target, making it incapable of using the same move twice in a row.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM47
+Low Sweep
+Fighting
+Physical
+65
+100
+20
+100
+The user attacks the target's legs swiftly, reducing the target's Speed stat.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM52
+Focus Blast
+Fighting
+Special
+120
+70
+5
+10
+The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM56
+Fling
+Dark
+Physical
+??
+100
+10
+--
+The user flings its held item at the target to attack. Its power and effects depend on the item.
+Attack
+-----------------
+TM62
+Acrobatics
+Flying
+Physical
+55
+100
+15
+--
+The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.
+Attack
+-----------------
+TM65
+Shadow Claw
+Ghost
+Physical
+70
+100
+15
+--
+The user slashes with a sharp claw made from shadows. Critical hits land more easily.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM80
+Rock Slide
+Rock
+Physical
+75
+90
+10
+30
+Large boulders are hurled at the opposing team to inflict damage. It may also make the targets flinch.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM98
+Power-Up Punch
+Fighting
+Physical
+40
+100
+20
+100
+Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Scratch
+Normal
+Physical
+40
+100
+35
+--
+Hard, pointed, and sharp claws rake the target to inflict damage.
+Attack
+-----------------
+Play Nice
+Normal
+Other
+--
+--
+20
+100
+The user and the target become friends, and the target loses its will to fight. This lowers the target's Attack stat.
+Attack
+-----------------
+Vine Whip
+Grass
+Physical
+45
+100
+25
+--
+The target is struck with slender, whiplike vines to inflict damage.
+Attack
+-----------------
+Leech Seed
+Grass
+Other
+--
+90
+10
+--
+A seed is planted on the target. It steals some HP from the target every turn.
+Attack
+-----------------
+Bite
+Dark
+Physical
+60
+100
+25
+30
+The target is bitten with viciously sharp fangs. It may make the target flinch.
+Attack
+-----------------
+Torment
+Dark
+Other
+--
+100
+15
+--
+The user torments and enrages the target, making it incapable of using the same move twice in a row.
+Attack
+-----------------
+Fling
+Dark
+Physical
+??
+100
+10
+--
+The user flings its held item at the target to attack. Its power and effects depend on the item.
+Attack
+-----------------
+Acrobatics
+Flying
+Physical
+55
+100
+15
+--
+The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.
+Attack
+-----------------
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Crunch
+Dark
+Physical
+80
+100
+15
+20
+The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Leer
+Normal
+Other
+--
+100
+30
+100
+The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.
+Attack
+-----------------
+—
+Lick
+Ghost
+Physical
+30
+100
+30
+30
+The target is licked with a long tongue, causing damage. It may also leave the target with paralysis.
+Attack
+-----------------
+—
+Fury Swipes
+Normal
+Physical
+18
+80
+15
+--
+The target is raked with sharp claws or scythes for two to five times in quick succession.
+Attack
+-----------------
+—
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Covet
+Normal
+Physical
+60
+100
+25
+--
+The user endearingly approaches the target, then steals the target's held item.
+Attack
+-----------------
+Endeavor
+Normal
+Physical
+??
+100
+5
+--
+An attack move that cuts down the target's HP to equal the user's HP.
+Attack
+-----------------
+Focus Punch
+Fighting
+Physical
+150
+100
+20
+--
+The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.
+Attack
+-----------------
+Gastro Acid
+Poison
+Other
+--
+100
+10
+--
+The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Gunk Shot
+Poison
+Physical
+120
+80
+5
+30
+The user shoots filthy garbage at the target to attack. It may also poison the target.
+Attack
+-----------------
+Helping Hand
+Normal
+Other
+--
+--
+20
+--
+The user assists an ally by boosting the power of its attack.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Low Kick
+Fighting
+Physical
+??
+100
+20
+--
+A powerful low kick that makes the target fall over. It inflicts greater damage on heavier targets.
+Attack
+-----------------
+Recycle
+Normal
+Other
+--
+--
+10
+--
+The user recycles a held item that has been used in battle so it can be used again.
+Attack
+-----------------
+Role Play
+Psychic
+Other
+--
+--
+10
+--
+The user mimics the target completely, copying the target's natural Ability.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Superpower
+Fighting
+Physical
+120
+100
+5
+100
+The user attacks the target with great power. However, it also lowers the user's Attack and Defense.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Uproar
+Normal
+Special
+90
+100
+10
+--
+The user attacks in an uproar for three turns. Over that time, no one can fall asleep.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Work Up
+Normal
+Other
+--
+--
+30
+--
+The user is roused, and its Attack and Sp. Atk stats increase.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Astonish
+Ghost
+Physical
+30
+100
+15
+30
+The user attacks the target while shouting in a startling fashion. It may also make the target flinch.
+Attack
+-----------------
+Bullet Seed
+Grass
+Physical
+25
+100
+30
+--
+The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
+Attack
+-----------------
+Covet
+Normal
+Physical
+60
+100
+25
+--
+The user endearingly approaches the target, then steals the target's held item.
+Attack
+-----------------
+Disarming Voice
+Fairy
+Special
+40
+--
+15
+--
+Letting out a charming cry, the user does emotional damage to opposing Pokémon. This attack never misses.
+Attack
+-----------------
+Grass Whistle
+Grass
+Other
+--
+55
+15
+--
+The user plays a pleasant melody that lulls the target into a deep sleep.
+Attack
+-----------------
+Leaf Storm
+Grass
+Special
+130
+90
+5
+100
+The user whips up a storm of leaves around the target. The attack's recoil harshly reduces the user's Sp. Atk stat.
+Attack
+-----------------
+Low Kick
+Fighting
+Physical
+??
+100
+20
+--
+A powerful low kick that makes the target fall over. It inflicts greater damage on heavier targets.
+Attack
+-----------------
+Magical Leaf
+Grass
+Special
+60
+--
+20
+--
+The user scatters curious leaves that chase the target. This attack will not miss.
+Attack
+-----------------
+Nasty Plot
+Dark
+Other
+--
+--
+20
+--
+The user stimulates its brain by thinking bad thoughts. It sharply raises the user's Sp. Atk.
+Attack
+-----------------
+Role Play
+Psychic
+Other
+--
+--
+10
+--
+The user mimics the target completely, copying the target's natural Ability.
+Attack
+-----------------
+Tickle
+Normal
+Other
+--
+100
+20
+--
+The user tickles the target into laughing, reducing its Attack and Defense stats.

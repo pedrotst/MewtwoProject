@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Glalie
+National No: 362
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 180
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ice
+Type 2: NoType
+Face Pokémon
+Meters: 1.5m
+Inches: 4'11"
+Kg: 256.5kg
+Lbs: 565.5lbs
+75
+5120
+PokeData/Glalie/Glalie.png
+PokeData/Glalie/Glalie-Shiny.png
+Name: Inner Focus
+Description: This Pokémon will not flinch. Does not prevent flinching with Focus Punch
+Name: Ice Body
+Description: HP is restored by 1/16th of maximum HP when it's hailing
+Name: Moody
+Description: At the end of every turn, a random stat is raised by two stages while another is lowered by one stage
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+HP: 2
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 2.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 2.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

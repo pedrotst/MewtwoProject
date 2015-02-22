@@ -1,0 +1,624 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Grass Whistle
+Grass
+Other
+--
+55
+15
+--
+The user plays a pleasant melody that lulls the target into a deep sleep.
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+—
+String Shot
+Bug
+Other
+--
+95
+40
+--
+The targets are bound with silk blown from the user's mouth. This silk reduces the targets' Speed stat.
+Attack
+-----------------
+—
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+—
+Razor Leaf
+Grass
+Physical
+55
+95
+25
+--
+Sharp-edged leaves are launched to slash at the opposing team. Critical hits land more easily.
+Attack
+-----------------
+20
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM04
+Calm Mind
+Psychic
+Other
+--
+--
+20
+--
+The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM76
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+TM85
+Dream Eater
+Psychic
+Special
+100
+100
+15
+--
+The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user's HP.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Sticky Web
+Bug
+Other
+--
+--
+20
+--
+The user weaves a sticky net around the opposing team, which lowers their Speed stat upon switching into battle.
+Attack
+-----------------
+Bug Buzz
+Bug
+Special
+90
+100
+10
+10
+The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+Flail
+Normal
+Physical
+??
+100
+15
+--
+The user flails about aimlessly to attack. It becomes more powerful the less HP the user has.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Agility
+Psychic
+Other
+--
+--
+30
+--
+The user relaxes and lightens its body to move faster. It sharply boosts the Speed stat.
+Attack
+-----------------
+Air Slash
+Flying
+Special
+75
+95
+15
+30
+The user attacks with a blade of air that slices even the sky. It may also make the target flinch.
+Attack
+-----------------
+Baton Pass
+Normal
+Other
+--
+--
+40
+--
+The user switches places with a party Pokémon in waiting, passing along any stat changes.
+Attack
+-----------------
+Camouflage
+Normal
+Other
+--
+--
+20
+--
+The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.
+Attack
+-----------------
+Me First
+Normal
+Other
+??
+--
+20
+--
+The user tries to cut ahead of the target to steal and use the target's intended move with greater power.
+Attack
+-----------------
+Mind Reader
+Normal
+Other
+--
+--
+5
+--
+The user senses the target's movements with its mind to ensure its next attack does not miss the target.
+Attack
+-----------------
+Razor Wind
+Normal
+Special
+80
+100
+10
+--
+A two-turn attack. Blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily.
+Attack
+-----------------
+Screech
+Normal
+Other
+--
+85
+40
+--
+An earsplitting screech harshly reduces the target's Defense stat.
+Attack
+-----------------
+Silver Wind
+Bug
+Special
+60
+100
+5
+10
+The target is attacked with powdery scales blown by wind. It may also raise all the user's stats.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Electroweb
+Electric
+Special
+55
+95
+15
+100
+The user captures and attacks opposing Pokémon by using an electric net. It reduces the targets' Speed stat.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Iron Defense
+Steel
+Other
+--
+--
+15
+--
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+Attack
+-----------------
+Magic Coat
+Psychic
+Other
+--
+--
+15
+--
+A barrier reflects back to the target moves like Leech Seed and moves that damage status.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.

@@ -1,0 +1,51 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Camerupt
+National No: 323
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 107
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Fire
+Type 2: Ground
+Eruption Pokémon
+Meters: 1.9m
+Inches: 6'03"
+Kg: 220.0kg
+Lbs: 485.0lbs
+150
+5120
+PokeData/Camerupt/Camerupt.png
+PokeData/Camerupt/Camerupt-Shiny.png
+Name: Magma Armor
+Description: This Pokémon cannot be Frozen while having this ability
+Name: Solid Rock
+Description: Damage by super-effective moves is reduced by 25%
+Name: Anger Point
+Description: Increases Attack to maximum level upon taking a critical hit
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Sp. Attack: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 0.5
+Ground: 2.0
+Electric: 0.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 4.0
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

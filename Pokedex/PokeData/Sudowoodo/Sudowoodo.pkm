@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Sudowoodo
+National No: 185
+Central No: 0
+Coastal No: 0
+Mountain No: 130
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Rock
+Type 2: NoType
+Imitation Pokémon
+Meters: 1.2m
+Inches: 3'11"
+Kg: 38.0kg
+Lbs: 83.8lbs
+65
+5120
+PokeData/Sudowoodo/Sudowoodo.png
+PokeData/Sudowoodo/Sudowoodo-Shiny.png
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Rock Head
+Description: Does not receive recoil damage from recoil-causing damages
+Name: Rattled
+Description: Speed is raised by one stage when the Pokémon is hit by a Bug-type, Ghost-type or Dark-type move
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 2.0
+Fire: 0.5
+Ground: 2.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 0.5
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 2.0
+Rock: 1.0
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

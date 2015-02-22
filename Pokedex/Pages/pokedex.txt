@@ -1,0 +1,99 @@
+#001§#080§#---§#---§#---§Bulbasaur§45§49§49§65§65§45§Grass§Poison§Overgrow§§Chlorophyll§Seed Pok&eacute;mon§0.7m§6.9kg§45§5,120
+#002§#081§#---§#---§#---§Ivysaur§60§62§63§80§80§60§Grass§Poison§Overgrow§§Chlorophyll§Seed Pok&eacute;mon§1.0m§13.0kg§45§5,120
+#003§#082§#---§#---§#---§Venusaur§80§82§83§100§100§80§Grass§Poison§Overgrow§§Chlorophyll§Seed Pok&eacute;mon§2.0m§100.0kg§45§5,120
+#004§#083§#---§#---§#---§Charmander§39§52§43§60§50§65§Fire§§Blaze§§Solar Power§Lizard Pok&eacute;mon§0.6m§8.5kg§45§5,120
+#005§#084§#---§#---§#---§Charmeleon§58§64§58§80§65§80§Fire§§Blaze§§Solar Power§Flame Pok&eacute;mon§1.1m§19.0kg§45§5,120
+#006§#085§#---§#---§#---§Charizard§78§84§78§109§85§100§Fire§Flying§Blaze§§Solar Power§Flame Pok&eacute;mon§1.7m§90.5kg§45§5,120
+#007§#086§#---§#---§#---§Squirtle§44§48§65§50§64§43§Water§§Torrent§§Rain Dish§Tiny Turtle Pok&eacute;mon§0.5m§9.0kg§45§5,120
+#008§#087§#---§#---§#---§Wartortle§59§63§80§65§80§58§Water§§Torrent§§Rain Dish§Turtle Pok&eacute;mon§1.0m§22.5kg§45§5,120
+#009§#088§#---§#---§#---§Blastoise§79§83§100§85§105§78§Water§§Torrent§§Rain Dish§Shellfish Pok&eacute;mon§1.6m§85.5kg§45§5,120
+#010§#023§#---§#---§#---§Caterpie§45§30§35§20§20§45§Bug§§Shield Dust§§Run Away§Worm Pok&eacute;mon§0.3m§2.9kg§255§3,840
+#011§#024§#---§#---§#---§Metapod§50§20§55§25§25§30§Bug§§Shed Skin§Shed Skin§Stats§Cocoon Pok&eacute;mon§0.7m§9.9kg§120§3,840
+#012§#025§#---§#---§#---§Butterfree§60§45§50§90§80§70§Bug§Flying§Compoundeyes§§Tinted Lens§Butterfly Pok&eacute;mon§1.1m§32.0kg§45§3,840
+#013§#026§#---§#---§#---§Weedle§40§35§30§20§20§50§Bug§Poison§Shield Dust§§Run Away§Hairy Pok&eacute;mon§0.3m§3.2kg§255§3,840
+#014§#027§#---§#---§#---§Kakuna§45§25§50§25§25§35§Bug§Poison§Shed Skin§Shed Skin§Stats§Cocoon Pok&eacute;mon§0.6m§10.0kg§120§3,840
+#015§#028§#---§#---§#---§Beedrill§65§90§40§45§80§75§Bug§Poison§Swarm§§Sniper§Poison Bee Pok&eacute;mon§1.0m§29.5kg§45§3,840
+#016§#017§#---§#---§#---§Pidgey§40§45§40§35§35§56§Normal§Flying§Keen Eye§Tangled Feet§Big Pecks§Tiny Bird Pok&eacute;mon§0.3m§1.8kg§255§3,840
+#017§#018§#---§#---§#---§Pidgeotto§63§60§55§50§50§71§Normal§Flying§Keen Eye§Tangled Feet§Big Pecks§Bird Pok&eacute;mon§1.1m§30.0kg§120§3,840
+#018§#019§#---§#---§#---§Pidgeot§83§80§75§70§70§101§Normal§Flying§Keen Eye§Tangled Feet§Big Pecks§Bird Pok&eacute;mon§1.5m§39.5kg§45§3,840
+#019§#---§#---§#---§#---§Rattata§30§56§35§25§35§72§Normal§§Run Away§Guts§Hustle§Mouse Pok&eacute;mon§0.3m§3.5kg§255§3,840
+#020§#---§#---§#---§#---§Raticate§55§81§60§50§70§97§Normal§§Run Away§Guts§Hustle§Mouse Pok&eacute;mon§0.7m§18.5kg§127§3,840
+#021§#---§#---§#109§#---§Spearow§40§60§30§31§31§70§Normal§Flying§Keen Eye§§Sniper§Tiny Bird Pok&eacute;mon§0.3m§2.0kg§255§3,840
+#022§#---§#---§#110§#---§Fearow§65§90§65§61§61§100§Normal§Flying§Keen Eye§§Sniper§Beak Pok&eacute;mon§1.2m§38.0kg§90§3,840
+#023§#---§#---§#037§#---§Ekans§35§60§44§40§54§55§Poison§§Intimidate§Shed Skin§Unnerve§Snake Pok&eacute;mon§2.0m§6.9kg§255§5,120
+#024§#---§#---§#038§#---§Arbok§60§85§69§65§79§80§Poison§§Intimidate§Shed Skin§Unnerve§Cobra Pok&eacute;mon§3.5m§65.0kg§90§5,120
+#025§#036§#---§#---§#163§Pikachu§35§55§40§50§50§90§Electric§§Static§§Lightningrod§Mouse Pok&eacute;mon§0.4m§6.0kg§190§2,560
+#026§#037§#---§#---§#164§Raichu§60§90§55§90§80§110§Electric§§Static§§Lightningrod§Mouse Pok&eacute;mon§0.8m§30.0kg§75§2,560
+#027§#---§#---§#097§#117§Sandshrew§50§75§85§20§30§40§Ground§§Sand Veil§§Sand Rush§Mouse Pok&eacute;mon§0.6m§12.0kg§255§5,120
+#028§#---§#---§#098§#118§Sandslash§75§100§110§45§55§65§Ground§§Sand Veil§§Sand Rush§Mouse Pok&eacute;mon§1.0m§29.5kg§90§5,120
+#029§#---§#104§#---§#---§Nidoran&#9792;§55§47§52§40§40§41§Poison§§Poison Point§Rivalry§Hustle§Poison Pin Pok&eacute;mon§0.4m§7.0kg§235§5,120
+#030§#---§#105§#---§#---§Nidorina§70§62§67§55§55§56§Poison§§Poison Point§Rivalry§Hustle§Poison Pin Pok&eacute;mon§0.8m§20.0kg§120§5,120
+#031§#---§#106§#---§#---§Nidoqueen§90§92§87§75§85§76§Poison§Ground§Poison Point§Rivalry§Sheer Force§Drill Pok&eacute;mon§1.3m§60.0kg§45§5,120
+#032§#---§#107§#---§#---§Nidoran&#9794;§46§57§40§40§40§50§Poison§§Poison Point§Rivalry§Hustle§Poison Pin Pok&eacute;mon§0.5m§9.0kg§235§5,120
+#033§#---§#108§#---§#---§Nidorino§61§72§57§55§55§65§Poison§§Poison Point§Rivalry§Hustle§Poison Pin Pok&eacute;mon§0.9m§19.5kg§120§5,120
+#034§#---§#109§#---§#---§Nidoking§81§102§77§85§75§85§Poison§Ground§Poison Point§Rivalry§Sheer Force§Drill Pok&eacute;mon§1.4m§62.0kg§45§5,120
+#035§#---§#---§#---§#---§Clefairy§70§45§48§60§65§35§Fairy§§Cute Charm§Magic Guard§Friend Guard§Fairy Pok&eacute;mon§0.6m§7.5kg§150§2,560
+#036§#---§#---§#---§#---§Clefable§95§70§73§95§90§60§Fairy§§Cute Charm§Magic Guard§Unaware§Fairy Pok&eacute;mon§1.3m§40.0kg§25§2,560
+#037§#---§#---§#---§#160§Vulpix§38§41§40§50§65§65§Fire§§Flash Fire§§Drought§Fox Pok&eacute;mon§0.6m§9.9kg§190§5,120
+#038§#---§#---§#---§#161§Ninetales§73§76§75§81§100§100§Fire§§Flash Fire§§Drought§Fox Pok&eacute;mon§1.1m§19.9kg§75§5,120
+#039§#---§#---§#120§#143§Jigglypuff§115§45§20§45§25§20§Normal§Fairy§Cute Charm§Competitive§Friend Guard§Balloon Pok&eacute;mon§0.5m§5.5kg§170§2,560
+#040§#---§#---§#121§#144§Wigglytuff§140§70§45§85§50§45§Normal§Fairy§Cute Charm§Competitive§Frisk§Balloon Pok&eacute;mon§1.0m§12.0kg§50§2,560
+#041§#145§#---§#---§#065§Zubat§40§45§35§30§40§55§Poison§Flying§Inner Focus§§Infiltrator§Bat Pok&eacute;mon§0.8m§7.5kg§255§3,840
+#042§#146§#---§#---§#066§Golbat§75§80§70§65§75§90§Poison§Flying§Inner Focus§§Infiltrator§Bat Pok&eacute;mon§1.6m§55.0kg§90§3,840
+#043§#105§#---§#---§#091§Oddish§45§50§55§75§65§30§Grass§Poison§Chlorophyll§§Run Away§Weed Pok&eacute;mon§0.5m§5.4kg§255§5,120
+#044§#106§#---§#---§#092§Gloom§60§65§70§85§75§40§Grass§Poison§Chlorophyll§§Stench§Weed Pok&eacute;mon§0.8m§8.6kg§120§5,120
+#045§#107§#---§#---§#093§Vileplume§75§80§85§110§90§50§Grass§Poison§Chlorophyll§§Effect Spore§Flower Pok&eacute;mon§1.2m§18.6kg§45§5,120
+#046§#---§#---§#---§#---§Paras§35§70§55§45§55§25§Bug§Grass§Effect Spore§Dry Skin§Damp§Mushroom Pok&eacute;mon§0.3m§5.4kg§190§5,120
+#047§#---§#---§#---§#---§Parasect§60§95§80§60§80§30§Bug§Grass§Effect Spore§Dry Skin§Damp§Mushroom Pok&eacute;mon§1.0m§29.5kg§75§5,120
+#048§#---§#---§#---§#---§Venonat§60§55§50§40§55§45§Bug§Poison§Compoundeyes§Tinted Lens§Run Away§Insect Pok&eacute;mon§1.0m§30.0kg§190§5,120
+#049§#---§#---§#---§#---§Venomoth§70§65§60§90§75§90§Bug§Poison§Shield Dust§Tinted Lens§Wonder Skin §Poison Moth Pok&eacute;mon§1.5m§12.5kg§75§5,120
+#050§#---§#---§#001§#---§Diglett§10§55§25§35§45§95§Ground§§Sand Veil§Arena Trap§Sand Force§Mole Pok&eacute;mon§0.2m§0.8kg§255§5,120
+#051§#---§#---§#002§#---§Dugtrio§35§80§50§50§70§120§Ground§§Sand Veil§Arena Trap§Sand Force§Mole Pok&eacute;mon§0.7m§33.3kg§50§5,120
+#052§#---§#---§#---§#---§Meowth§40§45§35§40§40§90§Normal§§Pickup§Technician§Unnerve§Scratch Cat Pok&eacute;mon§0.4m§4.2kg§255§5,120
+#053§#---§#---§#---§#---§Persian§65§70§60§65§65§115§Normal§§Limber§Technician§Unnerve§Classy Cat Pok&eacute;mon§1.0m§32.0kg§90§5,120
+#054§#059§#---§#---§#165§Psyduck§50§52§48§65§50§55§Water§§Damp§Cloud Nine§Swift Swim§Duck Pok&eacute;mon§0.8m§19.6kg§190§5,120
+#055§#060§#---§#---§#166§Golduck§80§82§78§95§80§85§Water§§Damp§Cloud Nine§Swift Swim§Duck Pok&eacute;mon§1.7m§76.6kg§75§5,120
+#056§#---§#---§#---§#---§Mankey§40§80§35§35§45§70§Fighting§§Vital Spirit§Anger Point§Defiant§Pig Monkey Pok&eacute;mon§0.5m§28.0kg§190§5,120
+#057§#---§#---§#---§#---§Primeape§65§105§60§60§70§95§Fighting§§Vital Spirit§Anger Point§Defiant§Pig Monkey Pok&eacute;mon§1.0m§32.0kg§75§5,120
+#058§#---§#---§#---§#---§Growlithe§55§70§45§70§50§60§Fire§§Intimidate§Flash Fire§Justified§Puppy Pok&eacute;mon§0.7m§19.0kg§190§5,120
+#059§#---§#---§#---§#---§Arcanine§90§110§80§100§80§95§Fire§§Intimidate§Flash Fire§Justified§Legendary Pok&eacute;mon§1.9m§155.0kg§75§5,120
+#060§#---§#---§#033§#---§Poliwag§40§50§40§40§40§90§Water§§Water Absorb§Damp§Swift Swim§Tadpole Pok&eacute;mon§0.6m§12.4kg§255§5,120
+#061§#---§#---§#034§#---§Poliwhirl§65§65§65§50§50§90§Water§§Water Absorb§Damp§Swift Swim§Tadpole Pok&eacute;mon§1.0m§20.0kg§120§5,120
+#062§#---§#---§#035§#---§Poliwrath§90§95§95§70§90§70§Water§Fighting§Water Absorb§Damp§Swift Swim§Tadpole Pok&eacute;mon§1.3m§54.0kg§45§5,120
+#063§#102§#---§#---§#040§Abra§25§20§15§105§55§90§Psychic§§Synchronize§Inner Focus§Magic Guard§Psi Pok&eacute;mon§0.9m§19.5kg§200§5,120
+#064§#103§#---§#---§#041§Kadabra§40§35§30§120§70§105§Psychic§§Synchronize§Inner Focus§Magic Guard§Psi Pok&eacute;mon§1.3m§56.5kg§100§5,120
+#065§#104§#---§#---§#042§Alakazam§55§50§45§135§95§120§Psychic§§Synchronize§Inner Focus§Magic Guard§Psi Pok&eacute;mon§1.5m§48.0kg§50§5,120
+#066§#---§#057§#---§#075§Machop§70§80§50§35§35§35§Fighting§§Guts§No Guard§Steadfast§Superpower Pok&eacute;mon§0.8m§19.5kg§180§5,120
+#067§#---§#058§#---§#076§Machoke§80§100§70§50§60§45§Fighting§§Guts§No Guard§Steadfast§Superpower Pok&eacute;mon§1.5m§70.5kg§90§5,120
+#068§#---§#059§#---§#077§Machamp§90§130§80§65§85§55§Fighting§§Guts§No Guard§Steadfast§Superpower Pok&eacute;mon§1.6m§130.0kg§45§5,120
+#069§#---§#---§#026§#---§Bellsprout§50§75§35§70§30§40§Grass§Poison§Chlorophyll§§Gluttony§Flower Pok&eacute;mon§0.7m§4.0kg§255§5,120
+#070§#---§#---§#027§#---§Weepinbell§65§90§50§85§45§55§Grass§Poison§Chlorophyll§§Gluttony§Flycatcher Pok&eacute;mon§1.0m§6.4kg§120§5,120
+#071§#---§#---§#028§#---§Victreebel§80§105§65§100§70§70§Grass§Poison§Chlorophyll§§Gluttony§Flycatcher Pok&eacute;mon§1.7m§15.5kg§45§5,120
+#072§#---§#025§#---§#068§Tentacool§40§40§35§50§100§70§Water§Poison§Clear Body§Liquid Ooze§Rain Dish§Jellyfish Pok&eacute;mon§0.9m§45.5kg§190§5,120
+#073§#---§#026§#---§#069§Tentacruel§80§70§65§80§120§100§Water§Poison§Clear Body§Liquid Ooze§Rain Dish§Jellyfish Pok&eacute;mon§1.6m§55.0kg§60§5,120
+#074§#---§#---§#009§#058§Geodude§40§80§100§30§30§20§Rock§Ground§Rock Head§Sturdy§Sand Veil§Rock Pok&eacute;mon§0.4m§20.0kg§255§3,840
+#075§#---§#---§#010§#059§Graveler§55§95§115§45§45§35§Rock§Ground§Rock Head§Sturdy§Sand Veil§Rock Pok&eacute;mon§1.0m§105.0kg§120§3,840
+#076§#---§#---§#011§#060§Golem§80§120§130§55§65§45§Rock§Ground§Rock Head§Sturdy§Sand Veil§Megaton Pok&eacute;mon§1.4m§300.0kg§45§3,840
+#077§#---§#---§#---§#---§Ponyta§50§85§55§65§65§90§Fire§§Run Away§Flash Fire§Flame Body§Fire Horse Pok&eacute;mon§1.0m§30.0kg§190§5,120
+#078§#---§#---§#---§#---§Rapidash§65§100§70§80§80§105§Fire§§Run Away§Flash Fire§Flame Body§Fire Horse Pok&eacute;mon§1.7m§95.0kg§60§5,120
+#079§#---§#133§#---§#---§Slowpoke§90§65§65§40§40§15§Water§Psychic§Oblivious§Own Tempo§Regenerator§Dopey Pok&eacute;mon§1.2m§36.0kg§190§5,120
+#080§#---§#134§#---§#---§Slowbro§95§75§110§100§80§30§Water§Psychic§Oblivious§Own Tempo§Regenerator§Hermit Crab Pok&eacute;mon§1.6m§78.5kg§75§5,120
+#081§#---§#---§#069§#084§Magnemite§25§35§70§95§55§45§Electric§Steel§Magnet Pull§Sturdy§Analytic§Magnet Pok&eacute;mon§0.3m§6.0kg§190§5,120
+#082§#---§#---§#070§#085§Magneton§50§60§95§120§70§70§Electric§Steel§Magnet Pull§Sturdy§Analytic§Magnet Pok&eacute;mon§1.0m§60.0kg§60§5,120
+#083§#061§#---§#---§#---§Farfetch'd§52§65§55§58§62§60§Normal§Flying§Keen Eye§Inner Focus§Defiant§Wild Duck Pok&eacute;mon§0.8m§15.0kg§45§5,120
+#084§#094§#---§#---§#095§Doduo§35§85§45§35§35§75§Normal§Flying§Run Away§Early Bird§Tangled Feet§Twin Bird Pok&eacute;mon§1.4m§39.2kg§190§5,120
+#085§#095§#---§#---§#096§Dodrio§60§110§70§60§60§100§Normal§Flying§Run Away§Early Bird§Tangled Feet§Triple Bird Pok&eacute;mon§1.8m§85.2kg§45§5,120
+#086§#---§#---§#---§#---§Seel§65§45§55§45§70§45§Water§§Thick Fat§Hydration§Ice Body§Sea Lion Pok&eacute;mon§1.1m§90.0kg§190§5,120
+#087§#---§#---§#---§#---§Dewgong§90§70§80§70§95§70§Water§Ice§Thick Fat§Hydration§Ice Body§Sea Lion Pok&eacute;mon§1.7m§120.0kg§75§5,120
+#088§#---§#---§#---§#111§Grimer§80§80§50§40§50§25§Poison§§Stench§Sticky Hold§Poison Touch§Sludge Pok&eacute;mon§0.9m§30.0kg§190§5,120
+#089§#---§#---§#---§#112§Muk§105§105§75§65§100§50§Poison§§Stench§Sticky Hold§Poison Touch§Sludge Pok&eacute;mon§1.2m§30.0kg§75§5,120
+#090§#---§#036§#---§#---§Shellder§30§65§100§45§25§40§Water§§Shell Armor§Skill Link§Overcoat§Bivalve Pok&eacute;mon§0.3m§4.0kg§190§5,120
+#091§#---§#037§#---§#---§Cloyster§50§95§180§85§45§70§Water§Ice§Shell Armor§Skill Link§Overcoat§Bivalve Pok&eacute;mon§1.5m§132.5kg§60§5,120
+#092§#---§#---§#030§#---§Gastly§30§35§30§100§35§80§Ghost§Poison§Levitate§Levitate§Stats§Gas Pok&eacute;mon§1.3m§0.1kg§190§5,120
+#093§#---§#---§#031§#---§Haunter§45§50§45§115§55§95§Ghost§Poison§Levitate§Levitate§Stats§Gas Pok&eacute;mon§1.6m§0.1kg§90§5,120
+#094§#---§#---§#032§#---§Gengar§60§65§60§130§75§110§Ghost§Poison§Levitate§Levitate§Stats§Shadow Pok&eacute;mon§1.5m§40.5kg§45§5,120
+#095§#---§#053§#---§#---§Onix§35§45§160§30§45§70§Rock§Ground§Rock Head§Sturdy§Weak Armor§Rock Snake Pok&eacute;mon§8.8m§210.0kg§45§6,400
+#096§#---§#---§#---§#---§Drowzee§60§48§45§43§90§42§Psychic§§Insomnia§Forewarn§Inner Focus§Hypnosis Pok&eacute;mon§1.0m§32.4kg§190§5,120
+#097§#---§#---§#---§#---§Hypno§85§73§70§73§115§67§Psychic§§Insomnia§Forewarn§Inner Focus§Hypnosis Pok&eacute;mon§1.6m§75.6kg§75§5,120
+#098§#---§#---§#---§#---§Krabby§30§105§90§25§25§50§Water§§Hyper Cutter§Shell Armor§Sheer Force§River Crab Pok&eacute;mon§0.4m§6.5kg§225§5,120
+#099§#---§#---§#---§#---§Kingler§55§130§115§50§50§75§Water§§Hyper Cutter§Shell Armor§Sheer Force§Pincer Pok&eacute;mon§1.3m§60.0kg§60§5,120

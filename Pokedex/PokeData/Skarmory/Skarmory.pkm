@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Skarmory
+National No: 227
+Central No: 0
+Coastal No: 0
+Mountain No: 112
+Hoenn No: 120
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Steel
+Type 2: Flying
+Armor Bird Pokémon
+Meters: 1.7m
+Inches: 5'07"
+Kg: 50.5kg
+Lbs: 111.3lbs
+25
+6400
+PokeData/Skarmory/Skarmory.png
+PokeData/Skarmory/Skarmory-Shiny.png
+Name: Keen Eye
+Description: Opponent cannot lower this Pokémon's accuracy. The Pokémon ignores evasion boosts of the opponent
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Weak Armor
+Description: When hit by an attack, the Pokémon's Defense is lowered by one stage but Speed is increased by one stage
+Exp to lvl 100: 1250000
+Classification: Slow
+70
+Defense: 2
+Eligible
+Grass: 0.25
+Psychic: 0.5
+Poison: 0.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.25
+Ice: 1.0
+Normal: 0.5
+Fairy: 0.5
+Dragon: 0.5
+Water: 1.0
+Steel: 0.5
+Rock: 1.0
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,47 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Ditto
+National No: 132
+Central No: 0
+Coastal No: 0
+Mountain No: 138
+Hoenn No: 0
+No gender
+Type 1: Normal
+Type 2: NoType
+Transform Pokémon
+Meters: 0.3m
+Inches: 1'00"
+Kg: 4.0kg
+Lbs: 8.8lbs
+35
+5120
+PokeData/Ditto/Ditto.png
+PokeData/Ditto/Ditto-Shiny.png
+Name: Limber
+Description: The Pokémon cannot be Paralysed while having this ability
+Name: Imposter
+Description: When sent into battle, the Pokémon automatically transforms into a random opponent that is on the field
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+HP: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

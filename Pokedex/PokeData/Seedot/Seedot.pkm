@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Seedot
+National No: 273
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 22
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: NoType
+Acorn Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 4.0kg
+Lbs: 8.8lbs
+255
+3840
+PokeData/Seedot/Seedot.png
+PokeData/Seedot/Seedot-Shiny.png
+Name: Chlorophyll
+Description: When sunny, the Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Strong Sunlight
+Name: Early Bird
+Description: Sleep conditions lasts for half as long, rounding down. For example, half of three turns is 1.5, which rounds down to one turn. When the number of turns to sleep is one, half of this rounded down is zero, and the Pokémon wakes up instantly
+Name: Pickpocket
+Description: When a Pokémon makes physical contact with the Pokémon, the item of the opponent is stolen
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Defense: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 2.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 2.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

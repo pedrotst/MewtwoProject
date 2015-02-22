@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Pineco
+National No: 204
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Bug
+Type 2: NoType
+Bagworm Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 7.2kg
+Lbs: 15.9lbs
+190
+5120
+PokeData/Pineco/Pineco.png
+PokeData/Pineco/Pineco-Shiny.png
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Overcoat
+Description: Protects Pokémon from Weather Effects and
+Name: Powder moves
+Description: such as Sleep Powder, Poison Powder etc
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 2.0
+Ground: 0.5
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Marowak
+National No: 105
+Central No: 0
+Coastal No: 61
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: NoType
+Bone Keeper Pokémon
+Meters: 1.0m
+Inches: 3'03"
+Kg: 45.0kg
+Lbs: 99.2lbs
+75
+5120
+PokeData/Marowak/Marowak.png
+PokeData/Marowak/Marowak-Shiny.png
+Name: Rock Head
+Description: Does not receive recoil damage from recoil-causing damages
+Name: Lightningrod
+Description: Electric-type moves are drawn to this Pokémon. Electric-type moves will do no damage and the Pokémon's SP ATK is raised one stage. If the Pokémon is Ground-type, moves are drawn to it, but it gets no boost
+Name: Battle Armor
+Description: Opponent's moves cannot Critical Hit
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

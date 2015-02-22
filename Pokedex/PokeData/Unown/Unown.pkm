@@ -1,0 +1,46 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Unown
+National No: 201
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+No gender
+Type 1: Psychic
+Type 2: NoType
+Symbol Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 5.0kg
+Lbs: 11.0lbs
+225
+10240
+PokeData/Unown/Unown.png
+PokeData/Unown/Unown-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Sp. Attack: 1
+Eligible
+Grass: 1.0
+Psychic: 0.5
+Poison: 1.0
+Fight: 0.5
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 2.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 2.0
+Dark: 2.0

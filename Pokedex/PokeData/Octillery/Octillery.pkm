@@ -1,0 +1,51 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Octillery
+National No: 224
+Central No: 0
+Coastal No: 145
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Jet Pokémon
+Meters: 0.9m
+Inches: 2'11"
+Kg: 28.5kg
+Lbs: 62.8lbs
+75
+5120
+PokeData/Octillery/Octillery.png
+PokeData/Octillery/Octillery-Shiny.png
+Name: Suction Cups
+Description: Negates moves that force switching out
+Name: Sniper
+Description: Power of critical-hit moves is increased to 225% rather than 150%
+Name: Moody
+Description: At the end of every turn, a random stat is raised by two stages while another is lowered by one stage
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Attack: 1
+Sp. Attack: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

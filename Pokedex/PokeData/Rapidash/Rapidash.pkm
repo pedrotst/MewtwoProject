@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Rapidash
+National No: 78
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Fire
+Type 2: NoType
+Fire Horse Pokémon
+Meters: 1.7m
+Inches: 5'07"
+Kg: 95.0kg
+Lbs: 209.4lbs
+60
+5120
+PokeData/Rapidash/Rapidash.png
+PokeData/Rapidash/Rapidash-Shiny.png
+Name: Run Away
+Description: Except for trainer battles, can always run from battle. Cannot run during Mean Look or Block or when the opponent is trapping with the Arena Trap, Magnet Pull, or Shadow Tag ability
+Name: Flash Fire
+Description: Activates when user is hit by a damaging Fire-type move (including Fire-type Hidden Power). Once activated, user's Fire-type moves deal 1.5 times damage. While this ability is in effect, this Pokémon is immune to damage from Fire-type attacks and Fire-type Hidden Power (accuracy and effect from these moves are ignored). For Fire-type Pokémon with this ability, Will-O-Wisp activates this ability without having an effect. If a non-Fire-type Pokémon has this ability, Will-O-Wisp will activate the ability and will have an effect
+Name: Flame Body
+Description: The opponent has a 30% chance of being induced with Burn when using an attack, that requires physical contact, against this Pokémon
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 2
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 2.0
+Electric: 1.0
+Bug: 0.5
+Ice: 0.5
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 2.0
+Steel: 0.5
+Rock: 2.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

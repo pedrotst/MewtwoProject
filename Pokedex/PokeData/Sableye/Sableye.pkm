@@ -1,0 +1,51 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Sableye
+National No: 302
+Central No: 0
+Coastal No: 123
+Mountain No: 0
+Hoenn No: 70
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Dark
+Type 2: Ghost
+Darkness Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 11.0kg
+Lbs: 24.3lbs
+45
+6400
+PokeData/Sableye/Sableye.png
+PokeData/Sableye/Sableye-Shiny.png
+Name: Keen Eye
+Description: Opponent cannot lower this Pokémon's accuracy. The Pokémon ignores evasion boosts of the opponent
+Name: Stall
+Description: The Pokémon always attacks last
+Name: Prankster
+Description: Status category moves have their Speed Priority increased by 1
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+35
+Attack: 1
+Defense: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 0.0
+Poison: 0.5
+Fight: 0.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 0.0
+Fairy: 2.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

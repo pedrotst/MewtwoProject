@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Onix
+National No: 95
+Central No: 0
+Coastal No: 53
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Rock
+Type 2: Ground
+Rock Snake Pokémon
+Meters: 8.8m
+Inches: 28'10"
+Kg: 210.0kg
+Lbs: 463.0lbs
+45
+6400
+PokeData/Onix/Onix.png
+PokeData/Onix/Onix-Shiny.png
+Name: Rock Head
+Description: Does not receive recoil damage from recoil-causing damages
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Weak Armor
+Description: When hit by an attack, the Pokémon's Defense is lowered by one stage but Speed is increased by one stage
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Defense: 1
+Not Eligible/Known
+Grass: 4.0
+Psychic: 1.0
+Poison: 0.25
+Fight: 2.0
+Fire: 0.5
+Ground: 2.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 0.5
+Fairy: 1.0
+Dragon: 1.0
+Water: 4.0
+Steel: 2.0
+Rock: 0.5
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

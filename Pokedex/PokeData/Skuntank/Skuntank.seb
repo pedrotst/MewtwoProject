@@ -1,0 +1,886 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Scratch
+Normal
+Physical
+40
+100
+35
+--
+Hard, pointed, and sharp claws rake the target to inflict damage.
+Attack
+-----------------
+—
+Focus Energy
+Normal
+Other
+--
+--
+30
+--
+The user takes a deep breath and focuses so that critical hits land more easily.
+Attack
+-----------------
+—
+Poison Gas
+Poison
+Other
+--
+90
+40
+--
+A cloud of poison gas is sprayed in the face of opposing Pokémon. It may poison those hit.
+Attack
+-----------------
+4
+Poison Gas
+Poison
+Other
+--
+90
+40
+--
+A cloud of poison gas is sprayed in the face of opposing Pokémon. It may poison those hit.
+Attack
+-----------------
+7
+Screech
+Normal
+Other
+--
+85
+40
+--
+An earsplitting screech harshly reduces the target's Defense stat.
+Attack
+-----------------
+10
+Fury Swipes
+Normal
+Physical
+18
+80
+15
+--
+The target is raked with sharp claws or scythes for two to five times in quick succession.
+Attack
+-----------------
+14
+Smokescreen
+Normal
+Other
+--
+100
+20
+--
+The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.
+Attack
+-----------------
+18
+Feint
+Normal
+Physical
+30
+100
+10
+--
+An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.
+Attack
+-----------------
+22
+Slash
+Normal
+Physical
+70
+100
+20
+--
+The target is attacked with a slash of claws or blades. Critical hits land more easily.
+Attack
+-----------------
+27
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+32
+Acid Spray
+Poison
+Special
+40
+100
+20
+100
+The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.
+Attack
+-----------------
+34
+Flamethrower
+Fire
+Special
+90
+100
+15
+10
+The target is scorched with an intense blast of fire. It may also leave the target with a burn.
+Attack
+-----------------
+41
+Night Slash
+Dark
+Physical
+70
+100
+15
+--
+The user slashes the target the instant an opportunity arises. Critical hits land more easily.
+Attack
+-----------------
+51
+Memento
+Dark
+Other
+--
+100
+10
+--
+The user faints when using this move. In return, it harshly lowers the target's Attack and Sp. Atk.
+Attack
+-----------------
+56
+Belch
+Poison
+Special
+120
+90
+10
+--
+The user lets out a damaging belch on the target. The user must eat a Berry to use this move.
+Attack
+-----------------
+61
+Explosion
+Normal
+Physical
+250
+100
+5
+--
+The user explodes to inflict damage on those around it. The user faints upon using this move.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM01
+Hone Claws
+Dark
+Other
+--
+--
+15
+--
+The user sharpens its claws to boost its Attack stat and accuracy.
+Attack
+-----------------
+TM05
+Roar
+Normal
+Other
+--
+--
+20
+--
+The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends.
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM09
+Venoshock
+Poison
+Special
+65
+100
+10
+--
+The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM12
+Taunt
+Dark
+Other
+--
+100
+20
+--
+The target is taunted into a rage that allows it to use only attack moves for three turns.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM28
+Dig
+Ground
+Physical
+80
+100
+10
+--
+The user burrows, then attacks on the second turn. It can also be used to exit dungeons.
+Attack
+-----------------
+TM30
+Shadow Ball
+Ghost
+Special
+80
+100
+15
+20
+The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM35
+Flamethrower
+Fire
+Special
+90
+100
+15
+10
+The target is scorched with an intense blast of fire. It may also leave the target with a burn.
+Attack
+-----------------
+TM36
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+TM38
+Fire Blast
+Fire
+Special
+110
+85
+5
+10
+The target is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn.
+Attack
+-----------------
+TM41
+Torment
+Dark
+Other
+--
+100
+15
+--
+The user torments and enrages the target, making it incapable of using the same move twice in a row.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM59
+Incinerate
+Fire
+Special
+60
+100
+15
+--
+The user attacks opposing Pokemon with fire. If a Pokemon is holding a certain item, such as a berry, the item becomes burned up and unusable
+Attack
+-----------------
+TM64
+Explosion
+Normal
+Physical
+250
+100
+5
+--
+The user explodes to inflict damage on those around it. The user faints upon using this move.
+Attack
+-----------------
+TM65
+Shadow Claw
+Ghost
+Physical
+70
+100
+15
+--
+The user slashes with a sharp claw made from shadows. Critical hits land more easily.
+Attack
+-----------------
+TM66
+Payback
+Dark
+Physical
+50
+100
+10
+--
+If the user moves after the target, this attack's power will be doubled.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM84
+Poison Jab
+Poison
+Physical
+80
+100
+20
+30
+The target is stabbed with a tentacle or arm steeped in poison. It may also poison the target.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM95
+Snarl
+Dark
+Special
+55
+95
+15
+100
+The user yells as if it is ranting about something, making the target's Sp. Atk stat decrease.
+Attack
+-----------------
+TM97
+Dark Pulse
+Dark
+Special
+80
+100
+15
+20
+The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Defog
+Flying
+Other
+--
+--
+15
+--
+A strong wind blows away the target's obstacles such as Reflect or Light Screen. It also lowers the target's evasiveness.
+Attack
+-----------------
+Fury Cutter
+Bug
+Physical
+40
+95
+20
+--
+The target is slashed with scythes or claws. Its power increases if it hits in succession.
+Attack
+-----------------
+Sucker Punch
+Dark
+Physical
+80
+100
+5
+--
+This move enables the user to attack first. It fails if the target is not readying an attack, however.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+Attack
+-----------------
+Mud-slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+Headbutt
+Normal
+Physical
+70
+100
+15
+30
+The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Astonish
+Ghost
+Physical
+30
+100
+15
+30
+The user attacks the target while shouting in a startling fashion. It may also make the target flinch.
+Attack
+-----------------
+Crunch
+Dark
+Physical
+80
+100
+15
+20
+The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.
+Attack
+-----------------
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+Flame Burst
+Fire
+Special
+70
+100
+15
+--
+The user attacks the target with a bursting flame. The bursting flame damages Pokémon next to the target as well.
+Attack
+-----------------
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+Haze
+Ice
+Other
+--
+--
+30
+--
+The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Leer
+Normal
+Other
+--
+100
+30
+100
+The opposing team gains an intimidating leer with sharp eyes. The opposing team's Defense stats are reduced.
+Attack
+-----------------
+Play Rough
+Fairy
+Physical
+90
+90
+10
+10
+The user plays rough with the target and attacks it. This may also lower the target's Attack stat.
+Attack
+-----------------
+Punishment
+Dark
+Physical
+??
+100
+5
+--
+This attack's power increases the more the target has powered up with stat changes.
+Attack
+-----------------
+Pursuit
+Dark
+Physical
+40
+100
+20
+--
+An attack move that inflicts double damage if used on a target that is switching out of battle.
+Attack
+-----------------
+Scary Face
+Normal
+Other
+--
+100
+10
+--
+The user frightens the target with a scary face to harshly reduce its Speed stat.
+Attack
+-----------------
+Smog
+Poison
+Special
+30
+70
+20
+40
+The target is attacked with a discharge of filthy gases. It may also poison the target.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Foul Play
+Dark
+Physical
+95
+100
+15
+--
+The user turns the target's power against it. The higher the target's Attack stat, the greater the damage.
+Attack
+-----------------
+Iron Tail
+Steel
+Physical
+100
+75
+15
+30
+The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.
+Attack
+-----------------
+Snatch
+Dark
+Other
+--
+--
+10
+--
+The user steals the effects of any healing or stat-changing move the opponent attempts to use.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.

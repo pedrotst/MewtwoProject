@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Meditite
+National No: 307
+Central No: 143
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 78
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: NoType
+Type 2: Psychic
+Meditate Pokémon
+Meters: 0.6m
+Inches: 2'00"
+Kg: 11.2kg
+Lbs: 24.7lbs
+180
+5120
+PokeData/Meditite/Meditite.png
+PokeData/Meditite/Meditite-Shiny.png
+Name: Pure Power
+Description: The Pokémon's Attack stat is doubled in battle while having this ability
+Name: Telepathy
+Description: Prevents damage from team-mates during Double and Triple battles
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 1
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 0.5
+Flying: 2.0
+Ghost: 2.0
+Dark: 1.0

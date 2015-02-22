@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Pidgeotto
+National No: 17
+Central No: 18
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: Flying
+Bird Pokémon
+Meters: 1.1m
+Inches: 3'07"
+Kg: 30.0kg
+Lbs: 66.1lbs
+120
+3840
+PokeData/Pidgeotto/Pidgeotto.png
+PokeData/Pidgeotto/Pidgeotto-Shiny.png
+Name: Keen Eye
+Description: Opponent cannot lower this Pokémon's accuracy. The Pokémon ignores evasion boosts of the opponent
+Name: Tangled Feet
+Description: Pokémon's evasion raises one level when Confused
+Name: Big Pecks
+Description: Its defense cannot be lowered
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Speed: 2
+Eligible
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 1.0
+Ground: 0.0
+Electric: 2.0
+Bug: 0.5
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

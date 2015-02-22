@@ -1,0 +1,46 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Latios
+National No: 381
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 206
+Male Rate :100.0%
+Female Rate :0.0%
+Type 1: Dragon
+Type 2: Psychic
+Eon Pokémon
+Meters: 2.0m
+Inches: 6'07"
+Kg: 60.0kg
+Lbs: 132.3lbs
+3
+30720
+PokeData/Latios/Latios.png
+PokeData/Latios/Latios-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Exp to lvl 100: 1250000
+Classification: Slow
+90
+Sp. Attack: 3
+Eligible
+Grass: 0.5
+Psychic: 0.5
+Poison: 1.0
+Fight: 0.5
+Fire: 0.5
+Ground: 1.0
+Electric: 0.5
+Bug: 2.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 2.0
+Dragon: 2.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 2.0
+Dark: 2.0

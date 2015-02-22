@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Wailord
+National No: 321
+Central No: 0
+Coastal No: 28
+Mountain No: 0
+Hoenn No: 105
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: NoType
+Float Whale Pokémon
+Meters: 14.5m
+Inches: 47'07"
+Kg: 398.0kg
+Lbs: 877.4lbs
+60
+10240
+PokeData/Wailord/Wailord.png
+PokeData/Wailord/Wailord-Shiny.png
+Name: Water Veil
+Description: This Pokémon cannot be Burned while having this ability
+Name: Oblivious
+Description: The Pokémon cannot be under the Attract condition, or be taunted, while having this ability
+Name: Pressure
+Description: When this Pokémon is hit by a move, the opponent's PP lowers by 2 rather than 1
+Exp to lvl 100: 1640000
+Classification: Fluctuating
+70
+HP: 2
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 1.0
+Electric: 2.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.5
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

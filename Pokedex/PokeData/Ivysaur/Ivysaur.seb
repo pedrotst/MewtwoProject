@@ -1,0 +1,870 @@
+Egg Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Amnesia
+Psychic
+Other
+--
+--
+20
+--
+The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat.
+Attack
+-----------------
+Charm
+Fairy
+Other
+--
+100
+20
+--
+The user gazes at the target rather charmingly, making it less wary. The target's Attack is harshly lowered.
+Attack
+-----------------
+Curse
+Ghost
+Other
+--
+--
+10
+--
+A move that works differently for the Ghost type than for all other types.
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Grass Whistle
+Grass
+Other
+--
+55
+15
+--
+The user plays a pleasant melody that lulls the target into a deep sleep.
+Attack
+-----------------
+Grassy Terrain
+Grass
+Other
+--
+--
+10
+--
+The user turns the ground under everyone's feet to grass for five turns. This restores the HP of Pokémon on the ground a little every turn.
+Attack
+-----------------
+Ingrain
+Grass
+Other
+--
+--
+20
+--
+The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out.
+Attack
+-----------------
+Leaf Storm
+Grass
+Special
+130
+90
+5
+100
+The user whips up a storm of leaves around the target. The attack's recoil harshly reduces the user's Sp. Atk stat.
+Attack
+-----------------
+Magical Leaf
+Grass
+Special
+60
+--
+20
+--
+The user scatters curious leaves that chase the target. This attack will not miss.
+Attack
+-----------------
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+Petal Dance
+Grass
+Special
+120
+100
+10
+--
+The user attacks the target by scattering petals for two to three turns. The user then becomes confused.
+Attack
+-----------------
+Power Whip
+Grass
+Physical
+120
+85
+10
+--
+The user violently whirls its vines or tentacles to harshly lash the target.
+Attack
+-----------------
+Skull Bash
+Normal
+Physical
+130
+100
+10
+100
+The user tucks in its head to raise its Defense in the first turn, then rams the target on the next turn.
+Attack
+-----------------
+Sludge
+Poison
+Special
+65
+100
+20
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Grass Pledge
+Grass
+Special
+80
+100
+10
+--
+A column of grass hits opposing Pokémon. When used with its water equivalent, its damage increases into a vast swamp.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Grass Pledge
+Grass
+Special
+80
+100
+10
+--
+A column of grass hits opposing Pokémon. When used with its water equivalent, its damage increases into a vast swamp.
+Attack
+-----------------
+Bullet Seed
+Grass
+Physical
+25
+100
+30
+--
+The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Fury Cutter
+Bug
+Physical
+40
+95
+20
+--
+The target is slashed with scythes or claws. Its power increases if it hits in succession.
+Attack
+-----------------
+Mud-slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+String Shot
+Bug
+Other
+--
+95
+40
+--
+The targets are bound with silk blown from the user's mouth. This silk reduces the targets' Speed stat.
+Attack
+-----------------
+Headbutt
+Normal
+Physical
+70
+100
+15
+30
+The user sticks out its head and attacks by charging straight into the target. It may also make the target flinch.
+Attack
+-----------------
+Body Slam
+Normal
+Physical
+85
+100
+15
+30
+The user drops onto the target with its full body weight. It may also leave the target with paralysis.
+Attack
+-----------------
+Mimic
+Normal
+Other
+--
+--
+10
+--
+The user copies the target's last move. The move can be used during battle until the Pokémon is switched out.
+Attack
+-----------------
+Defense Curl
+Normal
+Other
+--
+--
+40
+--
+The user curls up to conceal weak spots and raise its Defense stat.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM09
+Venoshock
+Poison
+Special
+65
+100
+10
+--
+The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM16
+Light Screen
+Psychic
+Other
+--
+--
+30
+--
+A wondrous wall of light is put up to suppress damage from special attacks for five turns.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM36
+Sludge Bomb
+Poison
+Special
+90
+100
+10
+30
+Unsanitary sludge is hurled at the target. It may also poison the target.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM49
+Echoed Voice
+Normal
+Special
+40
+100
+15
+--
+The user attacks the target with an echoing voice. If this move is used every turn, it does greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM75
+Swords Dance
+Normal
+Other
+--
+--
+20
+--
+A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.
+Attack
+-----------------
+TM86
+Grass Knot
+Grass
+Special
+??
+100
+20
+--
+The user snares the target with grass and trips it. The heavier the target, the greater the damage.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (XY)HM06 (ΩRαS)
+Rock Smash
+Fighting
+Physical
+40
+100
+15
+50
+The user attacks with a punch that can shatter a rock. It may also lower the target's Defense stat.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM96
+Nature Power
+Normal
+Other
+--
+--
+20
+--
+An attack that makes use of nature's power. Its effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Attack
+-----------------
+HM01
+Cut
+Normal
+Physical
+50
+95
+30
+--
+The target is cut with a scythe or a claw. It can also be used to cut down thin trees.
+Attack
+-----------------
+HM04
+Strength
+Normal
+Physical
+80
+100
+15
+--
+The target is slugged with a punch thrown at maximum power. It can also be used to move heavy boulders.
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+—
+Growl
+Normal
+Other
+--
+100
+40
+--
+The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.
+Attack
+-----------------
+—
+Leech Seed
+Grass
+Other
+--
+90
+10
+--
+A seed is planted on the target. It steals some HP from the target every turn.
+Attack
+-----------------
+3
+Growl
+Normal
+Other
+--
+100
+40
+--
+The user growls in an endearing way, making the opposing team less wary. The foes' Attack stats are lowered.
+Attack
+-----------------
+7
+Leech Seed
+Grass
+Other
+--
+90
+10
+--
+A seed is planted on the target. It steals some HP from the target every turn.
+Attack
+-----------------
+9
+Vine Whip
+Grass
+Physical
+45
+100
+25
+--
+The target is struck with slender, whiplike vines to inflict damage.
+Attack
+-----------------
+13
+Poison Powder
+Poison
+Other
+--
+75
+35
+--
+The user scatters a cloud of poisonous dust on the target. It may poison the target.
+Attack
+-----------------
+13
+Sleep Powder
+Grass
+Other
+--
+75
+15
+--
+The user scatters a big cloud of sleep-inducing dust around the target.
+Attack
+-----------------
+15
+Take Down
+Normal
+Physical
+90
+85
+20
+--
+A reckless, full-body charge attack for slamming into the target. It also damages the user a little.
+Attack
+-----------------
+20
+Razor Leaf
+Grass
+Physical
+55
+95
+25
+--
+Sharp-edged leaves are launched to slash at the opposing team. Critical hits land more easily.
+Attack
+-----------------
+23
+Sweet Scent
+Normal
+Other
+--
+100
+20
+--
+A sweet scent that harshly lowers the opposing team's evasiveness. It also lures wild Pokémon if used in grass, etc.
+Attack
+-----------------
+28
+Growth
+Normal
+Other
+--
+--
+20
+--
+The user's body grows all at once, raising the Attack and Sp. Atk stats.
+Attack
+-----------------
+31
+Double-Edge
+Normal
+Physical
+120
+100
+15
+--
+A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.
+Attack
+-----------------
+36
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.
+Attack
+-----------------
+39
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+44
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Pre-Evolution Only Moves
+-----------------------------------------------------------------------
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bind
+Normal
+Physical
+15
+85
+20
+100
+Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Knock Off
+Dark
+Physical
+65
+100
+25
+--
+The user slaps down the target's held item, preventing that item from being used in the battle.
+Attack
+-----------------
+Seed Bomb
+Grass
+Physical
+80
+100
+15
+--
+The user slams a barrage of hard-shelled seeds down on the target from above.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Synthesis
+Grass
+Other
+--
+--
+5
+--
+The user restores its own HP. The amount of HP regained varies with the weather.
+Attack
+-----------------
+Worry Seed
+Grass
+Other
+--
+100
+10
+--
+A seed that causes worry is planted on the target. It prevents sleep by making its Ability Insomnia.

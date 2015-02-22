@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Volbeat
+National No: 313
+Central No: 133
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 89
+Male Rate :100.0%
+Female Rate :0.0%
+Type 1: Bug
+Type 2: NoType
+Firefly Pokémon
+Meters: 0.7m
+Inches: 2'04"
+Kg: 17.7kg
+Lbs: 39.0lbs
+150
+3840
+PokeData/Volbeat/Volbeat.png
+PokeData/Volbeat/Volbeat-Shiny.png
+Name: Illuminate
+Description: Raises the likelihood of meeting wild Pokémon
+Name: Swarm
+Description: When HP is below 1/3rd its maximum, power of Bug-type moves is increased by 50%
+Name: Prankster
+Description: Status category moves have their Speed Priority increased by 1
+Exp to lvl 100: 600000
+Classification: Erratic
+70
+Speed: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 1.0
+Fight: 0.5
+Fire: 2.0
+Ground: 0.5
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 2.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

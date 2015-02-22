@@ -1,0 +1,49 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Magneton
+National No: 82
+Central No: 0
+Coastal No: 0
+Mountain No: 70
+Hoenn No: 85
+No gender
+Type 1: Electric
+Type 2: Steel
+Magnet Pokémon
+Meters: 1.0m
+Inches: 3'03"
+Kg: 60.0kg
+Lbs: 132.3lbs
+60
+5120
+PokeData/Magneton/Magneton.png
+PokeData/Magneton/Magneton-Shiny.png
+Name: Magnet Pull
+Description: Steel types cannot run nor switch while this Pokémon is in battle. Because the opponent's switching is blocked, the opponent cannot switch on the turn this Pokémon switches out of battle. The opponent may still switch with Baton Pass
+Name: Sturdy
+Description: The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Kit KO moves
+Name: Analytic
+Description: Attack power increases by 30% if the Pokémon is the last Pokémon to attack this turn
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Sp. Attack: 2
+Not Eligible/Known
+Grass: 0.5
+Psychic: 0.5
+Poison: 0.0
+Fight: 2.0
+Fire: 2.0
+Ground: 4.0
+Electric: 0.5
+Bug: 0.5
+Ice: 0.5
+Normal: 0.5
+Fairy: 0.5
+Dragon: 0.5
+Water: 1.0
+Steel: 0.25
+Rock: 0.5
+Flying: 0.25
+Ghost: 1.0
+Dark: 1.0

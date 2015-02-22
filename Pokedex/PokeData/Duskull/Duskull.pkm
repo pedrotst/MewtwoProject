@@ -1,0 +1,48 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Duskull
+National No: 355
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 153
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ghost
+Type 2: NoType
+Requiem Pokémon
+Meters: 0.8m
+Inches: 2'07"
+Kg: 15.0kg
+Lbs: 33.1lbs
+190
+6400
+PokeData/Duskull/Duskull.png
+PokeData/Duskull/Duskull-Shiny.png
+Name: Levitate
+Description: Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes
+Name: Frisk
+Description: Reveals the foe's held item
+Exp to lvl 100: 800000
+Classification: Fast
+35
+Sp. Defense: 1
+Eligible
+Grass: 1.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 0.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 0.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 2.0
+Dark: 2.0

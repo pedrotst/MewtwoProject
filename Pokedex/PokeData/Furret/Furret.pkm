@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Furret
+National No: 162
+Central No: 110
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Normal
+Type 2: NoType
+Long Body Pokémon
+Meters: 1.8m
+Inches: 5'11"
+Kg: 32.5kg
+Lbs: 71.6lbs
+90
+3840
+PokeData/Furret/Furret.png
+PokeData/Furret/Furret-Shiny.png
+Name: Run Away
+Description: Except for trainer battles, can always run from battle. Cannot run during Mean Look or Block or when the opponent is trapping with the Arena Trap, Magnet Pull, or Shadow Tag ability
+Name: Keen Eye
+Description: Opponent cannot lower this Pokémon's accuracy. The Pokémon ignores evasion boosts of the opponent
+Name: Frisk
+Description: Reveals the foe's held item
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 2
+Not Eligible/Known
+Grass: 1.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 2.0
+Fire: 1.0
+Ground: 1.0
+Electric: 1.0
+Bug: 1.0
+Ice: 1.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 0.0
+Dark: 1.0

@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Gulpin
+National No: 316
+Central No: 98
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 100
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Poison
+Type 2: NoType
+Stomach Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 10.3kg
+Lbs: 22.7lbs
+225
+5120
+PokeData/Gulpin/Gulpin.png
+PokeData/Gulpin/Gulpin-Shiny.png
+Name: Liquid Ooze
+Description: When the opponent absorbs Hit Points from this Pokémon, the opponent instead loses Hit Points
+Name: Sticky Hold
+Description: This Pokémon's item cannot be taken
+Name: Gluttony
+Description: The Pokémon will use a berry when its Hit Points are below 50%
+Exp to lvl 100: 1640000
+Classification: Fluctuating
+70
+HP: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 2.0
+Poison: 0.5
+Fight: 0.5
+Fire: 1.0
+Ground: 2.0
+Electric: 1.0
+Bug: 0.5
+Ice: 1.0
+Normal: 1.0
+Fairy: 0.5
+Dragon: 1.0
+Water: 1.0
+Steel: 1.0
+Rock: 1.0
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

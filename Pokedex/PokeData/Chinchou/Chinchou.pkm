@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Chinchou
+National No: 170
+Central No: 0
+Coastal No: 147
+Mountain No: 0
+Hoenn No: 190
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Water
+Type 2: Electric
+Angler Pokémon
+Meters: 0.5m
+Inches: 1'08"
+Kg: 12.0kg
+Lbs: 26.5lbs
+190
+5120
+PokeData/Chinchou/Chinchou.png
+PokeData/Chinchou/Chinchou-Shiny.png
+Name: Volt Absorb
+Description: The Pokémon heals up to 1/4 of it's maximum Hit Points when hit with Electric-type moves
+Name: Illuminate
+Description: Raises the likelihood of meeting wild Pokémon
+Name: Water Absorb
+Description: The Pokémon heals up to 1/4 of it's maximum Hit Points when hit with Water-type moves
+Exp to lvl 100: 1250000
+Classification: Slow
+70
+HP: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 1.0
+Fight: 1.0
+Fire: 0.5
+Ground: 2.0
+Electric: 1.0
+Bug: 1.0
+Ice: 0.5
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 0.25
+Rock: 1.0
+Flying: 0.5
+Ghost: 1.0
+Dark: 1.0

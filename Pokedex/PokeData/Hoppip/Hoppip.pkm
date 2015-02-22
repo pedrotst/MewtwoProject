@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Hoppip
+National No: 187
+Central No: 135
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: Flying
+Cottonweed Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 0.5kg
+Lbs: 1.1lbs
+255
+5120
+PokeData/Hoppip/Hoppip.png
+PokeData/Hoppip/Hoppip-Shiny.png
+Name: Chlorophyll
+Description: When sunny, the Pokémon's Speed doubles. However, Speed will not double on the turn weather becomes Strong Sunlight
+Name: Leaf Guard
+Description: Prevents the Pokémon from receiving status conditions during strong sunlight
+Name: Infiltrator
+Description: The protections and stat boosts caused by the moves Substitute, Reflect, Light Screen and Safeguard by the opponent are ignored
+Exp to lvl 100: 1059860
+Classification: Medium Slow
+70
+Sp. Defense: 1
+Eligible
+Grass: 0.25
+Psychic: 1.0
+Poison: 2.0
+Fight: 0.5
+Fire: 2.0
+Ground: 0.0
+Electric: 1.0
+Bug: 1.0
+Ice: 4.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 2.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

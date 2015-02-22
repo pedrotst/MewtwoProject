@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Diglett
+National No: 50
+Central No: 0
+Coastal No: 0
+Mountain No: 1
+Hoenn No: 0
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Ground
+Type 2: NoType
+Mole Pokémon
+Meters: 0.2m
+Inches: 0'08"
+Kg: 0.8kg
+Lbs: 1.8lbs
+255
+5120
+PokeData/Diglett/Diglett.png
+PokeData/Diglett/Diglett-Shiny.png
+Name: Sand Veil
+Description: Raises the Pokémon's evasion during a sandstorm by one level
+Name: Arena Trap
+Description: The opponent cannot run nor switch. Flying-type Pokémon and Pokémon with the Levitate special ability are unaffected. If this Pokémon switches, the opponent is still trapped for that turn. The opponent may still switch by using Baton Pass
+Name: Sand Force
+Description: Ground-type, Rock-type & Steel-type moves have their power increased by 33% in a Sandstorm
+Exp to lvl 100: 1000000
+Classification: Medium Fast
+70
+Speed: 1
+Not Eligible/Known
+Grass: 2.0
+Psychic: 1.0
+Poison: 0.5
+Fight: 1.0
+Fire: 1.0
+Ground: 1.0
+Electric: 0.0
+Bug: 1.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 2.0
+Steel: 1.0
+Rock: 0.5
+Flying: 1.0
+Ghost: 1.0
+Dark: 1.0

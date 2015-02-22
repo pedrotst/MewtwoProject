@@ -1,0 +1,50 @@
+----Pokemon File----
+Autor: Rodrigo Werberich
+Shroomish
+National No: 285
+Central No: 0
+Coastal No: 0
+Mountain No: 0
+Hoenn No: 35
+Male Rate :50.0%
+Female Rate :50.0%
+Type 1: Grass
+Type 2: NoType
+Mushroom Pokémon
+Meters: 0.4m
+Inches: 1'04"
+Kg: 4.5kg
+Lbs: 9.9lbs
+255
+3840
+PokeData/Shroomish/Shroomish.png
+PokeData/Shroomish/Shroomish-Shiny.png
+Name: Effect Spore
+Description: The opponent has a 10% chance of being induced by PARALYZE, POISON, or SLEEP when using an attack, that requires physical contact, against this Pokémon
+Name: Poison Heal
+Description: HP is restored by 1/8th the maximum HP every turn while the Pokémon has the Poison condition
+Name: Quick Feet
+Description: Speed is increased by 50% when induced with a status (Burn, Poison, Sleep, Frozen & Paralysis). If Paralysed, the speed drop is ignored
+Exp to lvl 100: 1640000
+Classification: Fluctuating
+70
+HP: 1
+Not Eligible/Known
+Grass: 0.5
+Psychic: 1.0
+Poison: 2.0
+Fight: 1.0
+Fire: 2.0
+Ground: 0.5
+Electric: 0.5
+Bug: 2.0
+Ice: 2.0
+Normal: 1.0
+Fairy: 1.0
+Dragon: 1.0
+Water: 0.5
+Steel: 1.0
+Rock: 1.0
+Flying: 2.0
+Ghost: 1.0
+Dark: 1.0

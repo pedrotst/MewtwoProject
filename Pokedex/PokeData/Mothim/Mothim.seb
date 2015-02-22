@@ -1,0 +1,717 @@
+Generation VI Level Up
+-----------------------------------------------------------------------
+Attack
+-----------------
+—
+Tackle
+Normal
+Physical
+50
+100
+35
+--
+A physical attack in which the user charges and slams into the target with its whole body.
+Attack
+-----------------
+10
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+15
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+20
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+23
+Confusion
+Psychic
+Special
+50
+100
+25
+10
+The target is hit by a weak telekinetic force. It may also leave the target confused.
+Attack
+-----------------
+26
+Gust
+Flying
+Special
+40
+100
+35
+--
+A gust of wind is whipped up by wings and launched at the target to inflict damage.
+Attack
+-----------------
+29
+Poison Powder
+Poison
+Other
+--
+75
+35
+--
+The user scatters a cloud of poisonous dust on the target. It may poison the target.
+Attack
+-----------------
+32
+Psybeam
+Psychic
+Special
+65
+100
+20
+10
+The target is attacked with a peculiar ray. It may also cause confusion.
+Attack
+-----------------
+35
+Camouflage
+Normal
+Other
+--
+--
+20
+--
+The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave.
+Attack
+-----------------
+38
+Silver Wind
+Bug
+Special
+60
+100
+5
+10
+The target is attacked with powdery scales blown by wind. It may also raise all the user's stats.
+Attack
+-----------------
+41
+Air Slash
+Flying
+Special
+75
+95
+15
+30
+The user attacks with a blade of air that slices even the sky. It may also make the target flinch.
+Attack
+-----------------
+44
+Psychic
+Psychic
+Special
+90
+100
+10
+10
+The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
+Attack
+-----------------
+47
+Bug Buzz
+Bug
+Special
+90
+100
+10
+10
+The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+50
+Quiver Dance
+Bug
+Other
+--
+--
+20
+--
+The user lightly performs a beautiful, mystic dance. It boosts the user's Sp. Atk, Sp. Def, and Speed stats.
+TM & HM Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+TM06
+Toxic
+Poison
+Other
+--
+90
+10
+--
+A move that leaves the target badly poisoned. Its poison damage worsens every turn.
+Attack
+-----------------
+TM09
+Venoshock
+Poison
+Special
+65
+100
+10
+--
+The user drenches the target in a special poisonous liquid. Its power is doubled if the target is poisoned.
+Attack
+-----------------
+TM10
+Hidden Power
+Normal
+Special
+60
+100
+15
+--
+A unique attack that varies in type depending on the Pokémon using it.
+Attack
+-----------------
+TM11
+Sunny Day
+Fire
+Other
+--
+--
+5
+--
+The user intensifies the sun for five turns, powering up Fire-type moves.
+Attack
+-----------------
+TM15
+Hyper Beam
+Normal
+Special
+150
+90
+5
+--
+The target is attacked with a powerful beam. The user must rest on the next turn to regain its energy.
+Attack
+-----------------
+TM17
+Protect
+Normal
+Other
+--
+--
+10
+--
+It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+TM18
+Rain Dance
+Water
+Other
+--
+--
+5
+--
+The user summons a heavy rain that falls for five turns, powering up Water-type moves.
+Attack
+-----------------
+TM19
+Roost
+Flying
+Other
+--
+--
+10
+--
+The user lands and rests its body. It restores the user's HP by up to half of its max HP.
+Attack
+-----------------
+TM20
+Safeguard
+Normal
+Other
+--
+--
+25
+--
+The user creates a protective field that prevents status problems for five turns.
+Attack
+-----------------
+TM21
+Frustration
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the less the user likes its Trainer.
+Attack
+-----------------
+TM22
+Solar Beam
+Grass
+Special
+120
+100
+10
+--
+A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.
+Attack
+-----------------
+TM27
+Return
+Normal
+Physical
+??
+100
+20
+--
+A full-power attack that grows more powerful the more the user likes its Trainer.
+Attack
+-----------------
+TM29
+Psychic
+Psychic
+Special
+90
+100
+10
+10
+The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.
+Attack
+-----------------
+TM30
+Shadow Ball
+Ghost
+Special
+80
+100
+15
+20
+The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat.
+Attack
+-----------------
+TM32
+Double Team
+Normal
+Other
+--
+--
+15
+--
+By moving rapidly, the user makes illusory copies of itself to raise its evasiveness.
+Attack
+-----------------
+TM40
+Aerial Ace
+Flying
+Physical
+60
+--
+20
+--
+The user confounds the target with speed, then slashes. The attack lands without fail.
+Attack
+-----------------
+TM42
+Facade
+Normal
+Physical
+70
+100
+20
+--
+An attack move that doubles its power if the user is poisoned, burned, or has paralysis.
+Attack
+-----------------
+TM44
+Rest
+Psychic
+Other
+--
+--
+10
+--
+The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem.
+Attack
+-----------------
+TM45
+Attract
+Normal
+Other
+--
+100
+15
+--
+If it is the opposite gender of the user, the target becomes infatuated and less likely to attack.
+Attack
+-----------------
+TM46
+Thief
+Dark
+Physical
+60
+100
+25
+--
+The user attacks and steals the target's held item simultaneously. It can't steal if the user holds an item.
+Attack
+-----------------
+TM48
+Round
+Normal
+Special
+60
+100
+15
+--
+The user attacks the target with a song. Others can join in the Round and make the attack do greater damage.
+Attack
+-----------------
+TM53
+Energy Ball
+Grass
+Special
+90
+100
+10
+10
+The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.
+Attack
+-----------------
+TM62
+Acrobatics
+Flying
+Physical
+55
+100
+15
+--
+The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.
+Attack
+-----------------
+TM68
+Giga Impact
+Normal
+Physical
+150
+90
+5
+--
+The user charges at the target using every bit of its power. The user must rest on the next turn.
+Attack
+-----------------
+TM70
+Flash
+Normal
+Other
+--
+100
+20
+--
+The user flashes a bright light that cuts the target's accuracy. It can also be used to illuminate caves.
+Attack
+-----------------
+TM76
+Struggle Bug
+Bug
+Special
+50
+100
+20
+100
+While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Attack
+-----------------
+TM77
+Psych Up
+Normal
+Other
+--
+--
+10
+--
+The user hypnotizes itself into copying any stat change made by the target.
+Attack
+-----------------
+TM83
+Infestation
+Bug
+Special
+20
+100
+20
+100
+The target is infested and attacked for four to five turns. The target can't flee during this time.
+Attack
+-----------------
+TM85
+Dream Eater
+Psychic
+Special
+100
+100
+15
+--
+The user eats the dreams of a sleeping target. It absorbs half the damage caused to heal the user's HP.
+Attack
+-----------------
+TM87
+Swagger
+Normal
+Other
+--
+90
+15
+--
+The user enrages and confuses the target. However, it also sharply raises the target's Attack stat.
+Attack
+-----------------
+TM88
+Sleep Talk
+Normal
+Other
+--
+--
+10
+--
+While it is asleep, the user randomly uses one of the moves it knows.
+Attack
+-----------------
+TM89
+U-turn
+Bug
+Physical
+70
+100
+20
+--
+After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Attack
+-----------------
+TM90
+Substitute
+Normal
+Other
+--
+--
+10
+--
+The user makes a copy of itself using some of its HP. The copy serves as the user's decoy.
+Attack
+-----------------
+TM94 (ΩRαS)
+Secret Power
+Normal
+Physical
+70
+100
+20
+30
+The user attacks the target with a secret power. Its added effects vary depending on the user's environment.
+Attack
+-----------------
+TM100
+Confide
+Normal
+Other
+--
+--
+20
+100
+The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat.
+Transfer Only Moves (Details)
+-----------------------------------------------------------------------
+Attack
+-----------------
+Endure
+Normal
+Other
+--
+--
+10
+--
+The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.
+Attack
+-----------------
+Captivate
+Normal
+Other
+--
+100
+20
+--
+If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat.
+Attack
+-----------------
+Natural Gift
+Normal
+Physical
+??
+100
+15
+--
+The user draws power to attack by using its held Berry. The Berry determines its type and power.
+Attack
+-----------------
+Defog
+Flying
+Other
+--
+--
+15
+--
+A strong wind blows away the target's obstacles such as Reflect or Light Screen. It also lowers the target's evasiveness.
+Attack
+-----------------
+Air Cutter
+Flying
+Special
+60
+95
+25
+--
+The user launches razor-like wind to slash the opposing team. Critical hits land more easily.
+Attack
+-----------------
+Ominous Wind
+Ghost
+Special
+60
+100
+5
+10
+The user blasts the target with a gust of repulsive wind. It may also raise all the user's stats at once.
+Attack
+-----------------
+Swift
+Normal
+Special
+60
+--
+20
+--
+Star-shaped rays are shot at the opposing team. This attack never misses.
+Attack
+-----------------
+Mud-slap
+Ground
+Special
+20
+100
+10
+100
+The user hurls mud in the target's face to inflict damage and lower its accuracy.
+Attack
+-----------------
+Twister
+Dragon
+Special
+40
+100
+20
+20
+The user whips up a vicious tornado to tear at the opposing team. It may also make targets flinch.
+Attack
+-----------------
+String Shot
+Bug
+Other
+--
+95
+40
+--
+The targets are bound with silk blown from the user's mouth. This silk reduces the targets' Speed stat.
+Omega Ruby/Alpha Sapphire Move Tutor Attacks
+-----------------------------------------------------------------------
+Attack
+-----------------
+Bug Bite
+Bug
+Physical
+60
+100
+20
+--
+The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Attack
+-----------------
+Electroweb
+Electric
+Special
+55
+95
+15
+100
+The user captures and attacks opposing Pokémon by using an electric net. It reduces the targets' Speed stat.
+Attack
+-----------------
+Giga Drain
+Grass
+Special
+75
+100
+10
+--
+A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.
+Attack
+-----------------
+Signal Beam
+Bug
+Special
+75
+100
+15
+10
+The user attacks with a sinister beam of light. It may also confuse the target.
+Attack
+-----------------
+Skill Swap
+Psychic
+Other
+--
+--
+10
+--
+The user employs its psychic power to exchange Abilities with the target.
+Attack
+-----------------
+Snore
+Normal
+Special
+50
+100
+15
+30
+An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch.
+Attack
+-----------------
+Tailwind
+Flying
+Other
+--
+--
+15
+--
+The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns.
