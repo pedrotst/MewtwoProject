@@ -1,4 +1,4 @@
-ROTTOM - Wrong Type -------------------------------------------CORRECTED
+﻿ROTTOM - Wrong Type -------------------------------------------CORRECTED
 KYOGRE 382-384,483-484,643-644 - 2 Capture Rates---------------CORRECTED
 DEOXYS 386 - Forms Level Up -----------------------------------CORRECTED
 DEOXYS EV Problem ---------------------------------------------CORRECTED
@@ -9,7 +9,7 @@ DARMANITAM 555 EV PROBLE---------------------------------------CORRECTED
 TORNADUS 641 EV PROBLEM----------------------------------------CORRECTED
 DIANCIE 719 Base Egg Step problem------------------------------CORRECTED
 HOOPA 720 Height Problem---------------------------------------CORRECTED
-Mr Mime - Nome Errado no DB
+Mr Mime - Nome Errado no DB------------------------------------CORRECTED
 
 TO-DO
 Poke Evo Chain - Elaborte way to identify

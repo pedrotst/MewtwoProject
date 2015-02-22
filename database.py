@@ -874,7 +874,8 @@ class ItemCategoryManager(Manager):
             conn.cursor().execute('DROP TABLE ItemCategory')
 
 if __name__ == '__main__':
-    PokemonEvoChainManager().view()
+    PokemonEvoChainManager().updateEvoNode('Gorebyss')
+    input('Waiting')
     
     
     

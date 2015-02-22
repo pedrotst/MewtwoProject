@@ -520,4 +520,4 @@ class importSerebii():
         self.__poke['Location'] = location
 
 if __name__ == '__main__':
-    runTest(287)
+    run(366)
