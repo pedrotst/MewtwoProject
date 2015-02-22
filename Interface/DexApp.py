@@ -3,6 +3,10 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 
 
+class BasicInfo(Widget):
+    pass
+
+
 class DexWindow(Widget):
     pass
 

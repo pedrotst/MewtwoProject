@@ -1,13 +1,49 @@
 #:kivy 1.8.0
-<DexWindow>:
+
+<BasicInfo>:
     canvas.before:
         Color:
-            rgba: 0.36,0.17,0.17,0.9
-
+            rgba:.5,.6,.7,1
         Rectangle:
+            source:'border.jpg'
             pos: self.pos
             size: self.size
-    Label:
-        text: 'Test'
-        center_x: root.width/8
-        top: root.top-50
+    GridLayout:
+        pos: self.parent.pos
+        size:self.parent.size
+        rows: 2
+        cols: 2
+        Button:
+            text:'Press'
+
+        Button:
+            text:'Press'
+        Label:
+            font_size: 14
+            text:'Basic Info:'
+        Label:
+            font_size: 14
+            text:'Pokemon Name'
+
+
+
+<DexWindow>:
+    canvas.before:
+        Rectangle:
+            source:'Pokedex.png'
+            pos: self.pos
+            size: self.size
+
+#        Rectangle:
+#            source:'border.png'
+#            pos: 1.158*self.center_x,0.223*self.center_y
+#            size: 0.378*self.width,0.65*self.height
+
+        Rectangle:
+            source:'../Pokedex/PokeData/Abra/Abra.png'
+            pos:    0.1*self.center_x,0.4*self.center_y
+            size: 0.4*self.width,0.5*self.height
+
+    BasicInfo:
+        pos: 1.158*self.parent.center_x,0.223*self.parent.center_y
+        size: 0.378*self.parent.width,0.65*self.parent.height
