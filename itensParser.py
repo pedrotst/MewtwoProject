@@ -13,7 +13,7 @@ class importItens():
     def __init__(self):
         self.__url = 'http://serebii.net/itemdex/'
         self.__serebii = 'http://serebii.net'
-        self.__itemFolder = 'Itens'
+        self.__itemFolder = './Itens'
         self.__itemName = 'Itens.html'
         self.__itemPath = os.path.join(self.__itemFolder, self.__itemName)
         self.__html = ''
@@ -138,53 +138,59 @@ class importItens():
             return True
         return False
 
-    def getDescriptionsDict(self, fileTree):
-        descriptions = {}
-        descriptions['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/text()')
-        descriptions['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()')
-        descriptions['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()')
-        descriptions['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/text()')
-        descriptions['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()')
-        descriptions['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White"]/following-sibling::td/text()')
-        descriptions['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/text()')
-        descriptions['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/text()')
-        descriptions['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/text()')
-        return descriptions
+    def getHead(self, l):
+        return l[0] if len(l) > 0 else ''
+
+    def getFlavourTextDict(self, fileTree):
+        flavours = {}
+        flavours['GSC'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/text()'))
+        flavours['RSE'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()'))
+        flavours['FRLG'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()'))
+        flavours['DPPl'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/text()'))
+        flavours['HGSS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()'))
+        flavours['BW'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White"]/following-sibling::td/text()'))
+        flavours['B2W2'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/text()'))
+        flavours['XY'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/text()'))
+        flavours['oRaS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Flavour Text"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/text()'))
+        return flavours
 
     def getLocationsDict(self, fileTree):
         locations = {}
-        locations['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
-        locations['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()')
-        locations['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()')
-        locations['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
-        locations['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()')
-        locations['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
-        locations['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
-        locations['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
-        locations['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
+        locations['GSC'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()'))
+        locations['RSE'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()'))
+        locations['FRLG'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()'))
+        locations['DPPl'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()'))
+        locations['HGSS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()'))
+        locations['BW'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()'))
+        locations['B2W2'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()'))
+        locations['XY'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()'))
+        locations['oRaS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()'))
+        locations['PkWalker'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="PokéWalker"]/following-sibling::td/a/text()'))
+        locations['PkWalker'] += " "+ self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="PokéWalker"]/following-sibling::td/i/text()'))
         return locations
                 
     def getShoppingDict(self, fileTree):
         shopDet = {}
-        shopDet['GSC'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()')
-        shopDet['RSE'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()')
-        shopDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()')
-        shopDet['DPPl'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()')
-        shopDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()')
-        shopDet['BW'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()')
-        shopDet['B2W2'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()')
-        shopDet['XY'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()')
-        shopDet['oRaS'] = fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()')
+        shopDet['GSC'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()'))
+        shopDet['RSE'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()'))
+        shopDet['FRLG'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()'))
+        shopDet['DPPl'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()'))
+        shopDet['HGSS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()'))
+        shopDet['BW'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()'))
+        shopDet['B2W2'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()'))
+        shopDet['XY'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()'))
+        shopDet['oRaS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()'))
+        shopDet['BattleRev'] =  self.getHead(fileTree.xpath('//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Battle Revolution"]/following-sibling::td/text()'))
         return shopDet
 
-    def getPickUpLoc(self, fileTree):
+    def getPickUpLocDict(self, fileTree):
         pickDet = {}
-        pickDet['RS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Sapphire"]/following-sibling::td/text()')
-        pickDet['FRLG'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()')
-        pickDet['Emerald'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()')
-        pickDet['HGSS'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()')
-        pickDet['BW'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="White"]/following-sibling::td/font/text()')
-        pickDet['XY'] = fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/font/text()')
+        pickDet['RS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Sapphire"]/following-sibling::td/text()'))
+        pickDet['FRLG'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()'))
+        pickDet['Emerald'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()'))
+        pickDet['HGSS'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()'))
+        pickDet['BW'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="White"]/following-sibling::td/font/text()'))
+        pickDet['XY'] = self.getHead(fileTree.xpath('//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/font/text()'))
         return pickDet
 
     def getAvailDict(self, fileTree):
@@ -196,31 +202,40 @@ class importItens():
 
     def getType(self, fileTree):
         iType = fileTree.xpath('//table[@class = "dextable"]/tr[./td[2]/text() = "Item Type"]/following-sibling::tr/td[2]/a/text()')
-        return iType[0] if len(iType) >0 else []
+        typeQuant = len(iType)
+        if(typeQuant > 0):
+            if(typeQuant > 1):
+                return (iType[0], iType[1])
+            else:
+                return (iType[0], '')
+        else:
+            return ('', '')
 
     def getName(self, fileTree):
         name = fileTree.xpath('//table[@class = "dextable" and @align = "center"]/tr[1]/td/font/b/text()')
         return name[0] if len(name) >0 else ''
 
+    #gets the purchPrice as int, if doesn't exists, returns -1
     def getPurchPrice(self,fileTree):
         purchPrice = fileTree.xpath('//td[@class = "cen"]/table/tr[./td/b/text() = "Purchase Price"]/td[2]/text()')
-        return purchPrice[0] if len(purchPrice) >0 else ''
-
+        return int(purchPrice[0]) if len(purchPrice) >0 else -1
+    #gets the sellPrice as int, if doesn't exists, returns -1
     def getSellPrice(self,fileTree):
         sellPrice = fileTree.xpath('//td[@class = "cen"]/table/tr[./td/b/text() = "Sell Price"]/td[2]/text()')
-        return sellPrice[0] if len(sellPrice) >0 else ''
-
+        return int(sellPrice[0]) if len(sellPrice) >0 else -1
+    #gets the flingDamage as int, if doesn't exists, returns -1
     def getFlingDamage(self, fileTree):
         flingDamage = fileTree.xpath('//table[@class = "dextable"]/tr[./td[4]/text() = "Fling Damage"]/following-sibling::tr/td[4]/text()')
-        return flingDamage[0] if len(flingDamage) > 0 else ''
+        return int(flingDamage[0]) if len(flingDamage) > 0 else -1
 
     def getEffectText(self,fileTree):
         effectText = fileTree.xpath('//table[@class = "dextable" and @align = "center" and ./tr/td/text() = "In-Depth Effect"]/tr[2]/td[@class = "fooinfo"]/text()')
         return effectText[0] if len(effectText) > 0 else ''
 
     def getJapaneseText(self, fileTree):
-        japaName = fileTree.xpath('//table[@class = "dextable"]/tr[./td[3]/text() = "Japanese Name"]/following-sibling::tr/td[3]/text()')
-        return japaName[0] if len(japaName) > 0 else ''
+        japaName = self.getHead(fileTree.xpath('//table[@class = "dextable"]/tr[./td[3]/text() = "Japanese Name"]/following-sibling::tr/td[3]/text()'))
+        japaTranls = self.getHead(fileTree.xpath('//table[@class = "dextable"]/tr[./td[3]/text() = "Japanese Name"]/following-sibling::tr/td[3]/i/text()'))
+        return (japaName, japaTranls)
 
     def getImgPath(self, fileTree):
         imgPath = fileTree.xpath("//table[@class='dextable'][2]/tr[2]/td[@class='cen'][1]/table/tr/td[@class='pkmn']/img/@src")
@@ -252,34 +267,36 @@ class importItens():
 
 
 
-    def buildBattleItemDb(self, name):
-        battleFolderPath = os.path.join(self.__itemFolder, 'battle')
-        print(battleFolderPath)
-        for root, dirs, files in os.walk(battleFolderPath, topdown = False):
-            for f in files:
-                # if f == name:
-                    fileHtml = self.getHTML(os.path.join(battleFolderPath, f))
+    def buildItemDb(self, name):
+        folderPath = os.path.join(self.__itemFolder, name)
+        print(folderPath)
+        for root, dirs, files in os.walk(folderPath, topdown = True):
+            for f in files: 
+                if f[-5:] == '.html':
+                    fileHtml = self.getHTML(os.path.join(root, f))
                     fileTree = html.fromstring(fileHtml)
                     name = self.getName(fileTree)
-                    category = battleFolderPath[6:]
-                    iType = self.getType(fileTree)
-                    flingDamage = self.getFlingDamage(fileTree)
-                    japaName = self.getJapaneseText(fileTree)
+                    category = root[len(self.__itemFolder)+1:]
+                    iType, iType2 = self.getType(fileTree)
+                    flingDamage = int(self.getFlingDamage(fileTree))
+                    japaName, japaTransl = self.getJapaneseText(fileTree)
                     purchPrice = self.getPurchPrice(fileTree)
                     sellPrice = self.getSellPrice(fileTree)
-                    versionsAvail = self.getAvailDict(fileTree)
                     effectText = self.getEffectText(fileTree)
-                    descriptions = self.getDescriptionsDict(fileTree)
+                    versionsAvail = self.getAvailDict(fileTree)
+                    flavours = self.getFlavourTextDict(fileTree)
                     locations = self.getLocationsDict(fileTree)
-                    pickUpLoc = self.getPickUpLoc(fileTree)
-                    shopDest = self.getShoppingDict(fileTree)
-                    theItem = item.battleItem(name, category, iType, japaName, flingDamage, purchPrice, sellPrice, versionsAvail, effectText, descriptions, locations, pickUpLoc, shopDest)
-                    print(theItem)
+                    pickUpLoc = self.getPickUpLocDict(fileTree)
+                    shopDet = self.getShoppingDict(fileTree)
+                    theItem = item.Item(name, category, iType, iType2, japaName, japaTransl, flingDamage, purchPrice, sellPrice, effectText, versionsAvail, flavours, locations, pickUpLoc, shopDet)
+                    # print(theItem)
+                    print(root, name)
+                    theItem.insertDb()
 
 c = importItens()
-c.downloadItensMainPage()
+# c.downloadItensMainPage()
 # c.downloadItensPages()
 #c.buildItemTypeDb()
-# c.buildBattleItemDb("PP Max.html")
-c.downloadSprites()
-#c.parseItems()
+c.buildItemDb('')
+# c.downloadSprites()
+# c.parseItems()
