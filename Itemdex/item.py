@@ -1,7 +1,12 @@
-import itensDb
+import itensdb
 
 class Item():
-    def __init__(self, iName, iCategory, iType, iType2, japaName, japaTransl, flingDamage, purchPrice, sellPrice, effectText, versionsAvail, flvText, loc, pickUpDet, shoppingDet):
+    def __init__(self, iName, iCategory,
+        iType, iType2, japaName,
+        japaTransl, flingDamage,
+        purchPrice, sellPrice, effectText,
+        versionsAvail, flvText, loc,
+        pickUpDet, shoppingDet):
         self.__name = iName
         self.__category = iCategory
         self.__type = iType
@@ -39,14 +44,17 @@ class Item():
 
     def insertDb(self):
         if(len(self.__versionsAvail) == 18):
-            itenDb = itensDb.ItemManager()
-            versions_db = itensDb.ItemVersions()
-            flav_db = itensDb.FlavourText()
-            loc_db = itensDb.Locations()
-            pickup_db = itensDb.Pickup()
-            shop_db = itensDb.Shop()
+            itenDb = itensdb.ItemManager()
+            versions_db = itensdb.ItemVersions()
+            flav_db = itensdb.FlavourText()
+            loc_db = itensdb.Locations()
+            pickup_db = itensdb.Pickup()
+            shop_db = itensdb.Shop()
             
-            itenDb.insertItem(self.__name, self.__category, self.__type, self.__type2, self.__japaName, self.__japaTransl, self.__flingDamage, self.__purchPrice, self.__sellPrice, self.__effectText)
+            itenDb.insertItem(self.__name, self.__category,
+                self.__type, self.__type2, self.__japaName,
+                self.__japaTransl, self.__flingDamage,
+                self.__purchPrice, self.__sellPrice, self.__effectText)
             versions_db.insert_item(self.__name, self.__versionsAvail)
             flav_db.insert_item(self.__name, self.__flvText)
             loc_db.insert_item(self.__name, self.__loc)

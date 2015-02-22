@@ -30,7 +30,7 @@ class mainApplication():
     def __configPokeList(self):
         self.__name = StringVar()
         db = DatabaseManager()
-        data = db.getPokemonsByDexNum()
+        data = db.get_pokemons_by_dex_num()
         self.__OPTIONS = []
         for option in data:
             self.__OPTIONS.append(str(option[0])+' : '+option[1].strip('{}'))

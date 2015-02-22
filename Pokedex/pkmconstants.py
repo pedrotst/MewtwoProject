@@ -28,31 +28,22 @@ class Type(Enum):
     def __repr__(self):
         return self.__str__()
     def __fromStr__(string):
-        names = {'NoType' : 0,
-                 'Bug' : 1,
-                 'Dark' : 2,
-                 'Dragon' : 3,
-                 'Electric' : 4,
-                 'Fairy' : 5,
-                 'Fighting' : 6,
-                 'Fire' : 7,
-                 'Flying' : 8,
-                 'Ghost' : 9,
-                 'Grass' : 10,
-                  'Ground' : 11,
-                  'Ice' : 12,
-                  'Normal' : 13,
-                  'Poison' : 14,
-                  'Psychic' : 15,
-                  'Rock' : 16,
-                  'Steel' : 17,
-                  'Water' : 18}
+        names = {'NoType' : 0, 'Bug' : 1,
+                 'Dark' : 2, 'Dragon' : 3,
+                 'Electric' : 4, 'Fairy' : 5,
+                 'Fighting' : 6, 'Fire' : 7,
+                 'Flying' : 8, 'Ghost' : 9,
+                 'Grass' : 10, 'Ground' : 11,
+                 'Ice' : 12, 'Normal' : 13,
+                 'Poison' : 14, 'Psychic' : 15,
+                 'Rock' : 16, 'Steel' : 17,
+                 'Water' : 18}
         try:
             return Type(names[string])
         except KeyError:
             return Type.NoType
 
-    def ImgH(self):
+    def img_h(self):
         names = {'NoType' : None,
                  'Bug' : 'Images/Tipos/BugH.png',
                  'Dark' : 'Images/Tipos/DarkH.png',
@@ -74,7 +65,7 @@ class Type(Enum):
                   'Water' : 'Images/Tipos/WaterH.png'}
         return names[str(self)]
         
-    def ImgV(self):
+    def img_v(self):
         names = {'NoType' : None,
                  'Bug' : 'Images/Tipos/BugV.png',
                  'Dark' : 'Images/Tipos/DarkV.png',

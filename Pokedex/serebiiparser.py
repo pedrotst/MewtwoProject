@@ -21,7 +21,7 @@ def run(i):
     print(i)
     c.parse_serebii()
     poke = Pokemon(c.get_poke())
-    poke.createPokemonEvoChainDatabase()
+    poke.create_pokemon_evo_chain_database()
 #    poke.createAbilityDatabase()
 #    poke.createPokemonAbilityDatabase()
 #    poke.createAttacksDatabase()

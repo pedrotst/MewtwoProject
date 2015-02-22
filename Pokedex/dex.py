@@ -56,7 +56,7 @@ class DexShow(LabelFrame):
         self.__labelTitle.grid(row = 0, column =0, columnspan = 2)
 
     def __configPokeImg(self):
-        self.__pokeImgPath = self.__pokemon.getImagePath().getPathImg()
+        self.__pokeImgPath = self.__pokemon.get_image_path().get_path_img()
         self.__pokeImg = PhotoImage(file = self.__pokeImgPath)  
         imgHeight = self.__pokeImg.height()
         imgWidth = self.__pokeImg.width()
@@ -68,7 +68,7 @@ class DexShow(LabelFrame):
         self.__pokeImgCanvas.create_image(0,0,anchor = NW, image = self.__pokeImg)
 
     def __configPokeImgShinny(self):
-        self.__pokeImgShinnyPath = self.__pokemon.getImagePath().getSPathImg()
+        self.__pokeImgShinnyPath = self.__pokemon.get_image_path().get_spath_img()
         self.__pokeImgShinny = PhotoImage(file = self.__pokeImgShinnyPath)
         imgHeight = self.__pokeImgShinny.height()
         imgWidth = self.__pokeImgShinny.width()
@@ -89,7 +89,7 @@ class DexShow(LabelFrame):
         self.__labelNameInfo = Label(self.__BasicInfo,textvariable = self.__name,bg = self.__background,font = ('Helvetica',10))
         self.__labelNameInfo.grid(row = 0, column = 1,sticky=NSEW)
 
-        self.__name.set(self.__pokemon.getName())
+        self.__name.set(self.__pokemon.get_name())
         
 
     def __configClassification(self):
@@ -101,7 +101,7 @@ class DexShow(LabelFrame):
         self.__labelClassificationInfo = Label(self.__BasicInfo,textvariable = self.__classification,bg = self.__background,font = ('Helvetica',10))
         self.__labelClassificationInfo.grid(row = 1, column = 1,sticky=NSEW)
 
-        self.__classification.set(self.__pokemon.getClassification())
+        self.__classification.set(self.__pokemon.get_classification())
 
 
     def __configHeight(self):
@@ -113,7 +113,7 @@ class DexShow(LabelFrame):
         self.__labelHeightInfo = Label(self.__BasicInfo,textvariable = self.__height,bg = self.__background,font = ('Helvetica',10))
         self.__labelHeightInfo.grid(row = 0, column = 3,sticky=NSEW)
 
-        self.__height.set(str(self.__pokemon.getHeight()))
+        self.__height.set(str(self.__pokemon.get_height()))
         
     def __configWeight(self):
         ##Make label
@@ -124,7 +124,7 @@ class DexShow(LabelFrame):
         self.__labelWeightInfo = Label(self.__BasicInfo,textvariable = self.__weight,bg = self.__background,font = ('Helvetica',10))
         self.__labelWeightInfo.grid(row = 1, column = 3,sticky=NSEW)
 
-        self.__weight.set(str(self.__pokemon.getWeight()))
+        self.__weight.set(str(self.__pokemon.get_weight()))
     
 
     def __configType(self):
@@ -132,11 +132,11 @@ class DexShow(LabelFrame):
         self.__labelType = Label(self.__BasicInfo,text = 'Type: ',bg = self.__background,font = ('Helvetica',12))
         self.__labelType.grid(row = 0, column =4,sticky=NSEW)
         ##Make info
-        types = self.__pokemon.getTypes()
+        types = self.__pokemon.get_types()
         ##If Two Types
-        if types.getType2() != Type.NoType:
-            self.__type1Img = PhotoImage(file = types.getType1().ImgH())
-            self.__type2Img = PhotoImage(file = types.getType2().ImgH())
+        if types.get_type2() != Type.NoType:
+            self.__type1Img = PhotoImage(file =types.get_type1().img_h())
+            self.__type2Img = PhotoImage(file =types.get_type2().img_h())
             imgHeight = self.__type1Img.height()
             imgWidth = self.__type1Img.width()
             
@@ -153,7 +153,7 @@ class DexShow(LabelFrame):
 
         ##If Only One Type    
         else:
-            self.__type1Img = PhotoImage(file = types.getType1().ImgH())
+            self.__type1Img = PhotoImage(file =types.get_type1().img_h())
             imgHeight = self.__type1Img.height()
             imgWidth = self.__type1Img.width()
             
@@ -175,7 +175,7 @@ class DexShow(LabelFrame):
         
         self.__labelGenderInfo.grid(row = 1, column =5)
         
-        self.__gender.set(self.__pokemon.getGender())
+        self.__gender.set(self.__pokemon.get_gender())
        
         
     def __configNo(self):
@@ -220,11 +220,11 @@ class DexShow(LabelFrame):
         self.__labelMontainInfo.grid(row = 3,column = 1,sticky = NSEW)
         self.__labelHoennInfo.grid(row = 4,column = 1,sticky = NSEW)
         
-        self.__nationalNum.set(self.__pokemon.getDexNum().get_national())
-        self.__centralNum.set(self.__pokemon.getDexNum().get_central())
-        self.__coastalNum.set(self.__pokemon.getDexNum().get_coastal())
-        self.__mountainNum.set(self.__pokemon.getDexNum().get_mountain())
-        self.__hoennNum.set(self.__pokemon.getDexNum().get_hoenn())
+        self.__nationalNum.set(self.__pokemon.get_dex_num().get_national())
+        self.__centralNum.set(self.__pokemon.get_dex_num().get_central())
+        self.__coastalNum.set(self.__pokemon.get_dex_num().get_coastal())
+        self.__mountainNum.set(self.__pokemon.get_dex_num().get_mountain())
+        self.__hoennNum.set(self.__pokemon.get_dex_num().get_hoenn())
         
 
     def __configDexText(self):
@@ -265,13 +265,13 @@ class DexShow(LabelFrame):
         ##Positioning NoFrame
         self.__dexTextFrame.grid(row = 2, column = 0, columnspan = 8)
         
-        self.__dexTextX.set(self.__pokemon.getDexText().getX())
-        self.__dexTextY.set(self.__pokemon.getDexText().getY())
-        self.__dexTextOR.set(self.__pokemon.getDexText().getOR())
-        if(self.__pokemon.getDexText().getAS()):
-            self.__dexTextAS.set(self.__pokemon.getDexText().getAS())
+        self.__dexTextX.set(self.__pokemon.get_dex_text().get_x())
+        self.__dexTextY.set(self.__pokemon.get_dex_text().get_y())
+        self.__dexTextOR.set(self.__pokemon.get_dex_text().get_or())
+        if(self.__pokemon.get_dex_text().get_as()):
+            self.__dexTextAS.set(self.__pokemon.get_dex_text().get_as())
         else:
-            self.__dexTextAS.set(self.__pokemon.getDexText().getOR())
+            self.__dexTextAS.set(self.__pokemon.get_dex_text().get_or())
             
             
     def __configBreedingInfo(self):
@@ -292,7 +292,7 @@ class DexShow(LabelFrame):
         self.__labelBaseEggStepsInfo = Label(self.__BreedingInfo,textvariable = self.__baseEggSteps,bg = self.__background,font = ('Helvetica',10))
         self.__labelBaseEggStepsInfo.grid(row = 0, column = 1,sticky=NSEW)
 
-        self.__baseEggSteps.set(self.__pokemon.getBaseEggSteps())
+        self.__baseEggSteps.set(self.__pokemon.get_base_egg_steps())
         
     def __configEggGroups(self):
         ##Make label
@@ -303,7 +303,7 @@ class DexShow(LabelFrame):
         self.__labelEggGroupsInfo = Label(self.__BreedingInfo,textvariable = self.__eggGroups,bg = self.__background,font = ('Helvetica',10))
         self.__labelEggGroupsInfo.grid(row = 0, column = 3,sticky=NSEW)
 
-        self.__eggGroups.set(self.__pokemon.getEggGroups())
+        self.__eggGroups.set(self.__pokemon.get_egg_groups())
         
     def __configTrainingInfo1(self):
         self.__TrainingInfo1 = LabelFrame(self.__top,background = 'gray21')
@@ -324,7 +324,7 @@ class DexShow(LabelFrame):
         self.__labelEVWorthInfo = Label(self.__TrainingInfo1,textvariable = self.__evWorth,bg = self.__background,font = ('Helvetica',10))
         self.__labelEVWorthInfo.grid(row = 0, column = 1,sticky=NSEW)
         try:
-            self.__evWorth.set(self.__pokemon.getEVWorth())
+            self.__evWorth.set(self.__pokemon.get_ev_worth())
         except AttributeError:
             self.__evWorth.set('Not known')
     def __configCaptureRate(self):
@@ -336,7 +336,7 @@ class DexShow(LabelFrame):
         self.__labelCaptureRateInfo = Label(self.__TrainingInfo1,textvariable = self.__captureRate,bg = self.__background,font = ('Helvetica',10))
         self.__labelCaptureRateInfo.grid(row = 0, column = 3,sticky=NSEW)
 
-        self.__captureRate.set(self.__pokemon.getCaptureRate())
+        self.__captureRate.set(self.__pokemon.get_capture_rate())
         
     def __configExpGrowth(self):
         ##Make label
@@ -347,7 +347,7 @@ class DexShow(LabelFrame):
         self.__labelExpGrowthInfo = Label(self.__TrainingInfo1,textvariable = self.__expGrowth,bg = self.__background,font = ('Helvetica',10))
         self.__labelExpGrowthInfo.grid(row = 1, column = 1,sticky=NSEW)
 
-        self.__expGrowth.set(self.__pokemon.getExpGrowth())
+        self.__expGrowth.set(self.__pokemon.get_exp_growth())
         
     def __configBaseHappiness(self):
         ##Make label
@@ -358,7 +358,7 @@ class DexShow(LabelFrame):
         self.__labelBaseHappinessInfo = Label(self.__TrainingInfo1,textvariable = self.__baseHappiness,bg = self.__background,font = ('Helvetica',10))
         self.__labelBaseHappinessInfo.grid(row = 1, column = 3,sticky=NSEW)
 
-        self.__baseHappiness.set(self.__pokemon.getHappiness())
+        self.__baseHappiness.set(self.__pokemon.get_happiness())
             
             
     def __configTrainingInfo2(self):
@@ -379,7 +379,7 @@ class DexShow(LabelFrame):
         self.__labelWildItemsInfo = Label(self.__TrainingInfo2,textvariable = self.__wildItems,bg = self.__background,font = ('Helvetica',10))
         self.__labelWildItemsInfo.grid(row = 0, column = 1,sticky=NSEW)
 
-        self.__wildItems.set(self.__pokemon.getWildItems())
+        self.__wildItems.set(self.__pokemon.get_wild_items())
     
     def __configLocation(self):
         ##Location Frame
@@ -418,13 +418,13 @@ class DexShow(LabelFrame):
         ##Positioning NoFrame
         self.__locationFrame.grid(row = 0, column = 2,columnspan = 2,sticky = NSEW, padx = 10)
         
-        self.__locationX.set(self.__pokemon.getLocation().getX())
-        self.__locationY.set(self.__pokemon.getLocation().getY())
-        self.__locationOR.set(self.__pokemon.getLocation().getOR())
-        if(self.__pokemon.getLocation().getAS()):
-            self.__locationAS.set(self.__pokemon.getLocation().getAS())
+        self.__locationX.set(self.__pokemon.get_location().get_x())
+        self.__locationY.set(self.__pokemon.get_location().get_y())
+        self.__locationOR.set(self.__pokemon.get_location().get_or())
+        if(self.__pokemon.get_location().get_as()):
+            self.__locationAS.set(self.__pokemon.get_location().get_as())
         else:
-            self.__locationAS.set(self.__pokemon.getLocation().getOR())
+            self.__locationAS.set(self.__pokemon.get_location().get_or())
 
     def __configEvoChain(self):
         ##Make label
@@ -435,7 +435,7 @@ class DexShow(LabelFrame):
         self.__labelEvoChainInfo = Label(self.__TrainingInfo2,textvariable = self.__evoChain,bg = self.__background,font = ('Helvetica',10))
         self.__labelEvoChainInfo.grid(row = 0, column = 5,sticky=NSEW)
 
-        self.__evoChain.set(self.__pokemon.getEvoChain())
+        self.__evoChain.set(self.__pokemon.get_evo_chain())
 
     def __configBattleInfo(self):
         self.__BattleInfo = LabelFrame(self.__top,background = 'gray21')
@@ -457,7 +457,7 @@ class DexShow(LabelFrame):
         self.__labelAbilitiesInfo = Text(self.__frameAbilities,bg = self.__background,font = ('Helvetica',9),yscrollcommand=self.__scrollAbilities.set,width=40,height=5)
         self.__labelAbilitiesInfo.pack(side=LEFT,fill=BOTH)
         
-        self.__abilities.set(self.__pokemon.getAbilities())
+        self.__abilities.set(self.__pokemon.get_abilities())
         self.__labelAbilitiesInfo.insert(INSERT,self.__abilities.get())
         
         self.__labelAbilitiesInfo.config(state = DISABLED)
@@ -474,7 +474,7 @@ class DexShow(LabelFrame):
         self.__labelAttacksInfo = Text(self.__frameAttacks,bg = self.__background,font = ('Helvetica',9),yscrollcommand=self.__scrollAttacks.set,width=40,height=5)
         self.__labelAttacksInfo.pack(side=LEFT,fill=BOTH)
         
-        self.__attack.set(self.__pokemon.getAttacks())
+        self.__attack.set(self.__pokemon.get_attacks())
         self.__labelAttacksInfo.insert(INSERT,self.__attack.get())
         
         self.__labelAttacksInfo.config(state = DISABLED)
@@ -490,12 +490,12 @@ class DexShow(LabelFrame):
         self.__typeDmgInfo = []
         for i in range(1,17):
             type_ = Type(i)
-            self.__typeImg.append(PhotoImage(file = type_.ImgV()))
+            self.__typeImg.append(PhotoImage(file =type_.img_v()))
             self.__typeDmg.append(StringVar())
 
             self.__typeDmgInfo.append(Label(self.__BattleInfo,textvariable = self.__typeDmg[i-1],bg = self.__background,font = ('Helvetica',12)))
             
-            self.__typeDmg[i-1].set(self.__pokemon.getWeaknesses()[Type(i)])
+            self.__typeDmg[i-1].set(self.__pokemon.get_weaknesses()[Type(i)])
             
 
             imgHeight = self.__typeImg[i-1].height()
@@ -555,13 +555,13 @@ class DexShow(LabelFrame):
         self.__labelSpeedInfo.grid(row = 1,column=5,sticky=NSEW)
         self.__labelTotalInfo.grid(row = 1,column=6,sticky=NSEW)
         
-        self.__hp.set(self.__pokemon.getStats().get_hp())
-        self.__attack.set(self.__pokemon.getStats().get_attack())
-        self.__defense.set(self.__pokemon.getStats().get_defense())
-        self.__spAttack.set(self.__pokemon.getStats().get_sp_attack())
-        self.__spDefense.set(self.__pokemon.getStats().get_sp_defense())
-        self.__speed.set(self.__pokemon.getStats().getSpeed())
-        self.__total.set(self.__pokemon.getStats().getTotal())
+        self.__hp.set(self.__pokemon.get_stats().get_hp())
+        self.__attack.set(self.__pokemon.get_stats().get_attack())
+        self.__defense.set(self.__pokemon.get_stats().get_defense())
+        self.__spAttack.set(self.__pokemon.get_stats().get_sp_attack())
+        self.__spDefense.set(self.__pokemon.get_stats().get_sp_defense())
+        self.__speed.set(self.__pokemon.get_stats().get_speed())
+        self.__total.set(self.__pokemon.get_stats().get_total())
     
     def __skyBattle(self):
         ##Make label
@@ -572,7 +572,7 @@ class DexShow(LabelFrame):
         self.__labelSkyBattleInfo = Label(self.__BattleInfo,textvariable = self.__skyBattle,bg = self.__background,font = ('Helvetica',10))
         self.__labelSkyBattleInfo.grid(row = 1, column = 17,sticky=NSEW)
 
-        self.__skyBattle.set(self.__pokemon.getSkyBattle())
+        self.__skyBattle.set(self.__pokemon.get_sky_battle())
 
 if __name__ == '__main__':
     DexShow('Pikachu').run()

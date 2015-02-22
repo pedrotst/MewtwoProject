@@ -12,11 +12,11 @@ class Manager:
             self._connection.close()
             print('Closing')
 
-    def _certifyConnection(self):
+    def _certify_connection(self):
         if self._connection is None:
-            self._connectToDatabase()        
+            self._connect_to_database()
 
-    def _connectToDatabase(self):
+    def _connect_to_database(self):
         self._connection = sqlite3.connect(self._databasePath)
 
 class DatabaseManager(Manager):
@@ -33,22 +33,22 @@ class DatabaseManager(Manager):
         self.__pkmEvoMan = PokemonEvoChainManager()
         self.__pkmMan = PokemonManager()
 
-    def getPokemonsByDexNum(self):
-        return  self.__pkmMan.getPokemonByDexNum()
+    def get_pokemons_by_dex_num(self):
+        return self.__pkmMan.get_pokemon_by_dex_num()
 
-    def getPokemonByName(self,name):
-        pokeData = self.__pkmMan.getPokemonByName(name)
+    def get_pokemon_by_name(self,name):
+        pokeData = self.__pkmMan.get_pokemon_by_name(name)
         pokemonName = pokeData[0]
-        pokeAbilities = self.__pkmAbMan.getPokemonAbilities(pokemonName)
+        pokeAbilities = self.__pkmAbMan.get_pokemon_abilities(pokemonName)
         try:
-            pokeHiddenAbilities = self.__pkmHiddenAbMan.getPokemonHiddenAbilities(pokemonName)
+            pokeHiddenAbilities = self.__pkmHiddenAbMan.get_pokemon_hidden_abilities(pokemonName)
         except Exception:
             pokeHiddenAbilities = None         
-        pokeAttacks = self.__pkmAtkMan.getPokemonAttacks(pokemonName)
-        pokeItems = self.__pkmItemsMan.getPokemonItems(pokemonName)
-        pokeDexNavItems = self.__pkmDNItemsMan.getPokemonDexNavItems(pokemonName)
-        pokeEvWorth = self.__pkmEVMan.getPokemonEVWorth(pokemonName)
-        pokeEvoChain = self.__pkmEvoMan.getPokemonEvoChain(pokemonName)
+        pokeAttacks = self.__pkmAtkMan.get_pokemon_attacks(pokemonName)
+        pokeItems = self.__pkmItemsMan.get_pokemon_items(pokemonName)
+        pokeDexNavItems = self.__pkmDNItemsMan.get_pokemon_dex_nav_items(pokemonName)
+        pokeEvWorth = self.__pkmEVMan.get_pokemon_ev_worth(pokemonName)
+        pokeEvoChain = self.__pkmEvoMan.get_pokemon_evo_chain(pokemonName)
         return (pokeData,
                 pokeAbilities,
                 pokeHiddenAbilities,
@@ -63,30 +63,30 @@ class DatabaseManager(Manager):
 #controla a tabela Abilities que contem todas habilidades que existem e sua descrição
 #só permite um tipo de query: getAbilityByName
 class AbilitiesManager(Manager):
-    def createTableAbilities(self):
-        self._certifyConnection()
+    def create_table_abilities(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS Abilities(Name TEXT PRIMARY KEY,Description TEXT)''')
             
-    def insertAbility(self,name = None,description = None,ability = None):
+    def insert_ability(self,name = None,description = None,ability = None):
         if ability:
-            abilityData = (ability.getName(),ability.getDescription())
+            abilityData = (ability.get_name(), ability.get_description())
         else:
             if not (isinstance(name,str) and isinstance(description,str)):
                 raise TypeError('Name and Description must be string')
             abilityData = (name,description)
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             try:
                 cursor.execute("INSERT INTO Abilities VALUES (?,?)",abilityData)
             except sqlite3.OperationalError as error:
-                self.createTableAbilities()
+                self.create_table_abilities()
                 cursor.execute("INSERT INTO Abilities VALUES (?,?)",abilityData)
 
-    def getAbilityByName(self,name):
-        self._certifyConnection()
+    def get_ability_by_name(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Ability\'s name must be a string')
@@ -100,7 +100,7 @@ class AbilitiesManager(Manager):
             raise self.AbilityNotFoundError('Ability was not found')
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Abilities'):
                 print(row)
@@ -109,28 +109,28 @@ class AbilitiesManager(Manager):
         pass
 
 class PokemonAbilitiesManager(Manager):
-    def createTablePokeAbilities(self):
-        self._certifyConnection()
+    def create_table_poke_abilities(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonAbilities(PokemonName TEXT PRIMARY KEY, Ability1 TEXT,Ability2 TEXT)''')
 
-    def insertAbility(self,pokemonName,name = None,description = None,ability = None):
+    def insert_ability(self,pokemonName,name = None,description = None,ability = None):
         if ability:
-            abilityData = (pokemonName,ability.getName())
+            abilityData = (pokemonName,ability.get_name())
         else:
             if not (isinstance(name,str)):
                 raise TypeError('Name')
             abilityData = (pokemonName,name)
-            
-        self._certifyConnection()
+
+        self._certify_connection()
         
         AM = AbilitiesManager()
-        if AM.getAbilityByName(abilityData[1]) is None:
+        if AM.get_ability_by_name(abilityData[1]) is None:
             if ability:
-                AM().insertAbility(ability = ability)
+                AM().insert_ability(ability=ability)
             elif description:
-                AM().insertAbility(name,description)
+                AM().insert_ability(name, description)
             else:
                 raise self.DescriptionError('Ability not in database and description is missing')
             
@@ -141,7 +141,7 @@ class PokemonAbilitiesManager(Manager):
                 cursor.execute("INSERT INTO PokemonAbilities(PokemonName,Ability1) VALUES (?,?)",abilityData)
 
             except sqlite3.OperationalError as error:
-                self.createTablePokeAbilities()
+                self.create_table_poke_abilities()
                 cursor.execute("INSERT INTO PokemonAbilities(PokemonName,Ability1) VALUES (?,?)",abilityData)
 
             except sqlite3.IntegrityError:
@@ -157,8 +157,8 @@ class PokemonAbilitiesManager(Manager):
                         cursor.execute("ALTER TABLE PokemonAbilities ADD COLUMN "+column+" TEXT")
                         cursor.execute("UPDATE PokemonAbilities SET "+column+" = (?) WHERE PokemonName=?",(abilityData[1],pokemonName))
 
-    def getPokemonAbilities(self,name):
-        self._certifyConnection()
+    def get_pokemon_abilities(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -180,10 +180,10 @@ class PokemonAbilitiesManager(Manager):
         else:
             raise self.AbilityNotFoundError('Ability was not found')
 
-    def getPokemonsWithAbility(self,name=None,ability=None):
-        self._certifyConnection()
+    def get_pokemons_with_ability(self,name=None,ability=None):
+        self._certify_connection()
         if ability:
-            search = (ability.getName(),)
+            search = (ability.get_name(),)
         else:
             if not (isinstance(name,str)):
                 raise TypeError('Name')
@@ -199,7 +199,7 @@ class PokemonAbilitiesManager(Manager):
             return pokemons
         
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokemonAbilities'):
                 print(row)
@@ -209,28 +209,28 @@ class PokemonAbilitiesManager(Manager):
         pass
 
 class PokemonHiddenAbilitiesManager(Manager):
-    def createTablePokeHiddenAbilities(self):
-        self._certifyConnection()
+    def create_table_poke_hidden_abilities(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonHiddenAbilities(PokemonName TEXT PRIMARY KEY, Ability1 TEXT,Ability2 TEXT)''')
 
-    def insertAbility(self,pokemonName,name = None,description = None,ability = None):
+    def insert_ability(self,pokemonName,name = None,description = None,ability = None):
         if ability:
-            abilityData = (pokemonName,ability.getName())
+            abilityData = (pokemonName,ability.get_name())
         else:
             if not (isinstance(name,str)):
                 raise TypeError('Name')
             abilityData = (pokemonName,name)
-            
-        self._certifyConnection()
+
+        self._certify_connection()
         
         AM = AbilitiesManager()
-        if AM.getAbilityByName(abilityData[1]) is None:
+        if AM.get_ability_by_name(abilityData[1]) is None:
             if ability:
-                AM().insertAbility(ability = ability)
+                AM().insert_ability(ability=ability)
             elif description:
-                AM().insertAbility(name,description)
+                AM().insert_ability(name, description)
             else:
                 raise self.DescriptionError('Ability not in database and description is missing')
             
@@ -241,7 +241,7 @@ class PokemonHiddenAbilitiesManager(Manager):
                 cursor.execute("INSERT INTO PokemonHiddenAbilities(PokemonName,Ability1) VALUES (?,?)",abilityData)
 
             except sqlite3.OperationalError as error:
-                self.createTablePokeHiddenAbilities()
+                self.create_table_poke_hidden_abilities()
                 cursor.execute("INSERT INTO PokemonHiddenAbilities(PokemonName,Ability1) VALUES (?,?)",abilityData)
 
             except sqlite3.IntegrityError:
@@ -257,8 +257,8 @@ class PokemonHiddenAbilitiesManager(Manager):
                         cursor.execute("ALTER TABLE PokemonAbilities ADD COLUMN "+column+" TEXT")
                         cursor.execute("UPDATE PokemonAbilities SET "+column+" = (?) WHERE PokemonName=?",(abilityData[1],pokemonName))
 
-    def getPokemonHiddenAbilities(self,name):
-        self._certifyConnection()
+    def get_pokemon_hidden_abilities(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -280,10 +280,10 @@ class PokemonHiddenAbilitiesManager(Manager):
         else:
             raise self.AbilityNotFoundError('Ability was not found')
 
-    def getPokemonsWithHiddenAbility(self,name=None,ability=None):
-        self._certifyConnection()
+    def get_pokemons_with_hidden_ability(self,name=None,ability=None):
+        self._certify_connection()
         if ability:
-            search = (ability.getName(),)
+            search = (ability.get_name(),)
         else:
             if not (isinstance(name,str)):
                 raise TypeError('Name')
@@ -300,7 +300,7 @@ class PokemonHiddenAbilitiesManager(Manager):
 
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokemonHiddenAbilities'):
                 print(row)
@@ -313,20 +313,21 @@ class PokemonHiddenAbilitiesManager(Manager):
         pass
 
 class AttacksManager(Manager):
-    def createTableAttacks(self):
-        self._certifyConnection()
+    def create_table_attacks(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS Attacks(Name TEXT PRIMARY KEY, Type TEXT,Category TEXT, Att INTEGER , Acc INTEGER, Pp INTEGER, Effect TEXT, Description TEXT)''')
 
-    def insertAttack(self,name = None, atkType = None, cat = None , att = None, acc = None, pp = None , effect = None, description = None,attack = None):
+    def insert_attack(self,name = None, atkType = None, cat = None , att = None, acc = None, pp = None , effect = None, description = None,attack = None):
         if attack:
-            attackData = (attack.getName(),str(attack.getType()),str(attack.getCat()),attack.getAtt(),attack.getAcc(),attack.getPP(),attack.getEffect(),attack.getDescription())
+            attackData = (attack.get_name(),str(attack.get_item_type()),str(attack.get_cat()),attack.get_att(),attack.get_acc(),
+                          attack.get_PP(), attack.get_effect(), attack.get_description())
         else:
             if not (isinstance(name,str) and isinstance(atkType,str)and isinstance(cat,str) and isinstance(att,int) and isinstance(acc,int) and isinstance(pp,int) and isinstance(effect,str) and isinstance(description,str)):
                 raise TypeError('Type incompatibily')
             attackData = (name,atkType,cat,att,acc,pp,effect,description)
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             try:
@@ -335,8 +336,8 @@ class AttacksManager(Manager):
                 self.createTableAbilities()
                 cursor.execute("INSERT INTO Attacks VALUES (?,?,?,?,?,?,?,?)",attackData)
         
-    def getAttackByName(self,name):
-        self._certifyConnection()
+    def get_attack_by_name(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Attack\'s name must be a string')
@@ -351,7 +352,7 @@ class AttacksManager(Manager):
 		
 		
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Attacks'):
                 print(row)
@@ -360,13 +361,13 @@ class AttacksManager(Manager):
         pass
         
 class PokeAttacksManager(Manager):
-    def createTablePkAttacks(self):
-        self._certifyConnection()
+    def create_table_pk_attacks(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeAttacks(PokeName TEXT, AtkName TEXT, AtkGroup TEXT, Condition TEXT, PRIMARY KEY (PokeName, AtkName,AtkGroup))''')
 
-    def insertPokeAttacks(self, pokeName = None, atkName = None, atkGroup = None , condition = None):
+    def insert_poke_attacks(self, pokeName = None, atkName = None, atkGroup = None , condition = None):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Poke name not str')
         if not (isinstance(atkName,str) ):
@@ -375,23 +376,23 @@ class PokeAttacksManager(Manager):
             raise TypeError('atk group not str')
         if not (isinstance(condition,str) ):
             raise TypeError('condition not str')
-            
-        self._certifyConnection()
+
+        self._certify_connection()
         
         attackData = (pokeName,atkName, atkGroup, condition)
         AM = AttacksManager()
-        if AM.getAttackByName(attackData[1]) is None:
+        if AM.get_attack_by_name(attackData[1]) is None:
             raise self.DescriptionError('Attack '+ atkName+ ' is not in database')
         with self._connection as conn:
             cursor = conn.cursor()
             try:
                 cursor.execute("INSERT INTO PokeAttacks VALUES (?,?,?,?)",attackData)
             except sqlite3.OperationalError as error:
-                self.createTablePkAttacks()
+                self.create_table_pk_attacks()
                 cursor.execute("INSERT INTO PokeAttacks VALUES (?,?,?,?)",attackData)
         
-    def getPokemonAttacks(self,name):
-        self._certifyConnection()
+    def get_pokemon_attacks(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -406,8 +407,8 @@ class PokeAttacksManager(Manager):
                 if( attack[2] not in attackGroups.keys()):
                     attackGroups[attack[2]] = []
                 AM = AttacksManager()
-                atk = AM.getAttackByName(attack[1])
-                atk.setCondition(attack[3])
+                atk = AM.get_attack_by_name(attack[1])
+                atk.set_condition(attack[3])
                 attackGroups[attack[2]].append(atk)
             return attackGroups
         else:
@@ -415,7 +416,7 @@ class PokeAttacksManager(Manager):
 		
 		
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeAttacks'):
                 print(row)
@@ -424,20 +425,20 @@ class PokeAttacksManager(Manager):
         pass
         
 class PokeItemsManager(Manager):
-    def createTablePkItems(self):
-        self._certifyConnection()
+    def create_table_pk_items(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeItems(PokeName TEXT , ItemName TEXT, ItemChance INTEGER,PRIMARY KEY(PokeName,ItemName))''')
 
-    def insertPokeItem(self, pokeName = None, itemName = None, itemChance = None):
+    def insert_poke_item(self, pokeName = None, itemName = None, itemChance = None):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Poke name not str')
         if not (isinstance(itemName,str) ):
             raise TypeError('item name not str')
         if not(isinstance(itemChance,int)):
             raise TypeError('item chance not int')
-        self._certifyConnection()
+        self._certify_connection()
         
         pkItemData = (pokeName,itemName,itemChance)
         with self._connection as conn:
@@ -445,11 +446,11 @@ class PokeItemsManager(Manager):
             try:
                 cursor.execute("INSERT INTO PokeItems VALUES (?,?,?)",pkItemData)
             except sqlite3.OperationalError as error:
-                self.createTablePkItems()
+                self.create_table_pk_items()
                 cursor.execute("INSERT INTO PokeItems VALUES (?,?,?)",pkItemData)
         		
-    def getPokemonItems(self,pokemonName):
-        self._certifyConnection()
+    def get_pokemon_items(self,pokemonName):
+        self._certify_connection()
         search = (pokemonName,)
         if not isinstance(pokemonName,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -463,7 +464,7 @@ class PokeItemsManager(Manager):
             raise self.AttackNotFoundError('Pokemon was not found')
 		
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeItems'):
                 print(row)
@@ -473,19 +474,19 @@ class PokeItemsManager(Manager):
 
 
 class PokeDexNavItemsManager(Manager):
-    def createTablePkDexNavItems(self):
-        self._certifyConnection()
+    def create_table_pk_dex_nav_items(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeDexNavItems(PokeName TEXT , ItemName TEXT,PRIMARY KEY(PokeName,ItemName))''')
 
-    def insertPokeItem(self, pokeName = None, itemName = None):
+    def insert_poke_item(self, pokeName = None, itemName = None):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Poke name not str')
         if not (isinstance(itemName,str) ):
             raise TypeError('item name not str')
 
-        self._certifyConnection()
+        self._certify_connection()
         
         pkItemData = (pokeName,itemName)
         with self._connection as conn:
@@ -496,8 +497,8 @@ class PokeDexNavItemsManager(Manager):
                 self.createTablePkItems()
                 cursor.execute("INSERT INTO PokeDexNavItems VALUES (?,?)",pkItemData)
                 
-    def getPokemonDexNavItems(self,pokemonName):
-        self._certifyConnection()
+    def get_pokemon_dex_nav_items(self,pokemonName):
+        self._certify_connection()
         search = (pokemonName,)
         if not isinstance(pokemonName,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -511,37 +512,37 @@ class PokeDexNavItemsManager(Manager):
             raise self.AttackNotFoundError('Pokemon was not found')
         
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeDexNavItems'):
                 print(row)
                 
 
 class PokemonEVWorthManager(Manager):
-    def createTablePokemonEVWorth(self):
-        self._certifyConnection()
+    def create_table_pokemon_ev_worth(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonEVWorth(PokeName TEXT , Stat TEXT, Value INTEGER, PRIMARY KEY(PokeName,Stat))''')
 
-    def insertPokeEvWorth(self,pokeName, ev = None):
+    def insert_poke_ev_worth(self,pokeName, ev = None):
         if not (isinstance(ev,EV) ):
             raise TypeError('ev not of type EV')
         if not (isinstance(pokeName,str) ):
             raise TypeError('Pokemon name not str')
-        self._certifyConnection()
+        self._certify_connection()
         
-        evData = (pokeName,str(ev.getStat()), ev.getValue())
+        evData = (pokeName,str(ev.get_stat()), ev.get_value())
         with self._connection as conn:
             cursor = conn.cursor()
             try:
                 cursor.execute("INSERT INTO PokemonEVWorth VALUES (?,?,?)",evData)
             except sqlite3.OperationalError as error:
-                self.createTablePokemonEVWorth()
+                self.create_table_pokemon_ev_worth()
                 cursor.execute("INSERT INTO PokemonEVWorth VALUES (?,?,?)",evData)		
 		
-    def getPokemonEVWorth(self,pokemonName):
-        self._certifyConnection()
+    def get_pokemon_ev_worth(self,pokemonName):
+        self._certify_connection()
         search = (pokemonName,)
         if not isinstance(pokemonName,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -556,156 +557,122 @@ class PokemonEVWorthManager(Manager):
 
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokemonEVWorth'):
                 print(row)
 
 class PokemonManager(Manager):
-    def createTablePokemon(self):
-        self._certifyConnection()
+    def create_table_pokemon(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS Pokemon(PokeName TEXT PRIMARY KEY, NationalDex INTEGER, CentralDex INTEGER, CoastalDex INTEGER, MountainDex INTEGER, HoennDex INTEGER, MaleRate REAL, FemaleRate Real, Genderless INTEGER, Type1 TEXT, Type2 TEXT, Classification TEXT, HeightMeters REAL, HeightInches INTEGER, WeightKg REAL, WeightLbs REAL, ORASCr INTEGER, XYCr INTEGER, BaseEggSteps INTEGER, PathImg TEXT, PathSImg TEXT, ExpGrowth INTEGER, ExpGrowthClassification TEXT, BaseHappiness INTEGER, SkyBattle TEXT, Normal REAL, Fire REAL, Water REAL, Electric REAL, Grass REAL, Ice REAL, Fighting REAL, Poison REAL, Ground REAL, Flying REAL, Psychic REAL, Bug REAL, Rock REAL, Ghost REAL, Dragon REAL, Dark REAL, Steel REAL, Fairy REAL, EggGroup1 TEXT, EggGroup2 TEXT, LocationX TEXT, LocationY TEXT, LocationOR TEXT, LocationAS TEXT, DexTextX TEXT, DexTextY TEXT , DexTextOR TEXT, DexTextAS TEXT, Hp INTEGER, Attack INTEGER, Defense INTEGER, SpAttack INTEGER, SpDefense INTEGER, Speed INTEGER, Total INTEGER)''')
 
-    def insertPokemon(self, pokemon):
+    def insert_pokemon(self, pokemon):
         if not (isinstance(pokemon,pkm.Pokemon) ):
             raise TypeError('Poke name not Pokemon')
 
-        name = pokemon.getName()
-        nationalDex = pokemon.getDexNum().get_national()
-        centralDex = pokemon.getDexNum().get_central()
-        coastalDex = pokemon.getDexNum().get_coastal()
-        mountainDex = pokemon.getDexNum().get_mountain()
-        hoennDex = pokemon.getDexNum().get_hoenn()
-        maleRate = pokemon.getGender().get_male_rate()
-        femaleRate = pokemon.getGender().get_female_rate()
-        genderless = int(pokemon.getGender().is_genderless())
-        type1 = str(pokemon.getTypes().getType1())
-        type2 = str(pokemon.getTypes().getType2())
-        classification = pokemon.getClassification()
-        heightMeters = pokemon.getHeight().getValueInMeters()
-        heightInches = pokemon.getHeight().getValueInInches()
-        weightKg = pokemon.getWeight().getValueInKg()
-        weightLbs = pokemon.getWeight().getValueInLbs()
-        oRASCr = pokemon.getCaptureRate().getORAS()
-        yXCr = pokemon.getCaptureRate().getXY()
-        baseEggSteps = pokemon.getBaseEggSteps()
-        pathImg = pokemon.getImagePath().getPathImg()
-        pathSImg = pokemon.getImagePath().getSPathImg()
-        expGrowth = pokemon.getExpGrowth().getExpGrowth()
-        expGrowthClassification = pokemon.getExpGrowth().getClassification()
-        baseHappiness = pokemon.getHappiness()
-        skyBattle = pokemon.getSkyBattle()
-        normal = pokemon.getWeaknesses()['Normal']
-        fire = pokemon.getWeaknesses()['Fire']
-        water = pokemon.getWeaknesses()['Water']
-        electric = pokemon.getWeaknesses()['Electric']
-        grass = pokemon.getWeaknesses()['Grass']
-        ice = pokemon.getWeaknesses()['Ice']
-        fighting = pokemon.getWeaknesses()['Fighting']
-        poison = pokemon.getWeaknesses()['Poison']
-        ground = pokemon.getWeaknesses()['Ground']
-        flying = pokemon.getWeaknesses()['Flying']
-        psychic = pokemon.getWeaknesses()['Psychic']
-        bug = pokemon.getWeaknesses()['Bug']
-        rock = pokemon.getWeaknesses()['Rock']
-        ghost = pokemon.getWeaknesses()['Ghost']
-        dragon = pokemon.getWeaknesses()['Dragon']
-        dark = pokemon.getWeaknesses()['Dark']
-        steel = pokemon.getWeaknesses()['Steel']
-        fairy = pokemon.getWeaknesses()['Fairy']
-        eggGroup1 = str(pokemon.getEggGroups().getGroup1())
-        eggGroup2 = str(pokemon.getEggGroups().getGroup2())
-        locationX = pokemon.getLocation().getX()
-        locationY = pokemon.getLocation().getY()
-        locationOR = pokemon.getLocation().getOR()
-        locationAS = pokemon.getLocation().getAS()
-        dexTextX = pokemon.getDexText().getX()
-        dexTextY = pokemon.getDexText().getY()
-        dexTextOR = pokemon.getDexText().getOR()
-        dexTextAS = pokemon.getDexText().getAS()
-        hp = pokemon.getStats().get_hp()
-        attack = pokemon.getStats().get_attack()
-        defense = pokemon.getStats().get_defense()
-        spAttack = pokemon.getStats().get_sp_attack()
-        spDefense = pokemon.getStats().get_sp_defense()
-        speed = pokemon.getStats().getSpeed()
+        name = pokemon.get_name()
+        nationalDex = pokemon.get_dex_num().get_national()
+        centralDex = pokemon.get_dex_num().get_central()
+        coastalDex = pokemon.get_dex_num().get_coastal()
+        mountainDex = pokemon.get_dex_num().get_mountain()
+        hoennDex = pokemon.get_dex_num().get_hoenn()
+        maleRate = pokemon.get_gender().get_male_rate()
+        femaleRate = pokemon.get_gender().get_female_rate()
+        genderless = int(pokemon.get_gender().is_genderless())
+        type1 = str(pokemon.get_types().get_type1())
+        type2 = str(pokemon.get_types().get_type2())
+        classification = pokemon.get_classification()
+        heightMeters = pokemon.get_height().get_value_in_meters()
+        heightInches = pokemon.get_height().get_value_in_inches()
+        weightKg = pokemon.get_weight().get_value_in_kg()
+        weightLbs = pokemon.get_weight().get_value_in_lbs()
+        oRASCr = pokemon.get_capture_rate().get_oras()
+        yXCr = pokemon.get_capture_rate().get_xy()
+        baseEggSteps = pokemon.get_base_egg_steps()
+        pathImg = pokemon.get_image_path().get_path_img()
+        pathSImg = pokemon.get_image_path().get_spath_img()
+        expGrowth = pokemon.get_exp_growth().get_exp_growth()
+        expGrowthClassification = pokemon.get_exp_growth().get_classification()
+        baseHappiness = pokemon.get_happiness()
+        skyBattle = pokemon.get_sky_battle()
+        normal = pokemon.get_weaknesses()['Normal']
+        fire = pokemon.get_weaknesses()['Fire']
+        water = pokemon.get_weaknesses()['Water']
+        electric = pokemon.get_weaknesses()['Electric']
+        grass = pokemon.get_weaknesses()['Grass']
+        ice = pokemon.get_weaknesses()['Ice']
+        fighting = pokemon.get_weaknesses()['Fighting']
+        poison = pokemon.get_weaknesses()['Poison']
+        ground = pokemon.get_weaknesses()['Ground']
+        flying = pokemon.get_weaknesses()['Flying']
+        psychic = pokemon.get_weaknesses()['Psychic']
+        bug = pokemon.get_weaknesses()['Bug']
+        rock = pokemon.get_weaknesses()['Rock']
+        ghost = pokemon.get_weaknesses()['Ghost']
+        dragon = pokemon.get_weaknesses()['Dragon']
+        dark = pokemon.get_weaknesses()['Dark']
+        steel = pokemon.get_weaknesses()['Steel']
+        fairy = pokemon.get_weaknesses()['Fairy']
+        eggGroup1 = str(pokemon.get_egg_groups().get_group1())
+        eggGroup2 = str(pokemon.get_egg_groups().get_group2())
+        locationX = pokemon.get_location().get_x()
+        locationY = pokemon.get_location().get_y()
+        locationOR = pokemon.get_location().get_or()
+        locationAS = pokemon.get_location().get_as()
+        dexTextX = pokemon.get_dex_text().get_x()
+        dexTextY = pokemon.get_dex_text().get_y()
+        dexTextOR = pokemon.get_dex_text().get_or()
+        dexTextAS = pokemon.get_dex_text().get_as()
+        hp = pokemon.get_stats().get_hp()
+        attack = pokemon.get_stats().get_attack()
+        defense = pokemon.get_stats().get_defense()
+        spAttack = pokemon.get_stats().get_sp_attack()
+        spDefense = pokemon.get_stats().get_sp_defense()
+        speed = pokemon.get_stats().get_speed()
         total = hp+attack+defense+spAttack+spDefense+speed
         
-        pkmData = (name,
-                   nationalDex,
-                   centralDex,
-                   coastalDex,
-                   mountainDex,
-                   hoennDex,
-                   maleRate,
-                   femaleRate,
-                   genderless,
-                   type1,
-                   type2,
-                   classification,
-                   heightMeters,
-                   heightInches,
-                   weightKg,
-                   weightLbs,
-                   oRASCr,
-                   yXCr,
-                   baseEggSteps,
-                   pathImg,
-                   pathSImg,
-                   expGrowth,
-                   expGrowthClassification,
-                   baseHappiness,
-                   skyBattle,
-                   normal,
-                   fire,
-                   water, 
-                   electric, 
-                   grass,
-                   ice,
-                   fighting, 
-                   poison,
-                   ground,
-                   flying,
-                   psychic ,
-                   bug ,
-                   rock ,
-                   ghost ,
-                   dragon ,
-                   dark ,
-                   steel ,
-                   fairy ,
-                   eggGroup1,
-                   eggGroup2,
-                   locationX,
-                   locationY,
-                   locationOR,
-                   locationAS,
-                   dexTextX,
-                   dexTextY,
-                   dexTextOR,
-                   dexTextAS,
-                   hp,
-                   attack,
-                   defense,
-                   spAttack,
-                   spDefense,
-                   speed,
-                   total)
-        
-        self._certifyConnection()
+        pkmData = (name, nationalDex, centralDex,
+                   coastalDex, mountainDex,hoennDex,
+                   maleRate,femaleRate,genderless,
+                   type1,type2,classification,
+                   heightMeters, heightInches, weightKg,
+                   weightLbs,oRASCr,yXCr,
+                   baseEggSteps,pathImg,pathSImg,expGrowth,
+                   expGrowthClassification,baseHappiness,
+                   skyBattle,normal,fire,
+                   water,electric,grass,
+                   ice,fighting,poison,
+                   ground,flying,psychic ,
+                   bug ,rock ,ghost ,
+                   dragon ,dark ,steel ,
+                   fairy ,eggGroup1,eggGroup2,
+                   locationX,locationY,locationOR,
+                   locationAS,dexTextX,dexTextY,
+                   dexTextOR,dexTextAS,hp,
+                   attack,defense,spAttack,
+                   spDefense,speed,total)
+
+        self._certify_connection()
         
         with self._connection as conn:
             cursor = conn.cursor()
             try:
-                cursor.execute("INSERT INTO Pokemon VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
+                cursor.execute("INSERT INTO Pokemon VALUES "
+                    "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
+                    "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+                    ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
             except sqlite3.OperationalError as error:
-                self.createTablePokemon()
-                cursor.execute("INSERT INTO Pokemon VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
+                self.create_table_pokemon()
+                cursor.execute("INSERT INTO Pokemon VALUES"
+                    " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
+                    "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+                    ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
              
-    def __correctLocation(self):
-        self._certifyConnection()
+    def __correct_location(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('SELECT PokeName,LocationX,LocationY,LocationOR,LocationAS FROM Pokemon ORDER BY NationalDex')
@@ -724,15 +691,15 @@ class PokemonManager(Manager):
                 newValues.append(p)
             print(*newValues,sep = '\n')
       
-    def getPokemonByDexNum(self):
-        self._certifyConnection()
+    def get_pokemon_by_dex_num(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('SELECT NationalDex,PokeName FROM Pokemon ORDER BY NationalDex')
             return cursor.fetchall()                        
                         
-    def getPokemonByName(self,name):
-        self._certifyConnection()
+    def get_pokemon_by_name(self,name):
+        self._certify_connection()
         search = (name,)
         if not isinstance(name,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -751,7 +718,7 @@ class PokemonManager(Manager):
 		
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Pokemon'):
                 print(row)
@@ -760,16 +727,16 @@ class PokemonManager(Manager):
         pass
 
 class PokemonEvoChainManager(Manager):
-    def createTablePokemonEvoChain(self):
-        self._certifyConnection()
+    def create_table_pokemon_evo_chain(self):
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonEvoChain(PokeName TEXT ,EvoNode TEXT, PRIMARY KEY(PokeName,EvoNode))''')
 
-    def insertEvoNode(self,pokeName, evoNode):
+    def insert_evo_node(self,pokeName, evoNode):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Pokemon name not str')
-        self._certifyConnection()
+        self._certify_connection()
         
         evData = (pokeName,str(evoNode))
         with self._connection as conn:
@@ -777,13 +744,13 @@ class PokemonEvoChainManager(Manager):
             try:
                 cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)
             except sqlite3.OperationalError as error:
-                self.createTablePokemonEvoChain()
+                self.create_table_pokemon_evo_chain()
                 cursor.execute("INSERT INTO PokemonEvoChain VALUES (?,?)",evData)
                 
-    def removeNode(self,pokeName,evoNode):
+    def remove_node(self,pokeName,evoNode):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Pokemon name not str')
-        self._certifyConnection()
+        self._certify_connection()
         
         evData = (pokeName,str(evoNode))
         with self._connection as conn:
@@ -792,16 +759,16 @@ class PokemonEvoChainManager(Manager):
             cursor.execute("DELETE FROM PokemonEvoChain WHERE PokeName=(?) AND EvoNode=(?)",evData)
 
     def drop(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             conn.cursor().execute('DROP TABLE PokemonEvoChain')
             
 
                 
-    def updateEvoNode(self,pokeName,add = None,remove = None):
+    def update_evo_node(self,pokeName,add = None,remove = None):
         if not (isinstance(pokeName,str) ):
             raise TypeError('Pokemon name not str')
-        self._certifyConnection()
+        self._certify_connection()
         
         with self._connection as conn:
             cursor = conn.cursor()
@@ -812,15 +779,15 @@ class PokemonEvoChainManager(Manager):
                 for node in nodes:
                     print(node)
                 if add:
-                    self.insertEvoNode(pokeName,add)
+                    self.insert_evo_node(pokeName, add)
                     print(add)
                 elif remove:
-                    self.removeNode(pokeName,remove)
+                    self.remove_node(pokeName, remove)
                     
 
     
-    def getPokemonEvoChain(self,pokemonName):
-        self._certifyConnection()
+    def get_pokemon_evo_chain(self,pokemonName):
+        self._certify_connection()
         search = (pokemonName,)
         if not isinstance(pokemonName,str):
             raise TypeError('Pokemon\'s name must be a string')
@@ -835,14 +802,15 @@ class PokemonEvoChainManager(Manager):
 
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokemonEvoChain'):
                 print(row)
 
+#deletar esta table
 class ItemCategoryManager(Manager):
     def createItemCategoryTable(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS ItemCategory(ItemName TEXT PRIMARY KEY, Category TEXT)''')
@@ -852,7 +820,7 @@ class ItemCategoryManager(Manager):
             raise TypeError('Poke name not str')
         if not (isinstance(category,str) ):
             raise TypeError('atk name not str')
-        self._certifyConnection()
+        self._certify_connection()
         
         pkItemData = (itemName,category)
         with self._connection as conn:
@@ -864,17 +832,17 @@ class ItemCategoryManager(Manager):
                 cursor.execute("INSERT INTO ItemCategory VALUES (?,?)",pkItemData)
 
     def view(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM ItemCategory ORDER BY Category, ItemName'):
                 print(row)
     def drop(self):
-        self._certifyConnection()
+        self._certify_connection()
         with self._connection as conn:
             conn.cursor().execute('DROP TABLE ItemCategory')
 
 if __name__ == '__main__':
-    PokemonEvoChainManager().updateEvoNode('Gorebyss')
+    PokemonEvoChainManager().update_evo_node('Gorebyss')
     input('Waiting')
     
     

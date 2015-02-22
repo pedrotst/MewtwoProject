@@ -10,7 +10,7 @@ class BDManager:
             self._connection.close()
             print('Closing')
 
-    def _certifyConnection(self):
+    def _certify_connection(self):
         if self._connection is None:
             self._connectToDatabase()        
 
@@ -19,7 +19,7 @@ class BDManager:
 
 class ItemManager(BDManager):
 	def createItemTable(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -35,7 +35,7 @@ class ItemManager(BDManager):
 				type1, type2, japaName, 
 				japaTranls, flingDmg, purchPrice, 
 				sellPrice, effect):
-		self._certifyConnection()
+		self._certify_connection()
 		if not (isinstance(name, str) and isinstance(category, str) 
 		and isinstance(type1, str)    and isinstance(type2, str) 
 		and isinstance(japaName, str) and isinstance(japaTranls, str)
@@ -61,13 +61,13 @@ class ItemManager(BDManager):
 								sellPrice, effect)
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT * FROM Item'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM Item WHERE Category = ? ORDER BY Name', (cat,)):
@@ -78,7 +78,7 @@ class ItemManager(BDManager):
 # c.getByCat('fossil')
 class ItemVersions(BDManager):
 	def create_table(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -92,7 +92,7 @@ class ItemVersions(BDManager):
 				)''')
 
 	def insert_item(self, name, versions_dict):
-		self._certifyConnection()
+		self._certify_connection()
 		if versions_dict is not None:
 			item_data = (name,  versions_dict['RGBY'], versions_dict['GS'], 
 				versions_dict['C'], versions_dict['RS'], versions_dict['E'], 
@@ -120,13 +120,13 @@ class ItemVersions(BDManager):
 
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT * FROM ItemVersions'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM ItemVersions WHERE Category = ? ORDER BY Name', (cat,)):
@@ -134,7 +134,7 @@ class ItemVersions(BDManager):
 
 class FlavourText(BDManager):
 	def create_table(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -145,7 +145,7 @@ class FlavourText(BDManager):
 				)''')
 
 	def insert_item(self, name, flav_dict):
-		self._certifyConnection()
+		self._certify_connection()
 		if len(flav_dict) == 9:
 			item_data = (name,  
 				flav_dict['GSC'], flav_dict['RSE'], flav_dict['FRLG'],
@@ -170,13 +170,13 @@ class FlavourText(BDManager):
 
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT * FROM Item'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM Item WHERE Category = ? ORDER BY Name', (cat,)):
@@ -184,7 +184,7 @@ class FlavourText(BDManager):
 
 class Locations(BDManager):
 	def create_table(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -196,7 +196,7 @@ class Locations(BDManager):
 				)''')
 
 	def insert_item(self, name, loc_dict):
-		self._certifyConnection()
+		self._certify_connection()
 		if len(loc_dict) == 10:
 			item_data = (name,  
 				loc_dict['GSC'], loc_dict['RSE'], loc_dict['FRLG'],
@@ -222,13 +222,13 @@ class Locations(BDManager):
 
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT * FROM Locations'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM Locations WHERE Category = ? ORDER BY Name', (cat,)):
@@ -236,7 +236,7 @@ class Locations(BDManager):
 
 class Shop(BDManager):
 	def create_table(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -248,7 +248,7 @@ class Shop(BDManager):
 				)''')
 
 	def insert_item(self, name, shop_dict):
-		self._certifyConnection()
+		self._certify_connection()
 		if len(shop_dict) == 10:
 			item_data = (name,  
 				shop_dict['GSC'], shop_dict['RSE'], shop_dict['FRLG'],
@@ -274,13 +274,13 @@ class Shop(BDManager):
 
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT * FROM Shop'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM Shop WHERE Category = ? ORDER BY Name', (cat,)):
@@ -288,7 +288,7 @@ class Shop(BDManager):
 
 class Pickup(BDManager):
 	def create_table(self):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			cursor = conn.cursor()
 			cursor.execute('''CREATE TABLE  IF NOT EXISTS 
@@ -298,7 +298,7 @@ class Pickup(BDManager):
 				)''')
 
 	def insert_item(self, name, pickup_dict):
-		self._certifyConnection()
+		self._certify_connection()
 		if len(pickup_dict) == 6:
 			item_data = (name,
 				pickup_dict['RS'], pickup_dict['FRLG'], pickup_dict['Emerald'],
@@ -322,13 +322,13 @@ class Pickup(BDManager):
 
 	
 	def view(self):
-	    self._certifyConnection()
+	    self._certify_connection()
 	    with self._connection as conn:
 	        for row in conn.cursor().execute('SELECT Namex FROM Pickup'):
 	            print(row)
 
 	def getByCat(self, cat):
-		self._certifyConnection()
+		self._certify_connection()
 		with self._connection as conn:
 			for row in conn.cursor().execute(
 				'SELECT Name FROM Pickup WHERE Category = ? ORDER BY Name', (cat,)):

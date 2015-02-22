@@ -132,23 +132,26 @@ class PokeGender:
 """ Stats Class for Database--------------------------------------------------
 """
 class PokeStats:
-    def __init__(self,stats = None ,hp = None ,attack = None ,defense = None ,spAttack = None ,spDefense = None ,speed = None ,total = None):
+    def __init__(self,stats = None ,hp = None ,
+                 attack = None ,defense = None ,
+                 spAttack = None ,spDefense = None ,
+                 speed = None ,total = None):
         if(stats):
             self.__set_hp(int(stats[1]))
             self.__set_attack(int(stats[2]))
             self.__set_defense(int(stats[3]))
             self.__set_sp_attack(int(stats[4]))
             self.__set_sp_defense(int(stats[5]))
-            self.__setSpeed(int(stats[6]))
-            self.__setTotal()
+            self.__set_speed(int(stats[6]))
+            self.__set_total()
         else:
             self.__set_hp(hp)
             self.__set_attack(attack)
             self.__set_defense(defense)
             self.__set_sp_attack(spAttack)
             self.__set_sp_defense(spDefense)
-            self.__setSpeed(speed)
-            self.__setTotal(total)
+            self.__set_speed(speed)
+            self.__set_total(total)
             
     def __str__(self):
         string = 'HP: '+str(self.__hp)
@@ -161,7 +164,7 @@ class PokeStats:
         return string
 
     def __rpr__(self):
-        return string
+        return self.__str__()
         
     def __set_hp(self,hp):
         self.__hp = hp
@@ -193,19 +196,19 @@ class PokeStats:
     def get_sp_defense(self):
         return self.__spDefense
 
-    def __setSpeed(self,Speed):
+    def __set_speed(self,Speed):
         self.__speed = Speed
 
-    def getSpeed(self):
+    def get_speed(self):
         return self.__speed
 
-    def __setTotal(self,total=None):
+    def __set_total(self,total=None):
         if(total):
             self.__total = total
         else:
             self.__total = self.__hp+self.__attack+self.__defense+self.__spAttack+self.__spDefense+self.__speed
 
-    def getTotal(self):
+    def get_total(self):
         return self.__total
 
 """ Image Class for Database--------------------------------------------------
@@ -224,21 +227,11 @@ class PokeImage:
     def __repr__(self):
         return self.__str__()
     
-    def getPathImg(self):
+    def get_path_img(self):
         return self.__pathImg
 
-    def getSPathImg(self):
+    def get_spath_img(self):
         return self.__pathSImg
-
-    def show(self):
-        import tkinter as tk
-        root = tk.Tk()
-        root.title('Pokemon')
-        photo = tk.PhotoImage(file = self.__pathImg)
-        cv = tk.Canvas()
-        cv.pack(side='top',fill = 'both',expand= 'yes')
-        cv.create_image(10,10,image=photo,anchor='nw')
-        root.mainloop()
 
 """ Types Class for Database--------------------------------------------------
 """
@@ -273,10 +266,10 @@ class PokeTypes:
     def __repr__(self):
         return self.__str__()
 
-    def getType1(self):
+    def get_type1(self):
         return self.__type1
 
-    def getType2(self):
+    def get_type2(self):
         return self.__type2
         
 """ Height Class for Database--------------------------------------------------
@@ -307,16 +300,16 @@ class PokeHeight:
     def __repr__(self):
         return self.__str__()
     
-    def getValueInMeters(self):
+    def get_value_in_meters(self):
         return self.__metersValue
 
-    def getMeters(self):
+    def get_meters(self):
         return self.__meters
 
-    def getValueInInches(self):
+    def get_value_in_inches(self):
         return self.__inchesValue
 
-    def getInches(self):
+    def get_inches(self):
         return self.__inches
 
 """ Weight Class for Database--------------------------------------------------
@@ -345,16 +338,16 @@ class PokeWeight:
     def __repr__(self):
         return self.__str__()
     
-    def getValueInKg(self):
+    def get_value_in_kg(self):
         return self.__kgValue
 
-    def getKg(self):
+    def get_kg(self):
         return self.__kg
 
-    def getValueInLbs(self):
+    def get_value_in_lbs(self):
         return self.__lbsValue
 
-    def getlbs(self):
+    def get_lbs(self):
         return self.__lbs
 
 """ Abilities Class for Database--------------------------------------------------
@@ -374,10 +367,10 @@ class PokeAbility:
     def __repr__(self):
         return self.__str__()
 
-    def getName(self):
+    def get_name(self):
         return self.__name
 
-    def getDescription(self):
+    def get_description(self):
         return self.__description
 
 class AbilityError(Exception):
@@ -418,16 +411,16 @@ class PokeAbilities:
     def __repr(self):
         return self.__str__()
             
-    def getAbility(self,i):
+    def get_ability(self,i):
         return self.__abilities[i]
 
-    def getHiddenAbility(self,i):
+    def get_hidden_ability(self,i):
         return self.__hiddenAbilities[i]
 
-    def getAbilities(self):
+    def get_abilities(self):
         return self.__abilities
 
-    def getHiddenAbilities(self):
+    def get_hidden_abilities(self):
         return self.__hiddenAbilities
 
 """ Exp Growth Class for Database--------------------------------------------------
@@ -450,10 +443,10 @@ class PokeExpGrowth:
     def __repr__(self):
         return self.__str__()
 
-    def getExpGrowth(self):
+    def get_exp_growth(self):
         return self.__exp
 
-    def getClassification(self):
+    def get_classification(self):
         return self.__classification
 
 """ EV Class for Database--------------------------------------------------
@@ -471,10 +464,10 @@ class EV:
     def __repr__(self):
         return self.__str__()
 
-    def getValue(self):
+    def get_value(self):
         return self.__value
 
-    def getStat(self):
+    def get_stat(self):
         return self.__stat
     
 """ EV Worth Class for Database--------------------------------------------------
@@ -496,7 +489,7 @@ class PokeEVWorth:
                 n = EV(ev[2],Stat.__fromStr__(ev[1]))
                 self.__EVs.append(n)
       
-    def getEVs(self):
+    def get_evs(self):
         return self.__EVs
         
     def __str__(self):
@@ -511,7 +504,12 @@ class PokeEVWorth:
 """ Weaknesses Class for Database--------------------------------------------------
 """
 class PokeWeaknesses:
-    def __init__(self,weak = None,normal = None ,fire = None ,water = None ,electric = None ,grass = None ,ice = None ,fighting = None ,poison = None ,ground = None ,flying = None ,psychic = None ,bug = None ,rock = None ,ghost = None ,dragon = None ,dark = None ,steel = None,fairy = None):
+    def __init__(self,weak = None,normal = None ,fire = None ,
+                 water = None ,electric = None ,grass = None ,
+                 ice = None ,fighting = None ,poison = None ,
+                 ground = None ,flying = None ,psychic = None ,
+                 bug = None ,rock = None ,ghost = None ,dragon = None ,
+                 dark = None ,steel = None,fairy = None):
         self.__weaknesses = {}
         if(weak):
             for key in weak.keys():
@@ -549,7 +547,7 @@ class PokeWeaknesses:
             key = Type.__fromStr__(key)
         return self.__weaknesses[str(key)]
 
-    def getWeaknesses(self):
+    def get_weaknesses(self):
         return self.__weaknesses
 
 """ Wild Items Class for Database--------------------------------------------------
@@ -578,10 +576,10 @@ class PokeWildItems():
     def __repr__(self):
         return self.__str__()
         
-    def getNormalItems(self):
+    def get_normal_items(self):
         return self.__normal
          
-    def getDexNavItems(self):
+    def get_dex_nav_items(self):
         try:
             return self.__dexNav
         except AttributeError:
@@ -615,10 +613,10 @@ class PokeCR:
     def __repr__(self):
         return self.__str__()
 
-    def getXY(self):
+    def get_xy(self):
         return self.__crXY
 
-    def getORAS(self):
+    def get_oras(self):
         return self.__cRORAS
 
 """ Egg Group Class for Database--------------------------------------------------
@@ -649,10 +647,10 @@ class PokeEggGroup:
     def __repr__(self):
         return self.__str__()
 
-    def getGroup1(self):
+    def get_group1(self):
         return self.__group1
 
-    def getGroup2(self):
+    def get_group2(self):
         return self.__group2
 
 
@@ -662,7 +660,7 @@ class PokeEvoChain:
     def __init__(self,evoChain = None,dbChain = None):
         if evoChain:
             #print(evoChain)
-            evoTable = self.__transformToTable(evoChain)
+            evoTable = self.__evochain_to_table(evoChain)
             evoList = []
             for row in evoTable.keys():
                 for col in evoTable[row].keys():
@@ -731,7 +729,7 @@ class PokeEvoChain:
         else:
             self.__evoChain = list(dbChain)
 
-    def __transformToTable(self,evoChain):
+    def __evochain_to_table(self,evoChain):
         table = {}
         table[0] = {}
         rowNum = 0
@@ -786,7 +784,7 @@ class PokeEvoChain:
             string += str(node[0])+'\n'
         return string.strip()
         
-    def getEvoChain(self):
+    def get_evo_chain(self):
         return self.__evoChain
 """ Poke Location for Database--------------------------------------------------
 """
@@ -822,16 +820,16 @@ class PokeLocation:
     def __repr__(self):
         return self.__str__()
 
-    def getX(self):
+    def get_x(self):
         return self.__x
 
-    def getY(self):
+    def get_y(self):
         return self.__y
 
-    def getOR(self):
+    def get_or(self):
         return self.__oR
 
-    def getAS(self):
+    def get_as(self):
         return self.__aS
 
 
@@ -871,16 +869,16 @@ class PokeDexText:
     def __repr__(self):
         return self.__str__()
 
-    def getX(self):
+    def get_x(self):
         return self.__x
 
-    def getY(self):
+    def get_y(self):
         return self.__y
 
-    def getOR(self):
+    def get_or(self):
         return self.__oR
 
-    def getAS(self):
+    def get_as(self):
         return self.__aS
 
 
@@ -888,7 +886,9 @@ class PokeDexText:
 """
 
 class Attack:
-    def __init__(self,condition=0,name='',atkType = Type.NoType,cat = AttackCat.Other,att = 0,acc = 0,pp=0,effect = '',description = '' ):
+    def __init__(self,condition=0,name='',
+                 atkType = Type.NoType,cat = AttackCat.Other,
+                 att = 0,acc = 0,pp=0,effect = '',description = '' ):
         self.__condition = condition
         self.__name = name
         self.__atkType = atkType
@@ -925,26 +925,26 @@ class Attack:
     def __repr__(self):
         return self.__str__()
 
-    def setCondition(self,value):
+    def set_condition(self,value):
         self.__condition = value
 
-    def getCondition(self):
+    def get_condition(self):
         return self.__condition
-    def getName(self):
+    def get_name(self):
         return self.__name
-    def getType(self):
+    def get_type(self):
         return self.__atkType
-    def getCat(self):
+    def get_cat(self):
         return self.__cat
-    def getAtt(self):
+    def get_att(self):
         return self.__att
-    def getAcc(self):
+    def get_acc(self):
         return self.__acc
-    def getPP(self):
+    def get_PP(self):
         return self.__pp
-    def getEffect(self):
+    def get_effect(self):
         return self.__effect
-    def getDescription(self):
+    def get_description(self):
        return self.__description
     
 class PokeAttacks:
@@ -958,24 +958,26 @@ class PokeAttacks:
                     for element in attack:
                         caract.append(element)
                     if(len(caract)==8):
-                        self.__attackGroups[attackGroup].append(Attack(name = caract[0],
-                                                                   atkType = Type.__fromStr__(caract[1]),
-                                                                   cat = AttackCat.__fromStr__(caract[2]),
-                                                                   att = caract[3],
-                                                                   acc = caract[4],
-                                                                   pp = caract[5],
-                                                                   effect = caract[6],
-                                                                   description = caract[7]))
+                        self.__attackGroups[attackGroup].\
+                            append(Attack(name = caract[0],
+                               atkType = Type.__fromStr__(caract[1]),
+                               cat = AttackCat.__fromStr__(caract[2]),
+                               att = caract[3],
+                               acc = caract[4],
+                               pp = caract[5],
+                               effect = caract[6],
+                               description = caract[7]))
                     elif(len(caract) == 9):
-                        self.__attackGroups[attackGroup].append(Attack(condition = caract[0],
-                                                                   name = caract[1],
-                                                                   atkType = Type.__fromStr__(caract[2]),
-                                                                   cat = AttackCat.__fromStr__(caract[3]),
-                                                                   att = caract[4],
-                                                                   acc = caract[5],
-                                                                   pp = caract[6],
-                                                                   effect = caract[7],
-                                                                   description = caract[8]))
+                        self.__attackGroups[attackGroup].\
+                            append(Attack(condition = caract[0],
+                               name = caract[1],
+                               atkType = Type.__fromStr__(caract[2]),
+                               cat = AttackCat.__fromStr__(caract[3]),
+                               att = caract[4],
+                               acc = caract[5],
+                               pp = caract[6],
+                               effect = caract[7],
+                               description = caract[8]))
                     else:
                         pass
         elif(attacks):
@@ -983,14 +985,14 @@ class PokeAttacks:
 
     def __str__(self):
         string = ''
-        for key in self.getAttackGroups():
+        for key in self.get_attack_groups():
             string += key+':\n'
-            for attack in self.getAttackGroup(key):
+            for attack in self.get_attack_group(key):
                 string += str(attack)+'\n'
         return string
     
-    def getAttackGroups(self):
+    def get_attack_groups(self):
         return self.__attackGroups.keys()
 
-    def getAttackGroup(self,key):
+    def get_attack_group(self,key):
         return self.__attackGroups[key]
