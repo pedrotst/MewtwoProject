@@ -1,4 +1,5 @@
 from database import *
+from pkmutils import *
 
 
 """ Pokemon Class for Database--------------------------------------------------
