@@ -1,6 +1,8 @@
 from tkinter import *
+
 from pokemon import *
-        
+
+
 class DexShow(LabelFrame):
     def __init__(self,top,PokemonName):
         LabelFrame.__init__(self,top)

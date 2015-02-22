@@ -1,6 +1,8 @@
 import sqlite3
+
 from pkmutils import *
 import pokemon as pkm
+
 
 class Manager:
     def __init__(self):
@@ -18,6 +20,7 @@ class Manager:
 
     def _connect_to_database(self):
         self._connection = sqlite3.connect(self._databasePath)
+
 
 class DatabaseManager(Manager):
     def __init__(self):

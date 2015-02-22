@@ -1,16 +1,16 @@
-from tkinter import *
-import tkinter.ttk
 from dex import *
 from database import DatabaseManager
-import re
 from dialog import MyDialog
+from tkinter import ttk
 
 class mainApplication():
     def __init__(self):
         self.__background = 'gray21'
         
         self.__config()
-        
+
+
+
     def __config(self):
         self.__top = Tk()
         self.__configTop()

@@ -1,0 +1,13 @@
+#:kivy 1.8.0
+<DexWindow>:
+    canvas.before:
+        Color:
+            rgba: 0.36,0.17,0.17,0.9
+
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: 'Test'
+        center_x: root.width/8
+        top: root.top-50

@@ -1,6 +1,8 @@
-from pkmconstants import *
 from numbers import Number
 import re
+
+from pkmconstants import *
+
 
 ##def split_uppercase(string):
 ##    return re.sub(r'([a-z])([A-Z])', r'\1 \2',string)
