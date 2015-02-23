@@ -483,12 +483,12 @@ class PokeEVWorth:
             self.__EVs = []
             for ev in EVs:
                 if ev is not '':
-                    n = EV(int(ev[0]),Stat.__fromStr__(ev[1:].strip()))
+                    n = EV(int(ev[0]), Stat.from_str(ev[1:].strip()))
                     self.__EVs.append(n)
         elif EvList:
             self.__EVs = []
             for ev in EvList:
-                n = EV(ev[2],Stat.__fromStr__(ev[1]))
+                n = EV(ev[2], Stat.from_str(ev[1]))
                 self.__EVs.append(n)
       
     def get_evs(self):

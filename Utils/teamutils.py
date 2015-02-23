@@ -1,3 +1,7 @@
+import Utils.pkmconstants as constants
+import Utils.pkmutils as pkmutils
+
+
 class Attacks:
     """
     Class for representing a team member attacks
@@ -34,173 +38,88 @@ class Attacks:
             raise KeyError('Key must be between 1 and 4')
 
 
-class IVs:
+class StatsManipulator:
+    """
+    Class to be imported by any class that desires to work with Stats
+    """
+
+    def __init__(self):
+        self._stats = {constants.Stat.Hp: 0, constants.Stat.Atk: 0,
+                       constants.Stat.Defense: 0, constants.Stat.SpAtk: 0,
+                       constants.Stat.SpDef: 0, constants.Stat.Spd: 0}
+
+    def __getitem__(self, item):
+        """Get the value of the stat given by item, if item is int value must be between 0 and 5
+        :param item: Name of Stat
+        :type item: str or constants.Stat or int
+        :return: the stat asked
+        :rtype: int
+        """
+        if isinstance(item, str):
+            key = constants.Stat.from_str(item)
+        elif isinstance(item, int):
+            if -1 < item < 6:
+                key = constants.Stat(item + 1)
+            else:
+                raise IndexError
+        else:
+            key = item
+        if 0 < key.value < 7:
+            return self._stats[key]
+        raise IndexError
+
+    def __setitem__(self, key, value):
+        """Set the value of the stat given by key to value
+        :param key: Name of Stat
+        :type key: str or constants.Stat or int
+        """
+        if isinstance(key, str):
+            key = constants.Stat.from_str(key)
+        elif isinstance(key, int):
+            key = constants.Stat(key)
+
+        self._stats[key] = value
+
+
+class IVs(StatsManipulator):
     """
     Store the ivs from each team member, it also updates the actual stats when iv value is updated
     """
 
-    def __init__(self):
-        self.__hp = 31
-        self.__attack = 31
-        self.__defense = 31
-        self.__sp_attack = 31
-        self.__sp_defense = 31
-        self.__speed = 31
-
-    def __getitem__(self, item):
-        """Get IV given by item
-        :param item: Name of IV
-        :type item: str
-        :return: the iv asked
-        :rtype: int
-        """
-        get = {'HP': self.get_hp(), 'Attack': self.get_attack(), 'Defense': self.get_defense(),
-               'Sp Attack': self.get_sp_attack(), 'Sp Defense': self.get_sp_defense(), 'Speed': self.get_speed()}
-        return get[item]
-
     def __setitem__(self, key, value):
-        """Set IV key with value
+        """Set IV key with value, the value of IV must be between 0 and 31, if not it will be adjusted to the extreme
+        value that is possible
         :param key: The IV to be changed
         :type key: str
         :param value: The new value
         :type value: int
         """
-        set_ = {'HP': self.set_hp, 'Attack': self.set_attack, 'Defense': self.set_defense,
-                'Sp Attack': self.set_sp_attack, 'Sp Defense': self.set_sp_defense, 'Speed': self.set_speed}
-        set_[key](value)
-
-    def set_hp(self, hp):
-        """Set the IV HP, value must be between 0 and 31, if not, value won't change
-        :param hp: The new value of the IV
-        :type hp: int
-        """
-        assert isinstance(hp, int)
-        if 0 < hp < 31:
-            self.__hp = hp
-            # Call update on stats
-
-    def get_hp(self):
-        """Get the HP IVs
-        :return: The HP IV
-        :rtype: int
-        """
-        return self.__hp
-
-    def set_attack(self, attack):
-        """Set the IV Attack, value must be between 0 and 31, if not, value won't change
-        :param attack: The new value of the IV
-        :type attack: int
-        """
-        assert isinstance(attack, int)
-        if 0 < attack < 31:
-            self.__attack = attack
-            # Call update on stats
-
-    def get_attack(self):
-        """Get the Attack IVs
-        :return: The Attack IV
-        :rtype: int
-        """
-        return self.__attack
-
-    def set_defense(self, defense):
-        """Set the IV Attack, value must be between 0 and 31, if not, value won't change
-        :param defense: The new value of the IV
-        :type defense: int
-        """
-        assert isinstance(defense, int)
-        if 0 < defense < 31:
-            self.__defense = defense
-            # Call update on stats
-
-    def get_defense(self):
-        """Get the Defense IVs
-        :return: The Defense IV
-        :rtype: int
-        """
-        return self.__defense
-
-    def set_sp_attack(self, sp_attack):
-        """Set the IV Sp Attack, value must be between 0 and 31, if not, value won't change
-        :param sp_attack: The new value of the IV
-        :type attack: int
-        """
-        assert isinstance(sp_attack, int)
-        if 0 < sp_attack < 31:
-            self.__sp_attack = sp_attack
-            # Call update on stats
-
-    def get_sp_attack(self):
-        """Get the Sp Attack IVs
-        :return: The Sp Attack IV
-        :rtype: int
-        """
-        return self.__sp_attack
-
-    def set_sp_defense(self, sp_defense):
-        """Set the IV Sp Defense, value must be between 0 and 31, if not, value won't change
-        :param sp_defense: The new value of the IV
-        :type sp_defense: int
-        """
-        assert isinstance(sp_defense, int)
-        if 0 < sp_defense < 31:
-            self.__sp_defense = sp_defense
-            # Call update on stats
-
-    def get_sp_defense(self):
-        """Get the Sp Defense IVs
-        :return: The Sp Defense IV
-        :rtype: int
-        """
-        return self.__sp_defense
-
-    def set_speed(self, speed):
-        """Set the IV Speed, value must be between 0 and 31, if not, value won't change
-        :param speed: The new value of the IV
-        :type speed: int
-        """
-        assert isinstance(speed, int)
-        if 0 < speed < 31:
-            self.__speed = speed
-            # Call update on stats
-
-    def get_speed(self):
-        """Get the Speed IVs
-        :return: The Speed IV
-        :rtype: int
-        """
-        return self.__speed
+        if value < 0:
+            value = 0
+        elif value > 31:
+            value = 31
+        super().__setitem__(key, value)
 
 
-class EVs:
+class EVs(StatsManipulator):
     """
     Store the evs from each team member, it also updates the actual stats when ev value is updated
     """
 
     def __init__(self):
-        self.__hp = 0
-        self.__attack = 0
-        self.__defense = 0
-        self.__sp_attack = 0
-        self.__sp_defense = 0
-        self.__speed = 0
-        self.__total = sum(self)
+        super().__init__()
+        self.__total = sum(self, 1)
 
     def __getitem__(self, item):
-        """Get EV given by item
-        :param item: Name of EV
-        :type item: str or int
-        :return: the ev asked
-        :rtype: int
+        """
+        Adding possibility to call Total
+        :param item: The ev to be get
+        :return: int or str or constants.Stat
         """
         if isinstance(item, str):
-            get = {'HP': self.get_hp(), 'Attack': self.get_attack(), 'Defense': self.get_defense(),
-                   'Sp Attack': self.get_sp_attack(), 'Sp Defense': self.get_sp_defense(), 'Speed': self.get_speed(),
-                   'Total': self.get_total()}
-        elif isinstance(item, int):
-            get = [self.get_hp(), self.get_attack(), self.get_defense(),
-                   self.get_sp_attack(), self.get_sp_defense(), self.get_speed()]
-        return get[item]
+            if item == 'Total':
+                return self.get_total()
+        return super().__getitem__(item)
 
     def __setitem__(self, key, value):
         """Set EV key with value
@@ -209,119 +128,17 @@ class EVs:
         :param value: The new value
         :type value: int
         """
-        set_ = {'HP': self.set_hp, 'Attack': self.set_attack, 'Defense': self.set_defense,
-                'Sp Attack': self.set_sp_attack, 'Sp Defense': self.set_sp_defense, 'Speed': self.set_speed}
+        if value > 255:
+            value = 255
+        elif value < 0:
+            value = 0
+
         if value + self.get_total() - self[key] > 510:
             value = 510 - self.get_total()
-        set_[key](value)
 
-    def set_hp(self, hp):
-        """Set the EV HP, value must be between 0 and 31, if not, value won't change
-        :param hp: The new value of the EV
-        :type hp: int
-        """
-        assert isinstance(hp, int)
-        if 0 < hp < 255 and self.__check_total():
+        if self.__check_total():
+            super().__setitem__(key, value)
             self.__set_total()
-            self.__hp = hp
-            # Call update on stats
-
-    def get_hp(self):
-        """Get the HP EVs
-        :return: The HP EV
-        :rtype: int
-        """
-        return self.__hp
-
-    def set_attack(self, attack):
-        """Set the EV Attack, value must be between 0 and 31, if not, value won't change
-        :param attack: The new value of the EV
-        :type attack: int
-        """
-        assert isinstance(attack, int)
-        if 0 < attack < 255 and self.__check_total():
-            self.__attack = attack
-            self.__set_total()
-            # Call update on stats
-
-    def get_attack(self):
-        """Get the Attack EVs
-        :return: The Attack EV
-        :rtype: int
-        """
-        return self.__attack
-
-    def set_defense(self, defense):
-        """Set the EV Attack, value must be between 0 and 31, if not, value won't change
-        :param defense: The new value of the EV
-        :type defense: int
-        """
-        assert isinstance(defense, int)
-        if 0 < defense < 255 and self.__check_total():
-            self.__defense = defense
-            self.__set_total()
-            # Call update on stats
-
-    def get_defense(self):
-        """Get the Defense EVs
-        :return: The Defense EV
-        :rtype: int
-        """
-        return self.__defense
-
-    def set_sp_attack(self, sp_attack):
-        """Set the EV Sp Attack, value must be between 0 and 31, if not, value won't change
-        :param sp_attack: The new value of the EV
-        :type attack: int
-        """
-        assert isinstance(sp_attack, int)
-        if 0 < sp_attack < 255 and self.__check_total():
-            self.__sp_attack = sp_attack
-            self.__set_total()
-            # Call update on stats
-
-    def get_sp_attack(self):
-        """Get the Sp Attack EVs
-        :return: The Sp Attack EV
-        :rtype: int
-        """
-        return self.__sp_attack
-
-    def set_sp_defense(self, sp_defense):
-        """Set the EV Sp Defense, value must be between 0 and 31, if not, value won't change
-        :param sp_defense: The new value of the EV
-        :type sp_defense: int
-        """
-        assert isinstance(sp_defense, int)
-        if 0 < sp_defense < 255 and self.__check_total():
-            self.__sp_defense = sp_defense
-            self.__set_total()
-            # Call update on stats
-
-    def get_sp_defense(self):
-        """Get the Sp Defense EVs
-        :return: The Sp Defense EV
-        :rtype: int
-        """
-        return self.__sp_defense
-
-    def set_speed(self, speed):
-        """Set the EV Speed, value must be between 0 and 31, if not, value won't change
-        :param speed: The new value of the EV
-        :type speed: int
-        """
-        assert isinstance(speed, int)
-        if 0 < speed < 255 and self.__check_total():
-            self.__speed = speed
-            self.__set_total()
-            # Call update on stats
-
-    def get_speed(self):
-        """Get the Speed EVs
-        :return: The Speed EV
-        :rtype: int
-        """
-        return self.__speed
 
     def __check_total(self):
         """
@@ -347,3 +164,55 @@ class EVs:
         :rtype: int
         """
         return self.__total
+
+
+class Stats(StatsManipulator):
+    """
+    The actual stats of the pokemon
+    """
+
+    def __init__(self, lvl, base_stats, iv, ev, nature):
+        super().__init__()
+        assert isinstance(lvl, int) and isinstance(base_stats, pkmutils.PokeStats) and isinstance(iv, IVs) \
+               and isinstance(ev, EVs) and isinstance(nature, constants.Nature)
+        self.__lvl = lvl
+        self.__base_stats = base_stats
+        self.__iv = iv
+        self.__ev = ev
+        self.__nature = nature
+        self.calculate_stats()
+
+    def set_nature(self, nature):
+        self.__nature = nature
+
+    def calculate_stats(self):
+        """
+        Calculate the stats ic and oc are constants that change with the stat being calculated
+        """
+        inner_constants = [100, 0, 0, 0, 0, 0]
+        outer_constants = [10, 5, 5, 5, 5, 5]
+        nature_constants = self.__determine_nature_constants()
+        bases = [self.__base_stats.get_hp(), self.__base_stats.get_attack(), self.__base_stats.get_defense(),
+                 self.__base_stats.get_sp_attack(), self.__base_stats.get_sp_defense(), self.__base_stats.get_speed()]
+        for iv, base, ev, ic, oc, nc, i in zip(self.__iv, bases, self.__ev, inner_constants, outer_constants, nature_constants, range(0, 6)):
+            self[i+1] = int((((iv + (2 * base) + ev / 4 + ic) * self.__lvl) / 100 + oc) * nc)
+
+    def __determine_nature_constants(self):
+        """
+        Creates a list in which the position represents one of the stats [hp,atk,def,sp_atk,sp_def,spd] and the value
+        stored is the bonus given by the nature
+        exp: Naughty boosts attack hinders sp_def so [1, 1.1, 1, 1, 0.9, 1] will be return
+        :return: A list with the the equivalents boosts and hinders of each nature
+        """
+        nature_increased_index = self.__nature.get_increased_stat()
+        nature_decreased_index = self.__nature.get_decreased_stat()
+        dnc = []
+        for i in range(0, 6):
+            if i == nature_increased_index.value-1:
+                dnc.append(1.1)
+            elif i == nature_decreased_index.value-1:
+                dnc.append(0.9)
+            else:
+                dnc.append(1)
+        return dnc
+
