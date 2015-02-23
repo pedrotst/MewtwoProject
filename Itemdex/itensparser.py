@@ -304,12 +304,11 @@ class importItens():
                     print("error with root-check: " + f)
 
 
-
-
     def buildItem_db(self, name):
         folderPath = os.path.join(self.__itemFolder, name)
         print(folderPath)
         for root, dirs, files in os.walk(folderPath, topdown = True):
+
             for f in files: 
                 if f[-5:] == '.html':
                     fileHtml = self.get_html(os.path.join(root, f))

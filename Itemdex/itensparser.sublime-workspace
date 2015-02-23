@@ -1,0 +1,255 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Pong",
+				"PongBall"
+			],
+			[
+				"vel",
+				"velocity_y"
+			],
+			[
+				"veloc",
+				"velocity_x"
+			],
+			[
+				"__f",
+				"__flvText"
+			],
+			[
+				"versions",
+				"versionsAvail"
+			],
+			[
+				"__japa",
+				"__japaName"
+			],
+			[
+				"japa",
+				"japaTranls"
+			],
+			[
+				"inst",
+				"isinstance"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"getF",
+				"getFlavourTextDict"
+			],
+			[
+				"download",
+				"downloadSprites"
+			],
+			[
+				"__",
+				"__serebii"
+			],
+			[
+				"get",
+				"getDescriptionsDict"
+			],
+			[
+				"versio",
+				"versionsAvail"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 306.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 415.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"install"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/pedroabreu/.config/sublime-text-3/Packages/User/python3.sublime-build",
+		"/home/pedroabreu/.config/sublime-text-3/Packages/Kivy/kivy.tmLanguage",
+		"/home/pedroabreu/pokestatusplanner/database.py",
+		"/home/pedroabreu/pokestatusplanner/itensParser.py",
+		"/home/pedroabreu/pokestatusplanner/item.py",
+		"/home/pedroabreu/pokestatusplanner/PROBLEMS.txt",
+		"/home/pedroabreu/pokestatusplanner/pokemon.py",
+		"/home/pedroabreu/pokestatusplanner/itensDb.py",
+		"/home/pedroabreu/pokestatusplanner/ItensDb.py",
+		"/home/pedroabreu/pokestatusplanner/Itens/battle/Calcium.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/mail/Flower Mail.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/battle/Rare Candy.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/key/Berry Pots.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/mail/BlueSky Mail.html",
+		"/home/pedroabreu/pokestatusplanner/serebiiParser.py",
+		"/home/pedroabreu/pokestatusplanner/Itens/evolution/Abomasite.html",
+		"/home/pedroabreu/pokestatusplanner/PokeData/Abra/Abra.pkm",
+		"/home/pedroabreu/pokestatusplanner/PokeData/Abra/Abra.seb"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"itemData",
+			"versions",
+			"__versions",
+			"attacksmanager",
+			"attack",
+			"sprite",
+			"pkm",
+			"pk",
+			"sprite",
+			"spr",
+			"sprite",
+			"pkm",
+			"img",
+			"pkm",
+			"re",
+			"re\n",
+			"8"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "itensparser.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 152.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

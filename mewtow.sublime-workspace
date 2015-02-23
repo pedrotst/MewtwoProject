@@ -1,0 +1,398 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Pong",
+				"PongBall"
+			],
+			[
+				"vel",
+				"velocity_y"
+			],
+			[
+				"veloc",
+				"velocity_x"
+			],
+			[
+				"__f",
+				"__flvText"
+			],
+			[
+				"versions",
+				"versionsAvail"
+			],
+			[
+				"__japa",
+				"__japaName"
+			],
+			[
+				"japa",
+				"japaTranls"
+			],
+			[
+				"inst",
+				"isinstance"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"getF",
+				"getFlavourTextDict"
+			],
+			[
+				"download",
+				"downloadSprites"
+			],
+			[
+				"__",
+				"__serebii"
+			],
+			[
+				"get",
+				"getDescriptionsDict"
+			],
+			[
+				"versio",
+				"versionsAvail"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "mewtow.sublime-project",
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Itemdex/item.py",
+			"settings":
+			{
+				"buffer_size": 2620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Itemdex/itensparser.py",
+			"settings":
+			{
+				"buffer_size": 18537,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 180.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"install"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/pedroabreu/MewtwoProject",
+		"/home/pedroabreu/MewtwoProject/Itemdex"
+	],
+	"file_history":
+	[
+		"/home/pedroabreu/MewtwoProject/Pokedex/PokeData/Infernape/Infernape.seb",
+		"/home/pedroabreu/MewtwoProject/Itemdex/Itens/key/Intriguing Stone.html",
+		"/home/pedroabreu/MewtwoProject/Interface/DexApp.py",
+		"/home/pedroabreu/MewtwoProject/Itemdex/Itens/holditem/Mental Herb.html",
+		"/home/pedroabreu/MewtwoProject/PROBLEMS.txt",
+		"/home/pedroabreu/MewtwoProject/Itemdex/Itens/misc/Pnk Apricorn.html",
+		"/home/pedroabreu/MewtwoProject/Pokedex/PokeData/Pachirisu/Pachirisu.seb",
+		"/home/pedroabreu/MewtwoProject/Itemdex/Itens/key/Pair of Tickets.html",
+		"/home/pedroabreu/MewtwoProject/Pokedex/PokeData/Arcanine/Arcanine.pkm",
+		"/home/pedroabreu/MewtwoProject/Pokedex/PokeData/Croagunk/Croagunk.seb",
+		"/home/pedroabreu/MewtwoProject/Pokedex/Pages/lerarquivo.py",
+		"/home/pedroabreu/MewtwoProject/Itemdex/Itens/holditem/Lax Incense.html",
+		"/home/pedroabreu/.config/sublime-text-3/Packages/User/python3.sublime-build",
+		"/home/pedroabreu/.config/sublime-text-3/Packages/Kivy/kivy.tmLanguage",
+		"/home/pedroabreu/pokestatusplanner/database.py",
+		"/home/pedroabreu/pokestatusplanner/itensParser.py",
+		"/home/pedroabreu/pokestatusplanner/item.py",
+		"/home/pedroabreu/pokestatusplanner/PROBLEMS.txt",
+		"/home/pedroabreu/pokestatusplanner/pokemon.py",
+		"/home/pedroabreu/pokestatusplanner/itensDb.py",
+		"/home/pedroabreu/pokestatusplanner/ItensDb.py",
+		"/home/pedroabreu/pokestatusplanner/Itens/battle/Calcium.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/mail/Flower Mail.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/battle/Rare Candy.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/key/Berry Pots.html",
+		"/home/pedroabreu/pokestatusplanner/Itens/mail/BlueSky Mail.html",
+		"/home/pedroabreu/pokestatusplanner/serebiiParser.py",
+		"/home/pedroabreu/pokestatusplanner/Itens/evolution/Abomasite.html",
+		"/home/pedroabreu/pokestatusplanner/PokeData/Abra/Abra.pkm",
+		"/home/pedroabreu/pokestatusplanner/PokeData/Abra/Abra.seb"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"itemData",
+			"versions",
+			"__versions",
+			"attacksmanager",
+			"attack",
+			"sprite",
+			"pkm",
+			"pk",
+			"sprite",
+			"spr",
+			"sprite",
+			"pkm",
+			"img",
+			"pkm",
+			"re",
+			"re\n",
+			"8"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "mewtow.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Itemdex/item.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 204.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Itemdex/itensparser.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17557,
+								17557
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5113.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "mewtow.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 152.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
