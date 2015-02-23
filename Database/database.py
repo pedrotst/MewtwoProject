@@ -630,7 +630,7 @@ class PokemonManager(Manager):
         dexTextOR = pokemon.get_dex_text().get_or()
         dexTextAS = pokemon.get_dex_text().get_as()
         hp = pokemon.get_stats().get_hp()
-        attack = pokemon.get_stats().get_sp_attack()
+        attack = pokemon.get_stats().get_attack()
         defense = pokemon.get_stats().get_defense()
         spAttack = pokemon.get_stats().get_sp_attack()
         spDefense = pokemon.get_stats().get_sp_defense()

@@ -558,7 +558,7 @@ class DexShow(LabelFrame):
         self.__labelTotalInfo.grid(row = 1,column=6,sticky=NSEW)
         
         self.__hp.set(self.__pokemon.get_stats().get_hp())
-        self.__attack.set(self.__pokemon.get_stats().get_sp_attack())
+        self.__attack.set(self.__pokemon.get_stats().get_attack())
         self.__defense.set(self.__pokemon.get_stats().get_defense())
         self.__spAttack.set(self.__pokemon.get_stats().get_sp_attack())
         self.__spDefense.set(self.__pokemon.get_stats().get_sp_defense())
