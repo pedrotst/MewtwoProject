@@ -572,7 +572,7 @@ class PokemonManager(Manager):
             cursor = conn.cursor()
             cursor.execute('''CREATE TABLE  IF NOT EXISTS Pokemon(PokeName TEXT PRIMARY KEY, NationalDex INTEGER, CentralDex INTEGER, CoastalDex INTEGER, MountainDex INTEGER, HoennDex INTEGER, MaleRate REAL, FemaleRate Real, Genderless INTEGER, Type1 TEXT, Type2 TEXT, Classification TEXT, HeightMeters REAL, HeightInches INTEGER, WeightKg REAL, WeightLbs REAL, ORASCr INTEGER, XYCr INTEGER, BaseEggSteps INTEGER, PathImg TEXT, PathSImg TEXT, ExpGrowth INTEGER, ExpGrowthClassification TEXT, BaseHappiness INTEGER, SkyBattle TEXT, Normal REAL, Fire REAL, Water REAL, Electric REAL, Grass REAL, Ice REAL, Fighting REAL, Poison REAL, Ground REAL, Flying REAL, Psychic REAL, Bug REAL, Rock REAL, Ghost REAL, Dragon REAL, Dark REAL, Steel REAL, Fairy REAL, EggGroup1 TEXT, EggGroup2 TEXT, LocationX TEXT, LocationY TEXT, LocationOR TEXT, LocationAS TEXT, DexTextX TEXT, DexTextY TEXT , DexTextOR TEXT, DexTextAS TEXT, Hp INTEGER, Attack INTEGER, Defense INTEGER, SpAttack INTEGER, SpDefense INTEGER, Speed INTEGER, Total INTEGER)''')
 
-    def insert_pokemon(self, pokemon):
+    def insert_pokemon(self, name,pokemon):
         if not (isinstance(pokemon,pkm.Pokemon) ):
             raise TypeError('Poke name not Pokemon')
 

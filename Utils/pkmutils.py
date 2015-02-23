@@ -100,7 +100,7 @@ class DexNum:
 """
 class GenderException(Exception):
     pass
-
+#gender percentage
 class PokeGender:
     def __init__(self,maleRate = 0,femaleRate = 0):
         if not (isinstance(maleRate,Number) and isinstance(femaleRate,Number)):

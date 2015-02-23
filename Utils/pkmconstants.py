@@ -2,7 +2,6 @@ from enum import Enum
 
 """ Stats Enum for Database--------------------------------------------------
 """
-
 class Type(Enum):
     def __str__(self):
         names = {0 : 'NoType',
