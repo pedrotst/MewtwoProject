@@ -550,7 +550,7 @@ class PokeWeaknesses:
             if self[i]:
                 self[i] *= weak
             else:
-                self[i] = 1
+                self[i] = 1*weak
         return self
 
     def __rmul__(self, other):
