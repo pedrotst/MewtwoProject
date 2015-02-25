@@ -65,7 +65,7 @@ class TeamAnalyser:
 
 
 if __name__ == '__main__':
-    c = Team(['Pikachu', 'Charizard', 'Blastoise', 'Mewtwo', 'Rayquaza', 'Meowth'])
+    c = Team(['Pikachu', 'Charizard', 'Blastoise', 'Mewtwo', 'Rayquaza', 'Latias'])
     a = TeamAnalyser(c)
     e = Utils.pkmutils.PokeWeaknesses()
     a.calculate_team_weaknesses()
