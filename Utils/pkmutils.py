@@ -535,6 +535,7 @@ class PokeWeaknesses:
             self.__weaknesses['Dark'] = dark
             self.__weaknesses['Steel'] = steel
             self.__weaknesses['Fairy'] = fairy
+
     def __str__(self):
         string = ''
         for key in self.__weaknesses.keys():
@@ -544,10 +545,56 @@ class PokeWeaknesses:
     def __repr__(self):
         return self.__str__()
 
-    def __getitem__(self,key):
-        if isinstance(key,str):
+    def __mul__(self, other):
+        for weak, i in zip(other, range(0, 19)):
+            if self[i]:
+                self[i] *= weak
+            else:
+                self[i] = 1
+        return self
+
+    def __rmul__(self, other):
+        return self.__mul__(other)
+
+    def __setitem__(self, key, value):
+        if isinstance(key, str):
             key = Type.__fromStr__(key)
+        if isinstance(key, int):
+            if key == 19:
+                raise IndexError
+            key = Type(key)
+        if key == Type.NoType:
+            return 0
+        self.__weaknesses[str(key)] = value
+
+    def __getitem__(self,key):
+        if isinstance(key, str):
+            key = Type.__fromStr__(key)
+        if isinstance(key, int):
+            if key == 19:
+                raise IndexError
+            key = Type(key)
+        if key == Type.NoType:
+            return 0
         return self.__weaknesses[str(key)]
+
+    def max_values(self):
+        m_values = max(self)
+        max_names = []
+        for weak, i in zip(self, range(0,19)):
+            if weak == m_values:
+                max_names.append(Type(i))
+        return max_names
+
+    def min_values(self):
+        m_values = min(self)
+        min_names = []
+        for weak, i in zip(self, range(0, 19)):
+            if weak == m_values and Type(i) != Type.NoType:
+                min_names.append(Type(i))
+        return min_names
+
+
 
     def get_weaknesses(self):
         return self.__weaknesses

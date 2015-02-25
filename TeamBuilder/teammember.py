@@ -11,9 +11,14 @@ class TeamMember:
     """
     Class used to represent each team member of a pokemon team
     """
-    def __init__(self, pkm_name):
-        # Get data from Database
-        pkm = Pokemon(pkm_name)
+    def __init__(self, pkm_name=None, poke=None):
+        if pkm_name:
+            # Get data from Database
+            pkm = Pokemon(pkm_name)
+        elif isinstance(poke, Pokemon):
+            pkm = poke
+        else:
+            raise TypeError('Type is not consistent')
 
         # Retrieve important data
         self.__name = pkm.get_name()
@@ -34,6 +39,12 @@ class TeamMember:
                                              self.__evs,
                                              self.__nature)
 
+    def get_weaknesses(self):
+        """
+        Getter of the weaknesses of the pokemon
+        :return: The weaknesses
+        """
+        return self.__weaknesses
 
     def set_attack(self, index, atk_name):
         """Define the pokemon attacks, it checks if the pokemon can learn that attack
