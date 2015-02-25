@@ -546,7 +546,7 @@ class PokeWeaknesses:
         return self.__str__()
 
     def __mul__(self, other):
-        for weak, i in zip(other, range(0, 19)):
+        for weak, i in zip(other, range(0, 18)):
             if self[i]:
                 self[i] *= weak
             else:
@@ -560,8 +560,7 @@ class PokeWeaknesses:
         if isinstance(key, str):
             key = Type.__fromStr__(key)
         if isinstance(key, int):
-            if key == 19:
-                raise IndexError
+            key += 1
             key = Type(key)
         if key == Type.NoType:
             return 0
@@ -571,6 +570,7 @@ class PokeWeaknesses:
         if isinstance(key, str):
             key = Type.__fromStr__(key)
         if isinstance(key, int):
+            key += 1
             if key == 19:
                 raise IndexError
             key = Type(key)
@@ -581,17 +581,17 @@ class PokeWeaknesses:
     def max_values(self):
         m_values = max(self)
         max_names = []
-        for weak, i in zip(self, range(0,19)):
+        for weak, i in zip(self, range(0, 18)):
             if weak == m_values:
-                max_names.append(Type(i))
+                max_names.append(Type(i+1))
         return max_names
 
     def min_values(self):
         m_values = min(self)
         min_names = []
-        for weak, i in zip(self, range(0, 19)):
-            if weak == m_values and Type(i) != Type.NoType:
-                min_names.append(Type(i))
+        for weak, i in zip(self, range(0, 18)):
+            if weak == m_values:
+                min_names.append(Type(i+1))
         return min_names
 
 

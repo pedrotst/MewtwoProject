@@ -56,16 +56,35 @@ class TeamAnalyser:
         self.__greatest_resistances_value = 0
 
     def calculate_team_weaknesses(self):
+        """
+        Calculate the teams greatest weaknesses and resistances
+        """
         for member in self.__team:
             if member:
                 self.__team_weaknesses *= member.get_weaknesses()
-        c = self.__team_weaknesses.max_values()
-        e = self.__team_weaknesses.min_values()
-        print(self.__team_weaknesses, c, e)
+        self.__greatest_weaknesses = self.__team_weaknesses.max_values()
+        self.__greatest_weaknesses_value = max(self.__team_weaknesses)
+        self.__greatest_resistances = self.__team_weaknesses.min_values()
+        self.__greatest_resistances_value = min(self.__team_weaknesses)
 
+    def get_greatest_weaknesses(self):
+        """
+        Return a tuple with the first value being the names of the greatest weaknesses and the second being the value
+        :return:
+        """
+        return self.__greatest_weaknesses, self.__greatest_weaknesses_value
+
+    def get_greatest_resistances(self):
+        """
+        Return a tuple with the first value being the names of the greatest resistances and the second being the value
+        :return:
+        """
+        return self.__greatest_resistances, self.__greatest_resistances_value
 
 if __name__ == '__main__':
-    c = Team(['Pikachu', 'Charizard', 'Blastoise', 'Mewtwo', 'Rayquaza', 'Latias'])
+    c = Team(['Pikachu', 'Charizard', 'Blastoise', 'Mewtwo', 'Rayquaza', 'Meowth'])
     a = TeamAnalyser(c)
     e = Utils.pkmutils.PokeWeaknesses()
     a.calculate_team_weaknesses()
+    print(a.get_greatest_weaknesses())
+    print(a.get_greatest_resistances())
