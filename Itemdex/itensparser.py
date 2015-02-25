@@ -9,7 +9,7 @@ from lxml import html
 
 
 
-class importItens():
+class ImportItens():
     def __init__(self):
         self.__url = 'http://serebii.net/itemdex/'
         self.__serebii = 'http://serebii.net'
@@ -166,28 +166,30 @@ class importItens():
 
     def get_locations_dict(self, fileTree):
         locations = {}
-        locations['GSC'] = self.__get_head(fileTree.xpath(
+        locations['GSC'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()'))
-        locations['RSE'] = self.__get_head(fileTree.xpath(
+        locations['RSE'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()'))
-        locations['FRLG'] = self.__get_head(fileTree.xpath(
+        locations['FRLG'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()'))
-        locations['DPPl'] = self.__get_head(fileTree.xpath(
+        locations['DPPl'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()'))
-        locations['HGSS'] = self.__get_head(fileTree.xpath(
+        locations['HGSS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()'))
-        locations['BW'] = self.__get_head(fileTree.xpath(
+        locations['BW'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()'))
-        locations['B2W2'] = self.__get_head(fileTree.xpath(
+        locations['B2W2'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()'))
-        locations['XY'] = self.__get_head(fileTree.xpath(
+        locations['XY'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()'))
-        locations['oRaS'] = self.__get_head(fileTree.xpath(
+        locations['oRaS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()'))
-        locations['PkWalker'] = self.__get_head(fileTree.xpath(
+        interpole = lambda x, y: [x[0], y[0]] + interpole(x[1:], y[1:]) if (len(x) > 1 and len(y) > 1) else [x[0], y[0]]
+        pokelocs1 = (fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="PokéWalker"]/following-sibling::td/a/text()'))
-        locations['PkWalker'] += " "+ self.__get_head(fileTree.xpath(
+        pokelocs2 = (fileTree.xpath(
             '//table[./tr[1]/td/text() = "Locations"]/tr[position()>1]/td[text()="PokéWalker"]/following-sibling::td/i/text()'))
+        locations['PkWalker'] = ', '.join(list(map(lambda x: ' '. join((x[0], x[1])), zip(pokelocs1, pokelocs2))))
         return locations
                 
     def get_shopping_dict(self, fileTree):
@@ -290,16 +292,20 @@ class importItens():
                     fileTree = html.fromstring(fileHtml)
                     imageUrl = self.__serebii + self.get_img_path(fileTree)
                     imagePath = os.path.join(root, 'Sprites', f[:-5])
-                    if imageUrl == self.__serebii:
-                        print("error with: " + f)
-                    r = requests.get(imageUrl)
-                    if r.status_code == 200:
-                        with open(imagePath+'.png', 'wb') as pic:
-                            for chunk in r.iter_content():
-                                pic.write(chunk)
-                            pic.close()
+
+                    if(not os.path.exists(os.path.join(root, 'Sprites'))):
+                        os.mkdir(os.path.join(root, 'Sprites'))
+                    if(not os.path.exists(imagePath)):
+                        if imageUrl == self.__serebii:
+                            print("error with: " + f)
+                        r = requests.get(imageUrl)
+                        if r.status_code == 200:
+                            with open(imagePath+'.jpg', 'wb') as pic:
+                                for chunk in r.iter_content():
+                                    pic.write(chunk)
+                                pic.close()
                     else:
-                        print("error with request: " + f)
+                        print("File Already Exists: " + f)
                 else:
                     print("error with root-check: " + f)
 
@@ -331,14 +337,15 @@ class importItens():
                                         purchPrice, sellPrice, effectText,
                                         versionsAvail, flavours, locations,
                                         pickUpLoc, shopDet)
-                    # print(theItem)
+                    # print(locations)
                     print(root, name)
                     theItem.insertDb()
 
-c = importItens()
+# c = ImportItens()
 # c.downloadItensMainPage()
 # c.downloadItensPages()
 #c.buildItemTypeDb()
-c.buildItem_db('')
-# c.downloadSprites()
+d = ImportItens()
+d.buildItem_db('')
+# d.download_sprites()
 # c.parseItems()

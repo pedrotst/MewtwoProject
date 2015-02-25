@@ -55,9 +55,9 @@ class Item():
                 self.__type, self.__type2, self.__japaName,
                 self.__japaTransl, self.__flingDamage,
                 self.__purchPrice, self.__sellPrice, self.__effectText)
-            versions_db.insert_item(self.__name, self.__versionsAvail)
-            flav_db.insert_item(self.__name, self.__flvText)
+            # versions_db.insert_item(self.__name, self.__versionsAvail)
+            # flav_db.insert_item(self.__name, self.__flvText)
             loc_db.insert_item(self.__name, self.__loc)
-            pickup_db.insert_item(self.__name, self.__pickUpDet)
-            shop_db.insert_item(self.__name, self.__shoppingDet)
+            # pickup_db.insert_item(self.__name, self.__pickUpDet)
+            # shop_db.insert_item(self.__name, self.__shoppingDet)
             # itenDb.view()
