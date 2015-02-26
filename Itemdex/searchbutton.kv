@@ -3,8 +3,10 @@
 
 <MySearchButtons>:
     orientation: 'vertical'
-    FloatLayout:
-        size_hint: 1, .07
+    GridLayout:
+        cols: 3
+        orientation: 'horizontal'
+        size_hint: 1, .2
 #        width: .05
 #        height: .25
 #        canvas:
@@ -18,31 +20,72 @@
             text: 'A-G'
             on_release: root.ag_drop.open(self)
             size_hint: (.25, 1)
-            pos_hint:
-                {'top': 1,
-                'left': 1}
         Button:
             id: but_hr
             text: 'H-R'
             on_release: root.hr_drop.open(self)
             size_hint: (.25, 1)
-            pos_hint:
-                {'top': 1,
-                'center_x': .5}
         Button:
             id: but_sz
             text: 'S-Z'
             on_release: root.sz_drop.open(self)
             size_hint: (.25, 1)
-            pos_hint:
-                {'top': 1,
-                'right': 1}
+        Button:
+            id: but_battle
+            text: 'Battle'
+            on_release: root.battle_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_berry
+            text: 'Berries'
+            on_release: root.berry_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_evo
+            text: 'Evolution'
+            on_release: root.evolution_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_fossil
+            text: 'Fossil'
+            on_release: root.fossil_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_hold
+            text: 'Hold Item'
+            on_release: root.holditem_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_key
+            text: 'Key'
+            on_release: root.key_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_mail
+            text: 'Mail'
+            on_release: root.mail_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_misc
+            text: 'Misc'
+            on_release: root.misc_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_ball
+            text: 'Pokeball'
+            on_release: root.pokeball_drop.open(self)
+            size_hint: (.25, 1)
+        Button:
+            id: but_recovery
+            text: 'Recovery'
+            on_release: root.recovery_drop.open(self)
+            size_hint: (.25, 1)
     ScrollView:
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
             width: root.width
-            height: 850
+            height: 2000
             BoxLayout:
                 orientation: 'horizontal'
                 size_hint_y: None
@@ -198,7 +241,10 @@
                     font_size: 14
                     color: 1,0,0,1
             BoxLayout:
+                id: flav_box
                 orientation: 'vertical'
+                size_hint: None, None
+                size: root.width, 300
                 Label:
                     text: 'GSC: ' + root.flav_texts[0] if root.flav_texts[0] != '' else ''
                     text_size: self.width, None
@@ -245,7 +291,10 @@
                     color: 1,0,0,1
 
             BoxLayout:
+                id: location_box
                 orientation: 'vertical'
+                size_hint: None, None
+                size: root.width, 600
                 Label:
                     text: 'GSC: ' + root.locations[0] if root.locations[0] != '' else ''
                     text_size: self.width, None
@@ -286,4 +335,92 @@
                     text: 'PokeWalker: ' + root.locations[8]if root.locations[8] != '' else ''
                     text_size: self.width, None
                     font_size: 14
+            BoxLayout:
+                size_hint: 1, None
+                height: version_id.font_size
+                Label:
+                    id: version_id
+                    text: 'Shopping Details'
+                    font_size: 14
+                    color: 1,0,0,1
 
+            BoxLayout:
+                id: shop_box
+                orientation: 'vertical'
+                size: root.width, 700
+                Label:
+                    text: 'GSC: ' + root.shop[0] if root.shop[0] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'RSE: ' + root.shop[1] if root.shop[1] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'FRLG: ' + root.shop[2]if root.shop[2] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'DPPl: ' + root.shop[3]if root.shop[3] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'HGSS: ' + root.shop[4]if root.shop[4] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'BW: ' + root.shop[5]if root.shop[5] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'B2W2: ' + root.shop[6]if root.shop[6] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'XY: ' + root.shop[7]if root.shop[7] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'oRaS: ' + root.shop[8]if root.shop[8] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'BattleRev: ' + root.shop[8]if root.shop[8] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+
+            BoxLayout:
+                size_hint: 1, None
+                height: version_id.font_size
+                Label:
+                    id: version_id
+                    text: 'Pickup Details'
+                    font_size: 14
+                    color: 1,0,0,1
+            BoxLayout:
+                orientation: 'vertical'
+                size: root.width, 200
+                Label:
+                    text: 'RS: ' + root.pick_up[0] if root.pick_up[0] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'FRLG: ' + root.pick_up[1] if root.pick_up[1] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'Emerald: ' + root.pick_up[2]if root.pick_up[2] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'HGSS: ' + root.pick_up[3]if root.pick_up[3] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'BW: ' + root.pick_up[4]if root.pick_up[4] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'XY: ' + root.pick_up[5]if root.pick_up[5] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14

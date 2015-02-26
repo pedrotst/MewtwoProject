@@ -194,41 +194,41 @@ class ImportItens():
                 
     def get_shopping_dict(self, fileTree):
         shopDet = {}
-        shopDet['GSC'] = self.__get_head(fileTree.xpath(
+        shopDet['GSC'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Crystal"]/following-sibling::td/a[position()>0]/text()'))
-        shopDet['RSE'] = self.__get_head(fileTree.xpath(
+        shopDet['RSE'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/a/text()'))
-        shopDet['FRLG'] = self.__get_head(fileTree.xpath(
+        shopDet['FRLG'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/a/text()'))
-        shopDet['DPPl'] = self.__get_head(fileTree.xpath(
+        shopDet['DPPl'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Platinum"]/following-sibling::td/a/text()'))
-        shopDet['HGSS'] = self.__get_head(fileTree.xpath(
+        shopDet['HGSS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/a/text()'))
-        shopDet['BW'] = self.__get_head(fileTree.xpath(
+        shopDet['BW'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White"]/following-sibling::td/a/text()'))
-        shopDet['B2W2'] = self.__get_head(fileTree.xpath(
+        shopDet['B2W2'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="White 2"]/following-sibling::td/a/text()'))
-        shopDet['XY'] = self.__get_head(fileTree.xpath(
+        shopDet['XY'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/a/text()'))
-        shopDet['oRaS'] = self.__get_head(fileTree.xpath(
+        shopDet['oRaS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Alpha Sapphire"]/following-sibling::td/a/text()'))
-        shopDet['BattleRev'] = self.__get_head(fileTree.xpath(
+        shopDet['BattleRev'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/text() = "Shopping Details"]/tr[position()>1]/td[text()="Battle Revolution"]/following-sibling::td/text()'))
         return shopDet
 
     def get_pickup_loc_dict(self, fileTree):
         pickDet = {}
-        pickDet['RS'] = self.__get_head(fileTree.xpath(
+        pickDet['RS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Sapphire"]/following-sibling::td/text()'))
-        pickDet['FRLG'] = self.__get_head(fileTree.xpath(
+        pickDet['FRLG'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="LeafGreen"]/following-sibling::td/text()'))
-        pickDet['Emerald'] = self.__get_head(fileTree.xpath(
+        pickDet['Emerald'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Emerald"]/following-sibling::td/text()'))
-        pickDet['HGSS'] = self.__get_head(fileTree.xpath(
+        pickDet['HGSS'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="SoulSilver"]/following-sibling::td/text()'))
-        pickDet['BW'] = self.__get_head(fileTree.xpath(
+        pickDet['BW'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="White"]/following-sibling::td/font/text()'))
-        pickDet['XY'] = self.__get_head(fileTree.xpath(
+        pickDet['XY'] = ', '.join(fileTree.xpath(
             '//table[./tr[1]/td/a/b/text() = "PickUp"]/tr[position()>1]/td[text()="Y"]/following-sibling::td/font/text()'))
         return pickDet
 
@@ -345,7 +345,7 @@ class ImportItens():
 # c.downloadItensMainPage()
 # c.downloadItensPages()
 #c.buildItemTypeDb()
-d = ImportItens()
-d.buildItem_db('')
+# d = ImportItens()
+# d.buildItem_db('')
 # d.download_sprites()
 # c.parseItems()

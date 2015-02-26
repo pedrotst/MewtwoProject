@@ -70,12 +70,14 @@ class ItemManager(BDManager):
             for row in conn.cursor().execute('SELECT * FROM Item'):
                 print(row)
 
-    def getByCat(self, cat):
+    def get_cat(self, cat):
         self._certify_connection()
         with self._connection as conn:
+            cat_itens = []
             for row in conn.cursor().execute(
                 'SELECT Name FROM Item WHERE Category = ? ORDER BY Name', (cat,)):
-                print(row)
+                cat_itens += row
+            return(cat_itens)
 
     def get_by_name(self, name):
         self._certify_connection()
@@ -350,6 +352,14 @@ class Shop(BDManager):
                 'SELECT Name FROM Shop WHERE Category = ? ORDER BY Name', (cat,)):
                 print(row)
 
+    def get_by_name(self, name):
+        self._certify_connection()
+        with self._connection as conn:
+            shop_loc_list = conn.cursor().execute(
+                'SELECT * FROM Shop WHERE Name = ? ORDER BY Name', (name,))
+            shop_loc = list(shop_loc_list)[0]
+            return shop_loc[1:]
+
 class Pickup(BDManager):
     def create_table(self):
         self._certify_connection()
@@ -397,3 +407,11 @@ class Pickup(BDManager):
             for row in conn.cursor().execute(
                 'SELECT Name FROM Pickup WHERE Category = ? ORDER BY Name', (cat,)):
                 print(row)
+
+    def get_by_name(self, name):
+        self._certify_connection()
+        with self._connection as conn:
+            pick_up_list = conn.cursor().execute(
+                'SELECT * FROM Pickup WHERE Name = ? ORDER BY Name', (name,))
+            pick_up = list(pick_up_list)[0]
+            return pick_up[1:]
