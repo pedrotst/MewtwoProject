@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.dropdown import DropDown
 from kivy.properties import ListProperty, ObjectProperty, StringProperty, NumericProperty
+from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.boxlayout import BoxLayout
@@ -14,6 +15,7 @@ from kivy.uix.scatter import Scatter
 from kivy.uix.scrollview import ScrollView
 from kivy.core.window import Window
 import itensdb
+import os
 
 class MySearchButtons(BoxLayout):
     db = itensdb.ItemManager()
@@ -50,6 +52,84 @@ class MySearchButtons(BoxLayout):
     pick_up = ListProperty(['']*6)
 
 
+    def update_flav_box(self):
+        self.ids.flav_box.clear_widgets()
+        # self.ids.flav_box.unbind()
+        flav_versions = ['GSC', 'RSE', 'FRLG', 'DPPl', 'HGSS', 'BW', 'B2W2', 'XY', 'oRaS']
+        # self.garbage_colect()
+        for text, ver in zip(self.flav_texts, flav_versions):
+            if text != '':
+                lab = (Label(text = ver+': '+text, font_size = 14, text_size = (self.width, None), size_hint_y = None))
+
+                # calculating height here
+                before = lab._label.render()
+                lab.text_size=(self.width, None)
+                after = lab._label.render()
+                lab.height = (after[1]/before[1])*before[1] # ammount of rows * single row height
+                # end
+                self.ids.flav_box.add_widget(lab)
+        self.ids.flav_box.height = self.get_children_height(self.ids.flav_box)
+
+    def update_locations(self):
+        self.ids.location_box.clear_widgets()
+        loc_versions = ['GSC', 'RSE', 'FRLG', 'DPPl', 'HGSS', 'BW', 'B2W2', 'XY', 'oRaS', 'PokéWalker']
+        for text, ver in zip(self.locations, loc_versions):
+            if text != '':
+                lab = (Label(text = ver+': '+text, font_size = 14, text_size = (self.width, None), size_hint_y = None))
+
+                # calculating height here
+                before = lab._label.render()
+                lab.text_size=(self.width, None)
+                after = lab._label.render()
+                lab.height = (after[1]/before[1])*before[1] # ammount of rows * single row height
+                # end
+                self.ids.location_box.add_widget(lab)
+        self.ids.location_box.height = self.get_children_height(self.ids.location_box)
+
+    def update_shop(self):
+        self.ids.shop_box.clear_widgets()
+        shop_versions = ['GSC', 'RSE', 'FRLG', 'DPPl', 'HGSS', 'BW', 'B2W2', 'XY', 'oRaS', 'Battle Revolution']
+        for text, ver in zip(self.shop, shop_versions):
+            if text != '':
+                lab = (Label(text = ver+': '+text, font_size = 14, text_size = (self.width, None), size_hint_y = None))
+
+                # calculating height here
+                before = lab._label.render()
+                lab.text_size=(self.width, None)
+                after = lab._label.render()
+                lab.height = (after[1]/before[1])*before[1] # ammount of rows * single row height
+                # end
+                self.ids.shop_box.add_widget(lab)
+        self.ids.shop_box.height = self.get_children_height(self.ids.shop_box)
+
+    def update_pick_up(self):
+        self.ids.pickup_box.clear_widgets()
+        pickup_versions = ['RS', 'FRLG', 'Emerald', 'HGSS', 'BW', 'XY']
+        for text, ver in zip(self.pick_up, pickup_versions):
+            if text != '':
+                lab = (Label(text = ver+': '+text, font_size = 14, text_size = (self.width, None), size_hint_y = None))
+
+                # calculating height here
+                before = lab._label.render()
+                lab.text_size=(self.width, None)
+                after = lab._label.render()
+                lab.height = (after[1]/before[1])*before[1] # ammount of rows * single row height
+                # end
+                self.ids.pickup_box.add_widget(lab)
+        self.ids.pickup_box.height = self.get_children_height(self.ids.pickup_box)
+
+    def update_scroll(self):
+        self.ids.scroll_box.height = self.get_children_height(self.ids.scroll_box)
+
+    def get_children_height(self, node):
+        total_height = 0
+        for child in node.children:
+            total_height = child.height + total_height
+        return total_height
+
+    def garbage_colect(self):
+        pass
+
     def update_text(self, name, *args):
         self.vers_db = itensdb.ItemVersions()
         self.flav_bd = itensdb.FlavourText()
@@ -72,7 +152,19 @@ class MySearchButtons(BoxLayout):
         self.locations = self.loc_bd.get_by_name(name)
         self.shop = self.shop_db.get_by_name(name)
         self.pick_up = self.pick_db.get_by_name(name)
-        # print(?)
+
+        img_path = os.path.join('Itens', self.category,'Sprites', self.text_item + '.tiff')
+        if os.path.exists(img_path):
+            self.ids.item_img.source = img_path
+        else:
+            self.ids.item_img.source = os.path.join('Itens', 'Sprites', 'mewtwo.gif')
+
+        # self.garbage_colect()
+        self.update_flav_box()
+        self.update_locations()
+        self.update_shop()
+        self.update_pick_up()
+        self.update_scroll()
     def __init__(self, **kwargs):
         super(MySearchButtons, self).__init__(**kwargs)
 
