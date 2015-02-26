@@ -11,6 +11,8 @@ from kivy.graphics.vertex_instructions import (Rectangle,
                                                 Line)
 
 from kivy.uix.scatter import Scatter
+from kivy.uix.scrollview import ScrollView
+from kivy.core.window import Window
 import itensdb
 
 class MySearchButtons(BoxLayout):

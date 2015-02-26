@@ -37,250 +37,253 @@
             pos_hint:
                 {'top': 1,
                 'right': 1}
-
-    BoxLayout:
-        orientation: 'vertical'
+    ScrollView:
         BoxLayout:
-            orientation: 'horizontal'
+            orientation: 'vertical'
             size_hint_y: None
-            size: root.width, 60
-            Label:
-                text: 'Item Name:\n' + root.text_item
-                text_size: self.width, None
-                halign: 'justify'
-                font_size: 14
-            Label:
-                text: 'Type1:\n' + root.type1
-                text_size: self.width, None
-                halign: 'justify'
-                font_size: 14
-            Label:
-                text: 'Type 2:\n' + root.type2
-                text_size: self.width, None
-                halign: 'justify'
-                font_size: 14
-            Label:
-                text: 'Fling Damage: ' + str(root.fling)
-                text_size: self.width, None
-                font_size: 14
-            Scatter:
+            width: root.width
+            height: 850
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: None
+                size: root.width, 60
+                Label:
+                    text: 'Item Name:\n' + root.text_item
+                    text_size: self.width, None
+                    halign: 'justify'
+                    font_size: 14
+                Label:
+                    text: 'Type1:\n' + root.type1
+                    text_size: self.width, None
+                    halign: 'justify'
+                    font_size: 14
+                Label:
+                    text: 'Type 2:\n' + root.type2
+                    text_size: self.width, None
+                    halign: 'justify'
+                    font_size: 14
+                Label:
+                    text: 'Fling Damage: ' + str(root.fling)
+                    text_size: self.width, None
+                    font_size: 14
+                Scatter:
+                    Image:
+                        id: item_img
+                        size_hint: None, None
+                        source: os.path.join('Itens', root.category,'Sprites', root.text_item + '.tiff')
+
+
+            BoxLayout:
+                size_hint_y: None
+                size: root.width, 40
+                orientation: 'horizontal'
+                Label:
+                    text: 'Japanese Name:\n' + root.jap_name
+                    font_name: 'TakaoPMincho.ttf'
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'Translation:\n' + root.jap_transl
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'Purchase Price: ' + str(root.purch_price)
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'Sell Price: ' + str(root.sell_price)
+                    text_size: self.width, None
+                    font_size: 14
+
+            BoxLayout:
+                size_hint: 1,None
+                height: version_id.font_size
+                Label:
+                    id: version_id
+                    text: 'Versions Available'
+                    font_size: 14
+                    color: 1,0,0,1
+            GridLayout:
+                cols: 18
+                row_force_default: True
+                row_default_height: 12
+                rows: 2
+                size_hint: None, None
+                size: root.width,40
+                canvas:
+                    Color:
+                        rgba: 1,0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                Label:
+                    text:'RGBY'
+                Label:
+                    text:'GS'
+                Label:
+                    text:'C'
+                Label:
+                    text:'RS'
+                Label:
+                    text:'E'
+                Label:
+                    text:'FRLG'
+                Label:
+                    text:'DP'
+                Label:
+                    text:'Pt'
+                Label:
+                    text:'HG'
+                Label:
+                    text:'SS'
+                Label:
+                    text:'B'
+                Label:
+                    text:'W'
+                Label:
+                    text:'B2'
+                Label:
+                    text:'W2'
+                Label:
+                    text:'X'
+                Label:
+                    text:'Y'
+                Label:
+                    text:'oR'
+                Label:
+                    text:'aS'
                 Image:
-                    id: item_img
-                    size_hint: None, None
-                    source: os.path.join('Itens', root.category,'Sprites', root.text_item + '.tiff')
+                    source: os.path.join('Itens', 'Sprites', 'rbitem.tiff') if root.versions_avail[0] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'citem.tiff')if root.versions_avail[1] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'citem.tiff')if root.versions_avail[2] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[3] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[4] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[5] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[6] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[7] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[8] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[9] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[10] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[11] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[12] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[13] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[14] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[15] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[16] else ''
+                Image:
+                    source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[17] else ''
+        #            size_hint: 1, 1
+            BoxLayout:
+                size_hint: 1, None
+                height: version_id.font_size
+                Label:
+                    id: version_id
+                    text: 'Flavour Text'
+                    font_size: 14
+                    color: 1,0,0,1
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: 'GSC: ' + root.flav_texts[0] if root.flav_texts[0] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'RSE: ' + root.flav_texts[1] if root.flav_texts[1] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'FRLG: ' + root.flav_texts[2]if root.flav_texts[2] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'DPPl: ' + root.flav_texts[3]if root.flav_texts[3] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'HGSS: ' + root.flav_texts[4]if root.flav_texts[4] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'BW: ' + root.flav_texts[5]if root.flav_texts[5] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'B2W2: ' + root.flav_texts[6]if root.flav_texts[6] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'XY: ' + root.flav_texts[7]if root.flav_texts[7] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'oRaS: ' + root.flav_texts[8]if root.flav_texts[8] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+            BoxLayout:
+                size_hint: 1, None
+                height: version_id.font_size
+                Label:
+                    id: version_id
+                    text: 'Locations'
+                    font_size: 14
+                    color: 1,0,0,1
 
-
-        BoxLayout:
-            size_hint_y: None
-            size: root.width, 40
-            orientation: 'horizontal'
-            Label:
-                text: 'Japanese Name:\n' + root.jap_name
-                font_name: 'TakaoPMincho.ttf'
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'Translation:\n' + root.jap_transl
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'Purchase Price: ' + str(root.purch_price)
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'Sell Price: ' + str(root.sell_price)
-                text_size: self.width, None
-                font_size: 14
-
-        BoxLayout:
-            size_hint: 1,None
-            height: version_id.font_size
-            Label:
-                id: version_id
-                text: 'Versions Available'
-                font_size: 14
-                color: 1,0,0,1
-        GridLayout:
-            cols: 18
-            row_force_default: True
-            row_default_height: 12
-            rows: 2
-            size_hint: None, None
-            size: root.width,40
-            canvas:
-                Color:
-                    rgba: 1,0,0,1
-                Rectangle:
-                    size: self.size
-                    pos: self.pos
-            Label:
-                text:'RGBY'
-            Label:
-                text:'GS'
-            Label:
-                text:'C'
-            Label:
-                text:'RS'
-            Label:
-                text:'E'
-            Label:
-                text:'FRLG'
-            Label:
-                text:'DP'
-            Label:
-                text:'Pt'
-            Label:
-                text:'HG'
-            Label:
-                text:'SS'
-            Label:
-                text:'B'
-            Label:
-                text:'W'
-            Label:
-                text:'B2'
-            Label:
-                text:'W2'
-            Label:
-                text:'X'
-            Label:
-                text:'Y'
-            Label:
-                text:'oR'
-            Label:
-                text:'aS'
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'rbitem.tiff') if root.versions_avail[0] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'citem.tiff')if root.versions_avail[1] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'citem.tiff')if root.versions_avail[2] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[3] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[4] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'frlgitem.tiff')if root.versions_avail[5] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[6] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[7] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[8] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[9] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[10] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[11] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[12] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[13] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[14] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[15] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[16] else ''
-            Image:
-                source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[17] else ''
-    #            size_hint: 1, 1
-        BoxLayout:
-            size_hint: 1, None
-            height: version_id.font_size
-            Label:
-                id: version_id
-                text: 'Flavour Text'
-                font_size: 14
-                color: 1,0,0,1
-        BoxLayout:
-            orientation: 'vertical'
-            Label:
-                text: 'GSC: ' + root.flav_texts[0] if root.flav_texts[0] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'RSE: ' + root.flav_texts[1] if root.flav_texts[1] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'FRLG: ' + root.flav_texts[2]if root.flav_texts[2] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'DPPl: ' + root.flav_texts[3]if root.flav_texts[3] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'HGSS: ' + root.flav_texts[4]if root.flav_texts[4] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'BW: ' + root.flav_texts[5]if root.flav_texts[5] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'B2W2: ' + root.flav_texts[6]if root.flav_texts[6] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'XY: ' + root.flav_texts[7]if root.flav_texts[7] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'oRaS: ' + root.flav_texts[8]if root.flav_texts[8] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-        BoxLayout:
-            size_hint: 1, None
-            height: version_id.font_size
-            Label:
-                id: version_id
-                text: 'Locations'
-                font_size: 14
-                color: 1,0,0,1
-
-        BoxLayout:
-            orientation: 'vertical'
-            Label:
-                text: 'GSC: ' + root.locations[0] if root.locations[0] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'RSE: ' + root.locations[1] if root.locations[1] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'FRLG: ' + root.locations[2]if root.locations[2] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'DPPl: ' + root.locations[3]if root.locations[3] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'HGSS: ' + root.locations[4]if root.locations[4] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'BW: ' + root.locations[5]if root.locations[5] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'B2W2: ' + root.locations[6]if root.locations[6] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'XY: ' + root.locations[7]if root.locations[7] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'oRaS: ' + root.locations[8]if root.locations[8] != '' else ''
-                text_size: self.width, None
-                font_size: 14
-            Label:
-                text: 'PokeWalker: ' + root.locations[8]if root.locations[8] != '' else ''
-                text_size: self.width, None
-                font_size: 14
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: 'GSC: ' + root.locations[0] if root.locations[0] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'RSE: ' + root.locations[1] if root.locations[1] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'FRLG: ' + root.locations[2]if root.locations[2] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'DPPl: ' + root.locations[3]if root.locations[3] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'HGSS: ' + root.locations[4]if root.locations[4] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'BW: ' + root.locations[5]if root.locations[5] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'B2W2: ' + root.locations[6]if root.locations[6] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'XY: ' + root.locations[7]if root.locations[7] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'oRaS: ' + root.locations[8]if root.locations[8] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
+                Label:
+                    text: 'PokeWalker: ' + root.locations[8]if root.locations[8] != '' else ''
+                    text_size: self.width, None
+                    font_size: 14
 
