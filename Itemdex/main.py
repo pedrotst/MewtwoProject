@@ -84,4 +84,4 @@ class SearchButtonApp(App):
 
 
 if __name__ == '__main__':
-    SearchButtonApp().run()
+        SearchButtonApp().run()

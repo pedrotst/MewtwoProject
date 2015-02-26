@@ -33,7 +33,7 @@ class Attacks:
         """
         assert isinstance(item, int)
         if 0 < item < 5:
-            return self.__attacks[item]
+            return self.__attacks[item-1]
         else:
             raise KeyError('Key must be between 1 and 4')
 
