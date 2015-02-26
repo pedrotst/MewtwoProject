@@ -70,7 +70,7 @@ class TeamMember:
         self.__lvl = 100
         self.__base_stats = pkm.get_stats()
         self.__types = pkm.get_types()
-        self.__abilities = pkm.get_abilities()
+        self.__abilities_possible = pkm.get_abilities()
         self.__attacks_possible = pkm.get_attacks()
         self.__weaknesses = pkm.get_weaknesses()
         self.__attacks = Utils.teamutils.Attacks()
@@ -107,6 +107,34 @@ class TeamMember:
         :return:
         """
         self.__nickname = n_nickname
+
+    def get_lvl(self):
+        """
+        Return the lvl
+        :return:
+        """
+        return self.__lvl
+
+    def set_lvl(self, n_lvl):
+        """
+        Set a new level with the value n_lvl
+        :param n_lvl: str
+        :return:
+        """
+        self.__lvl = n_lvl
+
+    def get_types(self):
+        """
+        Return the types of the pokemon
+        :return: The pokemon types
+        """
+        return self.__types
+
+    def set_ability(self):
+        """
+        Set one of the possible abilities
+        """
+        print(self.__abilities_possible)
 
     def get_weaknesses(self):
         """
@@ -208,6 +236,7 @@ class TeamAnalyser:
         self.__greatest_weaknesses_value = 0
         self.__greatest_resistances = []
         self.__greatest_resistances_value = 0
+        self.__physical_coverage_percentage = 0
         self.__positive_physical_coverage = {}
         self.__positive_special_coverage = {}
         self.__negative_physical_coverage = {}
@@ -252,6 +281,8 @@ class TeamAnalyser:
 
                 elif category == 'Other':
                     self.__effects_coverage.append(attack.get_description())
+        self.__physical_coverage_percentage = len(self.__positive_physical_coverage)/18
+        print('Physical Coverage Percentage: ', self.__physical_coverage_percentage)
         print('Positive Physical Coverage: ', self.__positive_physical_coverage)
         print('Negative Physical Coverage: ', self.__negative_physical_coverage)
         print('Positive Special Coverage: ', self.__positive_special_coverage)
@@ -305,23 +336,29 @@ class TeamAnalyser:
         return self.__greatest_resistances, self.__greatest_resistances_value
 
 if __name__ == '__main__':
-    p = [TeamMember('Pikachu'), TeamMember('Blaziken')]
-    p[0].set_attack(1, 'Thunder')
-    p[0].set_attack(2, 'Thunderbolt')
-    p[0].set_attack(3, 'Slam')
-    p[0].set_attack(4, 'Agility')
-    p[0].set_nickname('Johnny')
-    p[1].set_attack(1, 'Flare Blitz')
-    p[1].set_attack(2, 'Brave Bird')
-    p[1].set_attack(3, 'Slash')
-    p[1].set_attack(4, 'Sky Uppercut')
-    a = TeamAnalyser(p)
-    e = Utils.pkmutils.PokeWeaknesses()
-    a.calculate_team_weaknesses()
-    print(p[0].get_name(), p[0].get_nickname())
-    print('Attacks statistics-------------------------------------------------------')
-    a.calculate_team_coverage()
-    print('Defenses statistics------------------------------------------------------')
-    print('Team Weaknesses: ', a.get_weaknesses())
-    print('Greatest Weaknesses: ', a.get_greatest_weaknesses())
-    print('Greatest Resistances: ', a.get_greatest_resistances())
+    pika = TeamMember('Pikachu')
+    pika.set_ability()
+    # p = [TeamMember('Pikachu'), TeamMember('Blaziken')]
+    # p[0].set_attack(1, 'Thunder')
+    # p[0].set_attack(2, 'Thunderbolt')
+    # p[0].set_attack(3, 'Slam')
+    # p[0].set_attack(4, 'Agility')
+    # p[0].set_nickname('Johnny')
+    # p[1].set_attack(1, 'Flare Blitz')
+    # p[1].set_attack(2, 'Brave Bird')
+    # p[1].set_attack(3, 'Slash')
+    # p[1].set_attack(4, 'Sky Uppercut')
+    # a = TeamAnalyser(p)
+    # e = Utils.pkmutils.PokeWeaknesses()
+    # a.calculate_team_weaknesses()
+    # print('Team info-----------------------------------------------------------------')
+    # for j in range(0, 2):
+    #     print('Name:', p[j].get_name(), 'Nickname:', p[j].get_nickname())
+    #     for i in range(1, 5):
+    #         print(p[j].get_attack(i).get_name())
+    # print('Attacks statistics-------------------------------------------------------')
+    # a.calculate_team_coverage()
+    # print('Defenses statistics------------------------------------------------------')
+    # print('Team Weaknesses: ', a.get_weaknesses())
+    # print('Greatest Weaknesses: ', a.get_greatest_weaknesses())
+    # print('Greatest Resistances: ', a.get_greatest_resistances())
