@@ -43,6 +43,8 @@ Pumpkaboo and Gourgeist
 Xerneas
 Hoopa
 
+TODO Get abilities and attacks secondary effects
+
 #milestones semana 1:
 pedro
     gui itendex
