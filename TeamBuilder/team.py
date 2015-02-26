@@ -83,6 +83,31 @@ class TeamMember:
                                              self.__evs,
                                              self.__nature)
 
+    def get_name(self):
+        """
+        Return the name of the member
+        :return:
+        """
+        return self.__name
+
+    def get_nickname(self):
+        """
+        Return the nichname, if no nickname was set, return the pokemon name
+        :return:
+        """
+        if self.__nickname == '':
+            return self.__name
+        else:
+            return self.__nickname
+
+    def set_nickname(self, n_nickname):
+        """
+        Set a new nickname with the value n_nickname
+        :param n_nickname: str
+        :return:
+        """
+        self.__nickname = n_nickname
+
     def get_weaknesses(self):
         """
         Getter of the weaknesses of the pokemon
@@ -285,6 +310,7 @@ if __name__ == '__main__':
     p[0].set_attack(2, 'Thunderbolt')
     p[0].set_attack(3, 'Slam')
     p[0].set_attack(4, 'Agility')
+    p[0].set_nickname('Johnny')
     p[1].set_attack(1, 'Flare Blitz')
     p[1].set_attack(2, 'Brave Bird')
     p[1].set_attack(3, 'Slash')
@@ -292,6 +318,7 @@ if __name__ == '__main__':
     a = TeamAnalyser(p)
     e = Utils.pkmutils.PokeWeaknesses()
     a.calculate_team_weaknesses()
+    print(p[0].get_name(), p[0].get_nickname())
     print('Attacks statistics-------------------------------------------------------')
     a.calculate_team_coverage()
     print('Defenses statistics------------------------------------------------------')
