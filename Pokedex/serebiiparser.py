@@ -1,9 +1,12 @@
 import os
+from lxml import html
 
 from bs4 import BeautifulSoup
 import requests
 
 from pokemon import *
+
+
 
 
 def run_test(xi=1, xf=721):
@@ -13,18 +16,20 @@ def run_test(xi=1, xf=721):
 
 def run(i):
     if i < 10:
-        file = 'Pages/page00' + str(i) + '.html'
+        file = os.path.join('Pages', 'page00' + str(i) +'.html')
     elif i < 100:
-        file = 'Pages/page0' + str(i) + '.html'
+        file = os.path.join('Pages', 'page0'+str(i) +'.html')
     else:
-        file = 'Pages/page0' + str(i) + '.html'
+        file = os.path.join('Pages', 'page0'+ str(i) +'.html')
+
     c = ImportSerebii()
     # c.download_html(i)
     c.get_local_html(file)
     print(i)
-    c.parse_serebii()
-    poke = Pokemon(c.get_poke())
-    poke.create_pokemon_evo_chain_database()
+    c.download_poke_forms()
+    # c.parse_serebii()
+    # poke = Pokemon(c.get_poke())
+    # poke.create_pokemon_evo_chain_database()
 
 
 # poke.createAbilityDatabase()
@@ -38,6 +43,7 @@ def run(i):
 
 
 class ImportSerebii:
+
     def __init__(self):
         """
         Initializes the basic variables
@@ -50,6 +56,8 @@ class ImportSerebii:
         self.__urlEnd = '.shtml'
         self.__html = ''
         self.__soup = ''
+        #please take this / out and refactor the code to use os.path.join
+        #that is multiplatform
         self.__imgDir = 'PokeData/'
 
     # --------------------------------------------------------------------------------
@@ -281,24 +289,51 @@ class ImportSerebii:
 
         # Check status
         if r.status_code == 200:
-            folder = self.__imgDir + fld + '/'
+            #!after refactor drop the [:-1]
+            folder = os.path.join(self.__imgDir[:-1], fld)
 
             # Check folder existance
             self.__ensure_dir(folder)
 
             # Define image location
-            imgPath = folder + name + '.png'
+            imgPath = os.path.join(folder, name + '.png')
 
             # Save Image in folder
             with open(imgPath, 'wb') as f:
                 for chunk in r.iter_content():
                     f.write(chunk)
 
+    # --------------------------------------------------------------------------------
+    # Download pokemon alternative forms images
+    def download_poke_forms(self):
+        fileTree = html.fromstring(self.__html)
+        orig_name = fileTree.xpath('///table[@class = "dextab"]/tr/td[1]/table/tr/td[2]/font/b/text()')
+        img_name_list = fileTree.xpath('//table[@class = "dextable"]/tr[./td/text() = "Alternate Forms"]/following-sibling::tr/td/table/tr[2]/td[@class = "pkmn"]/img/@title')
+        img_path_list = fileTree.xpath('//table[@class = "dextable"]/tr[./td/text() = "Alternate Forms"]/following-sibling::tr/td/table/tr[2]/td[@class = "pkmn"]/img/@src')
+        how_to = fileTree.xpath('//table[@class = "dextable"]/tr[./td/text() = "Alternate Forms"]/following-sibling::tr/td/table[2]/tr/td//text()')
+
+        # print(list(zip(img_name_list, img_path_list)))
+        # print(how_to)
+        # print(len(orig_name), len('pikachu'), ''.join(list(str(orig_name)[11:-2])))
+
+        # name comes in a funky way, this was the easiest way to bipass it
+        orig_name = ''.join(list(str(orig_name)[11:-2]))
+
+        if len(img_name_list) > 0:
+            for name, url in zip(img_name_list,img_path_list):
+                self.__download_image(self.__serebiiUrl+url, os.path.join(orig_name, "Pokemon Forms"), name)
+
+            with open(os.path.join(self.__imgDir[:-1], orig_name, "Pokemon Forms", "How-to.txt"), 'w') as f:
+                for howto in how_to:
+                    f.write(howto)
+
     # Ensures that directory f exists
     def __ensure_dir(self, f):
         d = os.path.dirname(f)
         if not os.path.exists(d):
             os.makedirs(d)
+        if not os.path.exists(f):
+            os.makedirs(f)
             # --------------------------------------------------------------------------------
 
     #  Get abilities
@@ -549,4 +584,4 @@ class ImportSerebii:
 
 
 if __name__ == '__main__':
-    run(366)
+    run_test()

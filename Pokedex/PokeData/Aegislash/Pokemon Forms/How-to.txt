@@ -1,0 +1,1 @@
+Aegislash changes its form depending upon the move it uses. If it uses a move that is a damaging move, it will be in Blade Forme while if it uses the King's Shield move, it will be in Shield Forme

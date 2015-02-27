@@ -1,0 +1,1 @@
+Burmy's form changes after each battle, depending on the environment it just battled in.

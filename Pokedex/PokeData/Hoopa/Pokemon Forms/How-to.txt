@@ -1,0 +1,1 @@
+Hoopa changes its form when the Prison Bottle key item is used on it. It will revert when placed into a box. - This form is only in Omega Ruby & Alpha Sapphire
