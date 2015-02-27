@@ -412,6 +412,16 @@ class PokeAbilities:
 
     def __repr(self):
         return self.__str__()
+
+    def has_ability(self, query):
+        for ability in self.get_abilities():
+            if ability.get_name() == query:
+                return ability
+        for hidden in self.get_hidden_abilities():
+            if hidden.get_name() == query:
+                return hidden
+        return None
+
             
     def get_ability(self,i):
         return self.__abilities[i]
@@ -547,7 +557,7 @@ class PokeWeaknesses:
 
     def __mul__(self, other):
         for weak, i in zip(other, range(0, 18)):
-            if self[i]:
+            if self[i] is not None:
                 self[i] *= weak
             else:
                 self[i] = 1*weak

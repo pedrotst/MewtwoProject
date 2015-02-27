@@ -33,7 +33,7 @@ class Attacks:
         """
         assert isinstance(item, int)
         if 0 < item < 5:
-            return self.__attacks[item-1]
+            return self.__attacks[item - 1]
         else:
             raise KeyError('Key must be between 1 and 4')
 
@@ -194,8 +194,9 @@ class Stats(StatsManipulator):
         nature_constants = self.__determine_nature_constants()
         bases = [self.__base_stats.get_hp(), self.__base_stats.get_attack(), self.__base_stats.get_defense(),
                  self.__base_stats.get_sp_attack(), self.__base_stats.get_sp_defense(), self.__base_stats.get_speed()]
-        for iv, base, ev, ic, oc, nc, i in zip(self.__iv, bases, self.__ev, inner_constants, outer_constants, nature_constants, range(0, 6)):
-            self[i+1] = int((((iv + (2 * base) + ev / 4 + ic) * self.__lvl) / 100 + oc) * nc)
+        for iv, base, ev, ic, oc, nc, i in zip(self.__iv, bases, self.__ev, inner_constants, outer_constants,
+                                               nature_constants, range(0, 6)):
+            self[i + 1] = int((((iv + (2 * base) + ev / 4 + ic) * self.__lvl) / 100 + oc) * nc)
 
     def __determine_nature_constants(self):
         """
@@ -208,11 +209,52 @@ class Stats(StatsManipulator):
         nature_decreased_index = self.__nature.get_decreased_stat()
         dnc = []
         for i in range(0, 6):
-            if i == nature_increased_index.value-1:
+            if i == nature_increased_index.value - 1:
                 dnc.append(1.1)
-            elif i == nature_decreased_index.value-1:
+            elif i == nature_decreased_index.value - 1:
                 dnc.append(0.9)
             else:
                 dnc.append(1)
         return dnc
 
+
+class Coverage:
+    # TODO terminar essa porra
+    """
+    A class that calculate a coverage of a given pokemon
+    """
+
+    def __init__(self, member=None):
+        if member:
+            attacks = [member.get_attack(i) for i in range(1, 5)]
+
+            self.__positive_physical_coverage, self.__negative_physical_coverage = self.__get_coverage(attacks,
+                                                                                                       'Physical')
+
+            self.__positive_special_coverage, self.__negative_special_coverage = self.__get_coverage(attacks, 'Special')
+
+            self.__positive_coverage = self.__positive_special_coverage or self.__positive_physical_coverage
+
+            self.__negative_coverage = self.__negative_special_coverage or self.__negative_physical_coverage
+
+            self.__coverage_percentage = len(self.__positive_coverage) / 18
+            print(self.__coverage_percentage)
+
+    # noinspection PyMethodMayBeStatic
+    def __get_coverage(self, attacks, type_of_coverage):
+        """ Given a type of coverage and a list of attacks, this method will find both the positive coverage and the
+        negative coverage of that list of attacks with the specified type of coverage('Physical' or 'Special')
+            :param attacks: The list of attacks
+            :param type_of_coverage:'Physical' or 'Special'
+            :rtype : set,set
+            """
+        weak_table = constants.WeaknessesTable()
+        list_of_attacks = [attack for attack in attacks if attack.get_cat() == type_of_coverage]
+        positive_coverage = []
+        negative_coverage = []
+        for attack in list_of_attacks:
+            type_ = attack.get_type()
+            row = weak_table[type_]
+            positive_coverage += [type_def for type_def in row if row[type_def] > 1]
+            negative_coverage += [type_def for type_def in row if row[type_def] < 1]
+        return set(positive_coverage), set(negative_coverage)
