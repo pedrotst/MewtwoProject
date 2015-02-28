@@ -219,26 +219,65 @@ class Stats(StatsManipulator):
 
 
 class Coverage:
-    # TODO terminar essa porra
     """
-    A class that calculate a coverage of a given pokemon
+    A class that calculate a coverage of a given pokemon, if a member of class TeamMember is given it will be used for
+    calculation, if not the values given will be used
     """
 
-    def __init__(self, member=None):
+    def __init__(self, member=None,
+                 pcp=None, ppc=None, npc=None,
+                 scp=None, psc=None, nsc=None,
+                 cp=None, pc=None, nc=None,
+                 ec=None, pp=None, sp=None):
         if member:
+            # Get all attacks
             attacks = [member.get_attack(i) for i in range(1, 5)]
+
+            # Get all attacks organized in 5 lists, Physical Positive and Negative Coverages, a set with the values
+            # of the types the pokemon attacks cover. Special have the same distribution and Other attacks will be a
+            # list of the effects the attack causes
 
             self.__positive_physical_coverage, self.__negative_physical_coverage = self.__get_coverage(attacks,
                                                                                                        'Physical')
 
             self.__positive_special_coverage, self.__negative_special_coverage = self.__get_coverage(attacks, 'Special')
 
-            self.__positive_coverage = self.__positive_special_coverage or self.__positive_physical_coverage
+            self.__effects_coverage = [attack.get_description() for attack in attacks if attack.get_cat() == 'Other']
 
-            self.__negative_coverage = self.__negative_special_coverage or self.__negative_physical_coverage
+            # Calculate the total coverage with union of the sets
+
+            self.__positive_coverage = self.__positive_special_coverage | self.__positive_physical_coverage
+
+            self.__negative_coverage = self.__negative_special_coverage | self.__negative_physical_coverage
+
+            # Calculate the sum of the raw attack power of both special and physical power
+
+            self.__physical_power = sum([attack.get_att() for attack in attacks if attack.get_att() != 951
+                                         and attack.get_cat() == 'Physical'])
+
+            self.__special_power = sum([attack.get_att() for attack in attacks if attack.get_att() != 951
+                                        and attack.get_cat() == 'Special'])
+
+            # Calculate the percentage of the types cover by the attacks
 
             self.__coverage_percentage = len(self.__positive_coverage) / 18
-            print(self.__coverage_percentage)
+
+            self.__physical_coverage_percentage = len(self.__positive_physical_coverage) / 18
+
+            self.__special_coverage_percentage = len(self.__positive_special_coverage) / 18
+        else:
+            self.__physical_coverage_percentage = pcp
+            self.__positive_physical_coverage = ppc
+            self.__negative_physical_coverage = npc
+            self.__special_coverage_percentage = scp
+            self.__positive_special_coverage = psc
+            self.__negative_special_coverage = nsc
+            self.__coverage_percentage = cp
+            self.__positive_coverage = pc
+            self.__negative_coverage = nc
+            self.__effects_coverage = ec
+            self.__physical_power = pp
+            self.__special_power = sp
 
     # noinspection PyMethodMayBeStatic
     def __get_coverage(self, attacks, type_of_coverage):
@@ -258,3 +297,137 @@ class Coverage:
             positive_coverage += [type_def for type_def in row if row[type_def] > 1]
             negative_coverage += [type_def for type_def in row if row[type_def] < 1]
         return set(positive_coverage), set(negative_coverage)
+
+    def get_physical_coverage(self):
+        """
+        Return all in concern to the physical coverage
+        """
+        return self.__physical_coverage_percentage, self.__positive_physical_coverage, self.__negative_physical_coverage
+
+    def get_special_coverage(self):
+        """
+        Return all in concern to the special coverage
+        :return int, set, set
+        :rtype int, set, set
+        """
+        return self.__special_coverage_percentage, self.__positive_special_coverage, self.__negative_special_coverage
+
+    def get_coverage(self):
+        """
+        Return all in concern to the complete coverage
+        :return int, set, set
+        :rtype int, set, set
+        """
+        return self.__coverage_percentage, self.__positive_coverage, self.__negative_coverage
+
+    def get_power(self):
+        """
+        A tuple with the sum of the attacks
+        :return Tuple of ints
+        :rtype int, int
+        """
+        return self.__physical_power, self.__special_power
+
+    def get_effects(self):
+        """
+        Get all the effects the pokemon causes with its attacks
+        :return: A list of effects
+        """
+        return self.__effects_coverage
+
+    def __or__(self, other):
+        """
+        Make a union between this coverage and other coverage
+        :param other: The coverage to be united
+        :return: A new coverage
+        """
+        if other:
+            pcp, ppc, npc = other.get_physical_coverage()
+            scp, psc, nsc = other.get_special_coverage()
+            effects = other.get_effects()
+
+            n_ppc = self.__positive_physical_coverage | ppc
+            n_npc = self.__negative_physical_coverage | npc
+
+            n_psc = self.__positive_special_coverage | psc
+            n_nsc = self.__negative_special_coverage | nsc
+
+            n_ec = list(set(self.__effects_coverage) | set(effects))
+
+            n_pc = n_psc | n_ppc
+            n_nc = n_nsc | n_npc
+
+            n_pp = self.__physical_power + other.__physical_power
+            n_sp = self.__special_power + other.__special_power
+
+            n_cp = len(n_pc) / 18
+
+            n_pcp = len(n_ppc) / 18
+
+            n_scp = len(n_psc) / 18
+
+            n_coverage = Coverage(
+                ppc=n_ppc, npc=n_npc, psc=n_psc, nsc=n_nsc, ec=n_ec, pc=n_pc,
+                nc=n_nc, pp=n_pp, sp=n_sp, cp=n_cp, pcp=n_pcp, scp=n_scp
+            )
+
+            return n_coverage
+        return self
+
+
+# TODO Criar classe resistance
+class Resistance:
+    def __init__(self, weaknesses):
+        self.__weaknesses = weaknesses
+        self.__type_resistance = 18 / sum(self.__weaknesses)
+        self.__greatest_weaknesses = self.__weaknesses.max_values()
+        self.__greatest_weaknesses_value = max(self.__weaknesses)
+        self.__greatest_resistances = self.__weaknesses.min_values()
+        self.__greatest_resistances_value = min(self.__weaknesses)
+
+    def get_weaknesses(self):
+        """
+        Return the weaknesses of the team
+        """
+        return self.__weaknesses
+
+    def get_greatest_weaknesses(self):
+        """
+        Return a tuple with the first value being the names of the greatest weaknesses and the second being the value
+        :return:
+        """
+        return self.__greatest_weaknesses, self.__greatest_weaknesses_value
+
+    def get_greatest_resistances(self):
+        """
+        Return a tuple with the first value being the names of the greatest resistances and the second being the value
+        :return:
+        """
+        return self.__greatest_resistances, self.__greatest_resistances_value
+
+    def get_type_resistance(self):
+        """
+        Return the resistance of the pokemon, it's a value tha represents the overall resistance against types of the
+        pokemon. The greater the value the better, a resistance of 1 means that the pokemon is neutral, smaller tha one
+        means that pokemon is very not resistant and greater than one mean that it is very resistance
+        :return:
+        """
+        return self.__type_resistance
+
+    def __add__(self, other):
+        """
+        Add the two weaknesses making just one multiplied by the other
+        :param other: The other weakness
+        :return: The new Weakness
+        """
+        if other:
+            n_weaknesses = self.__weaknesses*other.get_weaknesses()
+            return Resistance(n_weaknesses)
+        return self
+
+
+class TeamStats(StatsManipulator):
+    """
+    Class to deal with the team stats, empty at the moment, ready for expansion if needed
+    """
+    pass

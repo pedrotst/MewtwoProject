@@ -233,179 +233,140 @@ class TeamMember:
 
 
 class MemberAnalyser:
-    # TODO terminar essa porra
+    # TODO Criar outras analises
     def __init__(self, member):
         self.__member = member
-        c = Utils.teamutils.Coverage(member)
+        self.__coverage = Utils.teamutils.Coverage(member)
+        self.__resistance = Utils.teamutils.Resistance(member.get_weaknesses())
+
+    def get_coverage(self):
+        """
+        Returns the coverage of the member
+        :return:
+        """
+        return self.__coverage
+
+    def get_resistance(self):
+        """
+        Returns the resistance of the member
+        :return:
+        """
+        return self.__resistance
 
 
 class TeamAnalyser:
-    # TODO refazer
     def __init__(self, team):
         self.__team = team
+        self.__team_analysed = [MemberAnalyser(member) for member in team]
 
-        self.__type_resistance = 0
-        self.__team_weaknesses = Utils.pkmutils.PokeWeaknesses()
+        self.__team_coverage = None
 
-        self.__greatest_weaknesses = []
-        self.__greatest_weaknesses_value = 0
-        self.__greatest_resistances = []
-        self.__greatest_resistances_value = 0
-
-        self.__coverage_percentage = 0
-        self.__positive_coverage = {}
-        self.__negative_coverage = {}
-
-        self.__physical_coverage_percentage = 0
-        self.__physical_attack_power = 0
-        self.__positive_physical_coverage = {}
-        self.__negative_physical_coverage = {}
-
-        self.__special_coverage_percentage = 0
-        self.__special_attack_power = 0
-        self.__positive_special_coverage = {}
-        self.__negative_special_coverage = {}
-
-        self.__effects_coverage = []
+        self.__team_resistance = None
 
         self.__stats_rank = {}
-        self.__team_stats = None
-
-    def __calculate_team_coverage(self):
-        """
-        Calculate the team coverage, total, physical and special, each of whom is stored in a dictionary with the key
-        being the type of the coverage and the value being the multiplied value of the members coverage. It also
-        calculates the negative coverage, which is the types that are hit not very effectively
-        """
-        for member in self.__team:
-            for i in range(1, 5):
-                attack = member.get_attack(i)
-                category = attack.get_cat()
-                if category == 'Physical':
-                    dmg = attack.get_att()
-                    if dmg != 951:
-                        self.__physical_attack_power += dmg
-                    for weak in constants.WeaknessesTable()[attack.get_type()]:
-                        attack_advantage = constants.WeaknessesTable()[attack.get_type()][weak]
-                        if attack_advantage > 1:
-                            if weak in self.__positive_physical_coverage and weak in self.__positive_coverage:
-                                self.__positive_coverage[weak] *= attack_advantage
-                                self.__positive_physical_coverage[weak] *= attack_advantage
-                            else:
-                                self.__positive_coverage[weak] = attack_advantage
-                                self.__positive_physical_coverage[weak] = attack_advantage
-                        elif attack_advantage < 1:
-                            if weak in self.__negative_physical_coverage and weak in self.__negative_coverage:
-                                self.__negative_coverage[weak] *= attack_advantage
-                                self.__negative_physical_coverage[weak] *= attack_advantage
-                            else:
-                                self.__negative_coverage[weak] = attack_advantage
-                                self.__negative_physical_coverage[weak] = attack_advantage
-
-                elif category == 'Special':
-                    dmg = attack.get_att()
-                    print(dmg, attack.get_name())
-                    if dmg != 951:
-                        self.__special_attack_power += dmg
-                    for weak in constants.WeaknessesTable()[attack.get_type()]:
-                        attack_advantage = constants.WeaknessesTable()[attack.get_type()][weak]
-                        if attack_advantage > 1:
-                            if weak in self.__positive_special_coverage and weak in self.__positive_coverage:
-                                self.__positive_coverage[weak] *= attack_advantage
-                                self.__positive_special_coverage[weak] *= attack_advantage
-                            else:
-                                self.__positive_coverage[weak] = attack_advantage
-                                self.__positive_special_coverage[weak] = attack_advantage
-                        elif attack_advantage < 1:
-                            if weak in self.__negative_special_coverage and weak in self.__negative_coverage:
-                                self.__negative_coverage[weak] *= attack_advantage
-                                self.__negative_special_coverage[weak] *= attack_advantage
-                            else:
-                                self.__negative_coverage[weak] = attack_advantage
-                                self.__negative_special_coverage[weak] = attack_advantage
-
-                elif category == 'Other':
-                    self.__effects_coverage.append(attack.get_description())
+        self.__team_stats = Utils.teamutils.TeamStats()
 
     def analyse_team_coverage(self):
         """
         Analyses the team coverage
         """
-        self.__calculate_team_coverage()
-        self.__coverage_percentage = len(self.__positive_coverage) / 18
-        self.__physical_coverage_percentage = len(self.__positive_physical_coverage) / 18
-        self.__special_coverage_percentage = len(self.__positive_special_coverage) / 18
-        print('Coverage Percentage: ', self.__coverage_percentage)
-        print('Positive  Coverage: ', self.__positive_coverage)
-        print('Negative  Coverage: ', self.__negative_coverage)
-        print('Physical Coverage Percentage: ', self.__physical_coverage_percentage)
-        print('Positive Physical Coverage: ', self.__positive_physical_coverage)
-        print('Negative Physical Coverage: ', self.__negative_physical_coverage)
-        print('Positive Special Coverage: ', self.__positive_special_coverage)
-        print('Negative Special Coverage: ', self.__negative_special_coverage)
-        print('Special Coverage Percentage: ', self.__special_coverage_percentage)
-        print('Effects: ', self.__effects_coverage)
-        print('Physical total power:', self.__physical_attack_power)
-        print('Special total power:', self.__special_attack_power)
+        coverages = [member.get_coverage() for member in self.__team_analysed]
+        for cover in coverages:
+            self.__team_coverage = cover | self.__team_coverage
 
     def get_physical_coverage(self):
         """
         Return a tuple with the first value being the positive and the second being the negative physical coverage
         :return: A tuple
         """
-        return self.__positive_physical_coverage, self.__negative_physical_coverage, self.__physical_coverage_percentage
+        return self.__team_coverage.get_physical_coverage()
 
     def get_special_coverage(self):
         """
         Return a tuple with the first value being the positive and the second being the negative special coverage
         :return: A tuple
         """
-        return self.__positive_special_coverage, self.__negative_special_coverage, self.__special_coverage_percentage
+        return self.__team_coverage.get_special_coverage()
+
+    def get_coverage(self):
+        """
+        Return all in concern to the complete coverage
+        :return int, set, set
+        :rtype int, set, set
+        """
+        return self.__team_coverage.get_coverage()
+
+    def get_coverage_power(self):
+        """
+        A tuple with the sum of the attacks
+        :return Tuple of ints
+        :rtype int, int
+        """
+        return self.__team_coverage.get_power()
+
+    def get_coverage_effects(self):
+        """
+        Get all the effects the pokemon causes with its attacks
+        :return: A list of effects
+        """
+        self.__team_coverage.get_effects()
 
     def analyse_team_weaknesses(self):
         """
         Calculate the teams greatest weaknesses and resistances
         """
-        for member in self.__team:
-            if member:
-                self.__team_weaknesses *= member.get_weaknesses()
-        self.__type_resistance = 18 / sum(self.__team_weaknesses)
-        self.__greatest_weaknesses = self.__team_weaknesses.max_values()
-        self.__greatest_weaknesses_value = max(self.__team_weaknesses)
-        self.__greatest_resistances = self.__team_weaknesses.min_values()
-        self.__greatest_resistances_value = min(self.__team_weaknesses)
+        resistances = [analysed.get_resistance() for analysed in self.__team_analysed]
+        for resistance in resistances:
+            self.__team_resistance = resistance + self.__team_resistance
 
     def get_weaknesses(self):
         """
         Return the weaknesses of the team
         """
-        return self.__team_weaknesses
+        return self.__team_resistance.get_weaknesses()
 
     def get_greatest_weaknesses(self):
         """
         Return a tuple with the first value being the names of the greatest weaknesses and the second being the value
         :return:
         """
-        return self.__greatest_weaknesses, self.__greatest_weaknesses_value
+        return self.__team_resistance.get_greatest_weaknesses()
 
     def get_greatest_resistances(self):
         """
         Return a tuple with the first value being the names of the greatest resistances and the second being the value
         :return:
         """
-        return self.__greatest_resistances, self.__greatest_resistances_value
+        return self.__team_resistance.get_greatest_resistances()
+
+    def get_type_resistance(self):
+        """
+        Return the resistance of the pokemon, it's a value tha represents the overall resistance against types of the
+        pokemon. The greater the value the better, a resistance of 1 means that the pokemon is neutral, smaller tha one
+        means that pokemon is very not resistant and greater than one mean that it is very resistance
+        :return:
+        """
+        return self.__team_resistance.get_type_resistance()
 
     def analyse_stats(self):
-        stats = ['']
+        """
+        Analyses the team stats and ranks
+        :return:
+        """
         for stat in Utils.pkmconstants.Stat:
             if stat == Utils.pkmutils.Stat.NoType:
                 continue
             rank = sorted(self.__team, key=lambda member1: member1.get_stats()[stat], reverse=True)
             self.__stats_rank[str(stat)] = list(map(lambda name: name.get_name(), rank))
             values = map(lambda name: name.get_stats()[stat], rank)
-            print(sum(values))
-        print(self.__stats_rank, sep='\n')
-        print(stats)
+            self.__team_stats[stat] = sum(values)
+
+    def get_team_stats(self):
+        """
+        Returns the summed stats of the whole team
+        :return: The TeamStats
+        """
+        return self.__team_stats
 
 
 if __name__ == '__main__':
@@ -455,5 +416,6 @@ if __name__ == '__main__':
     print('Team Weaknesses: ', a.get_weaknesses())
     print('Greatest Weaknesses: ', a.get_greatest_weaknesses())
     print('Greatest Resistances: ', a.get_greatest_resistances())
+    print(a.get_type_resistance())
     a.analyse_stats()
-    MemberAnalyser(p[0])
+    print([a.get_team_stats()[i] for i in range(0, 6)])
