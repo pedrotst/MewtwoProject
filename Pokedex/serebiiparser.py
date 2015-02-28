@@ -25,8 +25,9 @@ def run(i):
     c = ImportSerebii()
     # c.download_html(i)
     c.get_local_html(file)
-    print(i)
-    c.download_poke_forms()
+    # print(i)
+    # c.donwload_mega_imgs()
+    c.get_mega_data()
     # c.parse_serebii()
     # poke = Pokemon(c.get_poke())
     # poke.create_pokemon_evo_chain_database()
@@ -305,7 +306,7 @@ class ImportSerebii:
 
     # --------------------------------------------------------------------------------
     # Download pokemon alternative forms images
-    def download_poke_forms(self):
+    def __download_poke_forms(self):
         fileTree = html.fromstring(self.__html)
         orig_name = fileTree.xpath('///table[@class = "dextab"]/tr/td[1]/table/tr/td[2]/font/b/text()')
         img_name_list = fileTree.xpath('//table[@class = "dextable"]/tr[./td/text() = "Alternate Forms"]/following-sibling::tr/td/table/tr[2]/td[@class = "pkmn"]/img/@title')
@@ -327,6 +328,121 @@ class ImportSerebii:
                 for howto in how_to:
                     f.write(howto)
 
+    def donwload_mega_imgs(self):
+        fileTree = html.fromstring(self.__html)
+        orig_name = fileTree.xpath('///table[@class = "dextab"]/tr/td[1]/table/tr/td[2]/font/b/text()')
+        mega_name = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[2]/text()")
+        image_path = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[1]/table/tr/td[1]/img/@src")
+        s_image_path = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[1]/table/tr/td[2]/img/@src")
+        # how_to = fileTree.xpath('//table[@class = "dextable"]/tr[./td/text() = "Alternate Forms"]/following-sibling::tr/td/table[2]/tr/td//text()')
+
+        # print(list(zip(img_name_list, img_path_list)))
+        # print(how_to)
+        # print(len(orig_name), len('pikachu'), ''.join(list(str(orig_name)[11:-2])))
+
+        # name comes in a funky way, this was the easiest way to bipass it
+        orig_name = ''.join(list(str(orig_name)[11:-2]))
+        #
+        # if len(img_name_list) > 0:
+        #     for name, url in zip(img_name_list,img_path_list):
+        #         self.__download_image(self.__serebiiUrl+url, os.path.join(orig_name, "Pokemon Forms"), name)
+        #
+        #     with open(os.path.join(self.__imgDir[:-1], orig_name, "Pokemon Forms", "How-to.txt"), 'w') as f:
+        #         for howto in how_to:
+        #             f.write(howto)
+        if len(mega_name)>0:
+            print(mega_name)
+            print(image_path, s_image_path)
+            self.__download_image(self.__serebiiUrl+image_path[0], os.path.join(orig_name, "Mega Evolutions"), mega_name[0])
+            self.__download_image(self.__serebiiUrl+s_image_path[0], os.path.join(orig_name, "Mega Evolutions"), mega_name[0]+'-Shiny')
+            if len(mega_name) > 1:
+                self.__download_image(self.__serebiiUrl+image_path[1], os.path.join(orig_name, "Mega Evolutions"), mega_name[1])
+                self.__download_image(self.__serebiiUrl+s_image_path[1], os.path.join(orig_name, "Mega Evolutions"), mega_name[1]+'-Shiny')
+
+    def get_mega_data(self):
+        fileTree = html.fromstring(self.__html)
+        orig_name = fileTree.xpath('///table[@class = "dextab"]/tr/td[1]/table/tr/td[2]/font/b/text()')
+        orig_name = ''.join(list(str(orig_name)[11:-2]))
+        mega_name = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[2]/text()")
+        national_dex = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[4]/table/tr/td[./b/text() = 'National']/following-sibling::td/text()")
+        # national_dex = list(map(str, national_dex))
+        national_dex = [item.lstrip('#') for item in national_dex]
+        central_dex = ''
+        coastal_dex = ''
+        mountain_dex = ''
+        hoenn_dex = ''
+        male_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Male')]/following-sibling::td/text()")
+        female_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Female')]/following-sibling::td/text()")
+        genderless = 1 if (len(male_rate) == 0 and len(female_rate) == 0) else 0
+        type1 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[1]/img/@src")
+        type1 = [item[17:-4] for item in type1]
+        type2 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[2]/img/@src")
+        type2 = [item[17:-4] for item in type2]
+        classification = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[1]/text()")
+        height_inches = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[2]/text()")
+        height_m = height_inches[1::2]
+        height_m = [height for height in str(height_m) if height != '\\' and height!= 'n' and height != 't']
+        height_m = ''.join(height_m)
+        height_inches = height_inches[::2]
+        height_inches = [height for height in str(height_inches) if height != '\\']
+        height_inches = ''.join(height_inches)
+        weight_kgs = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[3]/text()")
+        weight_lbs = weight_kgs[::2]
+        weight_kgs = weight_kgs[1::2]
+        weight_kgs = [weight for weight in str(weight_kgs) if weight != '\\' and weight!= 'n' and weight != 't']
+        weight_kgs = ''.join(weight_kgs)
+        # capture_rate =
+        # base_egg_steps =
+        # path_img
+        # path_simg =
+        # exp_growth
+        # exp_growth_class
+        # base_happiness
+        # sky_battle
+        # abilities =
+        # normal =
+        # fire =
+        # water =
+        # electric
+        # grass
+        # ice
+        # fighting
+        # poison
+        # ground
+        # flying
+        # pyschic
+        # bug
+        # rock
+        # ghost
+        # dragon
+        # dark
+        # steel
+        # fairy
+        # eggroup1
+        # eggroup2
+        # locationX
+        # locationY
+        # locationAS
+        # dexTextX
+        # dexTextY
+        # dexTextOR
+        # dexTextAS
+        # hp
+        # attack
+        # defense
+        # sp_attack
+        # sp_defense
+        # speed
+        # total
+        if len(mega_name)>0:
+            print(orig_name, mega_name, national_dex)
+            print(male_rate, female_rate, genderless)
+            print(type1, type2)
+            print(classification)
+            print(height_inches, height_m)
+            print(weight_lbs, weight_kgs)
+            print('--------------------------')
+            print()
     # Ensures that directory f exists
     def __ensure_dir(self, f):
         d = os.path.dirname(f)

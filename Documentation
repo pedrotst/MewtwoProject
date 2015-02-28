@@ -2,3 +2,17 @@ não importar usando from  ___ import *
 cammelCase
 comentar funções e classes
 
+oq temos nos teambuilder:
+    self.__physical_coverage_percentage    self.__positive_physical_coverage
+    self.__negative_physical_coverage
+    self.__special_coverage_percentage
+    self.__positive_special_coverage
+    self.__negative_special_coverage
+    self.__coverage_percentage
+    self.__positive_coverage
+    self.__negative_coverage
+    self.__effects_coverage
+    self.__physical_power
+    self.__special_power
+
+planejado

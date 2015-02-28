@@ -70,7 +70,9 @@ class AbilitiesManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS Abilities(Name TEXT PRIMARY KEY,Description TEXT)''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+            Abilities(Name TEXT PRIMARY KEY,Description TEXT)
+            ''')
             
     def insert_ability(self,name = None,description = None,ability = None):
         if ability:
@@ -116,7 +118,9 @@ class PokemonAbilitiesManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonAbilities(PokemonName TEXT PRIMARY KEY, Ability1 TEXT,Ability2 TEXT)''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+                    PokemonAbilities(PokemonName TEXT PRIMARY KEY,
+                    Ability1 TEXT,Ability2 TEXT)''')
 
     def insert_ability(self,pokemonName,name = None,description = None,ability = None):
         if ability:
@@ -216,7 +220,9 @@ class PokemonHiddenAbilitiesManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonHiddenAbilities(PokemonName TEXT PRIMARY KEY, Ability1 TEXT,Ability2 TEXT)''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+                PokemonHiddenAbilities(PokemonName TEXT PRIMARY KEY,
+                Ability1 TEXT,Ability2 TEXT)''')
 
     def insert_ability(self,pokemonName,name = None,description = None,ability = None):
         if ability:
@@ -320,7 +326,10 @@ class AttacksManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS Attacks(Name TEXT PRIMARY KEY, Type TEXT,Category TEXT, Att INTEGER , Acc INTEGER, Pp INTEGER, Effect TEXT, Description TEXT)''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+             Attacks(Name TEXT PRIMARY KEY, Type TEXT,Category TEXT,
+              Att INTEGER , Acc INTEGER, Pp INTEGER,
+               Effect TEXT, Description TEXT)''')
 
     def insert_attack(self,name = None, atkType = None, cat = None , att = None, acc = None, pp = None , effect = None, description = None,attack = None):
         if attack:
@@ -368,7 +377,9 @@ class PokeAttacksManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeAttacks(PokeName TEXT, AtkName TEXT, AtkGroup TEXT, Condition TEXT, PRIMARY KEY (PokeName, AtkName,AtkGroup))''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+            PokeAttacks(PokeName TEXT, AtkName TEXT, AtkGroup TEXT,
+            Condition TEXT, PRIMARY KEY (PokeName, AtkName,AtkGroup))''')
 
     def insert_poke_attacks(self, pokeName = None, atkName = None, atkGroup = None , condition = None):
         if not (isinstance(pokeName,str) ):
@@ -432,7 +443,9 @@ class PokeItemsManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeItems(PokeName TEXT , ItemName TEXT, ItemChance INTEGER,PRIMARY KEY(PokeName,ItemName))''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+            PokeItems(PokeName TEXT , ItemName TEXT,
+            ItemChance INTEGER,PRIMARY KEY(PokeName,ItemName))''')
 
     def insert_poke_item(self, pokeName = None, itemName = None, itemChance = None):
         if not (isinstance(pokeName,str) ):
@@ -481,7 +494,8 @@ class PokeDexNavItemsManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokeDexNavItems(PokeName TEXT , ItemName TEXT,PRIMARY KEY(PokeName,ItemName))''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+             PokeDexNavItems(PokeName TEXT , ItemName TEXT,PRIMARY KEY(PokeName,ItemName))''')
 
     def insert_poke_item(self, pokeName = None, itemName = None):
         if not (isinstance(pokeName,str) ):
@@ -526,7 +540,9 @@ class PokemonEVWorthManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonEVWorth(PokeName TEXT , Stat TEXT, Value INTEGER, PRIMARY KEY(PokeName,Stat))''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+             PokemonEVWorth(PokeName TEXT , Stat TEXT, Value INTEGER,
+              PRIMARY KEY(PokeName,Stat))''')
 
     def insert_poke_ev_worth(self,pokeName, ev = None):
         if not (isinstance(ev,EV) ):
@@ -570,7 +586,34 @@ class PokemonManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS Pokemon(PokeName TEXT PRIMARY KEY, NationalDex INTEGER, CentralDex INTEGER, CoastalDex INTEGER, MountainDex INTEGER, HoennDex INTEGER, MaleRate REAL, FemaleRate Real, Genderless INTEGER, Type1 TEXT, Type2 TEXT, Classification TEXT, HeightMeters REAL, HeightInches INTEGER, WeightKg REAL, WeightLbs REAL, ORASCr INTEGER, XYCr INTEGER, BaseEggSteps INTEGER, PathImg TEXT, PathSImg TEXT, ExpGrowth INTEGER, ExpGrowthClassification TEXT, BaseHappiness INTEGER, SkyBattle TEXT, Normal REAL, Fire REAL, Water REAL, Electric REAL, Grass REAL, Ice REAL, Fighting REAL, Poison REAL, Ground REAL, Flying REAL, Psychic REAL, Bug REAL, Rock REAL, Ghost REAL, Dragon REAL, Dark REAL, Steel REAL, Fairy REAL, EggGroup1 TEXT, EggGroup2 TEXT, LocationX TEXT, LocationY TEXT, LocationOR TEXT, LocationAS TEXT, DexTextX TEXT, DexTextY TEXT , DexTextOR TEXT, DexTextAS TEXT, Hp INTEGER, Attack INTEGER, Defense INTEGER, SpAttack INTEGER, SpDefense INTEGER, Speed INTEGER, Total INTEGER)''')
+            #THREE HOURS ORGANIZING THIS SHIT!
+            #DO
+            #NOT
+            #MESS!
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+            Pokemon(             PokeName TEXT PRIMARY KEY,  NationalDex   INTEGER,
+            CentralDex     INTEGER,    CoastalDex   INTEGER, MountainDex   INTEGER,
+            HoennDex       INTEGER,    MaleRate     REAL,    FemaleRate    Real,
+            Genderless     INTEGER,    Type1        TEXT,    Type2         TEXT,
+            Classification TEXT,       HeightMeters REAL,    HeightInches  INTEGER,
+            WeightKg       REAL,       WeightLbs    REAL,    ORASCr        INTEGER,
+            XYCr           INTEGER     BaseEggSteps INTEGER, PathImg       TEXT,
+            PathSImg       TEXT,       ExpGrowth    INTEGER, ExpGrowthClassification TEXT,
+            BaseHappiness  INTEGER,    SkyBattle    TEXT,    Normal         REAL,
+            Fire           REAL,       Water        REAL,    Electric       REAL,
+            Grass          REAL,       Ice          REAL,    Fighting       REAL,
+            Poison         REAL,       Ground       REAL,    Flying         REAL,
+            Psychic        REAL,       Bug          REAL,    Rock           REAL,
+            Ghost          REAL,       Dragon       REAL,    Dark           REAL,
+            Steel          REAL,       Fairy        REAL,    EggGroup1      TEXT,
+            EggGroup2      TEXT,       LocationX    TEXT,    LocationY      TEXT,
+            LocationOR     TEXT,       LocationAS   TEXT,    DexTextX       TEXT,
+            DexTextY       TEXT ,      DexTextOR    TEXT,    DexTextAS      TEXT,
+            Hp             INTEGER,    Attack       INTEGER, Defense        INTEGER,
+            SpAttack       INTEGER,    SpDefense    INTEGER, Speed          INTEGER,
+            Total          INTEGER
+            )''')
+            #isn't it pretty now? <3
 
     def insert_pokemon(self, name,pokemon):
         if not (isinstance(pokemon,pkm.Pokemon) ):
@@ -734,7 +777,9 @@ class PokemonEvoChainManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS PokemonEvoChain(PokeName TEXT ,EvoNode TEXT, PRIMARY KEY(PokeName,EvoNode))''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+             PokemonEvoChain(PokeName TEXT ,EvoNode TEXT,
+             PRIMARY KEY(PokeName,EvoNode))''')
 
     def insert_evo_node(self,pokeName, evoNode):
         if not (isinstance(pokeName,str) ):
@@ -816,7 +861,8 @@ class ItemCategoryManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('''CREATE TABLE  IF NOT EXISTS ItemCategory(ItemName TEXT PRIMARY KEY, Category TEXT)''')
+            cursor.execute('''CREATE TABLE  IF NOT EXISTS
+            ItemCategory(ItemName TEXT PRIMARY KEY, Category TEXT)''')
 
     def insertItem(self, itemName = None, category = None):
         if not (isinstance(itemName,str) ):

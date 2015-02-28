@@ -14,34 +14,23 @@ Mr Mime - Nome Errado no DB------------------------------------CORRECTED
 TO-DO
 Poke Evo Chain - Elaborte way to identify
 MEGA-EVOLUTIONS
-POKEMON FORMS - 27 Pokemons(bulbapedia)
-Pikachu
-Pichu
-Unown
-Castform
-Deoxys
-Burmy and Wormadam
-Cherrim
-Shellos and Gastrodon
-Rotom
-Giratina
-Shaymin
-Arceus
-Basculin
-Darmanitan
-Deerling and Sawsbuck
-Forces of Nature(Thandurus, etc)
-Kyurem
-Keldeo
-Meloetta
-Genesect
-Vivillion
-Flabébé, Floete and Florges
-Furfrou
-Aegislash
-Pumpkaboo and Gourgeist
-Xerneas
-Hoopa
+acknowledgments:
+    status
+        baseado no melhor status do time
+    melhor resistencia
+        qual a resistencia do time
+    resistencia -
+    cada fraqueza que for zero
+    cobertura (cov) perfeita
+    uma medalha pra cada tipo \/ medalha de %
+        uma que substitui pra melhor medalha
+    estrela do time em determinado status
+    pegar todos efeitos que podem ser causados
+    (serebii )
+
+
+
+bot para construir a curva normal de status dos pokemons mais utilizados
 
 TODO Get abilities and attacks secondary effects
 
@@ -58,6 +47,10 @@ buzz
             https://www.pokebattle.com/dex/pokemon/deoxys/
             http://strategywiki.org/
             atacar pelo strategy
+            entrar no attack dex e pegar o secundary effect + speed priority
+                http://serebii.net/attackdex-xy/acrobatics.shtml
+        dizer quais as estrategias sao as opcoes
+
     buzz
         montar o time
             avaliar e indices (qual a fraqueza do time e essas coisas)
