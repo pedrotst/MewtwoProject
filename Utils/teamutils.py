@@ -174,7 +174,7 @@ class Stats(StatsManipulator):
     def __init__(self, lvl, base_stats, iv, ev, nature):
         super().__init__()
         assert isinstance(lvl, int) and isinstance(base_stats, pkmutils.PokeStats) and isinstance(iv, IVs) \
-               and isinstance(ev, EVs) and isinstance(nature, constants.Nature)
+                and isinstance(ev, EVs) and isinstance(nature, constants.Nature)
         self.__lvl = lvl
         self.__base_stats = base_stats
         self.__iv = iv
@@ -375,7 +375,6 @@ class Coverage:
         return self
 
 
-# TODO Criar classe resistance
 class Resistance:
     def __init__(self, weaknesses):
         self.__weaknesses = weaknesses
@@ -421,7 +420,7 @@ class Resistance:
         :return: The new Weakness
         """
         if other:
-            n_weaknesses = self.__weaknesses*other.get_weaknesses()
+            n_weaknesses = self.__weaknesses * other.get_weaknesses()
             return Resistance(n_weaknesses)
         return self
 
