@@ -60,7 +60,16 @@ class DatabaseManager(Manager):
                 pokeDexNavItems,
                 pokeEvWorth,
                 pokeEvoChain)
-                
+
+
+    def find_pokemon_name(self, text):
+        """
+        Try to find in the pokemon Database a pokemon with the name given, the name don't need to be complete
+        :param text: The text to look for
+        :return: The pokemon name
+        """
+        return self.__pkmMan.find_pokemon_name(text)
+
 
 
 #controla a tabela Abilities que contem todas habilidades que existem e sua descrição
@@ -769,8 +778,19 @@ class PokemonManager(Manager):
             for row in conn.cursor().execute('SELECT * FROM Pokemon'):
                 print(row)
 
-    class DescriptionError(Exception):
-        pass
+    def find_pokemon_name(self, text):
+        """
+        Try to find in the pokemon Database a pokemon with the name given, the name don't need to be complete
+        :param text: The text to look for
+        :return: The pokemons names
+        """
+        search = (text+'%',)
+        self._certify_connection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT PokeName FROM Pokemon WHERE PokeName LIKE ?', search)
+            return [name[0] for name in cursor.fetchall()]
+
 
 class PokemonEvoChainManager(Manager):
     def create_table_pokemon_evo_chain(self):
