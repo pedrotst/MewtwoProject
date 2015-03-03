@@ -870,7 +870,7 @@ class PokemonManager(Manager):
         self._certify_connection()
         with self._connection as conn:
             cursor = conn.cursor()
-            cursor.execute('SELECT PokeName FROM Pokemon WHERE PokeName LIKE ?', search)
+            cursor.execute('SELECT PokeName FROM Pokemon WHERE PokeName LIKE ? ORDER BY NationalDex', search)
             return [name[0] for name in cursor.fetchall()]
 
 

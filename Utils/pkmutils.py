@@ -128,6 +128,14 @@ class PokeGender:
     def get_female_rate(self):
         return self.__female
 
+    def get_most_common(self):
+        if self.is_genderless():
+            return 'G'
+        if self.__male >= self.__female:
+            return 'M'
+        else:
+            return 'F'
+
     def is_genderless(self):
         return self.__genderless
 
@@ -320,7 +328,7 @@ class PokeHeight:
 """
         
 class PokeWeight:
-    def __init__(self,kg='0kg',lbs='0lbs'):
+    def __init__(self, kg='0kg', lbs='0lbs'):
         if isinstance(kg,str) and isinstance(lbs,str):
             self.__kg = kg
             self.__kgValue = float(kg.strip('kg'))

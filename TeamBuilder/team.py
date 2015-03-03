@@ -68,7 +68,10 @@ class TeamMember:
         # Retrieve important data
         self.__name = pkm.get_name()
         self.__nickname = ''
+        self.__img = pkm.get_image_path()
         self.__lvl = 100
+        self.__gender = pkm.get_gender().get_most_common()
+        self.__is_shinny = False
         self.__base_stats = pkm.get_stats()
         self.__types = pkm.get_types()
         self.__abilities_possible = pkm.get_abilities()
@@ -109,6 +112,13 @@ class TeamMember:
         :return:
         """
         self.__nickname = n_nickname
+
+    def get_img(self):
+        """
+        Get the paths of the imgs
+        :return: The PokeImg class
+        """
+        return self.__img
 
     def get_lvl(self):
         """
@@ -230,6 +240,36 @@ class TeamMember:
         :return: The pokemon Stats
         """
         return self.__stats
+
+    def get_gender(self):
+        """
+        Return the pokemon gender
+        :return:
+        """
+        return self.__gender
+
+    def set_gender(self, poke_gender):
+        """
+        Set the pokemon gender
+        :param poke_gender:
+        :return:
+        """
+        self.__gender = poke_gender
+
+    def is_shinny(self):
+        """
+        Return if the pokemon is shinny or not
+        :return: A bool
+        """
+        return self.__is_shinny
+
+    def set_shinny(self, shinny):
+        """
+        Set if the pokemon is shinny
+        :param shinny:
+        :return:
+        """
+        self.__is_shinny = shinny
 
 
 class MemberAnalyser:
