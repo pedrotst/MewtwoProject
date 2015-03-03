@@ -134,6 +134,8 @@ class PokeGender:
 """ Stats Class for Database--------------------------------------------------
 """
 class PokeStats:
+    #this way one must to call PokeStatus(None, hp, ...)
+    #refactor stats argument to the end of the function
     def __init__(self,stats = None ,hp = None ,
                  attack = None ,defense = None ,
                  spAttack = None ,spDefense = None ,

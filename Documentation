@@ -13,6 +13,13 @@ oq temos nos teambuilder:
     self.__negative_coverage
     self.__effects_coverage
     self.__physical_power
-    self.__special_power
-
+    self.__special_power 
+    self.__weaknesses = weaknesses
+    self.__type_resistance 
+    self.__greatest_weaknesses 
+    self.__greatest_weaknesses_value 
+    self.__greatest_resistances 
+    self.__greatest_resistances_value 
+rank = sorted(self.__team, key=lambda member1: member1.get_stats()[stat], reverse=True)
+values = map(lambda name: name.get_stats()[stat], rank)
 planejado

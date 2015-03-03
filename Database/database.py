@@ -725,7 +725,89 @@ class PokemonManager(Manager):
                     " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
                     "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
                     ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
-             
+
+    def insert_pokemon_raw(self,
+            name, nationalDex, centralDex,
+            coastalDex, mountainDex,hoennDex,
+            maleRate,femaleRate,genderless,
+            type1,type2,classification,
+            heightMeters, heightInches, weightKg,
+            weightLbs,oRASCr,yXCr,
+            baseEggSteps,pathImg,pathSImg,expGrowth,
+            expGrowthClassification,baseHappiness,
+            skyBattle,normal,fire,
+            water,electric,grass,
+            ice,fighting,poison,
+            ground,flying,psychic ,
+            bug ,rock ,ghost ,
+            dragon ,dark ,steel ,
+            fairy ,eggGroup1,eggGroup2,
+            locationX,locationY,locationOR,
+            locationAS,dexTextX,dexTextY,
+            dexTextOR,dexTextAS,hp,
+            attack,defense,spAttack,
+            spDefense,speed,total):
+
+        pkmData = (name, nationalDex, centralDex,
+                   coastalDex, mountainDex,hoennDex,
+                   maleRate,femaleRate,genderless,
+                   type1,type2,classification,
+                   heightMeters, heightInches, weightKg,
+                   weightLbs,oRASCr,yXCr,
+                   baseEggSteps,pathImg,pathSImg,expGrowth,
+                   expGrowthClassification,baseHappiness,
+                   skyBattle,normal,fire,
+                   water,electric,grass,
+                   ice,fighting,poison,
+                   ground,flying,psychic ,
+                   bug ,rock ,ghost ,
+                   dragon ,dark ,steel ,
+                   fairy ,eggGroup1,eggGroup2,
+                   locationX,locationY,locationOR,
+                   locationAS,dexTextX,dexTextY,
+                   dexTextOR,dexTextAS,hp,
+                   attack,defense,spAttack,
+                   spDefense,speed,total)
+
+        self._certify_connection()
+
+        with self._connection as conn:
+            cursor = conn.cursor()
+            try:
+                cursor.execute("INSERT INTO Pokemon VALUES "
+                    "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
+                    "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+                    ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
+            except sqlite3.OperationalError as error:
+                self.create_table_pokemon()
+                cursor.execute("INSERT INTO Pokemon VALUES"
+                    " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"
+                    "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+                    ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
+            except sqlite3.IntegrityError as error:
+                cursor.execute("DELETE FROM Pokemon WHERE PokeName = ?", (name,))
+                self.insert_pokemon_raw(name, nationalDex, centralDex,
+                   coastalDex, mountainDex,hoennDex,
+                   maleRate,femaleRate,genderless,
+                   type1,type2,classification,
+                   heightMeters, heightInches, weightKg,
+                   weightLbs,oRASCr,yXCr,
+                   baseEggSteps,pathImg,pathSImg,expGrowth,
+                   expGrowthClassification,baseHappiness,
+                   skyBattle,normal,fire,
+                   water,electric,grass,
+                   ice,fighting,poison,
+                   ground,flying,psychic ,
+                   bug ,rock ,ghost ,
+                   dragon ,dark ,steel ,
+                   fairy ,eggGroup1,eggGroup2,
+                   locationX,locationY,locationOR,
+                   locationAS,dexTextX,dexTextY,
+                   dexTextOR,dexTextAS,hp,
+                   attack,defense,spAttack,
+                   spDefense,speed,total)
+
+
     def __correct_location(self):
         self._certify_connection()
         with self._connection as conn:

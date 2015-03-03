@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import requests
 
 from pokemon import *
-
-
+from database import PokemonManager
+from pkmutils import PokeHeight, PokeWeight
 
 
 def run_test(xi=1, xf=721):
@@ -364,85 +364,160 @@ class ImportSerebii:
         orig_name = fileTree.xpath('///table[@class = "dextab"]/tr/td[1]/table/tr/td[2]/font/b/text()')
         orig_name = ''.join(list(str(orig_name)[11:-2]))
         mega_name = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[2]/text()")
-        national_dex = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[4]/table/tr/td[./b/text() = 'National']/following-sibling::td/text()")
-        # national_dex = list(map(str, national_dex))
-        national_dex = [item.lstrip('#') for item in national_dex]
-        central_dex = ''
-        coastal_dex = ''
-        mountain_dex = ''
-        hoenn_dex = ''
-        male_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Male')]/following-sibling::td/text()")
-        female_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Female')]/following-sibling::td/text()")
-        genderless = 1 if (len(male_rate) == 0 and len(female_rate) == 0) else 0
-        type1 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[1]/img/@src")
-        type1 = [item[17:-4] for item in type1]
-        type2 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[2]/img/@src")
-        type2 = [item[17:-4] for item in type2]
-        classification = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[1]/text()")
-        height_inches = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[2]/text()")
-        height_m = height_inches[1::2]
-        height_m = [height for height in str(height_m) if height != '\\' and height!= 'n' and height != 't']
-        height_m = ''.join(height_m)
-        height_inches = height_inches[::2]
-        height_inches = [height for height in str(height_inches) if height != '\\']
-        height_inches = ''.join(height_inches)
-        weight_kgs = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[3]/text()")
-        weight_lbs = weight_kgs[::2]
-        weight_kgs = weight_kgs[1::2]
-        weight_kgs = [weight for weight in str(weight_kgs) if weight != '\\' and weight!= 'n' and weight != 't']
-        weight_kgs = ''.join(weight_kgs)
-        # capture_rate =
-        # base_egg_steps =
-        # path_img
-        # path_simg =
-        # exp_growth
-        # exp_growth_class
-        # base_happiness
-        # sky_battle
-        # abilities =
-        # normal =
-        # fire =
-        # water =
-        # electric
-        # grass
-        # ice
-        # fighting
-        # poison
-        # ground
-        # flying
-        # pyschic
-        # bug
-        # rock
-        # ghost
-        # dragon
-        # dark
-        # steel
-        # fairy
-        # eggroup1
-        # eggroup2
-        # locationX
-        # locationY
-        # locationAS
-        # dexTextX
-        # dexTextY
-        # dexTextOR
-        # dexTextAS
-        # hp
-        # attack
-        # defense
-        # sp_attack
-        # sp_defense
-        # speed
-        # total
-        if len(mega_name)>0:
-            print(orig_name, mega_name, national_dex)
-            print(male_rate, female_rate, genderless)
-            print(type1, type2)
-            print(classification)
-            print(height_inches, height_m)
-            print(weight_lbs, weight_kgs)
-            print('--------------------------')
-            print()
+        mega_name = [str(name) for name in mega_name]
+        if(len(mega_name) > 0):
+            national_dex = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[4]/table/tr/td[./b/text() = 'National']/following-sibling::td/text()")
+
+            national_dex = [item.lstrip('#') for item in national_dex]
+            central_dex = [0 for _ in mega_name]
+            coastal_dex = [0 for _ in mega_name]
+            mountain_dex = [0 for _ in mega_name]
+            hoenn_dex = [0 for _ in mega_name]
+            male_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Male')]/following-sibling::td/text()")
+            female_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[5]/table/tr/td[starts-with(./text(), 'Female')]/following-sibling::td/text()")
+            if(len(male_rate)< 1):
+                male_rate = ['0%'] * len(mega_name)
+            if(len(female_rate)< 1):
+                female_rate = ['0%'] * len(mega_name)
+            genderless = 1 if (len(male_rate) == 0 and len(female_rate) == 0) else 0
+            genderless = [genderless] * len(mega_name)
+            type1 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[1]/img/@src")
+            type1 = [item[17:-4] for item in type1]
+            type2 = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[3]/td[6]/a[2]/img/@src")
+            if(len(type2) < 1):
+                type2 = [''] * len(mega_name)
+            elif(len(type2) < len(mega_name)):
+                type2 = [item[17:-4] for item in type2] + ['']
+            else:
+                type2 = [item[17:-4] for item in type2]
+            classification = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[1]/text()")
+            height_inches = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[2]/text()")
+            height_m = height_inches[1::2]
+            height_m = [height.replace('\n', '').replace('\t', '') for height in height_m]
+
+            height_inches = height_inches[::2]
+            height_inches = [height.strip('\n').strip('\t').strip('\\') for height in height_inches]
+            # height_inches = [height[0] + height[2:] for height in height_inches]
+            weight_kgs = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[3]/text()")
+            weight_lbs = weight_kgs[::2]
+            weight_kgs = weight_kgs[1::2]
+            weight_kgs = [weight.strip('\n').strip('\t') for weight in weight_kgs]
+            capture_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[4]/text()")
+            base_egg_steps = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[5]/text()")
+            base_egg_steps = [step.replace(',', '') for step in base_egg_steps]
+            path_img = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name) for name in mega_name]
+            path_simg = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name+'-Shiny') for name in mega_name]
+            exp_growth = [0] * len(mega_name)
+            exp_growth_class = [''] * len(mega_name)
+            base_happiness = [0] * len(mega_name)
+            sky_battle = [''] * len(mega_name)
+            tot_abilities = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[1]/tr[2]/td/descendant::text()")
+            abilities = [''.join(tot_abilities[1:3])]
+            if(len(tot_abilities) > 3):
+                abilities = abilities + [''.join(tot_abilities[4:])]
+            normal = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[1]/text()")
+            normal = [stat.lstrip('*') for stat in normal]
+            normal = [float(weak) for weak in normal]
+            fire = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[2]/text()")
+            fire = [stat.lstrip('*') for stat in fire]
+            fire =  [float(weak) for weak in fire]
+            water = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[3]/text()")
+            water = [stat.lstrip('*') for stat in water]
+            water =  [float(weak) for weak in water]
+            electric = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[4]/text()")
+            electric = [stat.lstrip('*') for stat in electric]
+            electric = [float(weak) for weak in (electric)]
+            grass = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[5]/text()")
+            grass = [stat.lstrip('*') for stat in grass]
+            grass =  [float(weak) for weak in (grass)]
+            ice = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[6]/text()")
+            ice = [stat.lstrip('*') for stat in ice]
+            ice =  [float(weak) for weak in (ice)]
+            fighting = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[7]/text()")
+            fighting = [stat.lstrip('*') for stat in fighting]
+            fighting = [float(weak) for weak in (fighting)]
+            poison = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[8]/text()")
+            poison = [stat.lstrip('*') for stat in poison]
+            poison = [float(weak) for weak in (poison)]
+            ground = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[9]/text()")
+            ground = [stat.lstrip('*') for stat in ground]
+            ground = [float(weak) for weak in (ground)]
+            flying = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[10]/text()")
+            flying = [stat.lstrip('*') for stat in flying]
+            flying = [float(weak) for weak in (flying)]
+            psychic = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[11]/text()")
+            psychic = [stat.lstrip('*') for stat in psychic]
+            psychic = [float(weak) for weak in (psychic)]
+            bug = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[12]/text()")
+            bug = [stat.lstrip('*') for stat in bug]
+            bug =  [float(weak) for weak in (bug)]
+            rock = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[13]/text()")
+            rock = [stat.lstrip('*') for stat in rock]
+            rock = [float(weak) for weak in (rock)]
+            ghost = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[14]/text()")
+            ghost = [stat.lstrip('*') for stat in ghost]
+            ghost = [float(weak) for weak in (ghost)]
+            dragon = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[15]/text()")
+            dragon = [stat.lstrip('*') for stat in dragon]
+            dragon = [float(weak) for weak in (dragon)]
+            dark = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[16]/text()")
+            dark = [stat.lstrip('*') for stat in dark]
+            dark = [float(weak) for weak in (dark)]
+            steel = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[17]/text()")
+            steel = [stat.lstrip('*') for stat in steel]
+            steel = [float(weak) for weak in (steel)]
+            fairy = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[18]/text()")
+            fairy = [stat.lstrip('*') for stat in fairy]
+            fairy = [float(weak) for weak in (fairy)]
+            eggroup1 = [''] * len(mega_name)
+            eggroup2 = [''] * len(mega_name)
+            locationX = [''] * len(mega_name)
+            locationY = [''] * len(mega_name)
+            locationAS = [''] * len(mega_name)
+            dexTextX = [''] * len(mega_name)
+            dexTextY = [''] * len(mega_name)
+            dexTextOR = [''] * len(mega_name)
+            dexTextAS = [''] * len(mega_name)
+            hp = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[2]/text()")
+            attack = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[3]/text()")
+            defense = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[4]/text()")
+            sp_attack = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[5]/text()")
+            sp_defense = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[6]/text()")
+            speed = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[7]/text()")
+            total = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[3]/tr[3]/td[1]/text()")
+            total = [tot[-3:] for tot in total]
+            for i in range(len(mega_name)):
+                print(mega_name[i], national_dex[i])
+                print(male_rate[i])
+                print(female_rate[i], genderless[i])
+                print(type1[i], type2[i])
+                print(classification[i])
+                heights = PokeHeight(height_m[i], height_inches[i])
+                weights = PokeWeight(weight_kgs[i], weight_lbs[i])
+
+                print(heights.get_value_in_inches(), heights.get_value_in_meters())
+                print(weights.get_value_in_kg(), weights.get_value_in_lbs())
+                print(capture_rate[i], base_egg_steps[i])
+                print(abilities[i])
+                print(normal[i], fire[i], water[i], electric[i], grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i], bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i])
+
+                print(hp[i], attack[i], defense[i], sp_attack[i], sp_defense[i], speed[i], total[i])
+
+                db = PokemonManager()
+
+                db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
+                    coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
+                    float(female_rate[i][:-1]), genderless[i], type1[i], type2[i], classification[i],
+                    heights.get_value_in_meters(), heights.get_value_in_inches(), weights.get_value_in_kg(), weights.get_value_in_lbs(), '', '',
+                    int(base_egg_steps[i]), path_img[i], path_simg[i], exp_growth[i], exp_growth_class[i],
+                    base_happiness[i], sky_battle[i], normal[i], fire[i], water[i], electric[i],
+                    grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i],
+                    bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
+                    '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
+                    sp_attack[i], sp_defense[i], speed[i], total[i])
+                print('--------------------------')
+                print()
+
     # Ensures that directory f exists
     def __ensure_dir(self, f):
         d = os.path.dirname(f)
