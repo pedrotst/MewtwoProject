@@ -415,6 +415,7 @@ class ImportSerebii:
             abilities = [''.join(tot_abilities[1:3])]
             if(len(tot_abilities) > 3):
                 abilities = abilities + [''.join(tot_abilities[4:])]
+            abilities = [ability.split(':') for ability in abilities]
             normal = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/following-sibling::table[2]/tr[3]/td[1]/text()")
             normal = [stat.lstrip('*') for stat in normal]
             normal = [float(weak) for weak in normal]
@@ -503,18 +504,19 @@ class ImportSerebii:
 
                 print(hp[i], attack[i], defense[i], sp_attack[i], sp_defense[i], speed[i], total[i])
 
-                db = PokemonManager()
+                db = AbilitiesManager()
 
-                db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
-                    coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
-                    float(female_rate[i][:-1]), genderless[i], type1[i], type2[i], classification[i],
-                    heights.get_value_in_meters(), heights.get_value_in_inches(), weights.get_value_in_kg(), weights.get_value_in_lbs(), '', '',
-                    int(base_egg_steps[i]), path_img[i], path_simg[i], exp_growth[i], exp_growth_class[i],
-                    base_happiness[i], sky_battle[i], normal[i], fire[i], water[i], electric[i],
-                    grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i],
-                    bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
-                    '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
-                    sp_attack[i], sp_defense[i], speed[i], total[i])
+                # db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
+                #     coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
+                #     float(female_rate[i][:-1]), genderless[i], type1[i], type2[i], classification[i],
+                #     heights.get_value_in_meters(), heights.get_value_in_inches(), weights.get_value_in_kg(), weights.get_value_in_lbs(), '', '',
+                #     int(base_egg_steps[i]), path_img[i], path_simg[i], exp_growth[i], exp_growth_class[i],
+                #     base_happiness[i], sky_battle[i], normal[i], fire[i], water[i], electric[i],
+                #     grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i],
+                #     bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
+                #     '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
+                #     sp_attack[i], sp_defense[i], speed[i], total[i])
+                db.insert_ability(abilities[i][0], abilities[i][1])
                 print('--------------------------')
                 print()
 

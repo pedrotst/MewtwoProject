@@ -98,6 +98,8 @@ class AbilitiesManager(Manager):
             except sqlite3.OperationalError as error:
                 self.create_table_abilities()
                 cursor.execute("INSERT INTO Abilities VALUES (?,?)",abilityData)
+            except sqlite3.IntegrityError:
+                pass
 
     def get_ability_by_name(self,name):
         self._certify_connection()
