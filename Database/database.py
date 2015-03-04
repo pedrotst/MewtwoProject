@@ -788,6 +788,7 @@ class PokemonManager(Manager):
                     ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",pkmData)
             except sqlite3.IntegrityError as error:
                 cursor.execute("DELETE FROM Pokemon WHERE PokeName = ?", (name,))
+                print("Reinserting "+name)
                 self.insert_pokemon_raw(name, nationalDex, centralDex,
                    coastalDex, mountainDex,hoennDex,
                    maleRate,femaleRate,genderless,

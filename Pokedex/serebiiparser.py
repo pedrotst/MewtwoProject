@@ -405,8 +405,8 @@ class ImportSerebii:
             capture_rate = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[4]/text()")
             base_egg_steps = fileTree.xpath("//table[@class='dextable' and starts-with(./tr[1]/td/font/b/text(), 'Mega Evolution')]/tr[5]/td[5]/text()")
             base_egg_steps = [step.replace(',', '') for step in base_egg_steps]
-            path_img = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name) for name in mega_name]
-            path_simg = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name+'-Shiny') for name in mega_name]
+            path_img = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name+'.png') for name in mega_name]
+            path_simg = [os.path.join('PokeData', orig_name, 'Mega Evolutions', name+'-Shiny.png') for name in mega_name]
             exp_growth = [0] * len(mega_name)
             exp_growth_class = [''] * len(mega_name)
             base_happiness = [0] * len(mega_name)
@@ -504,19 +504,19 @@ class ImportSerebii:
 
                 print(hp[i], attack[i], defense[i], sp_attack[i], sp_defense[i], speed[i], total[i])
 
-                db = PokemonAbilitiesManager()
+                db = PokemonManager()
 
-                # db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
-                #     coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
-                #     float(female_rate[i][:-1]), genderless[i], type1[i], type2[i], classification[i],
-                #     heights.get_value_in_meters(), heights.get_value_in_inches(), weights.get_value_in_kg(), weights.get_value_in_lbs(), '', '',
-                #     int(base_egg_steps[i]), path_img[i], path_simg[i], exp_growth[i], exp_growth_class[i],
-                #     base_happiness[i], sky_battle[i], normal[i], fire[i], water[i], electric[i],
-                #     grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i],
-                #     bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
-                #     '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
-                #     sp_attack[i], sp_defense[i], speed[i], total[i])
-                db.insert_ability(mega_name[i], abilities[i][0], abilities[i][1])
+                db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
+                    coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
+                    float(female_rate[i][:-1]), genderless[i], type1[i], type2[i], classification[i],
+                    heights.get_value_in_meters(), heights.get_value_in_inches(), weights.get_value_in_kg(), weights.get_value_in_lbs(), '', '',
+                    int(base_egg_steps[i]), path_img[i], path_simg[i], exp_growth[i], exp_growth_class[i],
+                    base_happiness[i], sky_battle[i], normal[i], fire[i], water[i], electric[i],
+                    grass[i], ice[i], fighting[i], poison[i], ground[i], flying[i], psychic[i],
+                    bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
+                    '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
+                    sp_attack[i], sp_defense[i], speed[i], total[i])
+                # db.insert_ability(mega_name[i], abilities[i][0], abilities[i][1])
                 print('--------------------------')
                 print()
 
