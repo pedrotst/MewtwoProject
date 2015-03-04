@@ -504,7 +504,7 @@ class ImportSerebii:
 
                 print(hp[i], attack[i], defense[i], sp_attack[i], sp_defense[i], speed[i], total[i])
 
-                db = AbilitiesManager()
+                db = PokemonAbilitiesManager()
 
                 # db.insert_pokemon_raw(mega_name[i], national_dex[i], central_dex[i],
                 #     coastal_dex[i], mountain_dex[i], hoenn_dex[i], float(male_rate[i][:-1]),
@@ -516,7 +516,7 @@ class ImportSerebii:
                 #     bug[i], rock[i], ghost[i], dragon[i], dark[i], steel[i], fairy[i], '',
                 #     '', '', '', '', '', '', '', '', '', hp[i], attack[i], defense[i],
                 #     sp_attack[i], sp_defense[i], speed[i], total[i])
-                db.insert_ability(abilities[i][0], abilities[i][1])
+                db.insert_ability(mega_name[i], abilities[i][0], abilities[i][1])
                 print('--------------------------')
                 print()
 
