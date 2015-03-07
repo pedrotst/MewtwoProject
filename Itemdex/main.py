@@ -17,7 +17,7 @@ from kivy.core.window import Window
 import itensdb
 import os
 
-class MySearchButtons(BoxLayout):
+class MySearchButtons(GridLayout):
     db = itensdb.ItemManager()
     ag_drop = DropDown()
     hr_drop = DropDown()
@@ -50,7 +50,20 @@ class MySearchButtons(BoxLayout):
     locations = ListProperty(['']*10)
     shop = ListProperty(['']*9)
     pick_up = ListProperty(['']*6)
+    # flav_versions =
 
+    def update_effect_box(self):
+        self.ids.effect_box.clear_widgets()
+        if self.effect != '':
+            lab = (Label(text = self.effect, font_size = 14, text_size = (self.width, None), size_hint_y = None))
+            # calculating height here
+            before = lab._label.render()
+            lab.text_size=(self.width, None)
+            after = lab._label.render()
+            lab.height = (after[1]/before[1])*before[1] # ammount of rows * single row height
+            # end
+            self.ids.effect_box.add_widget(lab)
+            self.ids.effect_box.height = lab.height
 
     def update_flav_box(self):
         self.ids.flav_box.clear_widgets()
@@ -160,6 +173,7 @@ class MySearchButtons(BoxLayout):
             self.ids.item_img.source = os.path.join('Itens', 'Sprites', 'mewtwo.gif')
 
         # self.garbage_colect()
+        self.update_effect_box()
         self.update_flav_box()
         self.update_locations()
         self.update_shop()

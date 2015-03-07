@@ -2,7 +2,8 @@
 #:import os os
 
 <MySearchButtons>:
-    orientation: 'vertical'
+    cols: 1
+#    orientation: 'vertical'
     GridLayout:
         cols: 3
         orientation: 'horizontal'
@@ -90,10 +91,11 @@
                     height: 50
                     width: 50
                     source: os.path.join('Itens', 'Sprites', 'mewtwo.gif')
-                    allow_stretch: False
+#                    allow_stretch: False
                     #
 #
-            BoxLayout:
+            GridLayout:
+                cols: 1
                 id: big_box_id
                 canvas.after:
                 orientation: 'vertical'
@@ -133,7 +135,7 @@
                     orientation: 'horizontal'
                     Label:
                         text: 'Japanese Name:\n' + root.jap_name
-#                        font_name: 'TakaoPMincho.ttf'
+                        font_name: 'TakaoPMincho.ttf'
                         text_size: self.width, None
                         font_size: 14
                     Label:
@@ -242,6 +244,22 @@
                         source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[16] else os.path.join('Itens', 'Sprites', 'blank.tiff')
                     Image:
                         source: os.path.join('Itens', 'Sprites', 'dpitem.tiff')if root.versions_avail[17] else os.path.join('Itens', 'Sprites', 'blank.tiff')
+
+                BoxLayout:
+                    size_hint: 1, None
+                    height: version_id.font_size
+                    Label:
+                        id: version_id
+                        text: 'Effect'
+                        font_size: 14
+                        color: 1,0,0,1
+
+                BoxLayout:
+                    id: effect_box
+                    orientation: 'vertical'
+                    size_hint: 1, None
+                    height: root.get_children_height(self)
+
 
                 BoxLayout:
                     size_hint: 1, None

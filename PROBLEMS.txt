@@ -13,7 +13,6 @@ Mr Mime - Nome Errado no DB------------------------------------CORRECTED
 
 TO-DO
 Poke Evo Chain - Elaborte way to identify
-MEGA-EVOLUTIONS
 acknowledgments:
     status
         baseado no melhor status do time
@@ -34,12 +33,6 @@ bot para construir a curva normal de status dos pokemons mais utilizados
 
 TODO Get abilities and attacks secondary effects
 
-#milestones semana 1:
-pedro
-    gui itendex
-    pegar as megas
-buzz
-    estudar
 
 #milestones semana 2:
     pedro
@@ -55,5 +48,3 @@ buzz
         montar o time
             avaliar e indices (qual a fraqueza do time e essas coisas)
             atacar pelo evaluator
-
-#milestones semana 1
