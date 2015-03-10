@@ -957,11 +957,12 @@ class PokeDexText:
 class Attack:
     def __init__(self,condition=0,name='',
                  atkType = Type.NoType,cat = AttackCat.Other,
-                 att = 0,acc = 0,pp=0,effect = '',description = '' ):
+                 att = 0,acc = 0,pp=0,effect = '',description = '', sec_effect = ''):
         self.__condition = condition
         self.__name = name
         self.__atkType = atkType
         self.__cat = cat
+        self.__sec_effect = sec_effect
         ## Value 357 means --
         ## Value 951 means ??
         if att == '--':
@@ -981,7 +982,7 @@ class Attack:
 
     def __str__(self):
         string =  '\nName: '+self.__name
-        string += '\nCondition: '+self.__condition
+        string += '\nCondition: ' + str(self.__condition)
         string += '\nType: '+self.__atkType
         string += '\nCategory: '+self.__cat
         string += '\nAttribute: '+str(self.__att)
@@ -989,6 +990,7 @@ class Attack:
         string += '\nPP: '+str(self.__pp)
         string += '\nEffect: '+self.__effect
         string += '\nDescription: '+self.__description
+        string += '\nSecundary Effect: '+ str(self.__sec_effect)
         return string
 
     def __repr__(self):

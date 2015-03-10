@@ -369,20 +369,40 @@ class AttacksManager(Manager):
             cursor.execute('SELECT * FROM Attacks WHERE Name=?',search)
         attackData = cursor.fetchone()
         if(attackData is not None):
-            return Attack(0,attackData[0],attackData[1],attackData[2],attackData[3],attackData[4],attackData[5],attackData[6],attackData[7])
+            return Attack(0,attackData[0],attackData[1],attackData[2],attackData[3],attackData[4],attackData[5],attackData[6],attackData[7], attackData[8])
         else:
             raise self.AttackNotFoundError('Attack was not found')
-		
-		
+
+    def add_secundary_eff_col(self):
+        self._certify_connection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('ALTER TABLE Attacks ADD SecEffect TEXT')
+
+    def add_speed_priority(self):
+        self._certify_connection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('ALTER TABLE Attacks ADD SpeedPriority INTEGER')
+
     def view(self):
         self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM Attacks'):
                 print(row)
-				
+
+    def insert_sec_effect(self, attack_name, effect, speed_priority):
+        self._certify_connection()
+        with self._connection as conn:
+            cursor = conn.cursor()
+            cursor.execute('UPDATE Attacks'
+                           ' SET SecEffect=\"{}\"'
+                           ' AND SpeedPriority=\"{}\"'
+                           ' WHERE NAME=\"{}\"'.format(effect, speed_priority, attack_name))
+
     class AttackNotFoundError(Exception):
         pass
-        
+
 class PokeAttacksManager(Manager):
     def create_table_pk_attacks(self):
         self._certify_connection()
@@ -438,14 +458,14 @@ class PokeAttacksManager(Manager):
             return attackGroups
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
-		
-		
+
+
     def view(self):
         self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeAttacks'):
                 print(row)
-				
+
     class DescriptionError(Exception):
         pass
         
@@ -475,7 +495,7 @@ class PokeItemsManager(Manager):
             except sqlite3.OperationalError as error:
                 self.create_table_pk_items()
                 cursor.execute("INSERT INTO PokeItems VALUES (?,?,?)",pkItemData)
-        		
+
     def get_pokemon_items(self,pokemonName):
         self._certify_connection()
         search = (pokemonName,)
@@ -489,13 +509,13 @@ class PokeItemsManager(Manager):
             return itemData
         else:
             raise self.AttackNotFoundError('Pokemon was not found')
-		
+
     def view(self):
         self._certify_connection()
         with self._connection as conn:
             for row in conn.cursor().execute('SELECT * FROM PokeItems'):
                 print(row)
-				
+
     class DescriptionError(Exception):
         pass
 
@@ -570,7 +590,7 @@ class PokemonEVWorthManager(Manager):
             except sqlite3.OperationalError as error:
                 self.create_table_pokemon_ev_worth()
                 cursor.execute("INSERT INTO PokemonEVWorth VALUES (?,?,?)",evData)		
-		
+
     def get_pokemon_ev_worth(self,pokemonName):
         self._certify_connection()
         search = (pokemonName,)
@@ -855,7 +875,7 @@ class PokemonManager(Manager):
     class PokemonNotFoundError(Exception):
         pass
 
-		
+
 
     def view(self):
         self._certify_connection()

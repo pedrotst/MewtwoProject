@@ -12,7 +12,7 @@ HOOPA 720 Height Problem---------------------------------------CORRECTED
 Mr Mime - Nome Errado no DB------------------------------------CORRECTED
 
 TO-DO
-Poke Evo Chain - Elaborte way to identify
+Poke Evo Chain - Elaborate way to identify
 acknowledgments:
     status
         baseado no melhor status do time
@@ -29,7 +29,7 @@ acknowledgments:
 
 
 
-bot para construir a curva normal de status dos pokemons mais utilizados
+**bot para construir a curva normal de status dos pokemons mais utilizados
 
 TODO Get abilities and attacks secondary effects
 
@@ -40,8 +40,6 @@ TODO Get abilities and attacks secondary effects
             https://www.pokebattle.com/dex/pokemon/deoxys/
             http://strategywiki.org/
             atacar pelo strategy
-            entrar no attack dex e pegar o secundary effect + speed priority
-                http://serebii.net/attackdex-xy/acrobatics.shtml
         dizer quais as estrategias sao as opcoes
 
     buzz
